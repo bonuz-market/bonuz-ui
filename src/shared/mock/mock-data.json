@@ -1,3 +1,22 @@
 {
-  "news": []
+  "news": [
+    {
+      "created": "27 September 2021",
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/post_image.png",
+      "title": "Bonuz News",
+      "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+    },
+    {
+      "created": "27 September 2021",
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/post_image.png",
+      "title": "Bonuz News",
+      "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+    },
+    {
+      "created": "27 September 2021",
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/post_image.png",
+      "title": "Bonuz News",
+      "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+    }
+  ]
 }

@@ -2481,7 +2481,7 @@ header {
   position: relative;
 }
 
-#seven .post .img .post-image {
+.post .img .post-image {
   width: 280px;
   height: 235px;
   object-fit: cover;
@@ -2490,7 +2490,7 @@ header {
   left: 5px;
 }
 
-#seven .post .img .mask {
+.post .img .mask {
   width: 295px;
   height: 240px;
   position: relative;
@@ -2498,17 +2498,17 @@ header {
   user-select: none;
 }
 
-#seven .post {
+.post {
   position: relative;
   z-index: 2;
   width: 295px;
 }
 
-#seven .post .img {
+.post .img {
   position: relative;
 }
 
-#seven .post .date {
+.post .date {
   position: absolute;
   font-family: Roboto Condensed;
   font-style: normal;
@@ -2524,7 +2524,7 @@ header {
   top: 20px;
 }
 
-#seven .post h1 {
+.post h1 {
   font-family: Roboto Condensed;
   font-style: normal;
   font-weight: 500;
@@ -2534,7 +2534,7 @@ header {
   margin-bottom: 0px;
 }
 
-#seven .post p {
+.post p {
   font-family: Roboto Condensed;
   font-style: normal;
   font-weight: normal;
@@ -2543,20 +2543,20 @@ header {
   color: rgba(255, 255, 255, 0.8);
 }
 
-#seven .post .read-more img {
+.post .read-more img {
   width: 37px;
   height: 42px;
   margin-right: 15px;
 }
 
-#seven .post .read-more {
+.post .read-more {
   display: flex;
   align-items: center;
   text-decoration: none;
   transition: all 0.3s;
 }
 
-#seven .post .read-more:hover {
+.post .read-more:hover {
   /*     filter: hue-rotate(-40deg); */
   background-image: url(../public/assets/images/read-more-hover.svg);
   background-repeat: no-repeat;
@@ -2567,7 +2567,7 @@ header {
 footer .icon_list a img:hover {
 }
 
-#seven .post .read-more span {
+.post .read-more span {
   font-family: Roboto Condensed;
   font-style: normal;
   font-weight: 500;
@@ -3365,7 +3365,11 @@ footer .row .col:nth-child(2) .form p {
   margin-top: 57px;
 }
 
-footer form input[type="email"] {
+footer .row .col:nth-child(2) .form {
+  margin-top: 57px;
+}
+
+footer .form input {
   font-family: Roboto Condensed;
   font-style: normal;
   font-weight: normal;

@@ -636,7 +636,7 @@
     transition: all 0.3s;
   }
 
-  #seven .post p {
+  .post p {
     max-width: 300px;
   }
 
@@ -682,7 +682,7 @@
     left: calc(50% - 43px);
   }
 
-  #seven .post .img .post-image {
+  .post .img .post-image {
     top: 0px;
   }
 
