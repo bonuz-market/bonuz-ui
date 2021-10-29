@@ -58,5 +58,32 @@
       "title": "Q2 2021",
       "description": "Kick-off-April"
     }
+  ],
+  "howItWorks": [
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/i1-1.svg",
+      "title": "Buy BONUZ token",
+      "circleOffset": -452.389
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/i2-1.svg",
+      "title": "Buy your favorite celebrity token",
+      "circleOffset": -339.292
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/i3-1.svg",
+      "title": "Explore Celebrities and their tokens",
+      "circleOffset": -226.195
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/i4-1.svg",
+      "title": "Trade tokens",
+      "circleOffset": -113.097
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/i5-1.svg",
+      "title": "Receive exclusive content, buy exclusive celebrities NFTs, vote, interact, enjoy!",
+      "circleOffset": 0
+    }
   ]
 }

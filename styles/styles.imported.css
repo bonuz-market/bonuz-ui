@@ -3520,7 +3520,8 @@ footer .policy:hover {
 #svg #bar2,
 #svg #bar3,
 #svg #bar4,
-#svg #bar5 {
+#svg #bar5,
+#svg .bar {
   stroke-linecap: round;
   stroke: url(#MyGradient);
 }
