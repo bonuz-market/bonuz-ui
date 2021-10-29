@@ -1,5 +1,7 @@
 import { FC } from 'react';
-import { Button, Navigation } from '@/shared/ui/atoms';
+
+import { Button, Navigation, Input } from '@/shared/ui/atoms';
+import { SubscribeToNews } from '@/features/subscribe-to-news';
 
 export const Footer: FC = () => (
   <footer>
@@ -23,7 +25,11 @@ export const Footer: FC = () => (
             </ul>
 
             <div className="form">
-              <p>Subscribe to news:</p>
+              <Input
+                label="Subscribe to news:"
+                placeholder="Enter you email"
+                actionButton={<SubscribeToNews />}
+              />
             </div>
           </div>
           <div className="col">

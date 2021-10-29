@@ -4,7 +4,7 @@
     "paths": {
       "@/app/*": ["app/*"],
       "@/shared/*": ["shared/*"],
-      "@/pageLayouts/*": ["pageLayouts/*"],
+      "@/page-layouts/*": ["page-layouts/*"],
       "@/features/*": ["features/*"],
       "@/entities/*": ["entities/*"]
     },
