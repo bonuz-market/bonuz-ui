@@ -28,8 +28,10 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
+    'react/require-default-props': 'off',
     'import/prefer-default-export': 'off',
     'import/extensions': 'off',
+    'import/no-extraneous-dependencies': 'off',
     'react/jsx-filename-extension': [
       2,
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },

@@ -7,5 +7,13 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/preset-create-react-app"
-  ]
+  ],
+  webpackFinal: config => {
+    return {
+      ...config,
+      plugins: config.plugins.filter(plugin => {
+        return plugin.constructor.name !== 'ESLintWebpackPlugin';
+      }),
+    }
+  },
 }

@@ -8996,6 +8996,7 @@
     "jest-snapshot" "^26.6.2"
 
 "jest-resolve@*":
+  "integrity" "sha512-tRAz2bwraHufNp+CCmAD8ciyCpXCs1NQxB5EJAmtCFy6BN81loFEGWKzYu26Y62lAJJe4X4jg36Kf+NsQyiStQ=="
   "version" "26.6.0"
   dependencies:
     "@jest/types" "^26.6.0"
@@ -13476,6 +13477,11 @@
     "@storybook/components" "^6.3.0"
     "@storybook/core-events" "^6.3.0"
     "ts-dedent" "^2.1.1"
+
+"storybook-css-modules-preset@1.1.1":
+  "integrity" "sha512-wyINPOtB/8SvU7J92ePAhciBk4xoHuwrcqDNyGnSwilwHjmtHwbeEgZ1//JALOTwMB10zwz3WPONRkWec9LdGw=="
+  "resolved" "https://registry.npmjs.org/storybook-css-modules-preset/-/storybook-css-modules-preset-1.1.1.tgz"
+  "version" "1.1.1"
 
 "stream-browserify@^2.0.1":
   "integrity" "sha512-nX6hmklHs/gr2FuxYDltq8fJA1GDlxKQCz8O/IM4atRqBH8OORmBNgfvW5gG10GT/qQ9u0CzIvr2X5Pkt6ntqg=="
