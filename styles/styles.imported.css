@@ -99,6 +99,9 @@ header {
   display: none;
   width: 14px;
   height: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .header-inner .bg {
@@ -250,7 +253,7 @@ header {
 }
 
 #first {
-  background-image: url(../shared/ui/_settings/assets/images/hero-background.png);
+  background-image: url(../public/assets/images/hero-background.png);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 100% 0%;
@@ -523,7 +526,7 @@ header {
   position: absolute;
   width: 147px;
   height: 50px;
-  background-image: url(../shared/ui/_settings/assets/images/left-lines-title.svg);
+  background-image: url(../public/assets/images/left-lines-title.svg);
   background-repeat: no-repeat;
   background-size: contain;
   top: 245px;
@@ -538,7 +541,7 @@ header {
   position: absolute;
   width: 155px;
   height: 40px;
-  background-image: url(../shared/ui/_settings/assets/images/right-lines-title.svg);
+  background-image: url(../public/assets/images/right-lines-title.svg);
   background-repeat: no-repeat;
   background-size: contain;
   top: -120px;
@@ -886,7 +889,7 @@ header {
   position: absolute;
   width: 37px;
   height: 30px;
-  background-image: url(../shared/ui/_settings/assets/images/celeb_f.svg);
+  background-image: url(../public/assets/images/celeb_f.svg);
   background-repeat: x-repeat;
   background-size: contain;
   top: 50%;
@@ -1127,7 +1130,7 @@ header {
   position: absolute;
   width: 37px;
   height: 30px;
-  background-image: url(../shared/ui/_settings/assets/images/celeb_f.svg);
+  background-image: url(../public/assets/images/celeb_f.svg);
   background-repeat: x-repeat;
   background-size: contain;
   top: 50%;
@@ -1322,7 +1325,7 @@ header {
   position: absolute;
   width: 37px;
   height: 30px;
-  background-image: url(../shared/ui/_settings/assets/images/f.svg);
+  background-image: url(../public/assets/images/f.svg);
   background-repeat: x-repeat;
   background-size: contain;
   top: 50%;
@@ -1637,7 +1640,7 @@ header {
 
 #three {
   position: relative;
-  background-image: url(../shared/ui/_settings/assets/images/three-blur.svg);
+  background-image: url(../public/assets/images/three-blur.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 50% 0%;
@@ -1948,7 +1951,7 @@ header {
 
 #four {
   padding-top: 150px;
-  background: url(../shared/ui/_settings/assets/images/four-background.svg), var(--second-black);
+  background: url(../public/assets/images/four-background.svg), var(--second-black);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 50% 22%;
@@ -2032,7 +2035,7 @@ header {
 #four .block::before {
   content: "";
   position: absolute;
-  background-image: url(../shared/ui/_settings/assets/images/dash.svg);
+  background-image: url(../public/assets/images/dash.svg);
   background-repeat: repeat-x;
   width: 60px;
   height: 5px;
@@ -2193,7 +2196,7 @@ header {
 }
 
 #six {
-  background: url(../shared/ui/_settings/assets/images/six-background.svg), var(--second-black);
+  background: url(../public/assets/images/six-background.svg), var(--second-black);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 55% 91%;
@@ -2558,7 +2561,7 @@ header {
 
 #seven .post .read-more:hover {
   /*     filter: hue-rotate(-40deg); */
-  background-image: url(../shared/ui/_settings/assets/images/read-more-hover.svg);
+  background-image: url(../public/assets/images/read-more-hover.svg);
   background-repeat: no-repeat;
   background-size: contain;
   transition: all 0.3s;
@@ -2603,7 +2606,7 @@ footer .icon_list a img:hover {
 
 #eight {
   position: relative;
-  background: url(../shared/ui/_settings/assets/images/eight-background.png), var(--second-black);
+  background: url(../public/assets/images/eight-background.png), var(--second-black);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 60% 0;
@@ -3418,7 +3421,7 @@ footer .icon_list a img:hover {
   height: auto;
   /*     filter: hue-rotate(-40deg); */
   transform: scale(1.05);
-  background-image: url(../shared/ui/_settings/assets/images/footer-social-hover.svg);
+  background-image: url(../public/assets/images/footer-social-hover.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }

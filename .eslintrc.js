@@ -7,6 +7,7 @@ module.exports = {
     'prettier',
     'plugin:react/recommended',
     'airbnb',
+    'next/core-web-vitals',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
