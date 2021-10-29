@@ -770,6 +770,7 @@ header {
 }
 
 .button-stroke button span {
+  font-family: Farro;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -779,7 +780,6 @@ header {
 }
 
 #first .celebs > p {
-  font-family: Anonymous Pro;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -842,7 +842,6 @@ header {
 #first .celebs .celebs-list .celeb h3 {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-family: Anonymous Pro;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -852,7 +851,6 @@ header {
 #first .celebs .celebs-list .celeb p {
   margin-top: 5px;
   margin-bottom: 0px;
-  font-family: Anonymous Pro;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -1073,7 +1071,6 @@ header {
   height: 48px;
   border-radius: 0px 8px 8px 0px;
   border: none;
-  font-family: Anonymous Pro;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;

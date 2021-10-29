@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@/app/*": ["app/*"],
+      "@/shared/*": ["shared/*"],
+      "@/pageLayouts/*": ["pageLayouts/*"],
+      "@/features/*": ["features/*"],
+      "@/entities/*": ["entities/*"]
+    },
     "target": "es5",
     "lib": [
       "dom",

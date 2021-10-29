@@ -1,6 +1,8 @@
 import { FC, useState } from 'react';
 import classNames from 'classnames';
 
+import { Navigation } from '@/shared/ui/atoms';
+
 export const Header: FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -41,24 +43,7 @@ export const Header: FC = () => {
               })}
             >
               <ul id="menu-menu">
-                <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11">
-                  <a href="#">How it works</a>
-                </li>
-                <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11">
-                  <a href="#">Join the Waitlist</a>
-                </li>
-                <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11">
-                  <a href="#">Token</a>
-                </li>
-                <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11">
-                  <a href="#">Roadmap</a>
-                </li>
-                <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11">
-                  <a href="#">Team</a>
-                </li>
-                <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11">
-                  <a href="#">Contact Us</a>
-                </li>
+                <Navigation />
                 <li className="sign-in">
                   <a href="#">
                     <span>Sign In</span>

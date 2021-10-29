@@ -13,10 +13,11 @@ export const Button: FC<ButtonProps> = ({
   disabled,
   type = 'button',
   onClick,
+  children,
 }) => (
   <div className={outline ? 'button-stroke' : 'button-fill'}>
     <button type={type} disabled={disabled} onClick={onClick}>
-      <span>Join Community</span>
+      <span>{children}</span>
     </button>
   </div>
 );

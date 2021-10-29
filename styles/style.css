@@ -1,54 +1,11 @@
+@import "./variables.css";
+@import "./fonts.css";
 @import "./styles.imported.css";
 @import "./styles-adaptive.imported.css";
 
-@font-face {
-  font-weight: 400;
-  font-family: "Farro";
-  font-style: normal;
-  font-display: swap;
-
-  src: url("../public/assets/fonts/farro/regular/farro-v4-latin-regular.woff2") format("woff2"),
-    url("../public/assets/fonts/farro/regular/farro-v4-latin-regular.woff") format("woff");
-}
-
-@font-face {
-  font-weight: 500;
-  font-family: "Farro";
-  font-style: normal;
-  font-display: swap;
-
-  src: url("../public/assets/fonts/farro/medium/farro-v4-latin-500.woff2") format("woff2"),
-    url("../public/assets/fonts/farro/medium/farro-v4-latin-500.woff") format("woff");
-}
-
-@font-face {
-  font-weight: 700;
-  font-family: "Farro";
-  font-style: normal;
-  font-display: swap;
-
-  src: url("../public/assets/fonts/farro/bold/farro-v4-latin-700.woff2") format("woff2"),
-    url("../public/assets/fonts/farro/bold/farro-v4-latin-700.woff") format("woff");
-}
-
-:root {
-  --main-bg-color: #030C5E;
-  --second-bg-color: #050D50;
-  --gradient-color-1: #CE09FF;
-  --gradient-color-2: #FFA34E;
-  --gradient-color-3: #CE09FF;
-  --gradient-color-4: #48F573;
-  --main-black: #010845;
-  --second-black: #030B4D;
-  --light-bg: #2F1385;
-  --blur: #FF00F5;
-}
-
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Farro', 'Roboto Condensed', 'Roboto', 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

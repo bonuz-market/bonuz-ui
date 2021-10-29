@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   env: {
     browser: true,
@@ -17,13 +19,13 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-  ],
+  plugins: ['react', '@typescript-eslint'],
   settings: {
     'import/resolver': {
-      typescript: {},
+      alias: {
+        map: [['@', path.resolve(__dirname, 'src')]],
+        extensions: ['.ts', '.js', '.jsx', '.json', '.tsx'],
+      },
     },
   },
   rules: {
