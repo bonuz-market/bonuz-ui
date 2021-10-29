@@ -208,7 +208,7 @@
     padding-left: 20px;
   }
 
-  #first .celebs .celebs-list {
+  .celebs .celebs-list {
     display: flex;
     transform: translateX(0px);
     z-index: 2;
@@ -232,15 +232,15 @@
     margin: 0 -10px;
   }
 
-  #first .celebs .celebs-list .celeb:nth-child(1) {
+  .celebs .celebs-list .celeb:nth-child(1) {
     opacity: 1;
   }
 
-  #first .celebs .celebs-list .celeb {
+  .celebs .celebs-list .celeb {
     display: flex !important;
   }
 
-  #first .celebs-blocks {
+  .celebs-blocks {
     display: none;
   }
 

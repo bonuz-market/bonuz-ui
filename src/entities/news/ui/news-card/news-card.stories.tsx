@@ -10,5 +10,4 @@ export default {
 const Template: Story<NewsCardProps> = (args) => <NewsCard {...args} />;
 
 export const Primary = Template.bind({});
-// eslint-disable-next-line prefer-destructuring
 Primary.args = mockData.news[0];

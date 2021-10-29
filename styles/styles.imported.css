@@ -779,7 +779,7 @@ header {
   color: #ffffff;
 }
 
-#first .celebs > p {
+.celebs > p {
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -789,7 +789,7 @@ header {
   margin-bottom: 25px;
 }
 
-#first .celebs .celebs-list {
+.celebs .celebs-list {
   display: flex;
   transform: translateX(-245px);
   z-index: 8;
@@ -797,7 +797,7 @@ header {
   margin-bottom: 50px;
 }
 
-#first .celebs .celebs-list .celeb {
+.celebs .celebs-list .celeb {
   background: #2f1385;
   border-radius: 16px;
   width: 227px;
@@ -809,11 +809,11 @@ header {
   position: relative;
 }
 
-#first .celebs .celebs-list .celeb:hover:before {
+.celebs .celebs-list .celeb:hover:before {
   opacity: 1;
 }
 
-#first .celebs .celebs-list .celeb:before {
+.celebs .celebs-list .celeb:before {
   content: "";
   position: absolute;
   top: -1px;
@@ -827,11 +827,11 @@ header {
   transition: 0.3s;
 }
 
-#first .celebs .celebs-list .celeb:nth-child(1) {
+.celebs .celebs-list .celeb:nth-child(1) {
   opacity: 0.3;
 }
 
-#first .celebs .celebs-list .celeb img {
+.celebs .celebs-list .celeb img {
   width: 48px;
   height: 48px;
   border-radius: 48px;
@@ -839,7 +839,7 @@ header {
   margin-left: 25px;
 }
 
-#first .celebs .celebs-list .celeb h3 {
+.celebs .celebs-list .celeb h3 {
   margin-top: 0px;
   margin-bottom: 0px;
   font-style: normal;
@@ -848,7 +848,7 @@ header {
   line-height: 16px;
   color: #ffffff;
 }
-#first .celebs .celebs-list .celeb p {
+.celebs .celebs-list .celeb p {
   margin-top: 5px;
   margin-bottom: 0px;
   font-style: normal;
@@ -859,13 +859,13 @@ header {
   opacity: 0.3;
 }
 
-#first .celebs-blocks {
+.celebs-blocks {
   display: flex;
   z-index: 3;
   position: relative;
 }
 
-#first .celebs-blocks .block {
+.celebs-blocks .block {
   display: flex;
   align-items: center;
   margin-right: 50px;
@@ -882,7 +882,7 @@ header {
   }
 }
 
-#first .celebs-blocks .block::before {
+.celebs-blocks .block::before {
   content: "";
   position: absolute;
   width: 37px;
@@ -897,13 +897,13 @@ header {
   animation: stripe-animation 4500s linear infinite both;
 }
 
-#first .celebs-blocks .block img {
+.celebs-blocks .block img {
   width: 37px;
   height: 46px;
   margin-right: 15px;
 }
 
-#first .celebs-blocks .block p {
+.celebs-blocks .block p {
   width: 250px;
   font-family: Roboto Condensed;
   font-style: normal;
@@ -2524,7 +2524,7 @@ header {
   top: 20px;
 }
 
-.post h1 {
+.post h3 {
   font-family: Roboto Condensed;
   font-style: normal;
   font-weight: 500;

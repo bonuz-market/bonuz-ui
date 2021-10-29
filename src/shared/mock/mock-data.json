@@ -18,5 +18,27 @@
       "title": "Bonuz News",
       "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
     }
+  ],
+  "celebrities": [
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Max Miller",
+      "country": "England"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Max Miller",
+      "country": "England"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Max Miller",
+      "country": "England"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Max Miller",
+      "country": "England"
+    }
   ]
 }
