@@ -9,7 +9,7 @@ export type RoadMapListProps = {
 export const RoadMapList: FC<RoadMapListProps> = ({ items }) => (
   <>
     {items.map((item, index) => (
-      <div className="slick-slide">
+      <div className="slick-slide" key={`${item.title}-${index}`}>
         <RoadMapItem
           key={`${item.title}-${index}`}
           title={item.title}

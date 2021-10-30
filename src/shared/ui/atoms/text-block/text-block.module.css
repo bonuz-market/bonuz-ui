@@ -33,9 +33,14 @@
   color: #ffffff;
 }
 
+.large {
+  font-size: 24px;
+  line-height: 26px;
+}
+
 @keyframes stripe-animation {
   0% {
-    background-position: 0px 100%;
+    background-position: 0 100%;
   }
   100% {
     background-position: 100000px 100%;

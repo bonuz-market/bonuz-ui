@@ -5,12 +5,14 @@ import styles from './text-block.module.css';
 
 type TextBlockProps = {
   type?: 'primary' | 'secondary';
+  size?: 'small' | 'large';
 };
 export interface TextBlockPropsWithChildren
   extends PropsWithChildren<TextBlockProps> {}
 
 export const TextBlock: FC<TextBlockPropsWithChildren> = ({
   type = 'primary',
+  size = 'small',
   children,
 }) => (
   <div
@@ -19,6 +21,12 @@ export const TextBlock: FC<TextBlockPropsWithChildren> = ({
       [styles.secondary]: type === 'secondary',
     })}
   >
-    <p className={styles.text}>{children}</p>
+    <p
+      className={classnames(styles.text, {
+        [styles.large]: size === 'large',
+      })}
+    >
+      {children}
+    </p>
   </div>
 );

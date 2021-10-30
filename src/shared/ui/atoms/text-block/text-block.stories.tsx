@@ -13,6 +13,8 @@ const Template: Story<TextBlockPropsWithChildren> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
+  type: 'primary',
+  size: 'small',
   children:
     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur aut dolor, doloribus eum iusto molestias sequi! Amet, optio, veniam!',
 };
@@ -20,6 +22,7 @@ Primary.args = {
 export const Secondary = Template.bind({});
 Secondary.args = {
   type: 'secondary',
+  size: 'small',
   children:
     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur aut dolor, doloribus eum iusto molestias sequi! Amet, optio, veniam!',
 };
