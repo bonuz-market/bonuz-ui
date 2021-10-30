@@ -123,5 +123,97 @@
       "icon": "https://bonuz.wp4.host/wp-content/uploads/2021/09/block1.svg",
       "iconBlur": "https://bonuz.wp4.host/wp-content/uploads/2021/09/block1.svg"
     }
+  ],
+  "team": [
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_1"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_1"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_1"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_1"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_1"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_2"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_2"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_2"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_2"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_2"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_3"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_3"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_3"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_3"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_3"
+    }
   ]
 }

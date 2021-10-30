@@ -8,3 +8,4 @@ export { ActionButton } from './action-button';
 export { TextBlock } from './text-block';
 export { InfoBlock } from './info-block';
 export { AdvantagesItem } from './advantages-item';
+export { TeamCard } from './team-card';
