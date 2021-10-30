@@ -19,6 +19,11 @@ body.noscroll {
   overflow: hidden;
 }
 
+.slick-prev,
+.slick-next {
+  z-index: 10;
+}
+
 .skip-link.screen-reader-text {
   display: none;
 }
@@ -2357,7 +2362,6 @@ header {
 
 #six .slick-slider {
   border-radius: 8px;
-  overflow: hidden;
 }
 
 #six .slick-list {
@@ -2383,13 +2387,13 @@ header {
 
 #six .prev {
   transform: rotate(180deg);
-  left: -120px;
-  top: 85px;
+  right: 20px;
+  top: -40px;
 }
 
 #six .next {
-  right: 30px;
-  top: 85px;
+  right: 0px;
+  top: -40px;
   backdrop-filter: blur(1px);
 }
 

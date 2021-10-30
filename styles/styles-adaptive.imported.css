@@ -555,7 +555,8 @@
   #six .slick-dots {
     position: absolute;
     bottom: -60px;
-    display: flex;
+    display: flex !important;
+    justify-content: center;
     z-index: 5;
     list-style: none;
     padding-left: 0px;
@@ -1152,6 +1153,16 @@ stroke: url(#MyGradient);
     z-index: 1;
     position: relative;
     margin-top: 65px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  #six .prev {
+    right: 10px;
+  }
+
+  #six .next {
+    right: 194px;
   }
 }
 
