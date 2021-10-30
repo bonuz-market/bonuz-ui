@@ -103,5 +103,25 @@
       "https://bonuz.wp4.host/wp-content/uploads/2021/09/pa5.svg",
       "https://bonuz.wp4.host/wp-content/uploads/2021/09/pa6.svg"
     ]
+  ],
+  "advantages": [
+    {
+      "title": "Celebrities",
+      "description": "Celebrities can establish a new channel to communicate with and honor their hardcore fans, all while financilly benefiting.",
+      "icon": "https://bonuz.wp4.host/wp-content/uploads/2021/09/block3.svg",
+      "iconBlur": "https://bonuz.wp4.host/wp-content/uploads/2021/09/block3.svg"
+    },
+    {
+      "title": "Celebrities",
+      "description": "Celebrities can establish a new channel to communicate with and honor their hardcore fans, all while financilly benefiting.",
+      "icon": "https://bonuz.wp4.host/wp-content/uploads/2021/09/block2.svg",
+      "iconBlur": "https://bonuz.wp4.host/wp-content/uploads/2021/09/block2.svg"
+    },
+    {
+      "title": "Celebrities",
+      "description": "Celebrities can establish a new channel to communicate with and honor their hardcore fans, all while financilly benefiting.",
+      "icon": "https://bonuz.wp4.host/wp-content/uploads/2021/09/block1.svg",
+      "iconBlur": "https://bonuz.wp4.host/wp-content/uploads/2021/09/block1.svg"
+    }
   ]
 }

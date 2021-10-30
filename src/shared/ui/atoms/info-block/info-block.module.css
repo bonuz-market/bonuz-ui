@@ -43,4 +43,8 @@
     flex-direction: column;
     background-image: none;
   }
+
+  .column {
+    width: 100%;
+  }
 }
