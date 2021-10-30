@@ -8,15 +8,12 @@ export default {
 } as Meta;
 
 const Template: Story<RoadMapListProps> = (args) => (
-  <>
-    <h1 style={{ color: '#FFFFFF' }}>TODO прикрутить слайдер</h1>
-    <div id="six">
-      <div className="row" />
-      <div className="row" style={{ display: 'flex' }}>
-        <RoadMapList {...args} />
-      </div>
+  <div id="six">
+    <div className="row" />
+    <div className="row" style={{ display: 'flex' }}>
+      <RoadMapList {...args} />
     </div>
-  </>
+  </div>
 );
 
 export const Primary = Template.bind({});
