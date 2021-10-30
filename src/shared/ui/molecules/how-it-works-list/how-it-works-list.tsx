@@ -1,4 +1,7 @@
+/* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
+import Slider, { Settings } from 'react-slick';
+
 import { HowItWorksItem } from '@/shared/ui/atoms';
 
 export type HowItWorksListProps = {
@@ -9,14 +12,39 @@ export type HowItWorksListProps = {
   }[];
 };
 
+const settings: Settings = {
+  className: 'blocks',
+  dots: true,
+  arrows: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 4000,
+      settings: 'unslick',
+    },
+    {
+      breakpoint: 1050,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: false,
+      },
+    },
+  ],
+};
+
 export const HowItWorksList: FC<HowItWorksListProps> = ({ items }) => (
-  <div className="blocks pc">
-    {items.map((item) => (
+  <Slider {...settings}>
+    {items.map((item, index) => (
       <HowItWorksItem
+        key={`${item.title}-${index}`}
         img={item.img}
         title={item.title}
         circleOffset={item.circleOffset}
       />
     ))}
-  </div>
+  </Slider>
 );

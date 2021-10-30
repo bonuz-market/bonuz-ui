@@ -430,6 +430,10 @@
     margin: 40px auto;
   }
 
+  #four .block {
+    width: auto;
+  }
+
   #four .slide {
     display: flex !important;
     justify-content: center;
@@ -443,7 +447,7 @@
   #four .slick-dots {
     position: absolute;
     bottom: -30px;
-    display: flex;
+    display: flex !important;
     z-index: 5;
     list-style: none;
     padding-left: 0px;
