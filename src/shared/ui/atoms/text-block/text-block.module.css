@@ -24,17 +24,43 @@
   background-image: url(../../../../../public/assets/images/f.svg);
 }
 
+.container.withTitle {
+  display: block;
+}
+
+.container.withTitle::before {
+  display: none;
+}
+
 .text {
+  margin: 0;
+
   font-family: Roboto Condensed;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 26px;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .large {
   font-size: 24px;
+  line-height: 26px;
+}
+
+.title {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 104.4%;
+}
+
+.container.withTitle .text {
+  opacity: 0.8;
+
+  font-size: 14px;
   line-height: 26px;
 }
 
