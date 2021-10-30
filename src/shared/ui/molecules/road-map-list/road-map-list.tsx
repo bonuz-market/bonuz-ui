@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
-import { RoadMapItem } from '@/shared/ui/atoms/road-map-item';
+import { RoadMapItem } from '@/shared/ui/atoms';
 
 export type RoadMapListProps = {
   items: { title: string; description: string }[];

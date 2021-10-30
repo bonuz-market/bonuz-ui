@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding-left: 53px;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  width: 37px;
+  height: 30px;
+  background-image: url(../../../../../public/assets/images/celeb_f.svg);
+  background-repeat: repeat-x;
+  background-size: contain;
+  top: 50%;
+  transform: translatey(-50%);
+  left: 0;
+  overflow: hidden;
+  animation: stripe-animation 4500s linear infinite both;
+}
+
+.container.secondary::before {
+  background-image: url(../../../../../public/assets/images/f.svg);
+}
+
+.text {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+@keyframes stripe-animation {
+  0% {
+    background-position: 0px 100%;
+  }
+  100% {
+    background-position: 100000px 100%;
+  }
+}
