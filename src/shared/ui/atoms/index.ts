@@ -6,3 +6,4 @@ export { HowItWorksItem } from './how-it-works-item';
 export { RoadMapItem } from './road-map-item';
 export { ActionButton } from './action-button';
 export { TextBlock } from './text-block';
+export { InfoBlock } from './info-block';
