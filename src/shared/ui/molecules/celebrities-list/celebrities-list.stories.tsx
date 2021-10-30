@@ -8,9 +8,10 @@ export default {
 } as Meta;
 
 const Template: Story<CelebritiesListProps> = (args) => (
-  <div className="celebs">
-    <h1 style={{ color: '#FFFFFF' }}>TODO прикрутить слайдер</h1>
-    <CelebritiesList {...args} />
+  <div id="first">
+    <div className="celebs">
+      <CelebritiesList {...args} />
+    </div>
   </div>
 );
 

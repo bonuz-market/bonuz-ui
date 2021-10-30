@@ -222,6 +222,7 @@
 
   #first .slick-slide {
     margin: 0 10px;
+    transition: 0.3s;
   }
 
   #first .slick-slide[aria-hidden="true"] {
@@ -238,6 +239,8 @@
 
   #first .celebs .celebs-list .celeb {
     display: flex !important;
+    width: 100%;
+    margin-top: 10px;
   }
 
   #first .celebs-blocks {
