@@ -9,7 +9,6 @@ export default {
 
 const Template: Story<AdvantagesListProps> = (args) => (
   <div id="second">
-    <h1 style={{ color: '#FFFFFF' }}>TODO make slider on mobile devices</h1>
     <AdvantagesList {...args} />
   </div>
 );

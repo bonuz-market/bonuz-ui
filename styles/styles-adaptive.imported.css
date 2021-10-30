@@ -329,11 +329,12 @@
 
   #second .slick-dots {
     position: absolute;
-    bottom: 0px;
-    display: flex;
+    bottom: 0;
+    display: flex !important;
     z-index: 5;
     list-style: none;
     padding-left: 0px;
+    margin: 16px 0;
     left: calc(50% - 43px);
   }
 
