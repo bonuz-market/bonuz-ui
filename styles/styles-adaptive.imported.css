@@ -232,15 +232,15 @@
     margin: 0 -10px;
   }
 
-  .celebs .celebs-list .celeb:nth-child(1) {
+  #first .celebs .celebs-list .celeb:nth-child(1) {
     opacity: 1;
   }
 
-  .celebs .celebs-list .celeb {
+  #first .celebs .celebs-list .celeb {
     display: flex !important;
   }
 
-  .celebs-blocks {
+  #first .celebs-blocks {
     display: none;
   }
 
@@ -1019,13 +1019,15 @@
 
   #ten .prev {
     transform: rotate(180deg);
-    left: 67px;
-    top: 290px;
+    top: 170px;
+    right: auto;
+    left: 90px;
   }
 
   #ten .next {
-    right: 67px;
-    top: 290px;
+    top: 170px;
+    right: 90px;
+    left: auto;
   }
 
   #ten .buttons-field {

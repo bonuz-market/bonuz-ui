@@ -1,0 +1,25 @@
+.container {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.prev {
+  transform: rotate(180deg);
+}
+
+.prev:hover {
+  transform: rotate(180deg) scale(1.02);
+  filter: brightness(0.9);
+}
+
+.next:hover {
+  transform: scale(1.02);
+  filter: brightness(0.9);
+}

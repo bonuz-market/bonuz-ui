@@ -3,3 +3,4 @@ export { Navigation } from './navigation';
 export { Input } from './input';
 export { CelebritiesItem } from './celebrities-item';
 export { HowItWorksItem } from './how-it-works-item';
+export { ActionButton } from './action-button';

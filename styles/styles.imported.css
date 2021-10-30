@@ -3226,13 +3226,13 @@ footer .icon_list a img:hover {
 
 #ten .prev {
   transform: rotate(180deg);
-  left: -120px;
-  top: 85px;
+  right: 14px;
+  top: -40px;
 }
 
 #ten .next {
-  right: -100px;
-  top: 85px;
+  left: 0;
+  top: -40px;
 }
 
 #ten .next:hover {
