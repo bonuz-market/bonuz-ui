@@ -19,6 +19,9 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
+  globals: {
+    JSX: true,
+  },
   plugins: ['react', '@typescript-eslint'],
   settings: {
     'import/resolver': {

@@ -17,6 +17,9 @@ const settings: Settings = {
   speed: 600,
   slidesToShow: 1,
   slidesToScroll: 1,
+  customPaging(index: number): JSX.Element {
+    return <button type="button" aria-label={`Go to ${index + 1} slide`} />;
+  },
   responsive: [
     {
       breakpoint: 4000,
