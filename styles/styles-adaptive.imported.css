@@ -683,8 +683,8 @@
 
   #seven .slick-dots {
     position: absolute;
-    bottom: -60px;
-    display: flex;
+    bottom: -40px;
+    display: flex !important;
     z-index: 5;
     list-style: none;
     padding-left: 0px;
