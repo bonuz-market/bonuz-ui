@@ -215,5 +215,52 @@
       "position": "Designer",
       "tabId": "tab_3"
     }
+  ],
+  "statistic": [
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem3.svg",
+      "title": "20%",
+      "description": "Ecosystem Fund"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem1.svg",
+      "title": "25%",
+      "description": "Marketing"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem2.svg",
+      "title": "14%",
+      "description": "Seed & Private Rounds"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem4.svg",
+      "title": "6%",
+      "description": "Public Rounds"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem4.svg",
+      "title": "10%",
+      "description": "Team"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem2.svg",
+      "title": "10%",
+      "description": "Advisiors"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem3.svg",
+      "title": "2%",
+      "description": "test"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem1.svg",
+      "title": "1%",
+      "description": "test"
+    },
+    {
+      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem4.svg",
+      "title": "3%",
+      "description": "ddff"
+    }
   ]
 }
