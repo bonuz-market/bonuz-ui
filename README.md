@@ -2,7 +2,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, you need to install dependencies:
+
+```bash
+npm i
+# or
+yarn
+```
+
+Then you can run the development server:
 
 ```bash
 npm run dev
@@ -10,7 +18,15 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or, if you want to start storybook, just type:
+
+```bash
+npm run storybook
+# or
+yarn storybook
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result of dev server or [http://localhost:6006](http://localhost:6006) to see storybook.
 
 You can start editing the page by modifying `pages/button.tsx`. The page auto-updates as you edit the file.
 
