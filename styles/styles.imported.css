@@ -964,8 +964,8 @@ header {
 .checkbox-container .checkbox {
   display: inline-block;
   flex: 0 0 auto;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background: #6c58a4;
   border-radius: 4px;
   margin-right: 8px;
@@ -974,7 +974,7 @@ header {
 .checkbox-container .checkbox::after {
   content: "";
   position: absolute;
-  width: 0px;
+  width: 0;
   height: 3px;
   background: #fe9f53;
   border-radius: 60px;
@@ -987,7 +987,7 @@ header {
 .checkbox-container .checkbox::before {
   content: "";
   position: absolute;
-  width: 0px;
+  width: 0;
   height: 3px;
   border-radius: 60px;
   background: #fe9f53;
