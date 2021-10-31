@@ -6,6 +6,10 @@ export default {
   component: Navigation,
 } as Meta;
 
-const Template: Story = (args) => <Navigation {...args} />;
+const Template: Story = (args) => (
+  <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+    <Navigation {...args} />
+  </ul>
+);
 
 export const Primary = Template.bind({});

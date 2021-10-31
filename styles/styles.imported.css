@@ -28,6 +28,13 @@ body.noscroll {
   display: none;
 }
 
+.menu-item a {
+  color: #FFFFFF;
+  font-family: Farro;
+  font-size: 14px;
+  line-height: 14px;
+}
+
 li.menu-item a {
   position: relative;
   width: max-content;
@@ -3372,6 +3379,7 @@ footer .row .col:nth-child(2) .form p {
 
 footer .row .col:nth-child(2) .form {
   margin-top: 57px;
+  width: calc(100% - 30px);
 }
 
 footer .form input {
