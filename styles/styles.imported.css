@@ -2496,7 +2496,7 @@ header {
   width: 280px;
   height: 235px;
   object-fit: cover;
-  position: absolute;
+  position: relative;
   z-index: 2;
   left: 5px;
 }
@@ -2504,9 +2504,19 @@ header {
 .post .img .mask {
   width: 295px;
   height: 240px;
-  position: relative;
+  position: absolute;
   z-index: 3;
   user-select: none;
+
+  transition: 0.2s ease-in-out;
+}
+
+.post .img .mask--gradient {
+  opacity: 0;
+}
+
+.post .img:hover .mask--gradient {
+  opacity: 1;
 }
 
 .post {

@@ -13,6 +13,11 @@ export const NewsCard: FC<NewsCardProps> = ({
     <div className="date">{created}</div>
     <div className="img">
       <img src="/assets/images/post-mask.svg" className="mask" alt="" />
+      <img
+        src="/assets/images/post-mask--gradient.svg"
+        className="mask mask--gradient"
+        alt=""
+      />
       <img src={img} className="post-image" alt="" />
     </div>
     <h3>{title}</h3>
