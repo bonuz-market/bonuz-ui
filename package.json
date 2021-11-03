@@ -26,7 +26,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook",
-    "publish:npm": "rm -rf dist && mkdir dist && babel ./src/components -d dist --copy-files --ignore '**/*.stories.tsx' --presets @babel/preset-react --presets @babel/preset-typescript --extensions '.ts,.tsx' && find ./dist -name '*.stories.tsx' -exec rm -rf {} \\;"
+    "publish:npm": "rm -rf dist && mkdir dist && babel ./src/components -d dist --copy-files --extensions '.ts,.tsx' && find ./dist -name '*.stories.tsx' -exec rm -rf {} \\;"
   },
   "files": [
     "dist",
