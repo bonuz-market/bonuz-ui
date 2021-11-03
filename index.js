@@ -1,2 +1,2 @@
-export * from './dist/atoms';
-export * from './dist/molecules';
+export * from './dist/components/atoms';
+export * from './dist/components/molecules';
