@@ -3,7 +3,6 @@ import { FC } from 'react';
 import Slider, { Settings } from 'react-slick';
 
 import { ActionButton } from '../../atoms';
-import mockData from '../../../mock/mock-data.json';
 
 const settings: Settings = {
   className: 'partners',
@@ -25,10 +24,14 @@ const settings: Settings = {
   ],
 };
 
-export const PartnersList: FC = () => (
+export type PartnersListProps = {
+  partners: Array<Array<string>>;
+};
+
+export const PartnersList: FC<PartnersListProps> = ({ partners }) => (
   <div className="partners-block" data-aos="fade-up" data-aos-duration="1300">
     <Slider {...settings}>
-      {mockData.partners.map((item, index) => (
+      {partners.map((item, index) => (
         <div key={`${item}-${index}`} className="item">
           <div className="block">
             <img src={item[0]} alt="" />
