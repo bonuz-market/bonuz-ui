@@ -5,12 +5,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'prettier',
-    'plugin:react/recommended',
-    'airbnb',
-    'next/core-web-vitals',
-  ],
+  extends: ['plugin:react/recommended', 'airbnb', 'prettier'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -25,10 +20,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   settings: {
     'import/resolver': {
-      alias: {
-        map: [['@', path.resolve(__dirname, 'src')]],
-        extensions: ['.ts', '.js', '.jsx', '.json', '.tsx'],
-      },
+      typescript: {},
     },
   },
   rules: {

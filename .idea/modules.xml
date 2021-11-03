@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/bonuz-ui-next.iml" filepath="$PROJECT_DIR$/.idea/bonuz-ui-next.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/bonuz-ui-npm.iml" filepath="$PROJECT_DIR$/.idea/bonuz-ui-npm.iml" />
     </modules>
   </component>
 </project>
