@@ -25,10 +25,22 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "publish:npm": "rm -rf dist && mkdir dist && babel ./src/components -d dist --copy-files --ignore '**/*.stories.tsx' --presets @babel/preset-react --presets @babel/preset-typescript --extensions '.ts,.tsx' && find ./dist -name '*.stories.tsx' -exec rm -rf {} \\;"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "publishConfig": {
     "@bonuz:registry": "https://code.bonuz.team/api/v4/projects/18/packages/npm/"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-typescript"
+    ],
+    "ignore": ["**/*.stories.tsx"]
   },
   "eslintConfig": {
     "extends": [
@@ -51,6 +63,7 @@
   "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
