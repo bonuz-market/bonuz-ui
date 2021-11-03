@@ -1,5 +1,5 @@
 {
-  "name": "bonuz-ui-npm",
+  "name": "@bonuz/bonuz-ui",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
