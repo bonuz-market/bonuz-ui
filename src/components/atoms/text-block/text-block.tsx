@@ -1,8 +1,6 @@
 import { FC, PropsWithChildren } from 'react';
 import classnames from 'classnames';
 
-import styles from './text-block.module.css';
-
 type TextBlockProps = {
   type?: 'primary' | 'secondary';
   size?: 'small' | 'large';
@@ -18,16 +16,16 @@ export const TextBlock: FC<TextBlockPropsWithChildren> = ({
   children,
 }) => (
   <div
-    className={classnames(styles.container, {
-      [styles.primary]: type === 'primary',
-      [styles.secondary]: type === 'secondary',
-      [styles.withTitle]: !!title,
+    className={classnames('text-block', {
+      'text-block--primary': type === 'primary',
+      'text-block--secondary': type === 'secondary',
+      'text-block--with-title': !!title,
     })}
   >
-    {title && <span className={styles.title}>{title}</span>}
+    {title && <span className="text-block__title">{title}</span>}
     <p
-      className={classnames(styles.text, {
-        [styles.large]: size === 'large',
+      className={classnames('text-block__text', {
+        'text-block__text--large': size === 'large',
       })}
     >
       {children}

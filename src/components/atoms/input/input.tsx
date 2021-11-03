@@ -29,6 +29,7 @@ export const Input: FC<InputProps> = ({
 
   return (
     <div className={styles.container}>
+      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
       <label>
         <span className={styles.label}>{label}</span>
         <span className={styles.inputWrapper}>

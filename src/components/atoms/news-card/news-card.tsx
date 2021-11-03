@@ -26,6 +26,7 @@ export const NewsCard: FC<NewsCardProps> = ({
     </div>
     <h3>{title}</h3>
     <p>{description}</p>
+    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
     <a href="#" className="read-more">
       <img src="/assets/images/read.svg" alt="" />
       <span>Read More</span>

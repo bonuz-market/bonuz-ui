@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import { ActionButton } from './components/atoms';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <ActionButton type="left" />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit

@@ -25,6 +25,7 @@ export const Checkbox: FC<CheckboxProps> = ({ label, checked, onChange }) => {
         onChange={handleChange}
         id="rememberMe"
       />
+      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
       <label className="checkbox" htmlFor="rememberMe" />
       <label className="checkbox-text" htmlFor="rememberMe">
         {label}

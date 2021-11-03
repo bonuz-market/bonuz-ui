@@ -1,7 +1,6 @@
 import { FC, PropsWithChildren, ReactNode } from 'react';
 
 import classnames from 'classnames';
-import styles from './info-block.module.css';
 
 type InfoBlockProps = {
   size?: 'small' | 'large';
@@ -16,11 +15,11 @@ export const InfoBlock: FC<InfoBlockPropsWithChildren> = ({
   children,
 }) => (
   <div
-    className={classnames(styles.container, {
-      [styles.large]: size === 'large',
+    className={classnames('info-block', {
+      'info-block--large': size === 'large',
     })}
   >
-    <div className={styles.column}>{children}</div>
-    <div className={styles.column}>{secondColumn}</div>
+    <div className="info-block__column">{children}</div>
+    <div className="info-block__column">{secondColumn}</div>
   </div>
 );
