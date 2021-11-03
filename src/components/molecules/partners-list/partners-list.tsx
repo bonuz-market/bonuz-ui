@@ -4,6 +4,10 @@ import Slider, { Settings } from 'react-slick';
 
 import { ActionButton } from '../../atoms';
 
+export type PartnersListProps = {
+  partners: Array<Array<string>>;
+};
+
 const settings: Settings = {
   className: 'partners',
   slidesToShow: 3,
@@ -22,10 +26,6 @@ const settings: Settings = {
       },
     },
   ],
-};
-
-export type PartnersListProps = {
-  partners: Array<Array<string>>;
 };
 
 export const PartnersList: FC<PartnersListProps> = ({ partners }) => (

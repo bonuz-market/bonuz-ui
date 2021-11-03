@@ -8,7 +8,7 @@ export const Footer: FC = () => (
       <div className="inner">
         <div className="row">
           <div className="col">
-            <img src="/assets/images/logo.svg" className="logo" />
+            <img src="/assets/images/logo.svg" className="logo" alt="" />
             <p>
               A space for creators to BONUZ your fans with exclusive content
             </p>
@@ -34,22 +34,22 @@ export const Footer: FC = () => (
           <div className="col">
             <div className="icon_list">
               <a href="#">
-                <img src="/assets/images/telegram.svg" />
+                <img src="/assets/images/telegram.svg" alt="" />
               </a>
               <a href="#">
-                <img src="/assets/images/twiter.svg" />
+                <img src="/assets/images/twiter.svg" alt="" />
               </a>
               <a href="#">
-                <img src="/assets/images/m.svg" />
+                <img src="/assets/images/m.svg" alt="" />
               </a>
               <a href="#">
-                <img src="/assets/images/message.svg" />
+                <img src="/assets/images/message.svg" alt="" />
               </a>
               <a href="#">
-                <img src="/assets/images/instaram.svg" />
+                <img src="/assets/images/instaram.svg" alt="" />
               </a>
               <a href="#">
-                <img src="/assets/images/facebook.svg" />
+                <img src="/assets/images/facebook.svg" alt="" />
               </a>
             </div>
             <a href="#" className="policy">
