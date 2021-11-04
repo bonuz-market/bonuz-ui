@@ -1,10 +1,28 @@
-import { FC, useState } from 'react';
-import classNames from 'classnames';
+import { FC, useEffect, useState } from 'react';
+import classnames from 'classnames';
 
 import { Navigation } from '../../atoms';
 
 export const Header: FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = (event: Event) => {
+      const window = event.currentTarget as Window;
+
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const handleChangeIsVisible = () => {
     setIsVisible((prevState) => !prevState);
@@ -12,7 +30,11 @@ export const Header: FC = () => {
 
   return (
     <header>
-      <div className="header-outer">
+      <div
+        className={classnames('header-outer', {
+          header__fixed: isScrolled,
+        })}
+      >
         <div className="header-inner">
           <div className="col">
             <button
@@ -38,7 +60,7 @@ export const Header: FC = () => {
 
           <div className="col">
             <div
-              className={classNames('menu', {
+              className={classnames('menu', {
                 active: isVisible,
               })}
             >
