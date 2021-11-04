@@ -5,6 +5,7 @@ type TextBlockProps = {
   type?: 'primary' | 'secondary';
   size?: 'small' | 'large';
   title?: string;
+  mobileColumn?: boolean;
 };
 export interface TextBlockPropsWithChildren
   extends PropsWithChildren<TextBlockProps> {}
@@ -13,6 +14,7 @@ export const TextBlock: FC<TextBlockPropsWithChildren> = ({
   type = 'primary',
   size = 'small',
   title,
+  mobileColumn,
   children,
 }) => (
   <div
@@ -20,6 +22,7 @@ export const TextBlock: FC<TextBlockPropsWithChildren> = ({
       'text-block--primary': type === 'primary',
       'text-block--secondary': type === 'secondary',
       'text-block--with-title': !!title,
+      'text-block--mobile-column': mobileColumn,
     })}
   >
     {title && <span className="text-block__title">{title}</span>}

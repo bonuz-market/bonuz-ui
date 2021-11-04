@@ -1202,6 +1202,7 @@ stroke: url(#MyGradient);
 
   .info-block__column {
     width: 100%;
+    justify-content: unset;
   }
 
   .input--mobile-column {
@@ -1228,6 +1229,16 @@ stroke: url(#MyGradient);
   .input--mobile-column > .button-fill > button::before,
   .input--mobile-column > .button-fill > button::after {
     border-radius: 8px;
+  }
+
+  .text-block--mobile-column {
+    padding-left: 0;
+    padding-top: 53px;
+  }
+
+  .text-block--mobile-column::before {
+    top: 0;
+    transform: none;
   }
 }
 

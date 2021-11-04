@@ -74,6 +74,7 @@ declare module '@bonuz/bonuz-ui' {
     type?: 'primary' | 'secondary';
     size?: 'small' | 'large';
     title?: string;
+    mobileColumn?: boolean;
   }>;
   type AdvantagesListProps = {
     items: {
