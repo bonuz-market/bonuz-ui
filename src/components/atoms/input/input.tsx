@@ -1,7 +1,5 @@
 import { ChangeEvent, FC, ReactNode, useState } from 'react';
 
-import styles from './input.module.css';
-
 export type InputProps = {
   label: string;
   placeholder?: string;
@@ -28,13 +26,13 @@ export const Input: FC<InputProps> = ({
   };
 
   return (
-    <div className={styles.container}>
+    <div className="input">
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
       <label>
-        <span className={styles.label}>{label}</span>
-        <span className={styles.inputWrapper}>
+        <span className="input__label">{label}</span>
+        <span className="input__wrapper">
           <input
-            className={styles.input}
+            className="input__control"
             type="text"
             placeholder={placeholder}
             value={defaultValue}

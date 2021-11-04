@@ -2356,6 +2356,10 @@ header {
   border-radius: 8px;
   top: 0px;
   left: 0px;
+
+  background-image: url('../assets/images/slide_overlay.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #six .slides-block {
@@ -2508,11 +2512,15 @@ header {
   z-index: 3;
   user-select: none;
 
+  background-image: url('../assets/images/post-mask.svg');
+
   transition: 0.2s ease-in-out;
 }
 
 .post .img .mask--gradient {
   opacity: 0;
+
+  background-image: url('../assets/images/post-mask--gradient.svg');
 }
 
 .post .img:hover .mask--gradient {
@@ -2564,10 +2572,13 @@ header {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.post .read-more img {
+.post .read-more div {
   width: 37px;
   height: 42px;
   margin-right: 15px;
+
+  background-image: url('../assets/images/read.svg');
+  background-repeat: no-repeat;
 }
 
 .post .read-more {
@@ -3620,4 +3631,212 @@ footer .policy:hover {
   font-family: "Anonymous Pro";
   font-size: 12px;
   margin-left: -10px;
+}
+
+.slick-arrow::before {
+  display: none;
+}
+
+.info-block {
+  display: flex;
+
+  padding: 20px 24px;
+
+  background-color: var(--light-bg);
+  background-image: url(../assets/images/bgbg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+}
+
+.info-block > .info-block__column > p {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 32px;
+
+  color: #FFFFFF;
+  font-family: Roboto Condensed;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.info-block--large {
+  padding: 24px 48px;
+}
+
+.info-block--large > .info-block__column > p {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.info-block__column {
+  display: flex;
+  align-items: center;
+
+  width: 50%;
+}
+
+.text-block {
+  display: flex;
+  align-items: center;
+  padding-left: 53px;
+  position: relative;
+}
+
+.text-block::before {
+  content: "";
+  position: absolute;
+  width: 37px;
+  height: 30px;
+  background-image: url(../assets/images/celeb_f.svg);
+  background-repeat: repeat-x;
+  background-size: contain;
+  top: 50%;
+  transform: translatey(-50%);
+  left: 0;
+  overflow: hidden;
+  animation: stripe-animation 4500s linear infinite both;
+}
+
+.text-block.text-block--secondary::before {
+  background-image: url(../assets/images/f.svg);
+}
+
+.text-block.text-block--with-title {
+  display: block;
+}
+
+.text-block.text-block--with-title::before {
+  display: none;
+}
+
+.text-block__text {
+  margin: 0;
+
+  font-family: Roboto Condensed;
+  font-size: 16px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+
+.text-block__text--large {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.text-block__title {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 104.4%;
+}
+
+.text-block.text-block--with-title .text-block__text {
+  opacity: 0.8;
+
+  font-size: 14px;
+  line-height: 26px;
+}
+
+@keyframes stripe-animation {
+  0% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 100000px 100%;
+  }
+}
+
+.action-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.action-button__prev,
+.action-button__next {
+  width: 75px;
+  height: 86px;
+
+  cursor: pointer;
+  transition: all 0.3s;
+  background-image: url('../assets/images/slider-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.action-button__prev {
+  transform: rotate(180deg);
+}
+
+.action-button__prev:hover {
+  transform: rotate(180deg) scale(1.02);
+  filter: brightness(0.9);
+}
+
+.action-button__next:hover {
+  transform: scale(1.02);
+  filter: brightness(0.9);
+}
+
+.input__label {
+  display: block;
+  margin-bottom: 14px;
+
+  color: #FFFFFF;
+  font-family: Farro;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 14px;
+}
+
+.input__control {
+  width: 100%;
+  padding-bottom: 10px;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+
+  color: #FFFFFF;
+  font-family: Roboto Condensed;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 26px;
+}
+
+.input__wrapper {
+  display: flex;
+
+  width: 100%;
+}
+
+.input__wrapper > button {
+  display: flex;
+  align-items: flex-start;
+
+  padding: 0;
+  margin-left: -30px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.input__wrapper > button > img {
+  width: 24px;
+}
+
+.input__wrapper > button:hover {
+  filter: hue-rotate(-40deg);
+  transform: scale(1.02);
 }

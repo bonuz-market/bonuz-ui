@@ -1194,6 +1194,15 @@ stroke: url(#MyGradient);
     position: relative;
     margin-top: 65px;
   }
+
+  .info-block {
+    flex-direction: column;
+    background-image: none;
+  }
+
+  .info-block__column {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1250px) {

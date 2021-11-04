@@ -1,7 +1,5 @@
 import { FC } from 'react';
-
 import classnames from 'classnames';
-import styles from './action-button.module.css';
 
 export type ActionButtonProps = {
   type: 'left' | 'right';
@@ -19,22 +17,20 @@ export const ActionButton: FC<ActionButtonProps> = ({
   onClick,
 }) => (
   <button
-    className={classnames(styles.container, {
+    className={classnames('action-button', {
       [className || '']: className,
     })}
     type="button"
     onClick={onClick}
     style={{ ...style }}
   >
-    <img
+    <div
       className={classnames({
         prev: type === 'left',
-        [styles.prev]: type === 'left',
+        'action-button__prev': type === 'left',
         next: type === 'right',
-        [styles.next]: type === 'right',
+        'action-button__next': type === 'right',
       })}
-      src="/assets/images/slider-arrow.svg"
-      alt=""
     />
   </button>
 );
