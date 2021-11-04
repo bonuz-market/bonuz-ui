@@ -41,10 +41,12 @@ declare module '@bonuz/bonuz-ui' {
     secondColumn?: ReactNode;
   }>;
   type InputProps = {
-    label: string;
+    label?: string;
     placeholder?: string;
     value?: string;
     actionButton?: ReactNode;
+    withDefaultActionButton?: boolean;
+    defaultActionButtonLabel?: string;
     onChange?: (value: string) => void;
   };
   type NewsCardProps = {
