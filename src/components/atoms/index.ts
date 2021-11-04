@@ -15,3 +15,5 @@ export { NewsCard } from './news-card';
 export { SubscribeToNews } from './subscribe-to-news';
 export { Title } from './title';
 export { Subtitle } from './subtitle';
+export { TabTitle, Tab } from './tab';
+export type { TabProps } from './tab';

@@ -1,4 +1,4 @@
-import { ReactNode, FC, PropsWithChildren } from 'react';
+import { ReactNode, FC, PropsWithChildren, ReactElement } from 'react';
 
 declare module '@bonuz/bonuz-ui' {
   type ButtonProps = PropsWithChildren<{
@@ -122,6 +122,19 @@ declare module '@bonuz/bonuz-ui' {
       position: string;
     }[];
   };
+  type TabProps = {
+    title: string;
+  };
+  type TabTitleProps = PropsWithChildren<{
+    title: string;
+    type?: 'primary' | 'secondary';
+    isActive: boolean;
+    onClick: () => void;
+  }>;
+  type TabsProps = {
+    type?: 'primary' | 'secondary';
+    children: ReactElement<TabProps>[] | ReactElement<TabProps>;
+  };
 
   export const Button: FC<ButtonProps>;
   export const ActionButton: FC<ActionButtonProps>;
@@ -149,4 +162,7 @@ declare module '@bonuz/bonuz-ui' {
   export const TeamList: FC<TeamListProps>;
   export const Title: FC;
   export const Subtitle: FC;
+  export const Tab: FC<TabProps>;
+  export const TabTitle: FC<TabTitleProps>;
+  export const Tabs: FC<TabsProps>;
 }
