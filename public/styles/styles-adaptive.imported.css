@@ -1202,7 +1202,6 @@ stroke: url(#MyGradient);
 
   .info-block__column {
     width: 100%;
-    justify-content: unset;
   }
 
   .input--mobile-column {
@@ -1233,13 +1232,21 @@ stroke: url(#MyGradient);
 
   .text-block--mobile-column {
     padding-left: 0;
-    padding-top: 53px;
+    padding-top: 40px;
   }
 
   .text-block--mobile-column::before {
     top: 0;
     transform: none;
   }
+
+  .title-component {
+    margin-bottom: 16px;
+
+    font-size: 24px;
+  }
+
+  .subtitle {}
 }
 
 @media screen and (max-width: 1250px) {

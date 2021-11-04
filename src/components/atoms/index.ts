@@ -13,3 +13,5 @@ export { Checkbox } from './checkbox';
 export { StatElement } from './stat-element';
 export { NewsCard } from './news-card';
 export { SubscribeToNews } from './subscribe-to-news';
+export { Title } from './title';
+export { Subtitle } from './subtitle';
