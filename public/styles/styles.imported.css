@@ -3840,6 +3840,10 @@ footer .policy:hover {
   transform: scale(1.02);
 }
 
+.input {
+  width: 100%;
+}
+
 .input--action-btn {
   display: flex;
   height: 50px;
@@ -3849,7 +3853,6 @@ footer .policy:hover {
   display: flex;
 
   width: 100%;
-  max-width: 290px;
 }
 
 .input--action-btn .input__control {
@@ -3870,6 +3873,7 @@ footer .policy:hover {
 
 .input--action-btn > .button-fill {
   display: flex;
+  flex-shrink: 0;
 }
 
 .input--action-btn > .button-fill > button,
