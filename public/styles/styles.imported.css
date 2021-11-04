@@ -1847,8 +1847,7 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 219px;
-  height: 56px;
+  padding: 20px 48px;
   border: none;
   cursor: pointer;
   border-radius: 8px;
@@ -3839,4 +3838,40 @@ footer .policy:hover {
 .input__wrapper > button:hover {
   filter: hue-rotate(-40deg);
   transform: scale(1.02);
+}
+
+.input--action-btn {
+  display: flex;
+  height: 50px;
+}
+
+.input--action-btn > label {
+  display: flex;
+}
+
+.input--action-btn .input__control {
+  width: 290px;
+  padding: 16px;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+
+  transition: 0.3s ease;
+}
+
+.input--action-btn .input__control:focus {
+  background-color: #19094B;
+}
+
+.input--action-btn > .button-fill {
+  display: flex;
+}
+
+.input--action-btn > .button-fill > button,
+.input--action-btn > .button-fill > button::before,
+.input--action-btn > .button-fill > button::after {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }

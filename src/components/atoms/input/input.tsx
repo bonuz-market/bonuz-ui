@@ -1,10 +1,14 @@
 import { ChangeEvent, FC, ReactNode, useState } from 'react';
+import classnames from 'classnames';
+import { Button } from '../button';
 
 export type InputProps = {
-  label: string;
+  label?: string;
   placeholder?: string;
   value?: string;
   actionButton?: ReactNode;
+  withDefaultActionButton?: boolean;
+  defaultActionButtonLabel?: string;
   onChange?: (value: string) => void;
 };
 
@@ -13,6 +17,8 @@ export const Input: FC<InputProps> = ({
   placeholder,
   value,
   actionButton,
+  withDefaultActionButton,
+  defaultActionButtonLabel,
   onChange,
 }) => {
   const [defaultValue, setValue] = useState<string>(value || '');
@@ -26,10 +32,16 @@ export const Input: FC<InputProps> = ({
   };
 
   return (
-    <div className="input">
+    <div
+      className={classnames('input', {
+        'input--action-btn': withDefaultActionButton,
+      })}
+    >
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
       <label>
-        <span className="input__label">{label}</span>
+        {label && !withDefaultActionButton && (
+          <span className="input__label">{label}</span>
+        )}
         <span className="input__wrapper">
           <input
             className="input__control"
@@ -41,6 +53,7 @@ export const Input: FC<InputProps> = ({
           {actionButton}
         </span>
       </label>
+      {withDefaultActionButton && <Button>{defaultActionButtonLabel}</Button>}
     </div>
   );
 };
