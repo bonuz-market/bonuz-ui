@@ -25,6 +25,13 @@ export const Header: FC = () => {
   }, []);
 
   const handleChangeIsVisible = () => {
+    const body = document.querySelector('body');
+    if (!isVisible) {
+      body?.classList.add('noscroll');
+    } else {
+      body?.classList.remove('noscroll');
+    }
+
     setIsVisible((prevState) => !prevState);
   };
 

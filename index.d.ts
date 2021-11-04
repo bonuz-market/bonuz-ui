@@ -148,4 +148,5 @@ declare module '@bonuz/bonuz-ui' {
   export const RoadMapList: FC<RoadMapListProps>;
   export const TeamList: FC<TeamListProps>;
   export const Title: FC;
+  export const Subtitle: FC;
 }
