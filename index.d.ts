@@ -47,6 +47,7 @@ declare module '@bonuz/bonuz-ui' {
     actionButton?: ReactNode;
     withDefaultActionButton?: boolean;
     defaultActionButtonLabel?: string;
+    mobileColumn?: boolean;
     onChange?: (value: string) => void;
   };
   type NewsCardProps = {

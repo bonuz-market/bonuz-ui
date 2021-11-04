@@ -9,6 +9,7 @@ export type InputProps = {
   actionButton?: ReactNode;
   withDefaultActionButton?: boolean;
   defaultActionButtonLabel?: string;
+  mobileColumn?: boolean;
   onChange?: (value: string) => void;
 };
 
@@ -19,6 +20,7 @@ export const Input: FC<InputProps> = ({
   actionButton,
   withDefaultActionButton,
   defaultActionButtonLabel,
+  mobileColumn,
   onChange,
 }) => {
   const [defaultValue, setValue] = useState<string>(value || '');
@@ -35,6 +37,7 @@ export const Input: FC<InputProps> = ({
     <div
       className={classnames('input', {
         'input--action-btn': withDefaultActionButton,
+        'input--mobile-column': mobileColumn,
       })}
     >
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}

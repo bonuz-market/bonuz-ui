@@ -1203,6 +1203,30 @@ stroke: url(#MyGradient);
   .info-block__column {
     width: 100%;
   }
+
+  .input--mobile-column {
+    flex-direction: column;
+  }
+
+  .input--mobile-column > label {
+    max-width: none;
+  }
+
+  .input--mobile-column .input__control {
+    margin-bottom: 14px;
+
+    border-radius: 8px;
+  }
+
+  .input--mobile-column > .button-fill > button {
+    width: 100%;
+  }
+
+  .input--mobile-column > .button-fill > button,
+  .input--mobile-column > .button-fill > button::before,
+  .input--mobile-column > .button-fill > button::after {
+    border-radius: 8px;
+  }
 }
 
 @media screen and (max-width: 1250px) {

@@ -3847,10 +3847,13 @@ footer .policy:hover {
 
 .input--action-btn > label {
   display: flex;
+
+  width: 100%;
+  max-width: 290px;
 }
 
 .input--action-btn .input__control {
-  width: 290px;
+  width: 100%;
   padding: 16px;
 
   background-color: rgba(255, 255, 255, 0.3);
