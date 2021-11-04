@@ -1206,6 +1206,8 @@ stroke: url(#MyGradient);
 
   .input--mobile-column {
     flex-direction: column;
+
+    height: auto;
   }
 
   .input--mobile-column > label {
