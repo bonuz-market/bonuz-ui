@@ -1240,6 +1240,10 @@ stroke: url(#MyGradient);
     background-image: none;
   }
 
+  .info-block--large {
+    padding: 32px;
+  }
+
   .info-block__column {
     width: 100%;
   }
