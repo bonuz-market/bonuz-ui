@@ -103,48 +103,40 @@
   ],
   "howItWorks": [
     {
-      "img": "/assets/images/i1-1.svg",
+      "img": "/assets/images/i1.svg",
       "title": "Buy BONUZ token",
       "circleOffset": -452.389
     },
     {
-      "img": "/assets/images/i2-1.svg",
+      "img": "/assets/images/i2.svg",
       "title": "Buy your favorite celebrity token",
       "circleOffset": -339.292
     },
     {
-      "img": "/assets/images/i3-1.svg",
+      "img": "/assets/images/i3.svg",
       "title": "Explore Celebrities and their tokens",
       "circleOffset": -226.195
     },
     {
-      "img": "/assets/images/i4-1.svg",
+      "img": "/assets/images/i4.svg",
       "title": "Trade tokens",
       "circleOffset": -113.097
     },
     {
-      "img": "/assets/images/i5-1.svg",
+      "img": "/assets/images/i5.svg",
       "title": "Receive exclusive content, buy exclusive celebrities NFTs, vote, interact, enjoy!",
       "circleOffset": 0
     }
   ],
   "partners": [
-    [
-      "/assets/images/pa2.svg",
-      "/assets/images/pa3.svg"
-    ],
-    [
-      "/assets/images/pa5.svg",
-      "/assets/images/pa1.svg"
-    ],
-    [
-      "/assets/images/pa1.svg",
-      "/assets/images/pa3.svg"
-    ],
-    [
-      "/assets/images/pa5.svg",
-      "/assets/images/pa6.svg"
-    ]
+    "/assets/images/pa2.svg",
+    "/assets/images/pa3.svg",
+    "/assets/images/pa5.svg",
+    "/assets/images/pa1.svg",
+    "/assets/images/pa1.svg",
+    "/assets/images/pa3.svg",
+    "/assets/images/pa5.svg",
+    "/assets/images/pa6.svg"
   ],
   "advantages": [
     {

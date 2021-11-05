@@ -29,6 +29,7 @@ const settings: Settings = {
     {
       breakpoint: 1050,
       settings: {
+        arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         variableWidth: true,

@@ -806,72 +806,71 @@ header {
   margin-bottom: 25px;
 }
 
-.celebs .celebs-list {
-  max-width: 1010px;
-  display: flex;
-  transform: translateX(-245px);
-  z-index: 8;
-  position: relative;
-  margin-bottom: 50px;
-}
+/*.celebs .celebs-list {*/
+/*  max-width: 1010px;*/
+/*  display: flex;*/
+/*  transform: translateX(-245px);*/
+/*  z-index: 8;*/
+/*  position: relative;*/
+/*  margin-bottom: 50px;*/
+/*}*/
 
-.celebs .celebs-list .celeb {
-  background: #2f1385;
-  border-radius: 16px;
-  width: 227px;
-  height: 82px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-right: 15px;
-  position: relative;
-}
+/*.celebs .celebs-list .celeb {*/
+/*  background: #2f1385;*/
+/*  border-radius: 16px;*/
+/*  width: 227px;*/
+/*  height: 82px;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: flex-start;*/
+/*  position: relative;*/
+/*}*/
 
-.celebs .celebs-list .celeb:hover:before {
-  opacity: 1;
-}
+/*.celebs .celebs-list .celeb:hover:before {*/
+/*  opacity: 1;*/
+/*}*/
 
-.celebs .celebs-list .celeb:before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  bottom: -1px;
-  left: -1px;
-  right: -1px;
-  background: linear-gradient(31deg, var(--gradient-color-2), var(--gradient-color-4));
-  border-radius: 17px;
-  z-index: -1;
-  opacity: 0;
-  transition: 0.3s;
-}
+/*.celebs .celebs-list .celeb:before {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  top: -1px;*/
+/*  bottom: -1px;*/
+/*  left: -1px;*/
+/*  right: -1px;*/
+/*  background: linear-gradient(31deg, var(--gradient-color-2), var(--gradient-color-4));*/
+/*  border-radius: 17px;*/
+/*  z-index: -1;*/
+/*  opacity: 0;*/
+/*  transition: 0.3s;*/
+/*}*/
 
-.celebs .celebs-list .celeb img {
-  width: 48px;
-  height: 48px;
-  border-radius: 48px;
-  margin-right: 15px;
-  margin-left: 25px;
-}
+/*.celebs .celebs-list .celeb img {*/
+/*  width: 48px;*/
+/*  height: 48px;*/
+/*  border-radius: 48px;*/
+/*  margin-right: 15px;*/
+/*  margin-left: 25px;*/
+/*}*/
 
-.celebs .celebs-list .celeb h3 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 16px;
-  color: #ffffff;
-}
-.celebs .celebs-list .celeb p {
-  margin-top: 5px;
-  margin-bottom: 0px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 14px;
-  color: #ffffff;
-  opacity: 0.3;
-}
+/*.celebs .celebs-list .celeb h3 {*/
+/*  margin-top: 0px;*/
+/*  margin-bottom: 0px;*/
+/*  font-style: normal;*/
+/*  font-weight: bold;*/
+/*  font-size: 16px;*/
+/*  line-height: 16px;*/
+/*  color: #ffffff;*/
+/*}*/
+/*.celebs .celebs-list .celeb p {*/
+/*  margin-top: 5px;*/
+/*  margin-bottom: 0px;*/
+/*  font-style: normal;*/
+/*  font-weight: bold;*/
+/*  font-size: 14px;*/
+/*  line-height: 14px;*/
+/*  color: #ffffff;*/
+/*  opacity: 0.3;*/
+/*}*/
 
 .celebs-blocks {
   display: flex;
@@ -925,6 +924,73 @@ header {
   font-size: 16px;
   line-height: 26px;
   color: #ffffff;
+}
+
+#first .celebs-list {
+  max-width: 1010px;
+  transform: translateX(-245px);
+}
+
+.celebs .celeb {
+  display: flex;
+  align-items: center;
+  height: 82px;
+  padding: 17px 24px;
+  margin: 2px 8px;
+  box-sizing: border-box;
+  background: #281981;
+  border-radius: 16px;
+  position: relative;
+}
+
+.celebs .celebs-list .celeb:hover:before {
+  opacity: 1;
+}
+
+.celebs .celebs-list .celeb:before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  background: linear-gradient(31deg, var(--gradient-color-2), var(--gradient-color-4));
+  border-radius: 17px;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.celebs .celeb img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 17px;
+  display: block;
+}
+
+.celebs .celeb h3 {
+  margin: 0;
+
+  color: #FFFFFF;
+  font-family: Farro;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 16px;
+}
+
+.celebs .celeb p {
+  margin: 0;
+
+  opacity: 0.3;
+
+  color: #FFFFFF;
+  font-family: Roboto Condensed;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 26px;
 }
 
 .first-form {
@@ -2085,12 +2151,6 @@ header {
   animation: stripe-animation 4500s linear infinite both;
 }
 
-@media screen and (max-width: 1050px) {
-  #four .block::before {
-    display: none;
-  }
-}
-
 #four .block:last-child::before {
   display: none;
 }
@@ -2529,8 +2589,8 @@ header {
 
 .post .img .post-image {
   display: block;
-  width: 100%;
-  max-width: 210px;
+  width: 288px;
+  max-width: 288px;
   height: auto;
   object-fit: cover;
   position: relative;
@@ -2539,8 +2599,8 @@ header {
 }
 
 .post .img .mask {
-  width: 220px;
-  height: 180px;
+  width: 295px;
+  height: 242px;
   position: absolute;
   z-index: 3;
   user-select: none;

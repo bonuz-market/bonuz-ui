@@ -5,7 +5,7 @@ import Slider, { Settings } from 'react-slick';
 import { ActionButton } from '../../atoms';
 
 export type PartnersListProps = {
-  partners: Array<Array<string>>;
+  partners: Array<string>;
 };
 
 const settings: Settings = {
@@ -14,15 +14,22 @@ const settings: Settings = {
   speed: 800,
   autoplay: true,
   autoplaySpeed: 2000,
+  rows: 2,
   pauseOnHover: false,
   prevArrow: <ActionButton type="left" />,
   nextArrow: <ActionButton type="right" />,
+  customPaging(index: number): JSX.Element {
+    return <button type="button" aria-label={`Go to ${index + 1} slide`} />;
+  },
   responsive: [
     {
       breakpoint: 1050,
       settings: {
+        dots: true,
+        arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
+        rows: 1,
       },
     },
   ],
@@ -34,10 +41,7 @@ export const PartnersList: FC<PartnersListProps> = ({ partners }) => (
       {partners.map((item, index) => (
         <div key={`${item}-${index}`} className="item">
           <div className="block">
-            <img src={item[0]} alt="" />
-          </div>
-          <div className="block">
-            <img src={item[1]} alt="" />
+            <img src={item} alt="" />
           </div>
         </div>
       ))}
