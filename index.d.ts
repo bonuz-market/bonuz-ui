@@ -4,6 +4,7 @@ declare module '@bonuz/bonuz-ui' {
   type ButtonProps = PropsWithChildren<{
     outline?: boolean;
     disabled?: boolean;
+    secondary?: boolean;
     type?: 'button' | 'submit' | 'reset';
     onClick?: () => void;
   }>;

@@ -761,12 +761,17 @@ header {
   transition: 0.6s;
 }
 
-.button-stroke:hover:after {
+.button-stroke:hover:not([data-disabled="true"]):after {
   opacity: 1;
 }
 
-.button-stroke:hover:before {
+.button-stroke:hover:not([data-disabled="true"]):before {
   opacity: 0;
+}
+
+.button-stroke button:disabled {
+  opacity: 0.6;
+  cursor: default;
 }
 
 .button-stroke button {
@@ -1880,7 +1885,8 @@ header {
   border-radius: 8px;
 }
 
-.button-fill button span {
+.button-fill button span,
+.button button span {
   font-family: Farro;
   font-style: normal;
   font-weight: 500;
@@ -1893,12 +1899,41 @@ header {
   z-index: 3;
 }
 
-.button-fill:hover button:after {
+.button-fill button:hover:not(:disabled):after {
   opacity: 1;
 }
 
-.button-fill:hover button:before {
+.button-fill button:hover:not(:disabled):before {
   opacity: 0;
+}
+
+.button-fill button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.button button {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 48px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 0.2s ease;
+}
+
+.button button:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button button:disabled {
+  opacity: 0.6;
+  cursor: default;
 }
 
 #three .button-fill {
