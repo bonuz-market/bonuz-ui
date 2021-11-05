@@ -1029,17 +1029,6 @@
     width: 210px;
   }
 
-  #nine .tabs {
-    margin-top: -10px;
-    margin-bottom: 20px;
-  }
-
-  #nine .tabs .tab {
-    padding: 3px 21px;
-    width: max-content;
-    height: 40px;
-  }
-
   #ten .row:nth-child(1) h2 {
     font-size: 24px;
   }
