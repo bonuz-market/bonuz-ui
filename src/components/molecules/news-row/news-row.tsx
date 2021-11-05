@@ -2,7 +2,7 @@
 import { FC } from 'react';
 import Slider, { Settings } from 'react-slick';
 
-import { NewsCard } from '../../atoms';
+import { ActionButton, NewsCard } from '../../atoms';
 
 export type NewsRowProps = {
   news: {
@@ -16,19 +16,16 @@ export type NewsRowProps = {
 const settings: Settings = {
   className: 'blogs',
   dots: true,
-  arrows: false,
   infinite: false,
   speed: 600,
-  slidesToShow: 1,
+  slidesToShow: 3,
   slidesToScroll: 1,
-  customPaging(index: number): JSX.Element {
-    return <button type="button" aria-label={`Go to ${index + 1} slide`} />;
-  },
+  prevArrow: <ActionButton type="left" />,
+  nextArrow: <ActionButton type="right" />,
+  // customPaging(index: number): JSX.Element {
+  //   return <button type="button" aria-label={`Go to ${index + 1} slide`} />;
+  // },
   responsive: [
-    {
-      breakpoint: 4000,
-      settings: 'unslick',
-    },
     {
       breakpoint: 1050,
       settings: {

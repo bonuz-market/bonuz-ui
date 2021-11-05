@@ -2,41 +2,83 @@
   "news": [
     {
       "created": "27 September 2021",
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/post_image.png",
+      "img": "/assets/images/post_image.png",
       "title": "Bonuz News",
       "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
     },
     {
       "created": "27 September 2021",
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/post_image.png",
+      "img": "/assets/images/post_image.png",
       "title": "Bonuz News",
       "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
     },
     {
       "created": "27 September 2021",
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/post_image.png",
+      "img": "/assets/images/post_image.png",
+      "title": "Bonuz News",
+      "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+    },
+    {
+      "created": "27 September 2021",
+      "img": "/assets/images/post_image.png",
+      "title": "Bonuz News",
+      "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+    },
+    {
+      "created": "27 September 2021",
+      "img": "/assets/images/post_image.png",
       "title": "Bonuz News",
       "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
     }
   ],
   "celebrities": [
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Max Miller",
       "country": "England"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Max Miller",
       "country": "England"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Max Miller",
       "country": "England"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
+      "name": "Max Miller",
+      "country": "England"
+    },
+    {
+      "img": "/assets/images/celeb_pic.png",
+      "name": "Max Miller",
+      "country": "England"
+    },
+    {
+      "img": "/assets/images/celeb_pic.png",
+      "name": "Max Miller",
+      "country": "England"
+    },
+    {
+      "img": "/assets/images/celeb_pic.png",
+      "name": "Max Miller",
+      "country": "England"
+    },
+    {
+      "img": "/assets/images/celeb_pic.png",
+      "name": "Max Miller",
+      "country": "England"
+    },
+    {
+      "img": "/assets/images/celeb_pic.png",
+      "name": "Max Miller",
+      "country": "England"
+    },
+    {
+      "img": "/assets/images/celeb_pic.png",
       "name": "Max Miller",
       "country": "England"
     }
@@ -61,156 +103,156 @@
   ],
   "howItWorks": [
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/i1-1.svg",
+      "img": "/assets/images/i1-1.svg",
       "title": "Buy BONUZ token",
       "circleOffset": -452.389
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/i2-1.svg",
+      "img": "/assets/images/i2-1.svg",
       "title": "Buy your favorite celebrity token",
       "circleOffset": -339.292
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/i3-1.svg",
+      "img": "/assets/images/i3-1.svg",
       "title": "Explore Celebrities and their tokens",
       "circleOffset": -226.195
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/i4-1.svg",
+      "img": "/assets/images/i4-1.svg",
       "title": "Trade tokens",
       "circleOffset": -113.097
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/i5-1.svg",
+      "img": "/assets/images/i5-1.svg",
       "title": "Receive exclusive content, buy exclusive celebrities NFTs, vote, interact, enjoy!",
       "circleOffset": 0
     }
   ],
   "partners": [
     [
-      "https://bonuz.wp4.host/wp-content/uploads/2021/09/pa2.svg",
-      "https://bonuz.wp4.host/wp-content/uploads/2021/09/pa3.svg"
+      "/assets/images/pa2.svg",
+      "/assets/images/pa3.svg"
     ],
     [
-      "https://bonuz.wp4.host/wp-content/uploads/2021/09/pa5.svg",
-      "https://bonuz.wp4.host/wp-content/uploads/2021/09/pa1.svg"
+      "/assets/images/pa5.svg",
+      "/assets/images/pa1.svg"
     ],
     [
-      "https://bonuz.wp4.host/wp-content/uploads/2021/09/pa1.svg",
-      "https://bonuz.wp4.host/wp-content/uploads/2021/09/pa3.svg"
+      "/assets/images/pa1.svg",
+      "/assets/images/pa3.svg"
     ],
     [
-      "https://bonuz.wp4.host/wp-content/uploads/2021/09/pa5.svg",
-      "https://bonuz.wp4.host/wp-content/uploads/2021/09/pa6.svg"
+      "/assets/images/pa5.svg",
+      "/assets/images/pa6.svg"
     ]
   ],
   "advantages": [
     {
       "title": "Celebrities",
       "description": "Celebrities can establish a new channel to communicate with and honor their hardcore fans, all while financilly benefiting.",
-      "icon": "https://bonuz.wp4.host/wp-content/uploads/2021/09/block3.svg",
-      "iconBlur": "https://bonuz.wp4.host/wp-content/uploads/2021/09/block3.svg"
+      "icon": "/assets/images/block3.svg",
+      "iconBlur": "/assets/images/block3.svg"
     },
     {
       "title": "Celebrities",
       "description": "Celebrities can establish a new channel to communicate with and honor their hardcore fans, all while financilly benefiting.",
-      "icon": "https://bonuz.wp4.host/wp-content/uploads/2021/09/block2.svg",
-      "iconBlur": "https://bonuz.wp4.host/wp-content/uploads/2021/09/block2.svg"
+      "icon": "/assets/images/block2.svg",
+      "iconBlur": "/assets/images/block2.svg"
     },
     {
       "title": "Celebrities",
       "description": "Celebrities can establish a new channel to communicate with and honor their hardcore fans, all while financilly benefiting.",
-      "icon": "https://bonuz.wp4.host/wp-content/uploads/2021/09/block1.svg",
-      "iconBlur": "https://bonuz.wp4.host/wp-content/uploads/2021/09/block1.svg"
+      "icon": "/assets/images/block1.svg",
+      "iconBlur": "/assets/images/block1.svg"
     }
   ],
   "team": [
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_1"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_1"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_1"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_1"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_1"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_2"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_2"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_2"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_2"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_2"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_3"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_3"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_3"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_3"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/celeb_pic.png",
+      "img": "/assets/images/celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_3"
@@ -218,47 +260,47 @@
   ],
   "statistic": [
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem3.svg",
+      "img": "/assets/images/gem3.svg",
       "title": "20%",
       "description": "Ecosystem Fund"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem1.svg",
+      "img": "/assets/images/gem1.svg",
       "title": "25%",
       "description": "Marketing"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem2.svg",
+      "img": "/assets/images/gem2.svg",
       "title": "14%",
       "description": "Seed & Private Rounds"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem4.svg",
+      "img": "/assets/images/gem4.svg",
       "title": "6%",
       "description": "Public Rounds"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem4.svg",
+      "img": "/assets/images/gem4.svg",
       "title": "10%",
       "description": "Team"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem2.svg",
+      "img": "/assets/images/gem2.svg",
       "title": "10%",
       "description": "Advisiors"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem3.svg",
+      "img": "/assets/images/gem3.svg",
       "title": "2%",
       "description": "test"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem1.svg",
+      "img": "/assets/images/gem1.svg",
       "title": "1%",
       "description": "test"
     },
     {
-      "img": "https://bonuz.wp4.host/wp-content/uploads/2021/09/gem4.svg",
+      "img": "/assets/images/gem4.svg",
       "title": "3%",
       "description": "ddff"
     }

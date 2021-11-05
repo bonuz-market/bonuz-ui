@@ -2,7 +2,7 @@
 import { FC } from 'react';
 import Slider, { Settings } from 'react-slick';
 
-import { CelebritiesItem } from '../../atoms';
+import { ActionButton, CelebritiesItem } from '../../atoms';
 
 export type CelebritiesListProps = {
   celebrities: {
@@ -15,29 +15,29 @@ export type CelebritiesListProps = {
 const settings: Settings = {
   className: 'celebs-list',
   dots: false,
-  arrows: false,
+  arrows: true,
   infinite: true,
   speed: 300,
-  slidesToShow: 1,
+  slidesToShow: 4,
   slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  prevArrow: <ActionButton type="left" />,
+  nextArrow: <ActionButton type="right" />,
   responsive: [
     {
-      breakpoint: 4000,
-      settings: 'unslick',
-    },
-    {
-      breakpoint: 2000,
-      settings: 'unslick',
-    },
-    {
-      breakpoint: 830,
-      settings: 'unslick',
+      breakpoint: 1050,
+      settings: {
+        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
     },
     {
       breakpoint: 820,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
+        arrows: false,
+        slidesToShow: 1,
       },
     },
   ],

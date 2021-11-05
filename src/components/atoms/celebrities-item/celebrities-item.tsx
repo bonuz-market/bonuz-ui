@@ -12,7 +12,7 @@ export const CelebritiesItem: FC<CelebritiesItemProps> = ({
   country,
 }) => (
   // eslint-disable-next-line jsx-a11y/anchor-is-valid
-  <a className="celeb" href="#">
+  <a className="celeb" href="#" draggable={false}>
     <img src={img} alt="" />
     <div>
       <h3>{name}</h3>
