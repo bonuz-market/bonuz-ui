@@ -108,7 +108,7 @@ declare module '@bonuz/bonuz-ui' {
     }[];
   };
   type PartnersListProps = {
-    partners: Array<Array<string>>;
+    partners: Array<string>;
   };
   type RoadMapListProps = {
     items: {
