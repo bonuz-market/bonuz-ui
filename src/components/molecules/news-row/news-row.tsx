@@ -15,21 +15,22 @@ export type NewsRowProps = {
 
 const settings: Settings = {
   className: 'blogs',
-  dots: true,
+  dots: false,
   infinite: false,
   speed: 600,
   slidesToShow: 3,
   slidesToScroll: 1,
   prevArrow: <ActionButton type="left" />,
   nextArrow: <ActionButton type="right" />,
-  // customPaging(index: number): JSX.Element {
-  //   return <button type="button" aria-label={`Go to ${index + 1} slide`} />;
-  // },
+  customPaging(index: number): JSX.Element {
+    return <button type="button" aria-label={`Go to ${index + 1} slide`} />;
+  },
   responsive: [
     {
       breakpoint: 1050,
       settings: {
         arrows: false,
+        dots: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         variableWidth: true,
