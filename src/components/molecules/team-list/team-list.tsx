@@ -13,6 +13,7 @@ export type TeamListProps = {
 };
 
 const settings: Settings = {
+  infinite: false,
   className: 'team',
   slidesToShow: 4,
   prevArrow: <ActionButton type="left" />,
