@@ -450,6 +450,14 @@
     justify-content: center;
   }
 
+  [dir="rtl"] #four .block:first-child::before {
+    display: block;
+  }
+
+  #four .slick-slide:last-child .block::before {
+    display: none;
+  }
+
   #four .slick-list {
     padding: 20px 0;
     max-height: 230px;
@@ -1305,7 +1313,7 @@ stroke: url(#MyGradient);
   }
 
   #four .slick-slide:last-child .block::before {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -1321,11 +1329,11 @@ stroke: url(#MyGradient);
 
 @media (min-width: 820px) and (max-width: 1050px) {
   .celebs .slick-slider .action-button__prev {
-    right: -260px;
+    right: 20px !important;
   }
 
   .celebs .slick-slider .action-button__next {
-    left: -70px;
+    left: 20px !important;
   }
 }
 

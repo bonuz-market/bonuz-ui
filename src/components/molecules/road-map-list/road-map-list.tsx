@@ -3,6 +3,7 @@ import { FC } from 'react';
 import Slider, { Settings } from 'react-slick';
 
 import { ActionButton, RoadMapItem } from '../../atoms';
+import mockData from '../../../mock/mock-data.json';
 
 export type RoadMapListProps = {
   items: {
@@ -17,6 +18,7 @@ const settings: Settings = {
   speed: 600,
   prevArrow: <ActionButton type="left" />,
   nextArrow: <ActionButton type="right" />,
+  rtl: mockData.rtlLanguages.includes(localStorage.getItem('i18nextLng') || ''),
   customPaging(index: number): JSX.Element {
     return <button type="button" aria-label={`Go to ${index + 1} slide`} />;
   },

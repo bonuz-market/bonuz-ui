@@ -3,6 +3,7 @@ import { FC } from 'react';
 import Slider, { Settings } from 'react-slick';
 
 import { ActionButton, NewsCard } from '../../atoms';
+import mockData from '../../../mock/mock-data.json';
 
 export type NewsRowProps = {
   news: {
@@ -22,6 +23,7 @@ const settings: Settings = {
   slidesToScroll: 1,
   prevArrow: <ActionButton type="left" />,
   nextArrow: <ActionButton type="right" />,
+  rtl: mockData.rtlLanguages.includes(localStorage.getItem('i18nextLng') || ''),
   customPaging(index: number): JSX.Element {
     return <button type="button" aria-label={`Go to ${index + 1} slide`} />;
   },

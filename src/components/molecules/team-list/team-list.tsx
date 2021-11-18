@@ -3,6 +3,7 @@ import { FC } from 'react';
 import Slider, { Settings } from 'react-slick';
 
 import { ActionButton, TeamCard } from '../../atoms';
+import mockData from '../../../mock/mock-data.json';
 
 export type TeamListProps = {
   items: {
@@ -19,6 +20,7 @@ const settings: Settings = {
   prevArrow: <ActionButton type="left" />,
   nextArrow: <ActionButton type="right" />,
   speed: 600,
+  rtl: mockData.rtlLanguages.includes(localStorage.getItem('i18nextLng') || ''),
   customPaging(index: number): JSX.Element {
     return <button type="button" aria-label={`Go to ${index + 1} slide`} />;
   },

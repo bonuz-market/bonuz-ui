@@ -3,6 +3,7 @@ import { FC } from 'react';
 import Slider, { Settings } from 'react-slick';
 
 import { HowItWorksItem } from '../../atoms';
+import mockData from '../../../mock/mock-data.json';
 
 export type HowItWorksListProps = {
   items: {
@@ -20,6 +21,7 @@ const settings: Settings = {
   speed: 300,
   slidesToShow: 1,
   slidesToScroll: 1,
+  rtl: mockData.rtlLanguages.includes(localStorage.getItem('i18nextLng') || ''),
   customPaging(index: number): JSX.Element {
     return <button type="button" aria-label={`Go to ${index + 1} slide`} />;
   },

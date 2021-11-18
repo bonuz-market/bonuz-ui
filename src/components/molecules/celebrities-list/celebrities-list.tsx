@@ -3,6 +3,7 @@ import { FC } from 'react';
 import Slider, { Settings } from 'react-slick';
 
 import { ActionButton, CelebritiesItem } from '../../atoms';
+import mockData from '../../../mock/mock-data.json';
 
 export type CelebritiesListProps = {
   celebrities: {

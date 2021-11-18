@@ -3,6 +3,7 @@ import { FC } from 'react';
 import Slider, { Settings } from 'react-slick';
 
 import { ActionButton } from '../../atoms';
+import mockData from '../../../mock/mock-data.json';
 
 export type PartnersListProps = {
   partners: Array<string>;
