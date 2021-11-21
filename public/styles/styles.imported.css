@@ -3500,6 +3500,11 @@ footer .button-group {
   margin-bottom: 60px;
 }
 
+[dir="rtl"] footer .button-group {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
 footer .row .col:nth-child(1) p {
   font-family: Roboto Condensed;
   font-style: normal;
@@ -3531,7 +3536,7 @@ footer .row .col:nth-child(2) p {
 
 footer .row .col:nth-child(2) ul {
   list-style: none;
-  padding-left: 0px;
+  padding: 0;
   height: 120px;
   display: flex;
   flex-direction: column;
@@ -3550,6 +3555,11 @@ footer .row .col:nth-child(2) ul a {
   padding: 12px 0px;
   display: block;
   margin-right: 80px;
+}
+
+[dir="rtl"] footer .row .col:nth-child(2) ul a {
+  margin-right: 0;
+  margin-left: 80px;
 }
 
 footer .row .col:nth-child(2) .form p {
@@ -3580,7 +3590,6 @@ footer .form input {
   border-width: 0px 0px 1px 0px;
   width: 515px;
   padding-bottom: 10px;
-  padding-right: 40px;
 }
 
 footer form {
@@ -3812,10 +3821,6 @@ footer .policy:hover {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
-}
-
-[dir="rtl"] .info-block {
-  flex-direction: row-reverse;
 }
 
 .info-block > .info-block__column > p {
