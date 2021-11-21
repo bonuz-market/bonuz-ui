@@ -11,7 +11,6 @@ const Template: Story<CelebritiesItemProps> = (args) => (
   <div className="celebs">
     <div className="celebs-list">
       <CelebritiesItem {...args} />
-      <CelebritiesItem {...args} />
     </div>
   </div>
 );

@@ -948,7 +948,7 @@ header {
 
 #first .celebs-list {
   max-width: 1010px;
-  transform: translateX(-245px);
+  transform: translateX(245px);
 }
 
 .celebs .celeb {
@@ -2684,6 +2684,7 @@ header {
   position: relative;
   z-index: 2;
   margin-right: 20px;
+  width: 290px;
 }
 
 .post .img {
@@ -2750,15 +2751,29 @@ header {
 }
 
 [dir="rtl"] .post .read-more {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .slick-slide .post .read-more {
   justify-content: flex-end;
 }
 
 [dir="rtl"] .post .read-more > div {
   order: 2;
   margin-right: 0;
-  margin-left: 15px;
 
   transform: rotate(180deg);
+}
+
+[dir="rtl"] .post .read-more > span {
+  display: block;
+  order: 3;
+
+  margin-right: 16px;
+}
+
+[dir="rtl"] .slick-slide .post .read-more > span {
+  order: 1;
 }
 
 .post .read-more:hover {
@@ -2913,12 +2928,7 @@ footer .icon_list a img:hover {
   bottom: -16px;
 }
 
-#eight .row:nth-child(1) .col:nth-child(1) .block:nth-child(2):after,
-#eight .row:nth-child(1) .col:nth-child(1) .block:nth-child(4):after,
-#eight .row:nth-child(1) .col:nth-child(1) .block:nth-child(6):after,
-#eight .row:nth-child(1) .col:nth-child(1) .block:nth-child(8):after,
-#eight .row:nth-child(1) .col:nth-child(1) .block:nth-child(10):after,
-#eight .row:nth-child(1) .col:nth-child(1) .block:nth-child(12):after {
+#eight .row:nth-child(1) .col:nth-child(1) .block:nth-child(2n):after {
   content: "";
   display: block;
   width: 277px;
@@ -3804,6 +3814,10 @@ footer .policy:hover {
   border-radius: 16px;
 }
 
+[dir="rtl"] .info-block {
+  flex-direction: row-reverse;
+}
+
 .info-block > .info-block__column > p {
   display: block;
   margin-top: 0;
@@ -4003,6 +4017,15 @@ footer .policy:hover {
   transition: 0.3s;
 }
 
+[dir="rtl"] .input__wrapper > button {
+  margin-right: -30px;
+  margin-left: 0;
+}
+
+[dir="rtl"] .input__wrapper > button > img {
+  transform: rotate(180deg);
+}
+
 .input__wrapper > button > img {
   width: 24px;
 }
@@ -4033,10 +4056,13 @@ footer .policy:hover {
 
   background-color: rgba(255, 255, 255, 0.3);
   border-bottom: none;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-radius: 8px 0 0 8px;
 
   transition: 0.3s ease;
+}
+
+[dir="rtl"] .input--action-btn .input__control {
+  border-radius: 0 8px 8px 0;
 }
 
 .input--action-btn .input__control:focus {
@@ -4051,8 +4077,13 @@ footer .policy:hover {
 .input--action-btn > .button-fill > button,
 .input--action-btn > .button-fill > button::before,
 .input--action-btn > .button-fill > button::after {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.input--action-btn > .button-fill > button,
+.input--action-btn > .button-fill > button::before,
+.input--action-btn > .button-fill > button::after {
+  border-radius: 8px 0 0 8px;
 }
 
 .title-component {
@@ -4175,7 +4206,7 @@ footer .policy:hover {
 
 [dir="rtl"] .celebs .slick-slider .action-button__prev {
   transform: rotate(0);
-  right: -20px;
+  right: 260px;
 }
 
 #seven .slick-slider .action-button__prev {
