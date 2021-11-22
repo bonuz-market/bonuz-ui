@@ -1322,6 +1322,11 @@ stroke: url(#MyGradient);
     right: 10px;
   }
 
+  [dir="rtl"] #six .prev {
+    left: auto;
+    right: 200px;
+  }
+
   #six .next {
     right: 194px;
   }

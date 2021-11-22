@@ -2409,7 +2409,7 @@ header {
 
 #six .slick-slide:hover {
   /* transform: scale(1.1); */
-  filter: contrast(200%);
+  filter: contrast(150%);
   transition: all 0.3s;
 }
 .slide h3 {
@@ -2560,16 +2560,24 @@ header {
 }
 
 #six .next:hover {
-  transform: rotate(180deg) scale(1.08);
+  transform: rotate(0) scale(1.08);
   filter: brightness(0.7);
   transition: all 0.3s;
 }
 
+[dir="rtl"] #six .next:hover {
+  transform: rotate(180deg) scale(1.08);
+}
+
 #six .prev:hover {
-  transform: rotate(0) scale(1.08);
+  transform: rotate(180deg) scale(1.08);
   filter: brightness(0.7);
   transition: all 0.3s;
   opacity: 1;
+}
+
+[dir="rtl"] #six .prev:hover {
+  transform: rotate(0) scale(1.08);
 }
 
 #seven {
@@ -3287,15 +3295,23 @@ footer .icon_list a img:hover {
 }
 
 #nine .next:hover {
+  transform: rotate(0) scale(1.02);
+  filter: brightness(0.9);
+  transition: all 0.3s;
+}
+
+[dir="rtl"] #nine .next:hover {
+  transform: rotate(180deg) scale(1.02);
+}
+
+#nine .prev:hover {
   transform: rotate(180deg) scale(1.02);
   filter: brightness(0.9);
   transition: all 0.3s;
 }
 
-#nine .prev:hover {
+[dir="rtl"] #nine .prev:hover {
   transform: scale(1.02);
-  filter: brightness(0.9);
-  transition: all 0.3s;
 }
 
 #nine .figure {
@@ -3432,15 +3448,23 @@ footer .icon_list a img:hover {
 }
 
 #ten .next:hover {
+  transform: rotate(0) scale(1.02);
+  filter: brightness(0.9);
+  transition: all 0.3s;
+}
+
+[dir="rtl"] #ten .next:hover {
+  transform: rotate(180deg) scale(1.02);
+}
+
+#ten .prev:hover {
   transform: rotate(180deg) scale(1.02);
   filter: brightness(0.9);
   transition: all 0.3s;
 }
 
-#ten .prev:hover {
-  transform: scale(1.02);
-  filter: brightness(0.9);
-  transition: all 0.3s;
+[dir="rtl"] #ten .prev:hover {
+  transform: rotate(0) scale(1.02);
 }
 
 #ten .prev,
