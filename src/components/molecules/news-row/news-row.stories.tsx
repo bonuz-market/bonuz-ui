@@ -9,7 +9,9 @@ export default {
 
 const Template: Story<NewsRowProps> = (args) => (
   <div id="seven">
-    <NewsRow {...args} />
+    <div className="blogs">
+      <NewsRow {...args} />
+    </div>
   </div>
 );
 

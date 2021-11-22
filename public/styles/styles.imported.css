@@ -2796,7 +2796,7 @@ footer .icon_list a img:hover {
   color: #ffffff;
 }
 
-#seven .blogs {
+#seven .blogs .slick-slider {
   display: flex;
   justify-content: space-between;
   width: 925px;

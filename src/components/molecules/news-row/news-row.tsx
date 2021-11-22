@@ -15,7 +15,6 @@ export type NewsRowProps = {
 };
 
 const settings: Settings = {
-  className: 'blogs',
   dots: false,
   infinite: false,
   speed: 600,
