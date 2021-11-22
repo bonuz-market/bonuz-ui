@@ -1,6 +1,7 @@
 /* eslint-disable react/button-has-type */
 import { FC, PropsWithChildren } from 'react';
 import classnames from 'classnames';
+import './button.scss';
 
 type ButtonProps = {
   outline?: boolean;
