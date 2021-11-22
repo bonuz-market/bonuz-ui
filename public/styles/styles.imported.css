@@ -1351,6 +1351,8 @@ header {
 }
 
 #second .blocks {
+  display: flex;
+  justify-content: space-between;
   width: 940px;
   margin-top: 60px;
   margin-bottom: 40px;
@@ -2142,6 +2144,8 @@ header {
 }
 
 #four .blocks {
+  display: flex;
+  justify-content: space-between;
   width: 1053px;
   margin: 0 auto;
   margin-top: 50px;

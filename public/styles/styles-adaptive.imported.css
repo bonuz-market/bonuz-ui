@@ -320,6 +320,7 @@
     width: 275px;
     margin: 0 auto;
     margin-top: 25px;
+    display: block;
   }
 
   #second .block i {
@@ -443,6 +444,7 @@
   #four .blocks {
     width: 100%;
     margin: 40px auto;
+    display: block;
   }
 
   #four .slide {
