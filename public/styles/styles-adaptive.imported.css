@@ -1269,7 +1269,7 @@ stroke: url(#MyGradient);
   .input--mobile-column .input__control {
     margin-bottom: 14px;
 
-    border-radius: 8px;
+    border-radius: 8px !important;
   }
 
   .input--mobile-column > .button-fill > button {
@@ -1285,6 +1285,10 @@ stroke: url(#MyGradient);
   .text-block--mobile-column {
     padding-left: 0;
     padding-top: 40px;
+  }
+
+  [dir="rtl"] .text-block--mobile-column {
+    padding-right: 0;
   }
 
   .text-block--mobile-column::before {
