@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import './celebrities-item.scss';
 
 export type CelebritiesItemProps = {
   img: string;

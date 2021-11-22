@@ -1,0 +1,58 @@
+.celeb {
+  display: flex;
+  align-items: center;
+  height: 82px;
+  padding: 17px 24px;
+  margin: 2px 8px;
+  box-sizing: border-box;
+  background: #281981;
+  border-radius: 16px;
+  position: relative;
+  &:hover:before {
+    opacity: 1;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    background: linear-gradient(
+      31deg,
+      var(--gradient-color-2),
+      var(--gradient-color-4)
+    );
+    border-radius: 17px;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 17px;
+    display: block;
+  }
+  h3 {
+    margin: 0;
+
+    color: #ffffff;
+    font-family: Farro;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 16px;
+  }
+  p {
+    margin: 0;
+    opacity: 0.3;
+    color: #ffffff;
+    font-family: Roboto Condensed;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 26px;
+  }
+}
