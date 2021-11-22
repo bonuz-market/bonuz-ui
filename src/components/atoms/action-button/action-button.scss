@@ -1,0 +1,29 @@
+.action-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &__prev {
+    width: 75px;
+    height: 86px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-image: url('/assets/images/slider-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transform: rotate(180deg);
+    &:hover {
+      transform: rotate(180deg) scale(1.02);
+      filter: brightness(0.9);
+    }
+  }
+  &__next {
+    @extend .action-button__prev;
+    transform: none;
+    &:hover {
+      transform: scale(1.02);
+      filter: brightness(0.9);
+    }
+  }
+}

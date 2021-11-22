@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import classnames from 'classnames';
+import './action-button.scss';
 
 export type ActionButtonProps = {
   type: 'left' | 'right';
