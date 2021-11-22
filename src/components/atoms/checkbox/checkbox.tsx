@@ -1,4 +1,5 @@
 import { ChangeEvent, FC, useState } from 'react';
+import './checkbox.scss';
 
 export type CheckboxProps = {
   label: string;
