@@ -1,0 +1,92 @@
+#four {
+  padding-top: 150px;
+  background: url('/assets/images/four-background.svg'), var(--second-black);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 50% 22%;
+  @import 'how-it-works-item';
+  .outer {
+    display: flex;
+    justify-content: center;
+    max-width: 100vw;
+    width: 100%;
+  }
+
+  .inner {
+    max-width: 1310px;
+    width: 100%;
+    padding: 0px 10px;
+    position: relative;
+  }
+
+  .row:nth-child(1) {
+    .blur {
+      background: var(--blur);
+      filter: blur(200px);
+      z-index: 0;
+      position: absolute;
+      width: 300px;
+      height: 250px;
+      top: -30px;
+      left: calc(50% - 150px);
+      transition: 0.6s;
+    }
+
+    h2 {
+      font-family: Farro;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 104.4%;
+      text-align: center;
+      color: #ffffff;
+      z-index: 1;
+      position: relative;
+    }
+  }
+  .blocks {
+    display: flex;
+    justify-content: space-between;
+    width: 1053px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  .blocks.mob {
+    display: none;
+  }
+
+  .blocks.pc {
+    display: flex;
+    position: relative;
+    z-index: 3;
+  }
+
+  .divider-dashed {
+    width: 72px;
+    border-bottom: 2px dashed #ffa34e;
+    margin-bottom: auto;
+    margin-top: 70px;
+    overflow: hidden;
+    display: none;
+  }
+
+  .bg {
+    width: 1170px;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 570px);
+    z-index: 0;
+  }
+  .icon {
+    position: relative;
+  }
+  .slick-track {
+    height: 430px !important;
+  }
+  @media screen and (max-width: 1050px) {
+    & {
+      background: var(--second-black);
+    }
+  }
+}

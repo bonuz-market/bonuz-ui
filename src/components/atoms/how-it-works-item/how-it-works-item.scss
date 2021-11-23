@@ -1,0 +1,52 @@
+.block {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  & + & {
+    margin-left: 100px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('/assets/images/dash.svg');
+    background-repeat: repeat-x;
+    width: 60px;
+    height: 5px;
+    z-index: 5;
+    right: -30px;
+    top: 65px;
+    animation: stripe-animation 4500s linear infinite both;
+  }
+
+  &:last-child::before {
+    display: none;
+  }
+
+  [dir='rtl'] &:first-child::before {
+    display: none;
+  }
+
+  [dir='rtl'] &:last-child::before {
+    display: block;
+  }
+  img {
+    width: 50px;
+    height: 130px;
+    object-fit: contain;
+    transition: all 0.3s;
+    animation: iconscale 3s ease-in-out infinite;
+  }
+  p {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
