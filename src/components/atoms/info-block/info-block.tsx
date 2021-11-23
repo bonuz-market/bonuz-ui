@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren, ReactNode } from 'react';
-
+import './info-block.scss';
 import classnames from 'classnames';
 
 type InfoBlockProps = {
