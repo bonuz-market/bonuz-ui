@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import './navigation.scss';
 
 export const Navigation: FC = () => (
   <>

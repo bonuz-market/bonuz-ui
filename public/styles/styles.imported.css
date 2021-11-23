@@ -28,28 +28,6 @@ body.noscroll {
   display: none;
 }
 
-.menu-item a {
-  color: #ffffff;
-  font-family: Farro;
-  font-size: 14px;
-  line-height: 14px;
-}
-
-li.menu-item a {
-  position: relative;
-  width: max-content;
-}
-
-li.menu-item a:hover {
-  background: linear-gradient(
-    270.9deg,
-    var(--gradient-color-1) -2.92%,
-    var(--gradient-color-2) 99.95%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 header {
 }
 
