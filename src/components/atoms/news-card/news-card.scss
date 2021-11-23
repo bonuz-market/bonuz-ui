@@ -1,0 +1,120 @@
+%text {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 104.4%;
+  color: #ffffff;
+}
+.post {
+  position: relative;
+  z-index: 2;
+  margin-right: 20px;
+  width: 290px;
+  .read-more {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s;
+    &:hover {
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: all 0.3s;
+    }
+    span {
+      @extend %text;
+    }
+    div {
+      width: 37px;
+      height: 42px;
+      margin-right: 15px;
+      background-image: url('/assets/images/read.svg');
+      background-repeat: no-repeat;
+    }
+  }
+  .img {
+    position: relative;
+    .post-image {
+      display: block;
+      width: 288px;
+      max-width: 288px;
+      height: auto;
+      object-fit: cover;
+      position: relative;
+      z-index: 2;
+    }
+    .mask {
+      width: 295px;
+      height: 242px;
+      position: absolute;
+      z-index: 3;
+      user-select: none;
+      background-image: url('/assets/images/post-mask.svg');
+      background-size: cover;
+      transition: 0.2s ease-in-out;
+    }
+    .mask--gradient {
+      opacity: 0;
+      background-image: url('/assets/images/post-mask--gradient.svg');
+    }
+    &:hover {
+      .mask--gradient {
+        opacity: 1;
+      }
+    }
+  }
+
+  .date {
+    @extend %text;
+    position: absolute;
+    padding: 5px;
+    width: max-content;
+    background: #1f276f;
+    z-index: 4;
+    left: 20px;
+    top: 20px;
+  }
+  h3 {
+    @extend %text;
+    margin-bottom: 0px;
+  }
+  p {
+    @extend %text;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+[dir='rtl'] {
+  .post {
+    h3 {
+      text-align: right;
+    }
+    p {
+      text-align: right;
+    }
+    .read-more {
+      justify-content: flex-start;
+      > div {
+        order: 2;
+        margin-right: 0;
+        transform: rotate(180deg);
+      }
+      > span {
+        display: block;
+        order: 3;
+        margin-right: 16px;
+      }
+    }
+  }
+  .slick-slide {
+    .post {
+      .read-more {
+        justify-content: flex-end;
+        > span {
+          order: 1;
+        }
+      }
+    }
+  }
+}

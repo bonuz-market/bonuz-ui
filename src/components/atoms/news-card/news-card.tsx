@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import './news-card.scss';
 
 export type NewsCardProps = {
   created: string;
