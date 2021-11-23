@@ -3436,57 +3436,6 @@ footer .policy:hover {
   transform: scale(1.02);
 }
 
-.input {
-  width: 100%;
-}
-
-.input--action-btn {
-  display: flex;
-  height: 50px;
-}
-
-.input--action-btn > label {
-  display: flex;
-
-  width: 100%;
-}
-
-.input--action-btn .input__control {
-  width: 100%;
-  padding: 16px;
-
-  background-color: rgba(255, 255, 255, 0.3);
-  border-bottom: none;
-  border-radius: 8px 0 0 8px;
-
-  transition: 0.3s ease;
-}
-
-[dir='rtl'] .input--action-btn .input__control {
-  border-radius: 0 8px 8px 0;
-}
-
-.input--action-btn .input__control:focus {
-  background-color: #19094b;
-}
-
-.input--action-btn > .button-fill {
-  display: flex;
-  flex-shrink: 0;
-}
-
-.input--action-btn > .button-fill > button,
-.input--action-btn > .button-fill > button::before,
-.input--action-btn > .button-fill > button::after {
-  border-radius: 0 8px 8px 0;
-}
-
-.input--action-btn > .button-fill > button,
-.input--action-btn > .button-fill > button::before,
-.input--action-btn > .button-fill > button::after {
-  border-radius: 8px 0 0 8px;
-}
-
 .title-component {
   margin-top: 0;
   margin-bottom: 24px;

@@ -1,0 +1,47 @@
+.input {
+  width: 100%;
+
+  &--action-btn {
+    display: flex;
+    height: 50px;
+    .input__control {
+      width: 100%;
+      padding: 16px;
+
+      background-color: rgba(255, 255, 255, 0.3);
+      border-bottom: none;
+      border-radius: 8px 0 0 8px;
+
+      transition: 0.3s ease;
+
+      [dir='rtl'] & {
+        border-radius: 0 8px 8px 0;
+      }
+
+      &:focus {
+        background-color: #19094b;
+      }
+    }
+    > label {
+      display: flex;
+
+      width: 100%;
+    }
+    > .button-fill {
+      display: flex;
+      flex-shrink: 0;
+      > button {
+        border-radius: 0 8px 8px 0;
+        border-radius: 8px 0 0 8px;
+        &::before {
+          border-radius: 0 8px 8px 0;
+          border-radius: 8px 0 0 8px;
+        }
+        &::after {
+          border-radius: 0 8px 8px 0;
+          border-radius: 8px 0 0 8px;
+        }
+      }
+    }
+  }
+}
