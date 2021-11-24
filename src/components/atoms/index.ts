@@ -17,3 +17,7 @@ export { Title } from './title';
 export { Subtitle } from './subtitle';
 export { TabTitle, Tab } from './tab';
 export type { TabProps } from './tab';
+export { CreatorNewsCard } from './creator-news-card';
+export { UserInfo } from './user-info';
+export { FaqItem } from './faq-item';
+export { SocialList } from './social-list';

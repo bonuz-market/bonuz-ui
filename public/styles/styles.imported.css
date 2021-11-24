@@ -1,4 +1,4 @@
-/* style.css */
+/* style.scss */
 
 * {
   outline: none;
@@ -2791,7 +2791,7 @@ header {
   transition: all 0.3s;
 }
 
-footer .icon_list a img:hover {
+.icon_list a img:hover {
 }
 
 .post .read-more span {
@@ -3638,7 +3638,7 @@ footer form button img {
   height: auto;
 }
 
-footer .icon_list a img {
+.icon_list a img {
   width: 57px;
   height: auto;
   filter: hue-rotate(0deg);
@@ -3646,7 +3646,7 @@ footer .icon_list a img {
   transform: scale(1);
 }
 
-footer .icon_list a img:hover {
+.icon_list a img:hover {
   width: 57px;
   height: auto;
   /*     filter: hue-rotate(-40deg); */
@@ -3656,11 +3656,11 @@ footer .icon_list a img:hover {
   background-size: contain;
 }
 
-footer .icon_list a {
+.icon_list a {
   margin-bottom: 15px;
 }
 
-footer .icon_list {
+.icon_list {
   display: flex;
   flex-wrap: wrap;
   width: 203px;

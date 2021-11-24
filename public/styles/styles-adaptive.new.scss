@@ -1,0 +1,10 @@
+@media (min-width: 1050px) {
+  .user-info {
+    &__photo__wrapper {
+      order: 2;
+
+      margin-right: 0;
+      margin-left: 24px;
+    }
+  }
+}

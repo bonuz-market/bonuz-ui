@@ -1,6 +1,12 @@
 import { FC } from 'react';
 
-import { SubscribeToNews, Button, Navigation, Input } from '../../atoms';
+import {
+  SubscribeToNews,
+  Button,
+  Navigation,
+  Input,
+  SocialList,
+} from '../../atoms';
 
 export const Footer: FC = () => (
   <footer>
@@ -32,26 +38,7 @@ export const Footer: FC = () => (
             </div>
           </div>
           <div className="col">
-            <div className="icon_list">
-              <a href="#">
-                <img src="/assets/images/telegram.svg" alt="" />
-              </a>
-              <a href="#">
-                <img src="/assets/images/twiter.svg" alt="" />
-              </a>
-              <a href="#">
-                <img src="/assets/images/m.svg" alt="" />
-              </a>
-              <a href="#">
-                <img src="/assets/images/message.svg" alt="" />
-              </a>
-              <a href="#">
-                <img src="/assets/images/instaram.svg" alt="" />
-              </a>
-              <a href="#">
-                <img src="/assets/images/facebook.svg" alt="" />
-              </a>
-            </div>
+            <SocialList />
             <a href="#" className="policy">
               Privacy policy and terms
             </a>
