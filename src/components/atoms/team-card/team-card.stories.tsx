@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import { TeamCard, TeamCardProps } from './team-card';
 import mockData from '../../../mock/mock-data.json';
+import './team-card.scss';
 
 export default {
   title: 'Components/Atoms/TeamCard',
