@@ -1,5 +1,6 @@
 import { FC, PropsWithChildren } from 'react';
 import classnames from 'classnames';
+import './text-block.scss';
 
 type TextBlockProps = {
   type?: 'primary' | 'secondary';
