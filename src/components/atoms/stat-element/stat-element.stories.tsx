@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import { StatElement, StatElementProps } from './stat-element';
 import mockData from '../../../mock/mock-data.json';
+import './stat-wrapper.scss';
 
 export default {
   title: 'Components/Atoms/StatElement',
