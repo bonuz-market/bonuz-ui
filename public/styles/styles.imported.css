@@ -2476,18 +2476,6 @@ footer .policy:hover {
   transform: scale(1.02);
 }
 
-.title-component {
-  margin-top: 0;
-  margin-bottom: 24px;
-
-  color: #ffffff;
-  font-family: Farro;
-  font-size: 32px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 104.4%;
-  text-align: center;
-}
 .celebs .slick-slider .action-button__next,
 .celebs .slick-slider .action-button__prev {
   position: absolute;
