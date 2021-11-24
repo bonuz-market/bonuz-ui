@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import { RoadMapItem, RoadMapItemProps } from './road-map-item';
 import mockData from '../../../mock/mock-data.json';
+import './road-map-wrapper.scss';
 
 export default {
   title: 'Components/Atoms/RoadMapItem',
