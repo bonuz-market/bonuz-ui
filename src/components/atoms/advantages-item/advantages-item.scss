@@ -1,0 +1,36 @@
+@use 'public/styles/utils' as utils;
+.block {
+  i {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: block;
+    transition: all 0.3s;
+    animation: iconscale 3s ease-in-out infinite;
+  }
+  .blur {
+    filter: blur(20px);
+  }
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  width: 215px;
+  padding: 30px;
+  border-radius: 16px;
+  transition: all 0.3s;
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    transition: all 0.3s;
+  }
+  h4 {
+    @include utils.font(Farro, normal, 500, 20px, 104.4%, #ffffff);
+  }
+  p {
+    @include utils.font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
+    opacity: 0.8;
+  }
+}
