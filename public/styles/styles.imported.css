@@ -1169,8 +1169,7 @@ body.noscroll {
 
 #five,
 #eight,
-#nine,
-#ten {
+#nine {
   background: var(--second-black);
 }
 
@@ -1312,149 +1311,6 @@ body.noscroll {
   );
 }
 
-#ten .outer {
-  display: flex;
-  justify-content: center;
-  max-width: 100vw;
-  width: 100%;
-}
-
-#ten .inner {
-  max-width: 1360px;
-  width: 100%;
-  padding: 0px 10px;
-  position: relative;
-  padding-bottom: 130px;
-}
-
-#ten .row:nth-child(1) h2 {
-  font-family: Farro;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 104.4%;
-  text-align: center;
-  color: #ffffff;
-  z-index: 1;
-  position: relative;
-  margin: 0px;
-}
-
-#ten .buttons-field {
-  width: 630px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  margin-top: 55px;
-}
-
-#ten .button a span {
-  font-family: Farro;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 16px;
-  display: flex;
-  align-items: center;
-  text-transform: capitalize;
-  color: #ffffff;
-  z-index: 3;
-}
-
-#ten .button a {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 180px;
-  height: 56px;
-  border-radius: 8px;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0.1);
-  transition: 0.6s;
-}
-
-#ten .button a:hover {
-  background: rgba(255, 255, 255, 0.19);
-}
-
-#ten .item .block {
-  width: 295px;
-  height: 111px;
-  background: rgba(255, 255, 255, 0.14);
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-#ten .item .block img {
-  height: auto;
-  width: auto;
-}
-
-#ten .partners-block {
-  width: 930px;
-  margin: 0 auto;
-  position: relative;
-  margin-top: 55px;
-}
-
-#ten .prev {
-  transform: rotate(180deg);
-  right: 14px;
-  top: -40px;
-}
-
-[dir='rtl'] #ten .prev {
-  transform: none;
-  right: auto;
-  left: 0;
-}
-
-#ten .next {
-  left: 0;
-  top: -40px;
-}
-
-[dir='rtl'] #ten .next {
-  left: auto;
-  right: 0;
-  transform: rotate(180deg);
-}
-
-#ten .next:hover {
-  transform: rotate(0) scale(1.02);
-  filter: brightness(0.9);
-  transition: all 0.3s;
-}
-
-[dir='rtl'] #ten .next:hover {
-  transform: rotate(180deg) scale(1.02);
-}
-
-#ten .prev:hover {
-  transform: rotate(180deg) scale(1.02);
-  filter: brightness(0.9);
-  transition: all 0.3s;
-}
-
-[dir='rtl'] #ten .prev:hover {
-  transform: rotate(0) scale(1.02);
-}
-
-#ten .prev,
-#ten .next {
-  width: 75px;
-  height: 85px;
-  position: absolute;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
 #first .inner .logo_bg1 {
   position: absolute;
   right: 500px;
@@ -1481,12 +1337,6 @@ body.noscroll {
   z-index: 0;
 }
 
-#ten .inner .logo_bg2 {
-  position: absolute;
-  left: -154px;
-  top: -484px;
-  width: 390px;
-}
 #svg circle {
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 1s linear;
