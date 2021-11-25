@@ -1,0 +1,162 @@
+.user-card {
+  &__photo {
+    margin-bottom: 24px;
+
+    &__mask {
+      width: 131px;
+      height: 147px;
+    }
+
+    &__img {
+      position: absolute;
+      top: 11px;
+      left: 9px;
+
+      width: 112px;
+      height: 125px;
+
+      clip-path: polygon(50% 0, 50% 0, 100% 25%, 100% 75%, 50% 100%, 50% 100%, 0 75%, 0 25%);
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+
+      margin-bottom: 16px;
+
+      & > div {
+        position: relative;
+      }
+    }
+
+    &__short-link {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: #FFFFFF;
+      font-family: Farro, sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      text-align: center;
+      line-height: 20px;
+    }
+
+    &__created {
+      display: block;
+
+      color: rgba(255, 255, 255, 0.3);
+      font-family: Farro, sans-serif;
+      font-size: 14px;
+      text-align: center;
+      line-height: 14px;
+    }
+  }
+
+  &__addresses {
+    margin-bottom: 32px;
+
+    &__title {
+      display: block;
+
+      margin-bottom: 16px;
+
+      color: #FFFFFF;
+      font-family: Roboto Condensed, sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    &__list {
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 20px 16px;
+
+      background-color: #040D5B;
+      border-radius: 8px;
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+
+    &__address {
+      color: #FFFFFF;
+      font-family: Farro, sans-serif;
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    &__coins {
+      display: flex;
+      align-items: center;
+
+      color: #FFFFFF;
+      font-family: Farro, sans-serif;
+      font-size: 14px;
+      line-height: 14px;
+
+      & > img {
+        display: block;
+
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__info {
+    &__title {
+      display: block;
+
+      margin-bottom: 16px;
+
+      color: #FFFFFF;
+      font-family: Roboto Condensed, sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    &__content {
+      padding: 22px 16px;
+
+      background-color: #281981;
+      border-radius: 8px;
+    }
+
+    &__item {
+      color: #FFFFFF;
+      font-family: Roboto Condensed, sans-serif;
+      font-size: 14px;
+      line-height: 26px;
+
+      &__title {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+@media (min-width: 1050px) {
+  .user-card {
+    display: flex;
+
+    &__wrapper {
+      &:first-child {
+        margin-right: 60px;
+      }
+
+      &:last-child {
+        flex-grow: 1;
+      }
+    }
+  }
+}

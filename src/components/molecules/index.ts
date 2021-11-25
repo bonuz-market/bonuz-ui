@@ -11,3 +11,4 @@ export { NewsRow } from './news-row';
 export { Media } from './media';
 export { Users } from './users';
 export { FansList } from './fans-list';
+export { UserCard } from './user-card';
