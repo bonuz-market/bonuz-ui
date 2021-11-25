@@ -4,6 +4,7 @@ import Slider, { Settings } from 'react-slick';
 
 import { ActionButton, NewsCard } from '../../atoms';
 import mockData from '../../../mock/mock-data.json';
+import '../../atoms/news-card/news-card-wrapper.scss';
 
 export type NewsRowProps = {
   news: {

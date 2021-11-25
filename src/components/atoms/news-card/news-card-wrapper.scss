@@ -1,0 +1,135 @@
+@use 'public/styles/utils' as utils;
+
+#seven {
+  position: relative;
+  background: var(--second-black);
+  .slick-slider {
+    @mixin button-direction($direction) {
+      position: absolute;
+      #{$direction}: 20px;
+    }
+    .action-button__prev {
+      @include button-direction(right);
+    }
+    .action-button__next {
+      @include button-direction(left);
+    }
+  }
+  .inner {
+    max-width: 1310px;
+    width: 100%;
+    padding: 0px 10px;
+    position: relative;
+    .logo_bg2 {
+      position: absolute;
+      right: -80px;
+      top: 0px;
+      width: 250px;
+    }
+    .logo_bg1 {
+      position: absolute;
+      left: -150px;
+      top: 400px;
+      z-index: 0;
+      width: 250px;
+    }
+  }
+
+  .outer {
+    display: flex;
+    justify-content: center;
+    max-width: 100vw;
+    width: 100%;
+  }
+  .row {
+    &:nth-child(2) {
+      h2 {
+        @include utils.font(Farro, normal, normal, 32px, 104.4%, #ffffff);
+        text-align: center;
+        z-index: 1;
+        position: relative;
+        margin-top: 0px;
+      }
+      .blur {
+        background: var(--blur);
+        filter: blur(200px);
+        z-index: 0;
+        position: absolute;
+        width: 300px;
+        height: 250px;
+        top: 0px;
+        left: calc(50% - 150px);
+        transition: 0.6s;
+      }
+      p {
+        @include utils.font(
+          Roboto Condensed,
+          normal,
+          normal,
+          16px,
+          26px,
+          #ffffff
+        );
+        text-align: center;
+        z-index: 1;
+        margin-bottom: 55px;
+        position: relative;
+      }
+    }
+  }
+  .blogs {
+    .slick-slider {
+      width: 925px;
+      margin: 0 auto;
+      margin-bottom: 70px;
+    }
+  }
+  .button-fill {
+    margin: 0 auto;
+    width: max-content;
+    margin-bottom: 100px;
+  }
+  .bg {
+    position: absolute;
+    left: -60px;
+    top: -60px;
+    animation: text-animation 1s linear infinite alternate;
+  }
+  .divider {
+    max-width: 999px;
+  }
+}
+.seven {
+  &__background-holder {
+    position: absolute;
+    z-index: 1;
+    left: -100px;
+    top: 250px;
+    pointer-events: none;
+  }
+  &__background-holder--right {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    top: -50px;
+    pointer-events: none;
+  }
+}
+
+[dir='rtl'] {
+  #seven {
+    .slick-slider {
+      @mixin button-direction($left, $right, $degree) {
+        right: $right;
+        left: $left;
+        transform: rotate($degree);
+      }
+      .action-button__prev {
+        @include button-direction(0, auto, 0);
+      }
+      .action-button__next {
+        @include button-direction(auto, 10px, 180);
+      }
+    }
+  }
+}
