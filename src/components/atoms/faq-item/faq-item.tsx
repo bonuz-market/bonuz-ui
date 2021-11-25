@@ -1,6 +1,8 @@
 import { FC, useState } from 'react';
 import classnames from 'classnames';
 
+import './faq-item.scss';
+
 export type FaqItemProps = {
   title: string;
   description: string;

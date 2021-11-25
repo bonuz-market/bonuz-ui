@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import './fan-item.scss';
+
 export type FanItemProps = {
   avatar: string;
   name: string;

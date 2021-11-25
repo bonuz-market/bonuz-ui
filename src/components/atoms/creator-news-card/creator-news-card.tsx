@@ -1,5 +1,7 @@
 import { FC } from 'react';
 import classnames from 'classnames';
+
+import './creator-news-card.scss';
 import { cutText } from '../../../utils';
 
 export type CreatorNewsCardProps = {

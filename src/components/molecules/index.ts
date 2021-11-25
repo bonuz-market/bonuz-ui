@@ -8,3 +8,4 @@ export { AdvantagesList } from './advantages-list';
 export { TeamList } from './team-list';
 export { Tabs } from './tabs';
 export { NewsRow } from './news-row';
+export { Media } from './media';

@@ -1,10 +1,7 @@
 import { FC, useState } from 'react';
-import {
-  ChromePicker,
-  CirclePicker,
-  ColorResult,
-  CompactPicker,
-} from 'react-color';
+import { ChromePicker, ColorResult } from 'react-color';
+
+import './color-picker.scss';
 
 export type ColorPickerProps = {
   onChange?: (color: ColorResult) => void;

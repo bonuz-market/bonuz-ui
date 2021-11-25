@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import './user-info.scss';
+
 export type UserInfoProps = {
   avatar: string;
   name: string;

@@ -1,7 +1,8 @@
 import typescript from 'rollup-plugin-typescript2';
 import multiInput from 'rollup-plugin-multi-input';
 import json from '@rollup/plugin-json';
-import css from 'rollup-plugin-import-css';
+import scss from 'rollup-plugin-scss';
+import { writeFileSync } from 'fs';
 
 export default {
   input: ['src/components/**/*.ts', 'src/components/**/*.tsx'],
@@ -12,6 +13,16 @@ export default {
     sourcemap: false,
     strict: false,
   },
-  plugins: [multiInput(), typescript(), json(), css()],
+  plugins: [
+    multiInput(),
+    typescript(),
+    json(),
+    scss({
+      output: (styles) => {
+        writeFileSync('./public/styles/bundle.css', styles);
+      },
+      outputStyle: 'compressed',
+    }),
+  ],
   external: ['react', 'react-dom'],
 };

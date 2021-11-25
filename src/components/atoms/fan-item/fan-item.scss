@@ -1,0 +1,82 @@
+.fan-item {
+  display: flex;
+
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+    
+    &::after {
+      content: '';
+
+      position: absolute;
+      right: 0;
+      bottom: -16px;
+      left: 0;
+
+      height: 1px;
+
+      background-color: rgba(255, 255, 255, 0.07);
+    }
+  }
+
+  &__photo {
+    border-radius: 8px;
+  }
+
+  &__wrapper:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__name {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #FFFFFF;
+    font-family: Farro, sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  &__descr {
+    display: block;
+
+    margin-bottom: 8px;
+
+    opacity: 0.4;
+
+    color: #FFFFFF;
+    font-family: Farro, sans-serif;
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  &__viewers {
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+    font-family: Farro, sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+
+    & > img {
+      display: block;
+
+      margin-right: 8px;
+    }
+  }
+}
+
+@media (min-width: 1050px) {
+  .fan-item {
+    &:not(:last-child) {
+      margin-bottom: 48px;
+
+      &::after {
+        bottom: -24px;
+      }
+    }
+  }
+}
