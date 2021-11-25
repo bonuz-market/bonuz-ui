@@ -4,6 +4,7 @@ import Slider, { Settings } from 'react-slick';
 
 import { ActionButton, CelebritiesItem } from '../../atoms';
 import mockData from '../../../mock/mock-data.json';
+import '../../atoms/celebrities-item/celebrities-wrapper.scss';
 
 export type CelebritiesListProps = {
   celebrities: {

@@ -4,6 +4,7 @@ import Slider, { Settings } from 'react-slick';
 
 import { ActionButton, TeamCard } from '../../atoms';
 import mockData from '../../../mock/mock-data.json';
+import '../../atoms/team-card/team-card-wrapper.scss';
 
 export type TeamListProps = {
   items: {

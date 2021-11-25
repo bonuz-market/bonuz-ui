@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import { Tabs, TabsProps } from './tabs';
 import { Tab } from '../../atoms';
+import '../../atoms/tab/tabs.scss';
 
 export default {
   title: 'Components/Molecules/Tabs',

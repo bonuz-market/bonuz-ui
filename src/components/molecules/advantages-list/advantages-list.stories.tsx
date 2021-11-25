@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import { AdvantagesList, AdvantagesListProps } from './advantages-list';
 import mockData from '../../../mock/mock-data.json';
+import '../../atoms/advantages-item/advantages-wrapper.scss';
 
 export default {
   title: 'Components/Molecules/AdvantagesList',

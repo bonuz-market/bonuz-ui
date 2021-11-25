@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import './tab.scss';
 
 export type TabProps = {
   title: string;

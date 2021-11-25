@@ -4,6 +4,7 @@ import { FC } from 'react';
 import Slider, { Settings } from 'react-slick';
 import { AdvantagesItem } from '../../atoms';
 import mockData from '../../../mock/mock-data.json';
+import '../../atoms/advantages-item/advantages-wrapper.scss';
 
 export type AdvantagesListProps = {
   items: {

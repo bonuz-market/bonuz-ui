@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import { CelebritiesList, CelebritiesListProps } from './celebrities-list';
 import mockData from '../../../mock/mock-data.json';
+import '../../atoms/celebrities-item/celebrities-wrapper.scss';
 
 export default {
   title: 'Components/Molecules/CelebritiesList',

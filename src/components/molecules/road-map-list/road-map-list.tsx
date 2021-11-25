@@ -4,6 +4,7 @@ import Slider, { Settings } from 'react-slick';
 
 import { ActionButton, RoadMapItem } from '../../atoms';
 import mockData from '../../../mock/mock-data.json';
+import '../../atoms/road-map-item/road-map-wrapper.scss';
 
 export type RoadMapListProps = {
   items: {
