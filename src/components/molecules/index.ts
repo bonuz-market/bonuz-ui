@@ -9,3 +9,4 @@ export { TeamList } from './team-list';
 export { Tabs } from './tabs';
 export { NewsRow } from './news-row';
 export { Media } from './media';
+export { Users } from './users';
