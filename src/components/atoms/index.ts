@@ -22,4 +22,5 @@ export { UserInfo } from './user-info';
 export { FaqItem } from './faq-item';
 export { SocialList } from './social-list';
 export { FanItem } from './fan-item';
+export type { FanItemProps } from './fan-item';
 export { ColorPicker } from './color-picker';

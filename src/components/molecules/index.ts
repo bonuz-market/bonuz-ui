@@ -10,3 +10,4 @@ export { Tabs } from './tabs';
 export { NewsRow } from './news-row';
 export { Media } from './media';
 export { Users } from './users';
+export { FansList } from './fans-list';

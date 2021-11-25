@@ -11,7 +11,6 @@ const Template: Story<MediaProps> = (args) => <Media {...args} />;
 const translations = {
   tappable: 'Tappable Objects',
   meta: 'Meta Data',
-  fans: 'Fans',
   shortcode: 'Shortcode:',
   url: 'URL:',
 };
@@ -30,111 +29,4 @@ Primary.args = {
     shortcode: 'Shortcode',
     url: 'https://lorem-ipsum-dolor.sit-amet.tld',
   },
-  fans: [
-    {
-      avatar: 'https://via.placeholder.com/62x62',
-      name: 'Oliver Molnar',
-      description:
-        'Text example Text example Text example Text example Text example Text example',
-      viewers: 200,
-    },
-    {
-      avatar: 'https://via.placeholder.com/62x62',
-      name: 'Oliver Molnar',
-      description:
-        'Text example Text example Text example Text example Text example Text example',
-      viewers: 200,
-    },
-    {
-      avatar: 'https://via.placeholder.com/62x62',
-      name: 'Oliver Molnar',
-      description:
-        'Text example Text example Text example Text example Text example Text example',
-      viewers: 200,
-    },
-    {
-      avatar: 'https://via.placeholder.com/62x62',
-      name: 'Oliver Molnar',
-      description:
-        'Text example Text example Text example Text example Text example Text example',
-      viewers: 200,
-    },
-    {
-      avatar: 'https://via.placeholder.com/62x62',
-      name: 'Oliver Molnar',
-      description:
-        'Text example Text example Text example Text example Text example Text example',
-      viewers: 200,
-    },
-    {
-      avatar: 'https://via.placeholder.com/62x62',
-      name: 'Oliver Molnar',
-      description:
-        'Text example Text example Text example Text example Text example Text example',
-      viewers: 200,
-    },
-    {
-      avatar: 'https://via.placeholder.com/62x62',
-      name: 'Oliver Molnar',
-      description:
-        'Text example Text example Text example Text example Text example Text example',
-      viewers: 200,
-    },
-    {
-      avatar: 'https://via.placeholder.com/62x62',
-      name: 'Oliver Molnar',
-      description:
-        'Text example Text example Text example Text example Text example Text example',
-      viewers: 200,
-    },
-    {
-      avatar: 'https://via.placeholder.com/62x62',
-      name: 'Oliver Molnar',
-      description:
-        'Text example Text example Text example Text example Text example Text example',
-      viewers: 200,
-    },
-    {
-      avatar: 'https://via.placeholder.com/62x62',
-      name: 'Oliver Molnar',
-      description:
-        'Text example Text example Text example Text example Text example Text example',
-      viewers: 200,
-    },
-    {
-      avatar: 'https://via.placeholder.com/62x62',
-      name: 'Oliver Molnar',
-      description:
-        'Text example Text example Text example Text example Text example Text example',
-      viewers: 200,
-    },
-    {
-      avatar: 'https://via.placeholder.com/62x62',
-      name: 'Oliver Molnar',
-      description:
-        'Text example Text example Text example Text example Text example Text example',
-      viewers: 200,
-    },
-    {
-      avatar: 'https://via.placeholder.com/62x62',
-      name: 'Oliver Molnar',
-      description:
-        'Text example Text example Text example Text example Text example Text example',
-      viewers: 200,
-    },
-    {
-      avatar: 'https://via.placeholder.com/62x62',
-      name: 'Oliver Molnar',
-      description:
-        'Text example Text example Text example Text example Text example Text example',
-      viewers: 200,
-    },
-    {
-      avatar: 'https://via.placeholder.com/62x62',
-      name: 'Oliver Molnar',
-      description:
-        'Text example Text example Text example Text example Text example Text example',
-      viewers: 200,
-    },
-  ],
 };
