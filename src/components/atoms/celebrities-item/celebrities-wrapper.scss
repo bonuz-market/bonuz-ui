@@ -1,0 +1,78 @@
+@use '/public/styles/utils.scss' as utils;
+.celebs-blocks {
+  display: flex;
+  z-index: 3;
+  position: relative;
+  .block {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    padding-left: 53px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 37px;
+      height: 30px;
+      background-image: url('/assets/images/celeb_f.svg');
+      background-repeat: x-repeat;
+      background-size: contain;
+      top: 50%;
+      transform: translatey(-50%);
+      left: 0;
+      overflow: hidden;
+      animation: stripe-animation 4500s linear infinite both;
+    }
+    img {
+      width: 37px;
+      height: 46px;
+      margin-right: 15px;
+    }
+    p {
+      width: 250px;
+      @include utils.font(Roboto Condensed, normal, normal, 16px, 26, #ffffff);
+    }
+  }
+}
+.celebs {
+  > p {
+    @include utils.font(inherit, normal, bold, 16px, 16, #ffffff);
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+  &-list {
+    max-width: 1010px;
+    transform: translateX(245px);
+  }
+  @import 'celebrities-item';
+  .slick-slider {
+    %position {
+      position: absolute;
+      width: 54px;
+      height: 62px;
+      top: -20px;
+    }
+    .action-button__next {
+      @extend %position;
+      left: 0;
+    }
+    .action-button__prev {
+      @extend %position;
+      right: -320px;
+    }
+  }
+}
+[dir='rtl'] {
+  .celebs {
+    .slick-slider {
+      .action-button__next {
+        transform: rotate(180deg);
+        left: -20px;
+      }
+      .action-button__prev {
+        transform: rotate(0);
+        right: 440px;
+      }
+    }
+  }
+}

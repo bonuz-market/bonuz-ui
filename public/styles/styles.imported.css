@@ -672,29 +672,6 @@ header {
   float: left !important;
 }
 
-.celebs > p {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 16px;
-  color: #ffffff;
-  margin-top: 30px;
-  margin-bottom: 25px;
-}
-.celebs-blocks {
-  display: flex;
-  z-index: 3;
-  position: relative;
-}
-
-.celebs-blocks .block {
-  display: flex;
-  align-items: center;
-  margin-right: 50px;
-  padding-left: 53px;
-  position: relative;
-}
-
 @keyframes stripe-animation {
   0% {
     background-position: 0px 100%;
@@ -703,43 +680,6 @@ header {
     background-position: 100000px 100%;
   }
 }
-
-.celebs-blocks .block::before {
-  content: '';
-  position: absolute;
-  width: 37px;
-  height: 30px;
-  background-image: url(../assets/images/celeb_f.svg);
-  background-repeat: x-repeat;
-  background-size: contain;
-  top: 50%;
-  transform: translatey(-50%);
-  left: 0;
-  overflow: hidden;
-  animation: stripe-animation 4500s linear infinite both;
-}
-
-.celebs-blocks .block img {
-  width: 37px;
-  height: 46px;
-  margin-right: 15px;
-}
-
-.celebs-blocks .block p {
-  width: 250px;
-  font-family: Roboto Condensed;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 26px;
-  color: #ffffff;
-}
-
-#first .celebs-list {
-  max-width: 1010px;
-  transform: translateX(245px);
-}
-
 .first-form {
   position: relative;
   margin-top: 80px;
@@ -2278,34 +2218,6 @@ footer .policy:hover {
 .input__wrapper > button:hover {
   filter: hue-rotate(-40deg);
   transform: scale(1.02);
-}
-
-.celebs .slick-slider .action-button__next,
-.celebs .slick-slider .action-button__prev {
-  position: absolute;
-
-  width: 54px;
-  height: 62px;
-}
-
-.celebs .slick-slider .action-button__next {
-  top: -20px;
-  left: 0;
-}
-
-[dir='rtl'] .celebs .slick-slider .action-button__next {
-  transform: rotate(180deg);
-  left: -20px;
-}
-
-.celebs .slick-slider .action-button__prev {
-  top: -20px;
-  right: -320px;
-}
-
-[dir='rtl'] .celebs .slick-slider .action-button__prev {
-  transform: rotate(0);
-  right: 440px;
 }
 
 #seven .slick-slider .action-button__prev {
