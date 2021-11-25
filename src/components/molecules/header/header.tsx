@@ -2,6 +2,7 @@ import { FC, useEffect, useState } from 'react';
 import classnames from 'classnames';
 
 import { Navigation } from '../../atoms';
+import './header.scss';
 
 export const Header: FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
