@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import { SubscribeToNews, Button, Navigation, Input } from '../../atoms';
+import './footer.scss';
 
 export const Footer: FC = () => (
   <footer>

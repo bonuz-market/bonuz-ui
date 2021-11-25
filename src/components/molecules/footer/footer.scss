@@ -1,0 +1,190 @@
+@use 'public/styles/utils' as utils;
+footer {
+  background: var(--main-black);
+  .outer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .inner {
+    display: flex;
+    justify-content: center;
+    max-width: 1310px;
+    width: 100%;
+    padding: 0px 10px;
+  }
+  .row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .col {
+      &:nth-child(1) {
+        position: relative;
+        z-index: 5;
+        .button-fill {
+          button {
+            width: 160px;
+          }
+        }
+        .button-stroke {
+          width: 140px;
+          background: var(--main-black);
+        }
+        p {
+          @include utils.font(
+            Roboto Condensed,
+            normal,
+            normal,
+            16px,
+            26px,
+            #ffffff
+          );
+          opacity: 0.41;
+          width: 219px;
+          margin-bottom: 105px;
+        }
+      }
+      &:nth-child(2) {
+        p {
+          @include utils.font(Farro, normal, normal, 16px, 16px, #ffffff);
+          opacity: 0.3;
+          margin-top: 40px;
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+          height: 120px;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-content: baseline;
+          a {
+            text-decoration: none;
+            @include utils.font(Farro, normal, normal, 14px, 14px, #ffffff);
+            padding: 12px 0px;
+            display: block;
+            margin-right: 80px;
+          }
+        }
+        .form {
+          p {
+            @include utils.font(Farro, normal, normal, 14px, 14px, #ffffff);
+            opacity: 1;
+            margin-top: 57px;
+          }
+          margin-top: 57px;
+          width: calc(100% - 30px);
+        }
+      }
+    }
+  }
+  .button-group {
+    display: flex;
+    margin-bottom: 60px;
+  }
+  .logo {
+    width: 125px;
+    height: auto;
+    margin-top: 40px;
+  }
+  .form {
+    input {
+      @include utils.font(
+        Roboto Condensed,
+        normal,
+        normal,
+        14px,
+        25px,
+        #ffffff
+      );
+      background: none;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-width: 0px 0px 1px 0px;
+      width: 515px;
+      padding-bottom: 10px;
+    }
+  }
+  form {
+    position: relative;
+    button {
+      background: none;
+      border: none;
+      position: absolute;
+      right: 0px;
+      bottom: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        filter: hue-rotate(-40deg);
+        transform: scale(1.02);
+        transition: all 0.3s;
+      }
+      img {
+        width: 24px;
+        height: auto;
+      }
+    }
+  }
+  .icon_list {
+    a {
+      img {
+        width: 57px;
+        height: auto;
+        filter: hue-rotate(0deg);
+        transition: all 0.3s;
+        transform: scale(1);
+        &:hover {
+          width: 57px;
+          height: auto;
+          transform: scale(1.05);
+          background-image: url('/assets/images/footer-social-hover.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+      margin-bottom: 15px;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    width: 203px;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .policy {
+    @include utils.font(
+      Farro,
+      normal,
+      normal,
+      14px,
+      14px,
+      rgba(255, 255, 255, 0.38)
+    );
+    text-transform: capitalize;
+    margin-top: 80px;
+    display: block;
+    transition: all 0.3s;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+[dir='rtl'] {
+  footer {
+    .button-group {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+    .row {
+      .col {
+        &:nth-child(2) {
+          ul {
+            a {
+              margin-right: 0;
+              margin-left: 80px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
