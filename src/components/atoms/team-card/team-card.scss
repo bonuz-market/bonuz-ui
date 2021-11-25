@@ -1,4 +1,7 @@
+@use 'public/styles/utils' as utils;
+
 #nine {
+  background: var(--second-black);
   .outer {
     display: flex;
     justify-content: center;
@@ -16,13 +19,8 @@
   .row {
     &:nth-child(1) {
       h2 {
-        font-family: Farro;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 32px;
-        line-height: 104.4%;
+        @include utils.font(Farro, normal, normal, 32px, 104.4%, #ffffff);
         text-align: center;
-        color: #ffffff;
         z-index: 1;
         position: relative;
         margin: 0px;
@@ -40,22 +38,19 @@
         border-radius: 8px;
       }
       p {
-        font-family: Farro;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 26px;
-        color: #ffffff;
+        @include utils.font(Farro, normal, normal, 16px, 26px, #ffffff);
         margin-bottom: 0px;
         text-align: left;
       }
       span {
-        font-family: Roboto Condensed;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 26px;
-        color: #ffffff;
+        @include utils.font(
+          Roboto Condensed,
+          normal,
+          normal,
+          16px,
+          26px,
+          #ffffff
+        );
         opacity: 0.4;
         text-align: left;
         display: block;
@@ -69,33 +64,31 @@
     margin-top: 55px;
     z-index: 2;
   }
-  .prev {
+  @mixin position() {
+    top: -40px;
     width: 75px;
     height: 85px;
     position: absolute;
     cursor: pointer;
     transition: all 0.3s;
+  }
+  @mixin button-hover($rotation-degree) {
+    transform: rotate($rotation-degree) scale(1.02);
+    filter: brightness(0.9);
+  }
+  .prev {
+    @include position();
     transform: rotate(180deg);
     left: -120px;
-    top: -40px;
     &:hover {
-      transform: rotate(180deg) scale(1.02);
-      filter: brightness(0.9);
-      transition: all 0.3s;
+      @include button-hover(180deg);
     }
   }
   .next {
-    width: 75px;
-    height: 85px;
-    position: absolute;
-    cursor: pointer;
-    transition: all 0.3s;
+    @include position();
     right: -100px;
-    top: -40px;
     &:hover {
-      transform: rotate(0) scale(1.02);
-      filter: brightness(0.9);
-      transition: all 0.3s;
+      @include button-hover(0);
     }
   }
   .figure {
@@ -116,22 +109,21 @@
   }
 }
 [dir='rtl'] {
+  @mixin button-position($left, $right, $transform) {
+    right: $right;
+    left: $left;
+    &:hover {
+      transform: $transform scale(1.02);
+    }
+  }
   #nine {
     .prev {
-      left: auto;
-      right: -90px;
+      @include button-position(auto, -90px, '');
       transform: none;
-      &:hover {
-        transform: scale(1.02);
-      }
     }
     .next {
-      right: auto;
-      left: -100px;
+      @include button-position(-100px, auto, rotate(180deg));
       transform: rotate(180deg);
-      &:hover {
-        transform: rotate(180deg) scale(1.02);
-      }
     }
   }
 }
