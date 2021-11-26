@@ -1034,6 +1034,8 @@ header {
 .checkbox-container {
   display: flex;
   align-items: center;
+
+  cursor: pointer;
 }
 
 .checkbox-container input[type="checkbox"] {
