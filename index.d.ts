@@ -1,4 +1,5 @@
 import { ReactNode, FC, PropsWithChildren, ReactElement } from 'react';
+import { ColorResult } from 'react-color';
 
 declare module '@bonuz/bonuz-ui' {
   type ButtonProps = PropsWithChildren<{
@@ -136,6 +137,81 @@ declare module '@bonuz/bonuz-ui' {
     type?: 'primary' | 'secondary';
     children: ReactElement<TabProps>[] | ReactElement<TabProps>;
   };
+  type FanItemProps = {
+    avatar: string;
+    name: string;
+    description: string;
+    viewers: number;
+  };
+  type Column = {
+    title: string;
+    key: string;
+  };
+
+  type TableProps = {
+    columns: Column[];
+    data: {
+      [key: string]: string;
+    }[];
+    selectable?: boolean;
+    actionButton?: ReactNode;
+    onClick?: (index: number) => void;
+  };
+  type CreatorNewsCardProps = {
+    img: string;
+    title: string;
+    description: string;
+    tag: string;
+    created: string;
+    type?: 'main' | 'default';
+  };
+  type ColorPickerProps = {
+    onChange?: (color: ColorResult) => void;
+  };
+  type FaqItemProps = {
+    title: string;
+    description: string;
+  };
+  type FansListProps = {
+    t: (key: string) => string;
+    fans: FanItemProps[];
+  };
+  type MediaProps = {
+    img: string;
+    title: string;
+    viewers: number;
+    watermark: string;
+    created: string;
+    shortLink: string;
+    city: string;
+    t: (key: string) => string;
+    meta: {
+      shortcode: string;
+      url: string;
+    };
+  };
+  type UserCardProps = {
+    photo: string;
+    shortLink: string;
+    created: string;
+    addresses: {
+      address: string;
+      coins: number;
+    }[];
+    info: {
+      firstName: string;
+      lastName: string;
+    };
+    t: (key: string) => string;
+  };
+  type UsersProps = {
+    t: (key: string) => string;
+    users: {
+      name: string;
+      coins: number;
+      level: string;
+    }[];
+  };
 
   export const Button: FC<ButtonProps>;
   export const ActionButton: FC<ActionButtonProps>;
@@ -166,4 +242,13 @@ declare module '@bonuz/bonuz-ui' {
   export const Tab: FC<TabProps>;
   export const TabTitle: FC<TabTitleProps>;
   export const Tabs: FC<TabsProps>;
+  export const FanItem: FC<FanItemProps>;
+  export const Table: FC<TableProps>;
+  export const CreatorNewsCard: FC<CreatorNewsCardProps>;
+  export const ColorPicker: FC<ColorPickerProps>;
+  export const FaqItem: FC<FaqItemProps>;
+  export const FansList: FC<FansListProps>;
+  export const Media: FC<MediaProps>;
+  export const UserCard: FC<UserCardProps>;
+  export const Users: FC<UsersProps>;
 }
