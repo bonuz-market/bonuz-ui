@@ -28,24 +28,6 @@ body.noscroll {
   display: none;
 }
 
-@keyframes rainbow {
-  0% {
-    filter: hue-rotate(300deg) contrast(100%);
-  }
-  25% {
-    filter: hue-rotate(350deg) contrast(100%);
-  }
-  50% {
-    filter: hue-rotate(300deg) contrast(100%);
-  }
-  75% {
-    filter: hue-rotate(350deg) contrast(100%) invert(10%);
-  }
-  100% {
-    filter: hue-rotate(300deg) contrast(100%);
-  }
-}
-
 /* .p1{
 	position: absolute;
 	max-width: 318px;
@@ -56,55 +38,12 @@ body.noscroll {
 	display: block;
 } */
 
-@-webkit-keyframes hero-before {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(10px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
-}
-@keyframes hero-before {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(10px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
-}
-
 /* .p1div,
 .p2div {
 	position: relative;
 	z-index: 1;
 	transition: all .3s;
 } */
-
-@keyframes line-title {
-  0% {
-    opacity: 0;
-    transform: translatey(100px);
-  }
-  100% {
-    opacity: 100;
-    transform: translatey(0px);
-  }
-}
-
-@keyframes stripe-animation {
-  0% {
-    background-position: 0px 100%;
-  }
-  100% {
-    background-position: 100000px 100%;
-  }
-}
 
 .title__wrapper {
   display: flex;
@@ -207,81 +146,9 @@ body.noscroll {
 	transition: all .3s;
 } */
 
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translatey(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translatey(0px);
-  }
-}
-
-@keyframes iconscale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@-webkit-keyframes iconscale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 #eight,
 #nine {
   background: var(--second-black);
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-    filter: contrast(180%);
-  }
-  50% {
-    background-position: 100% 50%;
-    filter: contrast(130%);
-  }
-  100% {
-    background-position: 0% 50%;
-    filter: contrast(150%);
-  }
-}
-
-@keyframes diagramscale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@-webkit-keyframes diagramscale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 
 .line .progress.purple {
@@ -388,14 +255,6 @@ body.noscroll {
   display: none;
 }
 
-@keyframes stripe-animation {
-  0% {
-    background-position: 0 100%;
-  }
-  100% {
-    background-position: 100000px 100%;
-  }
-}
 .input__label {
   display: block;
   margin-bottom: 14px;
