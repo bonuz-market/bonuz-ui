@@ -1,0 +1,74 @@
+@use '/public/styles/utils.scss';
+#five {
+  background: var(--second-black);
+  .outer {
+    display: flex;
+    justify-content: center;
+    max-width: 100vw;
+    width: 100%;
+  }
+  .inner {
+    max-width: 1310px;
+    width: 100%;
+    padding: 0px 10px;
+    position: relative;
+  }
+  .row {
+    &:nth-child(1) {
+      margin-top: 150px;
+      h2 {
+        @include utils.font(Farro, normal, normal, 32px, 104.4%, #ffffff);
+        text-align: center;
+        z-index: 1;
+        position: relative;
+      }
+    }
+  }
+  .blocks {
+    width: 520px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 130px;
+  }
+  .block {
+    backdrop-filter: blur(34px);
+    border-radius: 31px 31px 31px 0px;
+    width: 240px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    @include utils.font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
+    margin-bottom: 35px;
+    &:nth-child(1) {
+      background: linear-gradient(
+        71.22deg,
+        var(--gradient-color-3) 0%,
+        var(--gradient-color-4) 95.13%
+      );
+      margin-right: 17px;
+    }
+    %background {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    @mixin margin($left: null, $right: null) {
+      @extend %background;
+      margin-left: $left;
+      margin-right: $right;
+    }
+    &:nth-child(2) {
+      @include margin($left: 17px);
+    }
+    &:nth-child(3) {
+      @include margin($right: 17px);
+    }
+    &:nth-child(4) {
+      background: linear-gradient(
+        180deg,
+        var(--gradient-color-1) 0%,
+        var(--gradient-color-2) 95.13%
+      );
+      margin-left: 17px;
+    }
+  }
+}
