@@ -1,4 +1,4 @@
-@use 'public/styles/utils' as utils;
+@import 'public/styles/utils.scss';
 
 #ten {
   background: var(--second-black);
@@ -24,7 +24,7 @@
   .row {
     &:nth-child(1) {
       h2 {
-        @include utils.font(Farro, normal, normal, 32px, 104.4%, #ffffff);
+        @include font(Farro, normal, normal, 32px, 104.4%, #ffffff);
         text-align: center;
         z-index: 1;
         position: relative;
@@ -54,7 +54,7 @@
       background: rgba(255, 255, 255, 0.1);
       transition: 0.6s;
       span {
-        @include utils.font(Farro, normal, 500, 16px, 16px, #ffffff);
+        @include font(Farro, normal, 500, 16px, 16px, #ffffff);
         display: flex;
         align-items: center;
         text-transform: capitalize;

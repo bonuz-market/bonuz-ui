@@ -1,4 +1,4 @@
-@use 'public/styles/utils' as utils;
+@import 'public/styles/utils.scss';
 
 #nine {
   background: var(--second-black);
@@ -19,7 +19,7 @@
   .row {
     &:nth-child(1) {
       h2 {
-        @include utils.font(Farro, normal, normal, 32px, 104.4%, #ffffff);
+        @include font(Farro, normal, normal, 32px, 104.4%, #ffffff);
         text-align: center;
         z-index: 1;
         position: relative;
@@ -38,19 +38,12 @@
         border-radius: 8px;
       }
       p {
-        @include utils.font(Farro, normal, normal, 16px, 26px, #ffffff);
+        @include font(Farro, normal, normal, 16px, 26px, #ffffff);
         margin-bottom: 0px;
         text-align: left;
       }
       span {
-        @include utils.font(
-          Roboto Condensed,
-          normal,
-          normal,
-          16px,
-          26px,
-          #ffffff
-        );
+        @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
         opacity: 0.4;
         text-align: left;
         display: block;

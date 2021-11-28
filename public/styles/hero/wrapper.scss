@@ -1,4 +1,4 @@
-@use 'public/styles/utils' as utils;
+@import 'public/styles/utils.scss';
 
 #first {
   background-image: url('/assets/images/hero-background.png');
@@ -43,7 +43,7 @@
             width: 460px;
             margin-top: 19px;
             margin-bottom: 40px;
-            @include utils.font(Farro, normal, normal, 64px, 87%, #ffffff);
+            @include font(Farro, normal, normal, 64px, 87%, #ffffff);
             span {
               background: linear-gradient(
                 270.9deg,
@@ -55,7 +55,7 @@
             }
           }
           p {
-            @include utils.font(
+            @include font(
               Roboto Condensed,
               normal,
               normal,
@@ -91,7 +91,7 @@
     align-items: center;
     margin-bottom: 32px;
     span {
-      @include utils.font(Farro, normal, normal, 12px, 12px, #ffffff);
+      @include font(Farro, normal, normal, 12px, 12px, #ffffff);
       margin-right: 18px;
     }
     img {

@@ -1,4 +1,4 @@
-@use '/public/styles/utils.scss' as utils;
+@import 'public/styles/utils.scss';
 %transition {
   transition: all 0.3s;
 }
@@ -48,18 +48,11 @@
       margin-top: 150px;
       @extend %transition;
       h2 {
-        @include utils.font(Farro, normal, normal, 32px, 104.4%x, #ffffff);
+        @include font(Farro, normal, normal, 32px, 104.4%x, #ffffff);
         @extend %position;
       }
       p {
-        @include utils.font(
-          Roboto Condensed,
-          normal,
-          normal,
-          16px,
-          26px,
-          #ffffff
-        );
+        @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
         @extend %position;
       }
       .toggle {
@@ -92,7 +85,7 @@
             @extend %transition;
           }
           span {
-            @include utils.font(Farro, normal, normal, 16px, 104.4%, #ffffff);
+            @include font(Farro, normal, normal, 16px, 104.4%, #ffffff);
             @extend %transition;
           }
         }
@@ -120,14 +113,7 @@
     .title {
       p {
         width: 232px;
-        @include utils.font(
-          Roboto Condensed,
-          normal,
-          normal,
-          16px,
-          26px,
-          #ffffff
-        );
+        @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
       }
     }
     .first-form {
@@ -153,17 +139,10 @@
     .col {
       &:nth-child(2) {
         h5 {
-          @include utils.font(Farro, normal, 500, 16px, 104.4%, #ffffff);
+          @include font(Farro, normal, 500, 16px, 104.4%, #ffffff);
         }
         p {
-          @include utils.font(
-            Roboto Condensed,
-            normal,
-            normal,
-            14px,
-            26px,
-            #ffffff
-          );
+          @include font(Roboto Condensed, normal, normal, 14px, 26px, #ffffff);
           opacity: 0.8;
         }
       }
@@ -179,7 +158,7 @@
       height: 48px;
     }
     span {
-      @include utils.font(Farro, normal, 500, 16px, 16px, #ffffff);
+      @include font(Farro, normal, 500, 16px, 16px, #ffffff);
 
       display: flex;
       align-items: center;

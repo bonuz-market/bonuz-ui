@@ -1,4 +1,4 @@
-@use 'public/styles/utils' as utils;
+@import 'public/styles/utils.scss';
 header {
   .header-outer {
     display: flex;
@@ -65,7 +65,7 @@ header {
           }
           li {
             a {
-              @include utils.font(Farro, normal, 500, 14px, 14px, #ffffff);
+              @include font(Farro, normal, 500, 14px, 14px, #ffffff);
               text-decoration: none;
             }
           }
@@ -84,7 +84,7 @@ header {
           text-decoration: none;
         }
         span {
-          @include utils.font(Farro, normal, 500, 16px, 16px, #ffffff);
+          @include font(Farro, normal, 500, 16px, 16px, #ffffff);
           text-transform: capitalize;
         }
         img {
@@ -146,7 +146,7 @@ header {
           }
 
           span {
-            @include utils.font(Farro, normal, 500, 16px, 16px, #ffffff);
+            @include font(Farro, normal, 500, 16px, 16px, #ffffff);
             display: flex;
             align-items: center;
             text-transform: capitalize;

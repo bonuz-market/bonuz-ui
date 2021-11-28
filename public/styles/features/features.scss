@@ -1,4 +1,4 @@
-@use '/public/styles/utils.scss';
+@import 'public/styles/utils.scss';
 #five {
   background: var(--second-black);
   .outer {
@@ -17,7 +17,7 @@
     &:nth-child(1) {
       margin-top: 150px;
       h2 {
-        @include utils.font(Farro, normal, normal, 32px, 104.4%, #ffffff);
+        @include font(Farro, normal, normal, 32px, 104.4%, #ffffff);
         text-align: center;
         z-index: 1;
         position: relative;
@@ -38,7 +38,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    @include utils.font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
+    @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
     margin-bottom: 35px;
     &:nth-child(1) {
       background: linear-gradient(

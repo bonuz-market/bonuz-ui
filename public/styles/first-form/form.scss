@@ -1,5 +1,4 @@
-@use '/public/styles/utils.scss' as utils;
-
+@import 'public/styles/utils.scss';
 .first-form {
   position: relative;
   margin-top: 80px;
@@ -44,7 +43,7 @@
       margin-right: 30px;
     }
     p {
-      @include utils.font(Farro, normal, normal, 24px, 26px, #ffffff);
+      @include font(Farro, normal, normal, 24px, 26px, #ffffff);
       width: 310px;
       margin-bottom: 10px;
       margin-top: 10px;
@@ -60,14 +59,7 @@
       width: 290px;
       height: 17px;
       z-index: 3;
-      @include utils.font(
-        Roboto Condensed,
-        normal,
-        normal,
-        14px,
-        16px,
-        #ffffff
-      );
+      @include font(Roboto Condensed, normal, normal, 14px, 16px, #ffffff);
       padding: 16px;
       position: relative;
       transition: 0.3s;
@@ -86,7 +78,7 @@
       height: 48px;
       border-radius: 0px 8px 8px 0px;
       border: none;
-      @include utils.font(null, normal, bold, 16px, 16px, #ffffff);
+      @include font(null, normal, bold, 16px, 16px, #ffffff);
       text-transform: capitalize;
       margin-left: -10px;
       z-index: 3;

@@ -1,4 +1,4 @@
-@use '/public/styles/utils.scss' as utils;
+@import 'public/styles/utils.scss';
 .celebs-blocks {
   display: flex;
   z-index: 3;
@@ -30,13 +30,13 @@
     }
     p {
       width: 250px;
-      @include utils.font(Roboto Condensed, normal, normal, 16px, 26, #ffffff);
+      @include font(Roboto Condensed, normal, normal, 16px, 26, #ffffff);
     }
   }
 }
 .celebs {
   > p {
-    @include utils.font(inherit, normal, bold, 16px, 16, #ffffff);
+    @include font(inherit, normal, bold, 16px, 16, #ffffff);
     margin-top: 30px;
     margin-bottom: 25px;
   }

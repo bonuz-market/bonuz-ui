@@ -1,7 +1,7 @@
-@use 'public/styles/utils' as utils;
+@import 'public/styles/utils.scss';
 
 @mixin text() {
-  @include utils.font(Farro, normal, normal, 32px, 104.4%, #ffffff);
+  @include font(Farro, normal, normal, 32px, 104.4%, #ffffff);
   text-align: center;
 }
 #six {
@@ -55,14 +55,7 @@
           margin-bottom: 4px;
         }
         p {
-          @include utils.font(
-            Roboto Condensed,
-            normal,
-            normal,
-            16px,
-            26px,
-            #ffffff
-          );
+          @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
           margin-top: 4px;
         }
         .overlay {

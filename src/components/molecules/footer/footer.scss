@@ -1,4 +1,4 @@
-@use 'public/styles/utils' as utils;
+@import 'public/styles/utils.scss';
 footer {
   background: var(--main-black);
   .outer {
@@ -31,14 +31,7 @@ footer {
           background: var(--main-black);
         }
         p {
-          @include utils.font(
-            Roboto Condensed,
-            normal,
-            normal,
-            16px,
-            26px,
-            #ffffff
-          );
+          @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
           opacity: 0.41;
           width: 219px;
           margin-bottom: 105px;
@@ -46,7 +39,7 @@ footer {
       }
       &:nth-child(2) {
         p {
-          @include utils.font(Farro, normal, normal, 16px, 16px, #ffffff);
+          @include font(Farro, normal, normal, 16px, 16px, #ffffff);
           opacity: 0.3;
           margin-top: 40px;
         }
@@ -60,7 +53,7 @@ footer {
           align-content: baseline;
           a {
             text-decoration: none;
-            @include utils.font(Farro, normal, normal, 14px, 14px, #ffffff);
+            @include font(Farro, normal, normal, 14px, 14px, #ffffff);
             padding: 12px 0px;
             display: block;
             margin-right: 80px;
@@ -68,7 +61,7 @@ footer {
         }
         .form {
           p {
-            @include utils.font(Farro, normal, normal, 14px, 14px, #ffffff);
+            @include font(Farro, normal, normal, 14px, 14px, #ffffff);
             opacity: 1;
             margin-top: 57px;
           }
@@ -89,14 +82,7 @@ footer {
   }
   .form {
     input {
-      @include utils.font(
-        Roboto Condensed,
-        normal,
-        normal,
-        14px,
-        25px,
-        #ffffff
-      );
+      @include font(Roboto Condensed, normal, normal, 14px, 25px, #ffffff);
       background: none;
       border: 1px solid rgba(255, 255, 255, 0.24);
       border-width: 0px 0px 1px 0px;
@@ -151,14 +137,7 @@ footer {
     margin-top: 50px;
   }
   .policy {
-    @include utils.font(
-      Farro,
-      normal,
-      normal,
-      14px,
-      14px,
-      rgba(255, 255, 255, 0.38)
-    );
+    @include font(Farro, normal, normal, 14px, 14px, rgba(255, 255, 255, 0.38));
     text-transform: capitalize;
     margin-top: 80px;
     display: block;
