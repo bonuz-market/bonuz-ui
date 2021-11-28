@@ -1,9 +1,11 @@
-@import "./variables.css";
-@import "./fonts.css";
-@import "./styles.imported.css";
-@import "./styles-adaptive.imported.css";
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+@import './variables.css';
+@import './fonts.css';
+@import './styles.imported.css';
+@import './styles-adaptive.imported.css';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+@import './animations.scss';
+@import './bundle.css';
 
 body {
   margin: 0;
