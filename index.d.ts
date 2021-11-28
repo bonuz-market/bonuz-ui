@@ -44,6 +44,7 @@ declare module '@bonuz/bonuz-ui' {
   }>;
   type InputProps = {
     label?: string;
+    secondary?: boolean;
     placeholder?: string;
     value?: string;
     actionButton?: ReactNode;
