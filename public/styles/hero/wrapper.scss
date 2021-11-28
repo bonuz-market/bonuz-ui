@@ -1,0 +1,117 @@
+@use 'public/styles/utils' as utils;
+
+#first {
+  background-image: url('/assets/images/hero-background.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 100% 0%;
+  padding-top: 91px;
+  .outer {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .inner {
+    max-width: 1310px;
+    width: 100%;
+    padding: 0px 10px;
+    position: relative;
+    @mixin position($top, $right) {
+      position: absolute;
+      right: $right;
+      top: $top;
+    }
+    .logo_bg1 {
+      @include position(0, 500px);
+    }
+    .logo_bg2 {
+      @include position(500px, 0);
+    }
+  }
+  .row {
+    &:nth-child(1) {
+      display: flex;
+      height: 560px;
+      margin-top: 60px;
+      .col {
+        position: relative;
+        width: max-content;
+        z-index: 3;
+        &:nth-child(1) {
+          z-index: 3;
+          h1 {
+            width: 460px;
+            margin-top: 19px;
+            margin-bottom: 40px;
+            @include utils.font(Farro, normal, normal, 64px, 87%, #ffffff);
+            span {
+              background: linear-gradient(
+                270.9deg,
+                var(--gradient-color-1) -2.92%,
+                var(--gradient-color-2) 99.95%
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+          p {
+            @include utils.font(
+              Roboto Condensed,
+              normal,
+              normal,
+              12px,
+              26px,
+              #ffffff
+            );
+            width: 360px;
+          }
+          .button-group {
+            margin-top: 40px;
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+  .blur {
+    background: var(--blur);
+    width: 783px;
+    height: 300px;
+    position: absolute;
+    z-index: 0;
+    left: 40%;
+    top: 15%;
+    transform: skewY(10deg);
+    filter: blur(140px);
+  }
+  .buildon {
+    width: max-content;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    span {
+      @include utils.font(Farro, normal, normal, 12px, 12px, #ffffff);
+      margin-right: 18px;
+    }
+    img {
+      width: 23px;
+    }
+    .first {
+      padding-right: 15px;
+      margin-right: 15px;
+      border-right: 1px solid rgba(255, 255, 255, 0.13);
+    }
+  }
+}
+[dir='rtl'] {
+  .slick-slide {
+    float: left !important;
+  }
+}
+@media screen and (max-width: 1050px) {
+  #first {
+    background-size: cover;
+    padding-top: 50px;
+  }
+}
