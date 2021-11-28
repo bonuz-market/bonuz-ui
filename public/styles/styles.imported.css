@@ -4078,7 +4078,8 @@ footer .policy:hover {
   width: 100%;
 }
 
-.input--action-btn .input__control {
+.input--action-btn .input__control,
+.input--secondary .input__control {
   width: 100%;
   padding: 16px;
 
@@ -4089,11 +4090,16 @@ footer .policy:hover {
   transition: 0.3s ease;
 }
 
+.input--secondary .input__control {
+  border-radius: 8px;
+}
+
 [dir="rtl"] .input--action-btn .input__control {
   border-radius: 0 8px 8px 0;
 }
 
-.input--action-btn .input__control:focus {
+.input--action-btn .input__control:focus,
+.input--secondary .input__control:focus {
   background-color: #19094B;
 }
 

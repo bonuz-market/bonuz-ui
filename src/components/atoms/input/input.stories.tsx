@@ -12,6 +12,14 @@ export const Primary = Template.bind({});
 Primary.args = {
   label: 'Subscribe to news:',
   placeholder: 'Enter you email',
+  secondary: false,
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  label: 'Subscribe to news:',
+  placeholder: 'Enter you email',
+  secondary: true,
 };
 
 export const WithActionButton = Template.bind({});

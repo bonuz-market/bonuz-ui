@@ -4,6 +4,7 @@ import { Button } from '../button';
 
 export type InputProps = {
   label?: string;
+  secondary?: boolean;
   placeholder?: string;
   value?: string;
   actionButton?: ReactNode;
@@ -15,6 +16,7 @@ export type InputProps = {
 
 export const Input: FC<InputProps> = ({
   label,
+  secondary,
   placeholder,
   value,
   actionButton,
@@ -38,6 +40,7 @@ export const Input: FC<InputProps> = ({
       className={classnames('input', {
         'input--action-btn': withDefaultActionButton,
         'input--mobile-column': mobileColumn,
+        'input--secondary': secondary,
       })}
     >
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
