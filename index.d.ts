@@ -46,6 +46,7 @@ declare module '@bonuz/bonuz-ui' {
     label?: string;
     secondary?: boolean;
     placeholder?: string;
+    icon?: ReactNode;
     value?: string;
     actionButton?: ReactNode;
     withDefaultActionButton?: boolean;
