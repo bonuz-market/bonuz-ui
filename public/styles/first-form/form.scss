@@ -136,9 +136,43 @@
 }
 @media (max-width: 1050px) {
   .first-form {
+    margin: 0 auto;
+    width: calc(100% - 45px);
+    flex-direction: column;
+    height: auto;
+    padding: 26px 0px;
+    margin-bottom: 60px;
+    .form_bg {
+      display: none;
+    }
     .title {
-      &::before {
-        display: none;
+      p {
+        width: 260px;
+        font-size: 20px;
+        &::before {
+          display: none;
+        }
+      }
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      padding-left: 0px;
+    }
+    .col {
+      width: 100%;
+    }
+    form {
+      input[type='email'] {
+        width: calc(100% - 16px);
+        padding-right: 0px;
+      }
+      button {
+        margin-left: 0px;
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 15px;
       }
     }
   }

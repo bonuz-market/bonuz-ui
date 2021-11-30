@@ -38,3 +38,15 @@
     width: 50%;
   }
 }
+@media screen and (max-width: 1050px) {
+  .info-block {
+    flex-direction: column;
+    background-image: none;
+    &--large {
+      padding: 32px;
+    }
+    &__column {
+      width: 100%;
+    }
+  }
+}

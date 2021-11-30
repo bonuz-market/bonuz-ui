@@ -45,3 +45,30 @@
     }
   }
 }
+@media screen and (max-width: 1050px) {
+  .input {
+    &--mobile-column {
+      flex-direction: column;
+      height: auto;
+      > label {
+        max-width: none;
+      }
+      .input__control {
+        margin-bottom: 14px;
+        border-radius: 8px !important;
+      }
+      > .button-fill {
+        > button {
+          width: 100%;
+          border-radius: 8px;
+          &::before {
+            border-radius: 8px;
+          }
+          &::after {
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  }
+}

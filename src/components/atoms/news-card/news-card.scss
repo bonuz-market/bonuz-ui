@@ -118,3 +118,20 @@
     }
   }
 }
+
+@media screen and (max-width: 1050px) {
+  .post {
+    margin-right: 0;
+    p {
+      max-width: 300px;
+    }
+    .img {
+      .post-image {
+        top: 0px;
+      }
+    }
+    .read-more {
+      display: none;
+    }
+  }
+}

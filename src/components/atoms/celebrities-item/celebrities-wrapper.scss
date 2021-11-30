@@ -76,3 +76,15 @@
     }
   }
 }
+@media (min-width: 820px) and (max-width: 1050px) {
+  .celebs {
+    .slick-slider {
+      .action-button__prev {
+        right: 20px !important;
+      }
+      .action-button__next {
+        left: 20px !important;
+      }
+    }
+  }
+}

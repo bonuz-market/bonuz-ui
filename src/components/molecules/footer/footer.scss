@@ -167,3 +167,54 @@ footer {
     }
   }
 }
+@media screen and (max-width: 1050px) {
+  footer {
+    overflow: hidden;
+    .row {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      flex-direction: column;
+      .col {
+        width: calc(100vw - 40px);
+        padding: 20px;
+        &:nth-child(1) {
+          p {
+            margin-bottom: 40px;
+          }
+          .button-stroke {
+            width: 125px;
+          }
+        }
+        &:nth-child(2) {
+          p {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+    .button-stroke {
+      min-width: 125px;
+      width: 140px;
+      background: #0f0d67;
+      margin-left: 20px;
+    }
+    .button-group {
+      display: flex;
+      margin-bottom: 0px;
+    }
+    .icon_list {
+      margin: 0 auto;
+      margin-top: 0px;
+    }
+    .policy {
+      margin-top: 40px;
+      text-align: center;
+    }
+    form {
+      input[type='email'] {
+        width: calc(100% - 10px);
+      }
+    }
+  }
+}
