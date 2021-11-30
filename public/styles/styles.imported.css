@@ -4087,7 +4087,8 @@ footer .policy:hover {
 }
 
 .input--icon {
-  margin-left: 8px;
+  width: calc(100% - 16px);
+  margin-left: 16px;
 }
 
 .input--action-btn .input__control,
