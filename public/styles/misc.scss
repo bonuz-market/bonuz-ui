@@ -1,0 +1,106 @@
+* {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: var(--main-bg-color);
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0px;
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+#svg {
+  circle {
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear;
+    stroke: #666;
+    stroke-width: 1em;
+  }
+  #bar {
+    stroke-linecap: round;
+    stroke: url(#MyGradient);
+  }
+  #bar1 {
+    stroke-linecap: round;
+    stroke: url(#MyGradient);
+  }
+  #bar2 {
+    stroke-linecap: round;
+    stroke: url(#MyGradient);
+  }
+  #bar3 {
+    stroke-linecap: round;
+    stroke: url(#MyGradient);
+  }
+  #bar4 {
+    stroke-linecap: round;
+    stroke: url(#MyGradient);
+  }
+  #bar5 {
+    stroke-linecap: round;
+    stroke: url(#MyGradient);
+  }
+  .bar {
+    stroke-linecap: round;
+    stroke: url(#MyGradient);
+  }
+  #bar6 {
+    stroke-linecap: round;
+    stroke: url(#MyGradient1);
+  }
+  #bar7 {
+    stroke-linecap: round;
+    stroke: url(#MyGradient2);
+  }
+  #bar8 {
+    stroke-linecap: round;
+    stroke: url(#MyGradient3);
+  }
+  #bar9 {
+    stroke-linecap: round;
+    stroke: url(#MyGradient4);
+  }
+  #bar10 {
+    stroke-linecap: round;
+    stroke: url(#MyGradient5);
+  }
+  #back {
+    stroke-width: 0.6em;
+  }
+}
+#cont {
+  display: block;
+  margin: 2em auto;
+  border-radius: 100%;
+  position: absolute;
+  left: -52px;
+  top: -41px;
+  transform: scale(0.75);
+  transform-origin: left top;
+}
+.divider {
+  background: rgba(255, 255, 255, 0.12);
+  width: 100%;
+  display: block;
+  height: 1px;
+  margin: 0 auto;
+}
+.slick-prev,
+.slick-next {
+  z-index: 10;
+}
+
+.skip-link.screen-reader-text {
+  display: none;
+}
+.header-inner .col .sign-up a {
+  display: none;
+}
