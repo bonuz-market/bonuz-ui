@@ -136,6 +136,10 @@
 }
 @media (max-width: 1050px) {
   .first-form {
+    .title {
+    }
+  }
+  .first-form {
     margin: 0 auto;
     width: calc(100% - 45px);
     flex-direction: column;
@@ -146,12 +150,12 @@
       display: none;
     }
     .title {
+      &::before {
+        display: none;
+      }
       p {
         width: 260px;
         font-size: 20px;
-        &::before {
-          display: none;
-        }
       }
       position: relative;
       z-index: 3;
