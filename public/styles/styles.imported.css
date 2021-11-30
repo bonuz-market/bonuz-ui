@@ -4078,8 +4078,21 @@ footer .policy:hover {
   width: 100%;
 }
 
+.input__icon {
+  position: relative;
+  z-index: 2;
+
+  margin-right: -40px;
+  align-self: center;
+}
+
+.input--icon {
+  margin-left: 8px;
+}
+
 .input--action-btn .input__control,
-.input--secondary .input__control {
+.input--secondary .input__control,
+.input--icon .input__control {
   width: 100%;
   padding: 16px;
 
@@ -4088,6 +4101,10 @@ footer .policy:hover {
   border-radius: 8px 0 0 8px;
 
   transition: 0.3s ease;
+}
+
+.input--icon .input__control {
+  padding-left: 52px;
 }
 
 .input--secondary .input__control {
@@ -4099,7 +4116,8 @@ footer .policy:hover {
 }
 
 .input--action-btn .input__control:focus,
-.input--secondary .input__control:focus {
+.input--secondary .input__control:focus,
+.input--icon .input__control:focus {
   background-color: #19094B;
 }
 

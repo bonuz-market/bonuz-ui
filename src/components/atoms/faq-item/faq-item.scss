@@ -4,6 +4,10 @@
   background-color: #281981;
   border-radius: 8px;
 
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
   &::after {
     content: '';
 

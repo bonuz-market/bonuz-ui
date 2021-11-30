@@ -6,6 +6,7 @@ export type InputProps = {
   label?: string;
   secondary?: boolean;
   placeholder?: string;
+  icon?: ReactNode;
   value?: string;
   actionButton?: ReactNode;
   withDefaultActionButton?: boolean;
@@ -18,6 +19,7 @@ export const Input: FC<InputProps> = ({
   label,
   secondary,
   placeholder,
+  icon,
   value,
   actionButton,
   withDefaultActionButton,
@@ -41,6 +43,7 @@ export const Input: FC<InputProps> = ({
         'input--action-btn': withDefaultActionButton,
         'input--mobile-column': mobileColumn,
         'input--secondary': secondary,
+        'input--icon': icon,
       })}
     >
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
@@ -49,6 +52,7 @@ export const Input: FC<InputProps> = ({
           <span className="input__label">{label}</span>
         )}
         <span className="input__wrapper">
+          {icon && <span className="input__icon">{icon}</span>}
           <input
             className="input__control"
             type="text"
