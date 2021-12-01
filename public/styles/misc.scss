@@ -17,64 +17,44 @@ body.noscroll {
   overflow: hidden;
 }
 
-#svg {
-  circle {
-    stroke-dashoffset: 0;
-    transition: stroke-dashoffset 1s linear;
-    stroke: #666;
-    stroke-width: 1em;
-  }
-  .bar {
-    stroke-linecap: round;
-    stroke: url(#MyGradient);
-  }
-  #bar {
-    stroke-linecap: round;
-    stroke: url(#MyGradient);
-  }
-  #bar1 {
-    stroke-linecap: round;
-    stroke: url(#MyGradient);
-  }
-  #bar2 {
-    stroke-linecap: round;
-    stroke: url(#MyGradient);
-  }
-  #bar3 {
-    stroke-linecap: round;
-    stroke: url(#MyGradient);
-  }
-  #bar4 {
-    stroke-linecap: round;
-    stroke: url(#MyGradient);
-  }
-  #bar5 {
-    stroke-linecap: round;
-    stroke: url(#MyGradient);
-  }
-  #bar6 {
-    stroke-linecap: round;
-    stroke: url(#MyGradient1);
-  }
-  #bar7 {
-    stroke-linecap: round;
-    stroke: url(#MyGradient2);
-  }
-  #bar8 {
-    stroke-linecap: round;
-    stroke: url(#MyGradient3);
-  }
-  #bar9 {
-    stroke-linecap: round;
-    stroke: url(#MyGradient4);
-  }
-  #bar10 {
-    stroke-linecap: round;
-    stroke: url(#MyGradient5);
-  }
-  #back {
-    stroke-width: 0.6em;
-  }
+#svg circle {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+  stroke: #666;
+  stroke-width: 1em;
+}
+#svg .bar,
+#bar,
+#bar1,
+#bar2,
+#bar3,
+#bar4,
+#bar5 {
+  stroke-linecap: round;
+  stroke: url(#MyGradient);
+}
+#svg #bar6 {
+  stroke-linecap: round;
+  stroke: url(#MyGradient1);
+}
+#svg #bar7 {
+  stroke-linecap: round;
+  stroke: url(#MyGradient2);
+}
+#svg #bar8 {
+  stroke-linecap: round;
+  stroke: url(#MyGradient3);
+}
+#svg #bar9 {
+  stroke-linecap: round;
+  stroke: url(#MyGradient4);
+}
+#svg #bar10 {
+  stroke-linecap: round;
+  stroke: url(#MyGradient5);
+}
+#svg #back {
+  stroke-width: 0.6em;
 }
 #cont {
   display: block;
