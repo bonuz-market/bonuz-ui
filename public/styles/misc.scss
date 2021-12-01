@@ -24,6 +24,10 @@ body.noscroll {
     stroke: #666;
     stroke-width: 1em;
   }
+  .bar {
+    stroke-linecap: round;
+    stroke: url(#MyGradient);
+  }
   #bar {
     stroke-linecap: round;
     stroke: url(#MyGradient);
@@ -45,10 +49,6 @@ body.noscroll {
     stroke: url(#MyGradient);
   }
   #bar5 {
-    stroke-linecap: round;
-    stroke: url(#MyGradient);
-  }
-  .bar {
     stroke-linecap: round;
     stroke: url(#MyGradient);
   }
@@ -97,13 +97,36 @@ body.noscroll {
 .slick-next {
   z-index: 10;
 }
-
+.slick-arrow::before {
+  display: none;
+}
+.slick-arrow.slick-disabled {
+  opacity: 0.4;
+  user-select: none;
+  pointer-events: none;
+}
 .skip-link.screen-reader-text {
   display: none;
 }
 .header-inner .col .sign-up a {
   display: none;
 }
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.sent .wpcf7-response-output {
+  border-color: transparent;
+  position: absolute;
+  bottom: 7px;
+  width: 300px;
+  height: 20px;
+  margin: 0px;
+  color: white;
+  z-index: 3;
+  font-family: 'Anonymous Pro';
+  font-size: 12px;
+  margin-left: -10px;
+}
+
 @media screen and (max-width: 1050px) {
   section {
     overflow: hidden;

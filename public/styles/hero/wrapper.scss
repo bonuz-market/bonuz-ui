@@ -22,7 +22,7 @@
       top: $top;
     }
     .logo_bg1 {
-      @include position(0, 500px);
+      @include position(180px, -200px);
     }
     .logo_bg2 {
       @include position(500px, 0);
