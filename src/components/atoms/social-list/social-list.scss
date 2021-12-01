@@ -1,0 +1,25 @@
+.icon_list {
+  a {
+    img {
+      width: 57px;
+      height: auto;
+      filter: hue-rotate(0deg);
+      transition: all 0.3s;
+      transform: scale(1);
+      &:hover {
+        width: 57px;
+        height: auto;
+        transform: scale(1.05);
+        background-image: url('/assets/images/footer-social-hover.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+    margin-bottom: 15px;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  width: 203px;
+  justify-content: space-between;
+  margin-top: 50px;
+}

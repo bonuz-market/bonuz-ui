@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import './social-list.scss';
 
 export const SocialList: FC = () => (
   <div className="icon_list">
