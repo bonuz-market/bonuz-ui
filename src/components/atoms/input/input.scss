@@ -1,45 +1,98 @@
+@import 'public/styles/utils.scss';
+%input_control {
+  width: 100%;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom: none;
+  border-radius: 8px 0 0 8px;
+  transition: 0.3s ease;
+  &:focus {
+    background-color: #19094b;
+  }
+}
 .input {
   width: 100%;
-
+  &__label {
+    display: block;
+    margin-bottom: 14px;
+    @include font(Farro, normal, normal, 14px, 14px, #ffffff);
+  }
+  &__control {
+    width: 100%;
+    padding-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+    @include font(Roboto Condensed, normal, normal, 14px, 26px, #ffffff);
+  }
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    > button {
+      display: flex;
+      align-items: flex-start;
+      padding: 0;
+      margin-left: -30px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      > img {
+        width: 24px;
+      }
+      &:hover {
+        filter: hue-rotate(-40deg);
+        transform: scale(1.02);
+      }
+    }
+  }
+  &__icon {
+    position: relative;
+    z-index: 2;
+    margin-right: -40px;
+    align-self: center;
+  }
+  &--icon {
+    width: calc(100% - 16px);
+    margin-left: 16px;
+    .input__control {
+      @extend %input_control;
+      padding-left: 52px;
+    }
+  }
+  &--secondary {
+    .input__control {
+      @extend %input_control;
+      border-radius: 8px;
+    }
+  }
   &--action-btn {
     display: flex;
     height: 50px;
     .input__control {
-      width: 100%;
-      padding: 16px;
-
-      background-color: rgba(255, 255, 255, 0.3);
-      border-bottom: none;
-      border-radius: 8px 0 0 8px;
-
-      transition: 0.3s ease;
-
+      @extend %input_control;
       [dir='rtl'] & {
         border-radius: 0 8px 8px 0;
-      }
-
-      &:focus {
-        background-color: #19094b;
       }
     }
     > label {
       display: flex;
-
       width: 100%;
     }
     > .button-fill {
+      %border {
+        border-radius: 0 8px 8px 0;
+        border-radius: 8px 0 0 8px;
+      }
       display: flex;
       flex-shrink: 0;
       > button {
-        border-radius: 0 8px 8px 0;
-        border-radius: 8px 0 0 8px;
+        @extend %border;
         &::before {
-          border-radius: 0 8px 8px 0;
-          border-radius: 8px 0 0 8px;
+          @extend %border;
         }
         &::after {
-          border-radius: 0 8px 8px 0;
-          border-radius: 8px 0 0 8px;
+          @extend %border;
         }
       }
     }
@@ -47,6 +100,20 @@
 }
 @media screen and (max-width: 1050px) {
   .input {
+    &__wrapper {
+      > button {
+        margin-right: -30px;
+        margin-left: 0;
+        > img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &--action-btn {
+      .input__control {
+        border-radius: 0 8px 8px 0;
+      }
+    }
     &--mobile-column {
       flex-direction: column;
       height: auto;
