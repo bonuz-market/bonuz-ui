@@ -9,6 +9,7 @@ export type CheckboxProps = {
 
 export const Checkbox: FC<CheckboxProps> = ({ label, checked, onChange }) => {
   const [defaultChecked, setChecked] = useState(checked || false);
+  console.log(label, defaultChecked);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setChecked(event.target.checked);
@@ -19,18 +20,13 @@ export const Checkbox: FC<CheckboxProps> = ({ label, checked, onChange }) => {
   };
 
   return (
-    <div className="checkbox-container">
-      <input
-        type="checkbox"
-        checked={defaultChecked}
-        onChange={handleChange}
-        id="rememberMe"
-      />
+    // eslint-disable-next-line jsx-a11y/label-has-associated-control
+    <label className="checkbox-container">
+      <input type="checkbox" checked={defaultChecked} onChange={handleChange} />
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-      <label className="checkbox" htmlFor="rememberMe" />
-      <label className="checkbox-text" htmlFor="rememberMe">
-        {label}
-      </label>
-    </div>
+      <span className="checkbox" />
+      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+      <span className="checkbox-text">{label}</span>
+    </label>
   );
 };

@@ -1,0 +1,45 @@
+.media {
+  &__fans {
+    background-color: #040D5B;
+    padding-top: 32px;
+
+    &__title {
+      display: flex;
+      align-items: center;
+
+      margin-bottom: 24px;
+
+      color: #FFFFFF;
+      font-family: Farro, sans-serif;
+      font-size: 16px;
+      line-height: 16px;
+
+      & > span {
+        display: block;
+
+        margin-left: 8px;
+
+        opacity: 0.2;
+      }
+    }
+
+    &__list {
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+    }
+  }
+}
+
+@media (min-width: 1050px) {
+  .media {
+    &__fans {
+      max-height: 80vh;
+      padding: 32px;
+
+      border-radius: 16px;
+      overflow: auto;
+    }
+  }
+}
