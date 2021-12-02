@@ -71,11 +71,11 @@
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
     "@rollup/plugin-json": "^4.1.0",
-    "@storybook/addon-actions": "^6.4.3",
-    "@storybook/addon-essentials": "^6.4.3",
-    "@storybook/addon-links": "^6.4.3",
+    "@storybook/addon-actions": "^6.4.4",
+    "@storybook/addon-essentials": "^6.4.4",
+    "@storybook/addon-links": "^6.4.4",
     "@storybook/preset-scss": "1.0.3",
-    "@storybook/react": "^6.4.3",
+    "@storybook/react": "^6.4.4",
     "@types/react-color": "3.0.6",
     "@types/react-slick": "^0.23.7",
     "eslint-config-airbnb": "18.2.1",
@@ -89,6 +89,11 @@
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-typescript2": "^0.30.0",
     "sass": "^1.43.5",
-    "storybook-css-modules-preset": "^1.1.1"
+    "storybook-css-modules-preset": "^1.1.1",
+    "stylelint": "^14.1.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "postcss": "^8.4.4",
+    "postcss-scss": "^4.0.2"
   }
 }
