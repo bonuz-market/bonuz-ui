@@ -19,7 +19,7 @@ export const Footer: FC = () => (
             <p>
               A space for creators to BONUZ your fans with exclusive content
             </p>
-            <div className="button-group">
+            <div className="button__group">
               <Button>Join Community</Button>
               <Button outline>Whitepaper</Button>
             </div>

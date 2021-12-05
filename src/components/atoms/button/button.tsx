@@ -24,9 +24,9 @@ export const Button: FC<ButtonPropsWithChildren> = ({
   <div
     data-disabled={disabled}
     className={classnames({
-      'button-stroke': outline && !secondary,
-      'button-fill': !outline && !secondary,
-      button: secondary,
+      button: true,
+      'button--stroke': outline && !secondary,
+      'button--fill': !outline && !secondary,
     })}
   >
     <button type={type} disabled={disabled} onClick={onClick}>

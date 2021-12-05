@@ -79,7 +79,8 @@
       display: flex;
       width: 100%;
     }
-    > .button-fill {
+
+    > .button--fill {
       %border {
         border-radius: 0 8px 8px 0;
         border-radius: 8px 0 0 8px;
@@ -124,7 +125,8 @@
         margin-bottom: 14px;
         border-radius: 8px !important;
       }
-      > .button-fill {
+
+      > .button--fill {
         > button {
           width: 100%;
           border-radius: 8px;

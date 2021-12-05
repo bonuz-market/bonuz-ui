@@ -65,7 +65,8 @@
             );
             width: 360px;
           }
-          .button-group {
+
+          .button__group {
             margin-top: 40px;
             display: flex;
           }
@@ -162,7 +163,8 @@
       top: 21%;
       z-index: -1;
     }
-    .button-group {
+
+    .button__group {
       margin-left: calc(50% - 160px);
     }
     .ps {

@@ -71,7 +71,8 @@ footer {
       }
     }
   }
-  .button-group {
+
+  .button__group {
     display: flex;
     margin-bottom: 60px;
   }
@@ -124,7 +125,7 @@ footer {
 }
 [dir='rtl'] {
   footer {
-    .button-group {
+    .button__group {
       flex-direction: row-reverse;
       justify-content: flex-end;
     }
@@ -157,7 +158,8 @@ footer {
           p {
             margin-bottom: 40px;
           }
-          .button-stroke {
+
+          .button--stroke {
             width: 125px;
           }
         }
@@ -168,13 +170,15 @@ footer {
         }
       }
     }
-    .button-stroke {
+
+    .button--stroke {
       min-width: 125px;
       width: 140px;
       background: #0f0d67;
       margin-left: 20px;
     }
-    .button-group {
+
+    .button__group {
       display: flex;
       margin-bottom: 0px;
     }
