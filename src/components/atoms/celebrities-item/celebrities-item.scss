@@ -1,3 +1,5 @@
+@import 'public/styles/utils';
+
 .celeb {
   display: flex;
   align-items: center;
@@ -8,10 +10,8 @@
   background: #281981;
   border-radius: 16px;
   position: relative;
-  &:hover:before {
-    opacity: 1;
-  }
-  &:before {
+
+  &::before {
     content: '';
     position: absolute;
     top: -1px;
@@ -28,6 +28,11 @@
     opacity: 0;
     transition: 0.3s;
   }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
   img {
     width: 48px;
     height: 48px;
@@ -35,24 +40,15 @@
     margin-right: 17px;
     display: block;
   }
+
   h3 {
     margin: 0;
-
-    color: #ffffff;
-    font-family: Farro;
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 16px;
+    @include font(Farro, normal, normal, 16px, 16px, #ffffff);
   }
+
   p {
     margin: 0;
     opacity: 0.3;
-    color: #ffffff;
-    font-family: Roboto Condensed;
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 26px;
+    @include font(Roboto Condensed, normal, normal, 14px, 26px, #ffffff);
   }
 }

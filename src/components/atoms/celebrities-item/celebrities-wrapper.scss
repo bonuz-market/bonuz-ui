@@ -1,14 +1,17 @@
-@import 'public/styles/utils.scss';
+@import 'public/styles/utils';
+
 .celebs-blocks {
   display: flex;
   z-index: 3;
   position: relative;
+
   .block {
     display: flex;
     align-items: center;
     margin-right: 50px;
     padding-left: 53px;
     position: relative;
+
     &::before {
       content: '';
       position: absolute;
@@ -18,33 +21,37 @@
       background-repeat: x-repeat;
       background-size: contain;
       top: 50%;
-      transform: translatey(-50%);
+      transform: translateY(-50%);
       left: 0;
       overflow: hidden;
       animation: stripe-animation 4500s linear infinite both;
     }
+
     img {
       width: 37px;
       height: 46px;
       margin-right: 15px;
     }
+
     p {
       width: 250px;
       @include font(Roboto Condensed, normal, normal, 16px, 26, #ffffff);
     }
   }
 }
+
 .celebs {
+  &-list {
+    max-width: 1010px;
+    transform: translateX(245px);
+  }
+
   > p {
     @include font(inherit, normal, bold, 16px, 16, #ffffff);
     margin-top: 30px;
     margin-bottom: 25px;
   }
-  &-list {
-    max-width: 1010px;
-    transform: translateX(245px);
-  }
-  @import 'celebrities-item';
+
   .slick-slider {
     %position {
       position: absolute;
