@@ -1,6 +1,7 @@
+@import 'public/styles/utils';
+
 .faq-item {
   position: relative;
-
   background-color: #281981;
   border-radius: 8px;
 
@@ -10,18 +11,15 @@
 
   &::after {
     content: '';
-
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 0;
-
-    background: linear-gradient(270.9deg, #CE09FF -2.92%, #FFA34E 99.95%);
+    background: linear-gradient(270.9deg, #ce09ff -2.92%, #ffa34e 99.95%);
     border-radius: 8px;
     opacity: 0;
-
     transition: 0.3s ease;
   }
 
@@ -29,13 +27,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     position: relative;
     z-index: 1;
-
     width: 100%;
     padding: 11px 8px 11px 16px;
-
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -46,42 +41,29 @@
   }
 
   &__title {
-    color: #FFFFFF;
-    font-family: Farro, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 104.4%;
+    @include font(Farro, null, 500, 14px, 104.4%, #ffffff);
   }
 
   &__content {
     position: relative;
     z-index: 1;
-
     max-height: 0;
     padding: 0 50px 0 16px;
-
     overflow: hidden;
-
     transition: 0.3s ease;
 
     &::after {
       content: '';
-
       position: absolute;
       top: 0;
       right: 0;
       left: 0;
-
       height: 1px;
-
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: rgb(255 255 255 / 20%);
     }
 
     &__descr {
-      color: #FFFFFF;
-      font-family: Roboto Condensed, sans-serif;
-      font-size: 14px;
-      line-height: 26px;
+      @include font(Roboto Condensed, null, null, 14px, 26px, #ffffff);
     }
   }
 
