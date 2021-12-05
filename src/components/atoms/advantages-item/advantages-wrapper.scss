@@ -1,38 +1,48 @@
-@import 'public/styles/utils.scss';
+@import 'public/styles/utils';
+
 #second {
   position: relative;
+
   .outer {
     width: 100%;
     display: flex;
     justify-content: center;
     position: relative;
   }
+
   .inner {
     max-width: 1310px;
     width: 100%;
-    padding: 0px 10px;
+    padding: 0 10px;
     z-index: 2;
     position: relative;
   }
+
   div {
     z-index: 2;
   }
+
   .row {
     &:nth-child(1) {
       h2 {
         @include font(Farro, normal, 500, 32px, 104.4%, #ffffff);
+
         text-align: center;
       }
+
       p {
         @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
+
         text-align: center;
       }
     }
+
     &:nth-child(2) {
       display: flex;
       justify-content: center;
     }
   }
+
   .blocks {
     display: flex;
     justify-content: space-between;
@@ -40,18 +50,20 @@
     margin-top: 60px;
     margin-bottom: 40px;
   }
-  @import 'advantages-item';
+
   .divider {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgb(255 255 255 / 12%);
     width: 940px;
     display: block;
     height: 1px;
     margin: 0 auto;
   }
+
   .row-text {
     display: flex;
     justify-content: center;
   }
+
   .text {
     display: flex;
     justify-content: flex-start;
@@ -60,6 +72,7 @@
     margin-top: 40px;
     position: relative;
     padding-left: 53px;
+
     &::before {
       content: '';
       position: absolute;
@@ -69,22 +82,25 @@
       background-repeat: x-repeat;
       background-size: contain;
       top: 50%;
-      transform: translatey(-50%);
+      transform: translateY(-50%);
       left: 0;
       overflow: hidden;
       animation: stripe-animation 4500s linear infinite both;
     }
+
     img {
       width: 37px;
       height: 46px;
       margin-right: 15px;
     }
+
     p {
       width: 809px;
       height: 52px;
       @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
     }
   }
+
   .bg1 {
     width: 510px;
     position: absolute;
@@ -92,6 +108,7 @@
     top: 50px;
     z-index: 0;
   }
+
   .bg2 {
     width: 605px;
     position: absolute;
@@ -99,19 +116,26 @@
     top: -70px;
     z-index: 0;
   }
-  .second__background-holder {
+  %background-holder {
     position: absolute;
     z-index: 0;
-    left: 0;
-    top: 130px;
     pointer-events: none;
   }
-  .second__background-holder--right {
-    position: absolute;
-    z-index: 0;
-    right: 0;
-    top: 50px;
-    pointer-events: none;
+
+  .second {
+    &__background-holder {
+      @extend %background-holder;
+
+      left: 0;
+      top: 130px;
+    }
+
+    &__background-holder--right {
+      @extend %background-holder;
+
+      right: 0;
+      top: 50px;
+    }
   }
 }
 @media screen and (max-width: 1050px) {
@@ -123,6 +147,7 @@
           width: 290px;
           margin: 0 auto;
         }
+
         p {
           width: 260px;
           font-size: 16px;
@@ -131,42 +156,64 @@
         }
       }
     }
+
     .bg2 {
       display: none;
     }
+
     .bg1 {
       display: none;
     }
+
     .block {
       width: 215px !important;
+
       i {
         margin: 0 auto;
       }
+
       h4 {
         text-align: center;
       }
+
       p {
         text-align: center;
       }
     }
+
     .blocks {
       width: 275px;
       margin: 0 auto;
       margin-top: 25px;
       display: block;
     }
+
     .slick-dots {
       position: absolute;
       bottom: 0;
       display: flex !important;
       z-index: 5;
       list-style: none;
-      padding-left: 0px;
+      padding-left: 0;
       margin: 16px 0;
       left: calc(50% - 43px);
+
+      button {
+        display: block;
+        width: 14px;
+        height: 14px;
+        margin: 0 7px;
+        padding: 0;
+
+        &::before {
+          display: none;
+        }
+      }
+
       li {
         width: 14px;
         height: 14px;
+
         button {
           &::after {
             content: '';
@@ -178,16 +225,7 @@
           }
         }
       }
-      button {
-        display: block;
-        width: 14px;
-        height: 14px;
-        margin: 0px 7px;
-        padding: 0;
-        &::before {
-          display: none;
-        }
-      }
+
       li.slick-active {
         button {
           &::after {
@@ -200,19 +238,24 @@
         }
       }
     }
+
     .row-text {
       display: none;
     }
+
     .divider {
       display: none;
     }
   }
+
   .second {
     %display {
       display: none;
     }
+
     &__background-holder {
       @extend %display;
+
       &--right {
         @extend %display;
       }

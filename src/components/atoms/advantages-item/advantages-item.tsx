@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import './advantages-item.scss';
 
 export type AdvantagesItemProps = {
   title: string;
@@ -13,7 +14,7 @@ export const AdvantagesItem: FC<AdvantagesItemProps> = ({
   icon,
   iconBlur,
 }) => (
-  <div className="block">
+  <div className="advantages-item">
     <i data-aos="fade-up" data-aos-duration="1300" data-aos-delay="0">
       <img src={iconBlur} alt="" className="blur" />
       <img src={icon} alt="" />
