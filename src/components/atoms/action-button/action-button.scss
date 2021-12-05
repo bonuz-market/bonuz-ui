@@ -3,7 +3,7 @@
   border: none;
   cursor: pointer;
 
-  &__prev {
+  %action-button-direction {
     width: 75px;
     height: 86px;
     cursor: pointer;
@@ -12,18 +12,29 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    transform: rotate(180deg);
+
     &:hover {
-      transform: rotate(180deg) scale(1.02);
       filter: brightness(0.9);
     }
   }
+
+  &__prev {
+    @extend %action-button-direction;
+
+    transform: rotate(180deg);
+
+    &:hover {
+      transform: rotate(180deg) scale(1.02);
+    }
+  }
+
   &__next {
-    @extend .action-button__prev;
+    @extend %action-button-direction;
+
     transform: none;
+
     &:hover {
       transform: scale(1.02);
-      filter: brightness(0.9);
     }
   }
 }
