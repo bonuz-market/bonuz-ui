@@ -1,17 +1,15 @@
+@import 'public/styles/utils';
+
 .creator-news-card {
   display: flex;
-
   background: #281981;
   border-radius: 10px;
 
   &__photo {
     &__wrapper {
       order: 2;
-
       position: relative;
-
       width: 40%;
-
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -22,12 +20,10 @@
       position: absolute;
       top: 16px;
       right: 16px;
-
       width: 40px;
       height: 40px;
       padding: 0;
-
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgb(255 255 255 / 10%);
       backdrop-filter: blur(34px);
       border: none;
       border-radius: 100px;
@@ -37,65 +33,45 @@
 
   &__content {
     order: 1;
-
     width: 60%;
     padding: 16px;
 
     &__tag {
-      background: linear-gradient(270.9deg, #EF7188 -2.92%, #FFA34E 99.95%);
+      background: linear-gradient(270.9deg, #ef7188 -2.92%, #ffa34e 99.95%);
       background-clip: text;
-      -webkit-background-clip: text;
-
       color: transparent;
-      font-family: Roboto Condensed, sans-serif;
-      font-size: 14px;
-      line-height: 26px;
+      @include font(Roboto Condensed, null, null, 14px, 26px, null);
 
       &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         margin-bottom: 8px;
       }
 
       &__created {
         display: none;
-
-        color: rgba(255, 255, 255, 0.2);
-        font-family: Farro, sans-serif;
-        font-size: 12px;
-        line-height: 12px;
+        color: rgb(255 255 255 / 20%);
+        @include font(Farro, null, null, 12px, 12px, null);
       }
     }
 
     &__title {
       display: block;
-
       margin-bottom: 20px;
-
-      color: #FFFFFF;
-      font-family: Farro, sans-serif;
-      font-size: 16px;
-      line-height: 16px;
+      @include font(Farro, null, null, 16px, 16px, #ffffff);
     }
 
     &__descr {
       display: none;
-
       margin: 0;
-
-      color: rgba(255, 255, 255, 0.5);
-      font-family: Roboto Condensed, sans-serif;
-      font-size: 14px;
-      line-height: 20px;
+      color: rgb(255 255 255 / 50%);
+      @include font(Roboto Condensed, null, null, 14px, 20px, null);
     }
 
     &__created {
-      color: rgba(255, 255, 255, 0.2);
-      font-family: Farro, sans-serif;
-      font-size: 12px;
-      line-height: 12px;
+      color: rgb(255 255 255 / 20%);
+      @include font(Farro, null, null, 12px, 12px, null);
     }
   }
 
@@ -106,7 +82,6 @@
       &__photo__wrapper {
         width: 100%;
         height: 200px;
-
         border-radius: 10px 10px 0 0;
       }
 
