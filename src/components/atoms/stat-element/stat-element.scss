@@ -1,0 +1,57 @@
+@import 'public/styles/utils';
+
+.stat-element {
+  width: 170px;
+  flex-basis: 50%;
+  position: relative;
+
+  &:nth-child(2n + 1) {
+    &::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 136px;
+      background: rgb(255 255 255 / 12%);
+      position: absolute;
+      right: 60px;
+      bottom: -16px;
+    }
+  }
+
+  &:nth-child(2n) {
+    &::after {
+      content: '';
+      display: block;
+      width: 277px;
+      height: 1px;
+      background: rgb(255 255 255 / 12%);
+      position: absolute;
+      right: 165px;
+      bottom: -18px;
+    }
+  }
+
+  h4 {
+    @include font(Farro, normal, bold, 32px, 26px, #ffffff);
+
+    margin-bottom: 0;
+    padding-left: 30px;
+    text-align: left;
+  }
+
+  p {
+    @include font(Roboto Condensed, normal, normal, 14px, 20px, #ffffff);
+
+    opacity: 0.8;
+    width: auto;
+    padding-left: 30px;
+    text-align: left;
+  }
+
+  .gem {
+    position: absolute;
+    left: 0;
+    top: 45px;
+    width: 14px;
+  }
+}
