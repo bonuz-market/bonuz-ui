@@ -1,5 +1,6 @@
 import { FC, PropsWithChildren } from 'react';
 import classnames from 'classnames';
+import './tab.scss';
 
 export type TabTitleProps = PropsWithChildren<{
   title: string;

@@ -25,7 +25,7 @@ export const Tabs: FC<TabsProps> = ({ type, children }) => {
 
   return (
     <div className="tabs">
-      <ul className="tabs__list">
+      <ul className="tabs-list">
         {getChildren().map((item, index) => (
           <TabTitle
             key={`${item.props.title}-${index}`}

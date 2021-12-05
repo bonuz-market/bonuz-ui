@@ -1,32 +1,15 @@
+@import 'public/styles/utils';
+
 .tab {
   > button {
     padding: 16px 20px;
     background-color: var(--main-black);
     border: none;
     cursor: pointer;
-    color: #ffffff;
-    font-family: Farro;
-    font-size: 16px;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 104.4%;
     transition: 0.2s ease;
+    @include font(Farro, normal, 500, 16px, 104.4%, #ffffff);
   }
-  &:first-child {
-    > button {
-      border-radius: 16px 0 0 16px;
-    }
-    &:last-child {
-      > button {
-        border-radius: 16px;
-      }
-    }
-  }
-  &:last-child {
-    > button {
-      border-radius: 0 16px 16px 0;
-    }
-  }
+
   &--active {
     > button {
       background: linear-gradient(
@@ -36,19 +19,40 @@
       );
     }
   }
+
+  &--secondary {
+    > button {
+      background-color: rgb(255 255 255 / 10%);
+
+      &:hover {
+        background: rgb(255 255 255 / 100%);
+        color: #030c5d;
+      }
+    }
+  }
+
   &--active &--secondary {
     > button {
-      background: rgba(255, 255, 255, 1);
+      background: rgb(255 255 255 / 100%);
       color: #030c5d;
     }
   }
-  &--secondary {
+
+  &:first-child {
     > button {
-      background-color: rgba(255, 255, 255, 0.1);
-      &:hover {
-        background: rgba(255, 255, 255, 1);
-        color: #030c5d;
+      border-radius: 16px 0 0 16px;
+    }
+
+    &:last-child {
+      > button {
+        border-radius: 16px;
       }
+    }
+  }
+
+  &:last-child {
+    > button {
+      border-radius: 0 16px 16px 0;
     }
   }
 }
@@ -60,6 +64,7 @@
         border-radius: 0 16px 16px 0;
       }
     }
+
     &:last-child {
       > button {
         border-radius: 16px 0 0 16px;
