@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import './team-card.scss';
 
 export type TeamCardProps = {
   img: string;
