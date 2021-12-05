@@ -9,7 +9,6 @@ export type CheckboxProps = {
 
 export const Checkbox: FC<CheckboxProps> = ({ label, checked, onChange }) => {
   const [defaultChecked, setChecked] = useState(checked || false);
-  console.log(label, defaultChecked);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setChecked(event.target.checked);

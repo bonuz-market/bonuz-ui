@@ -1,25 +1,29 @@
+@import 'public/styles/utils';
+
 .checkbox-container {
   display: flex;
   align-items: center;
+
   input[type='checkbox'] {
     display: none;
+
+    &:checked ~ .checkbox::before,
+    &:checked ~ .checkbox::after {
+      width: 12px;
+      transition-delay: 0ms;
+    }
+
+    &:checked ~ .checkbox::after {
+      transition-delay: 150ms;
+    }
   }
-  input[type='checkbox']:checked ~ .checkbox::before,
-  input[type='checkbox']:checked ~ .checkbox::after {
-    width: 12px;
-    transition-delay: 0ms;
-  }
-  input[type='checkbox']:checked ~ .checkbox::after {
-    transition-delay: 150ms;
-  }
+
   label {
+    @include font(Farro, normal, normal, 12px, null, #ffffff);
+
     cursor: pointer;
-    font-family: Farro;
-    font-style: normal;
-    font-weight: normal;
-    color: #fff;
-    font-size: 12px;
   }
+
   .checkbox {
     display: inline-block;
     flex: 0 0 auto;
@@ -35,8 +39,8 @@
       position: relative;
     }
 
-    &:after,
-    &:before {
+    &::after,
+    &::before {
       content: '';
       position: absolute;
       width: 0;
@@ -48,28 +52,34 @@
       transition: all 150ms;
       transition-delay: 0ms;
     }
-    &:before {
+
+    &::before {
       transform: translate(3px, 6px) rotate(45deg);
       transition-delay: 150ms;
     }
-    [dir='rtl'] &:after,
-    [dir='rtl'] &:before {
+
+    [dir='rtl'] &::after,
+    [dir='rtl'] &::before {
       transform: translate(-10px, -15px) rotate(45deg);
       bottom: 0;
     }
-    [dir='rtl'] &:before {
+
+    [dir='rtl'] &::before {
       transform: translate(-3px, -6px) rotate(-45deg);
     }
-  }
-  .checkbox-text {
-    font-size: 14px;
-    line-height: 140%;
-    a {
-      color: #f6255a;
-      text-decoration: underline;
-      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
-      &:hover {
-        color: #e6063e;
+
+    &-text {
+      font-size: 14px;
+      line-height: 140%;
+
+      a {
+        color: #f6255a;
+        text-decoration: underline;
+        transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+
+        &:hover {
+          color: #e6063e;
+        }
       }
     }
   }
