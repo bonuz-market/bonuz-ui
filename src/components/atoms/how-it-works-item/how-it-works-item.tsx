@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import './how-it-works-item.scss';
 
 export type HowItWorksItemProps = {
   img: string;
@@ -13,7 +14,7 @@ export const HowItWorksItem: FC<HowItWorksItemProps> = ({
 }) => (
   <>
     <div
-      className="block"
+      className="how-it-works-block"
       data-aos="fade-left"
       data-aos-duration="1300"
       data-aos-delay="0"

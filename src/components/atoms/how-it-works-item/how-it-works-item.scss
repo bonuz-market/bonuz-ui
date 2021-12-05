@@ -1,12 +1,14 @@
-.block {
+@import 'public/styles/utils';
+
+.how-it-works-block {
   width: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 
-  & + & {
-    margin-left: 100px;
+  .icon {
+    position: relative;
   }
 
   &::before {
@@ -33,6 +35,7 @@
   [dir='rtl'] &:last-child::before {
     display: block;
   }
+
   img {
     width: 50px;
     height: 130px;
@@ -40,13 +43,10 @@
     transition: all 0.3s;
     animation: iconscale 3s ease-in-out infinite;
   }
+
   p {
-    font-family: Roboto Condensed;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 26px;
+    @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
+
     text-align: center;
-    color: #ffffff;
   }
 }
