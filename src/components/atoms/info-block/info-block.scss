@@ -1,3 +1,5 @@
+@import 'public/styles/utils';
+
 .info-block {
   display: flex;
   padding: 20px 24px;
@@ -12,15 +14,7 @@
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 32px;
-    color: #ffffff;
-    font-family: Roboto Condensed;
-    font-size: 16px;
-    line-height: 26px;
-  }
-
-  [dir='rtl'] & > &__column > p {
-    margin-left: 0;
-    margin-right: 32px;
+    @include font(Roboto Condensed, null, null, 16px, 26px, #ffffff);
   }
 
   &--large {
@@ -30,6 +24,11 @@
   &--large > &__column > p {
     font-size: 24px;
     line-height: 26px;
+  }
+
+  [dir='rtl'] & > &__column > p {
+    margin-left: 0;
+    margin-right: 32px;
   }
 
   &__column {
@@ -42,9 +41,11 @@
   .info-block {
     flex-direction: column;
     background-image: none;
+
     &--large {
       padding: 32px;
     }
+
     &__column {
       width: 100%;
     }
