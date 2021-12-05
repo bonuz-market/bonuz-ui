@@ -18,7 +18,7 @@
     }
   }
 
-  &__prev {
+  &--prev {
     @extend %action-button-direction;
 
     transform: rotate(180deg);
@@ -28,7 +28,7 @@
     }
   }
 
-  &__next {
+  &--next {
     @extend %action-button-direction;
 
     transform: none;

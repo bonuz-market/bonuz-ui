@@ -48,6 +48,7 @@
 
   > p {
     @include font(inherit, normal, bold, 16px, 16, #ffffff);
+
     margin-top: 30px;
     margin-bottom: 25px;
   }
@@ -59,24 +60,30 @@
       height: 62px;
       top: -20px;
     }
-    .action-button__next {
+
+    .action-button--next {
       @extend %position;
+
       left: 0;
     }
-    .action-button__prev {
+
+    .action-button--prev {
       @extend %position;
+
       right: -320px;
     }
   }
 }
+
 [dir='rtl'] {
   .celebs {
     .slick-slider {
-      .action-button__next {
+      .action-button--next {
         transform: rotate(180deg);
         left: -20px;
       }
-      .action-button__prev {
+
+      .action-button--prev {
         transform: rotate(0);
         right: 440px;
       }
@@ -86,10 +93,11 @@
 @media (min-width: 820px) and (max-width: 1050px) {
   .celebs {
     .slick-slider {
-      .action-button__prev {
+      .action-button--prev {
         right: 20px !important;
       }
-      .action-button__next {
+
+      .action-button--next {
         left: 20px !important;
       }
     }

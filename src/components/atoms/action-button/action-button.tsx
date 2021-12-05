@@ -28,9 +28,9 @@ export const ActionButton: FC<ActionButtonProps> = ({
     <div
       className={classnames({
         prev: type === 'left',
-        'action-button__prev': type === 'left',
+        'action-button--prev': type === 'left',
         next: type === 'right',
-        'action-button__next': type === 'right',
+        'action-button--next': type === 'right',
       })}
     />
   </button>

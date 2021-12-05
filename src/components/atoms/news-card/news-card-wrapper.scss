@@ -8,10 +8,12 @@
       position: absolute;
       #{$direction}: 20px;
     }
-    .action-button__prev {
+
+    .action-button--prev {
       @include button-direction(right);
     }
-    .action-button__next {
+
+    .action-button--next {
       @include button-direction(left);
     }
   }
@@ -118,10 +120,12 @@
         left: $left;
         transform: rotate($degree);
       }
-      .action-button__prev {
+
+      .action-button--prev {
         @include button-direction(0, auto, 0);
       }
-      .action-button__next {
+
+      .action-button--next {
         @include button-direction(auto, 10px, 180);
       }
     }
