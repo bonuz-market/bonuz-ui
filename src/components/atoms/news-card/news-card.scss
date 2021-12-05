@@ -1,29 +1,31 @@
+@import 'public/styles/utils';
+
 %text {
-  font-family: Roboto Condensed;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 104.4%;
-  color: #ffffff;
+  @include font(Roboto Condensed, normal, 500, 16px, 104.4%, #ffffff);
 }
+
 .post {
   position: relative;
   z-index: 2;
   margin-right: 20px;
   width: 290px;
+
   .read-more {
     display: flex;
     align-items: center;
     text-decoration: none;
     transition: all 0.3s;
+
     &:hover {
       background-repeat: no-repeat;
       background-size: contain;
       transition: all 0.3s;
     }
+
     span {
       @extend %text;
     }
+
     div {
       width: 37px;
       height: 42px;
@@ -32,8 +34,10 @@
       background-repeat: no-repeat;
     }
   }
+
   .img {
     position: relative;
+
     .post-image {
       display: block;
       width: 288px;
@@ -43,6 +47,7 @@
       position: relative;
       z-index: 2;
     }
+
     .mask {
       width: 295px;
       height: 242px;
@@ -53,10 +58,12 @@
       background-size: cover;
       transition: 0.2s ease-in-out;
     }
+
     .mask--gradient {
       opacity: 0;
       background-image: url('/assets/images/post-mask--gradient.svg');
     }
+
     &:hover {
       .mask--gradient {
         opacity: 1;
@@ -66,6 +73,7 @@
 
   .date {
     @extend %text;
+
     position: absolute;
     padding: 5px;
     width: max-content;
@@ -74,32 +82,41 @@
     left: 20px;
     top: 20px;
   }
+
   h3 {
     @extend %text;
-    margin-bottom: 0px;
+
+    margin-bottom: 0;
   }
+
   p {
     @extend %text;
+
     font-size: 16px;
     line-height: 26px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgb(255 255 255 / 80%);
   }
 }
+
 [dir='rtl'] {
   .post {
     h3 {
       text-align: right;
     }
+
     p {
       text-align: right;
     }
+
     .read-more {
       justify-content: flex-start;
+
       > div {
         order: 2;
         margin-right: 0;
         transform: rotate(180deg);
       }
+
       > span {
         display: block;
         order: 3;
@@ -107,10 +124,12 @@
       }
     }
   }
+
   .slick-slide {
     .post {
       .read-more {
         justify-content: flex-end;
+
         > span {
           order: 1;
         }
@@ -122,14 +141,17 @@
 @media screen and (max-width: 1050px) {
   .post {
     margin-right: 0;
+
     p {
       max-width: 300px;
     }
+
     .img {
       .post-image {
-        top: 0px;
+        top: 0;
       }
     }
+
     .read-more {
       display: none;
     }

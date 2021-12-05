@@ -1,8 +1,16 @@
 @import 'public/styles/utils.scss';
+@mixin position($top, $right: null, $left: null) {
+  @content;
+
+  top: $top;
+  right: $right;
+  left: $left;
+}
 
 #seven {
   position: relative;
   background: var(--second-black);
+
   .slick-slider {
     @mixin button-direction($direction) {
       position: absolute;
@@ -17,23 +25,33 @@
       @include button-direction(left);
     }
   }
+
   .inner {
     max-width: 1310px;
     width: 100%;
-    padding: 0px 10px;
+    padding: 0 10px;
     position: relative;
-    .logo_bg2 {
-      position: absolute;
-      right: -80px;
-      top: 0px;
-      width: 250px;
-    }
-    .logo_bg1 {
-      position: absolute;
-      left: -150px;
-      top: 400px;
-      z-index: 0;
-      width: 250px;
+
+    .logo {
+      %position {
+        position: absolute;
+        width: 250px;
+      }
+
+      &_bg2 {
+        position: absolute;
+        @include position(0, -80px, null) {
+          @extend %position;
+        }
+      }
+
+      &_bg1 {
+        @include position(400px, null, -150px) {
+          @extend %position;
+        }
+
+        z-index: 0;
+      }
     }
   }
 
@@ -43,15 +61,18 @@
     max-width: 100vw;
     width: 100%;
   }
+
   .row {
     &:nth-child(2) {
       h2 {
         @include font(Farro, normal, normal, 32px, 104.4%, #ffffff);
+
         text-align: center;
         z-index: 1;
         position: relative;
-        margin-top: 0px;
+        margin-top: 0;
       }
+
       .blur {
         background: var(--blur);
         filter: blur(200px);
@@ -59,12 +80,14 @@
         position: absolute;
         width: 300px;
         height: 250px;
-        top: 0px;
+        top: 0;
         left: calc(50% - 150px);
         transition: 0.6s;
       }
+
       p {
         @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
+
         text-align: center;
         z-index: 1;
         margin-bottom: 55px;
@@ -72,6 +95,7 @@
       }
     }
   }
+
   .blogs {
     .slick-slider {
       width: 925px;
@@ -85,16 +109,19 @@
     width: max-content;
     margin-bottom: 100px;
   }
+
   .bg {
     position: absolute;
     left: -60px;
     top: -60px;
     animation: text-animation 1s linear infinite alternate;
   }
+
   .divider {
     max-width: 999px;
   }
 }
+
 .seven {
   &__background-holder {
     position: absolute;
@@ -103,6 +130,7 @@
     top: 250px;
     pointer-events: none;
   }
+
   &__background-holder--right {
     position: absolute;
     z-index: 0;
@@ -134,21 +162,27 @@
 @media screen and (max-width: 1050px) {
   #seven {
     .inner {
-      .logo_bg1 {
-        display: none;
-      }
-      .logo_bg2 {
-        display: none;
+      .logo {
+        &_bg1 {
+          display: none;
+        }
+
+        &_bg2 {
+          display: none;
+        }
       }
     }
+
     .bg {
       display: none;
     }
+
     .row {
       &:nth-child(2) {
         h2 {
           font-size: 24px;
         }
+
         p {
           width: 260px;
           margin: 0 auto;
@@ -156,36 +190,44 @@
         }
       }
     }
+
     .slick-slide {
       margin: 0 10px;
       transition: all 0.3s;
     }
+
     .slick-slider {
       overflow: visible;
       margin: 0 -15px;
       transition: all 0.3s;
     }
+
     .slick-slide[aria-hidden='true'] {
       opacity: 0.2;
       transition: all 0.3s;
     }
+
     .rowseven {
       padding-left: 20px;
     }
+
     .slick-dots {
       li {
         width: 14px;
         height: 14px;
       }
+
       button {
         display: block;
         width: 14px;
         height: 14px;
         margin: 0 7px;
         padding: 0;
+
         &::before {
           display: none;
         }
+
         &::after {
           content: '';
           display: block;
@@ -195,6 +237,7 @@
           background-repeat: no-repeat;
         }
       }
+
       li.slick-active {
         button {
           &::after {
@@ -206,15 +249,18 @@
           }
         }
       }
+
       display: flex !important;
       justify-content: center;
       z-index: 5;
       list-style: none;
-      padding-left: 0px;
+      padding-left: 0;
     }
+
     .slick-list {
       margin-bottom: 20px;
     }
+
     .blogs {
       .slick-slider {
         width: 100%;
@@ -224,17 +270,21 @@
 
     .button--fill {
       margin-top: 110px;
+
       button {
         width: 290px;
       }
     }
   }
+
   .seven {
     %display {
       display: none;
     }
+
     &__background-holder {
       @extend %display;
+
       &--right {
         @extend %display;
       }
