@@ -1,23 +1,26 @@
-.menu-item {
-  a {
-    color: #ffffff;
-    font-family: Farro;
-    font-size: 14px;
-    line-height: 14px;
-  }
-}
-li.menu-item {
-  a {
-    position: relative;
-    width: max-content;
-    &:hover {
-      background: linear-gradient(
-        270.9deg,
-        var(--gradient-color-1) -2.92%,
-        var(--gradient-color-2) 99.95%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+@import 'public/styles/utils';
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &-item {
+    a {
+      @include font(Farro, null, null, 14px, 14px, #ffffff);
+
+      position: relative;
+      width: max-content;
+
+      &:hover {
+        background: linear-gradient(
+          270.9deg,
+          var(--gradient-color-1) -2.92%,
+          var(--gradient-color-2) 99.95%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
 }

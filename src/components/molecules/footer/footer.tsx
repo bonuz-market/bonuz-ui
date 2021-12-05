@@ -26,10 +26,7 @@ export const Footer: FC = () => (
           </div>
           <div className="col">
             <p>Navigation:</p>
-            <ul>
-              <Navigation />
-            </ul>
-
+            <Navigation />
             <div className="form">
               <Input
                 label="Subscribe to news:"
