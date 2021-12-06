@@ -1,10 +1,8 @@
+@import 'public/styles/utils';
+
 .subtitle {
   margin: 0;
-  color: #ffffff;
-  font-family: Roboto Condensed;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 26px;
+  @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
+
   text-align: center;
 }

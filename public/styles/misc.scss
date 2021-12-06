@@ -1,3 +1,4 @@
+/* stylelint-disable function-url-quotes */
 * {
   outline: none;
 }
@@ -7,10 +8,10 @@ a {
 }
 
 body {
-  background: var(--main-bg-color);
   width: 100vw;
+  margin: 0;
   overflow-x: hidden;
-  margin: 0px;
+  background: var(--main-bg-color);
 }
 
 body.noscroll {
@@ -18,11 +19,12 @@ body.noscroll {
 }
 
 #svg circle {
-  stroke-dashoffset: 0;
-  transition: stroke-dashoffset 1s linear;
   stroke: #666;
   stroke-width: 1em;
+  transition: stroke-dashoffset 1s linear;
+  stroke-dashoffset: 0;
 }
+
 #svg .bar,
 #bar,
 #bar1,
@@ -33,91 +35,106 @@ body.noscroll {
   stroke-linecap: round;
   stroke: url(#MyGradient);
 }
+
 #svg #bar6 {
   stroke-linecap: round;
   stroke: url(#MyGradient1);
 }
+
 #svg #bar7 {
   stroke-linecap: round;
   stroke: url(#MyGradient2);
 }
+
 #svg #bar8 {
   stroke-linecap: round;
   stroke: url(#MyGradient3);
 }
+
 #svg #bar9 {
   stroke-linecap: round;
   stroke: url(#MyGradient4);
 }
+
 #svg #bar10 {
   stroke-linecap: round;
   stroke: url(#MyGradient5);
 }
+
 #svg #back {
   stroke-width: 0.6em;
 }
+
 #cont {
+  position: absolute;
+  top: -41px;
+  left: -52px;
   display: block;
   margin: 2em auto;
   border-radius: 100%;
-  position: absolute;
-  left: -52px;
-  top: -41px;
   transform: scale(0.75);
   transform-origin: left top;
 }
+
 .divider {
-  background: rgba(255, 255, 255, 0.12);
-  width: 100%;
   display: block;
+  width: 100%;
   height: 1px;
   margin: 0 auto;
+  background: rgb(255 255 255 / 12%);
 }
+
 .slick-prev,
 .slick-next {
   z-index: 10;
 }
+
 .slick-arrow::before {
   display: none;
 }
+
 .slick-arrow.slick-disabled {
-  opacity: 0.4;
-  user-select: none;
   pointer-events: none;
+  user-select: none;
+  opacity: 0.4;
 }
+
 .skip-link.screen-reader-text {
   display: none;
 }
+
 .header-inner .col .sign-up a {
   display: none;
 }
+
 .wpcf7 form.invalid .wpcf7-response-output,
 .wpcf7 form.unaccepted .wpcf7-response-output,
 .wpcf7 form.sent .wpcf7-response-output {
-  border-color: transparent;
   position: absolute;
   bottom: 7px;
+  z-index: 3;
   width: 300px;
   height: 20px;
-  margin: 0px;
-  color: white;
-  z-index: 3;
-  font-family: 'Anonymous Pro';
-  font-size: 12px;
+  margin: 0;
   margin-left: -10px;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 12px;
+  color: white;
+  border-color: transparent;
 }
 
 @media screen and (max-width: 1050px) {
   section {
     overflow: hidden;
   }
+
   #cont {
+    position: absolute;
+    top: -35px;
+    left: -43px;
     display: block;
     margin: 2em auto;
     border-radius: 100%;
-    position: absolute;
-    left: -43px;
-    top: -35px;
     transform: scale(0.67);
     transform-origin: left top;
   }

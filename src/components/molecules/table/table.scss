@@ -1,42 +1,37 @@
+@import 'public/styles/utils';
+
 .table {
   border-collapse: separate;
   border-spacing: 0 8px;
 
   &__cell {
-    color: #FFFFFF;
-    font-family: Farro, sans-serif;
-    font-size: 14px;
+    @include font(Farro, normal, normal, 14px, 14px, #ffffff);
+
     text-align: left;
-    line-height: 14px;
 
     &:not(&--header) {
       padding-top: 22px;
       padding-bottom: 22px;
-
-      background-color: #040D5B;
+      background-color: #040d5b;
 
       &:first-child {
         padding-left: 16px;
-
         border-radius: 8px 0 0 8px;
       }
 
       &:last-child {
         padding-right: 16px;
-
         border-radius: 0 8px 8px 0;
       }
     }
 
     &--header {
       opacity: 0.5;
-
       font-weight: normal;
     }
 
     &__action-button {
       padding: 0;
-
       background-color: transparent;
       border: none;
       cursor: pointer;

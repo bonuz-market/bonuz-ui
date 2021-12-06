@@ -1,42 +1,66 @@
-@import 'public/styles/utils.scss';
+@import 'public/styles/utils';
 %transition {
   transition: all 0.3s;
 }
+@mixin position($top, $right: null, $left: null) {
+  @content;
+
+  top: $top;
+  right: $right;
+  left: $left;
+}
+
 #three {
   position: relative;
   background-image: url('/assets/images/three-blur.svg');
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 50% 0%;
+
   .outer {
     width: 100%;
     display: flex;
     justify-content: center;
     position: relative;
   }
+
   .inner {
     %position {
       position: absolute;
     }
-    @mixin position($top, $right: null, $left: null) {
-      @extend %position;
-      top: $top;
-      right: $right;
-      left: $left;
-    }
+
     max-width: 1310px;
     width: 100%;
-    padding: 0px 10px;
+    padding: 0 10px;
     z-index: 2;
-    .logo_bg1 {
-      @include position($top: 565px, $right: -21px);
-      width: 250px;
-    }
-    .logo_bg2 {
-      @include position($top: 250px, $left: 0);
-      z-index: 0;
+
+    .logo {
+      &_bg1 {
+        @include position($top: 565px, $right: -21px) {
+          @extend %position;
+        }
+
+        width: 250px;
+      }
+
+      &_bg2 {
+        @include position($top: 250px, $left: 0);
+
+        z-index: 0;
+      }
     }
   }
+
+  .first-form {
+    .title {
+      padding-left: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
   .row {
     %position {
       text-align: center;
@@ -47,14 +71,17 @@
     &:nth-child(1) {
       margin-top: 150px;
       @extend %transition;
+
       h2 {
         @include font(Farro, normal, normal, 32px, 104.4%x, #ffffff);
         @extend %position;
       }
+
       p {
         @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
         @extend %position;
       }
+
       .toggle {
         min-width: 310px;
         display: flex;
@@ -66,6 +93,7 @@
         z-index: 1;
         position: relative;
         @extend %transition;
+
         div {
           background: var(--main-black);
           border-radius: 16px;
@@ -76,19 +104,23 @@
           justify-content: center;
           align-items: center;
           @extend %transition;
+
           &:nth-child(1) {
-            border-radius: 16px 0px 0px 16px;
+            border-radius: 16px 0 0 16px;
             @extend %transition;
           }
+
           &:nth-child(2) {
-            border-radius: 0px 16px 16px 0px;
+            border-radius: 0 16px 16px 0;
             @extend %transition;
           }
+
           span {
             @include font(Farro, normal, normal, 16px, 104.4%, #ffffff);
             @extend %transition;
           }
         }
+
         div.active {
           background: linear-gradient(
             270.9deg,
@@ -98,6 +130,7 @@
           @extend %transition;
         }
       }
+
       .blur {
         background: var(--blur);
         filter: blur(200px);
@@ -110,16 +143,33 @@
         transition: 0.6s;
       }
     }
+
     .title {
       p {
         width: 232px;
         @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
       }
     }
+
+    .col {
+      &:nth-child(2) {
+        h5 {
+          @include font(Farro, normal, 500, 16px, 104.4%, #ffffff);
+        }
+
+        p {
+          @include font(Roboto Condensed, normal, normal, 14px, 26px, #ffffff);
+
+          opacity: 0.8;
+        }
+      }
+    }
+
     .first-form {
       .col {
         justify-content: flex-start;
       }
+
       height: 95px;
       margin-top: 40px;
       margin-bottom: 165px;
@@ -128,6 +178,7 @@
       @extend %transition;
     }
   }
+
   .slide {
     width: 930px;
     margin: 0 auto;
@@ -135,12 +186,10 @@
     position: relative;
     z-index: 1;
     @extend %transition;
-    animation: slideIn 1s ease-in-out;
-    .col {
-      &:nth-child(2) {
-        h5 {
-          @include font(Farro, normal, 500, 16px, 104.4%, #ffffff);
-        }
+
+    animation: slide-in 1s ease-in-out;
+  }
+
   .button--fill {
     width: 178px;
     height: 48px;
@@ -161,26 +210,24 @@
       @extend %transition;
     }
   }
-      }
-    }
-  }
 }
+
 .three {
   %position {
     position: absolute;
     z-index: 0;
     pointer-events: none;
   }
-  @mixin position($top, $right: null, $left: null) {
-    @extend %position;
-    top: $top;
-    right: $right;
-    left: $left;
-  }
+
   &__background-holder {
-    @include position($top: 180px, $left: 0);
+    @include position($top: 180px, $left: 0) {
+      @extend %position;
+    }
+
     &--right {
-      @include position($top: 430px, $right: 0);
+      @include position($top: 430px, $right: 0) {
+        @extend %position;
+      }
     }
   }
 }
@@ -188,66 +235,83 @@
 @media screen and (max-width: 1050px) {
   #three {
     background: none;
+
     .inner {
-      .logo_bg1 {
-        display: none;
-      }
-      .logo_bg2 {
-        display: none;
+      .logo {
+        &_bg1 {
+          display: none;
+        }
+
+        &_bg2 {
+          display: none;
+        }
       }
     }
+
     .row {
       &:nth-child(1) {
         .blur {
           display: none;
         }
+
         .toggle {
           div {
             padding: 0 10px;
             min-width: 100px;
           }
         }
+
         margin-top: 50px;
+
         h2 {
           font-size: 24px;
         }
+
         p {
           width: 260px;
           margin: 0 auto;
           margin-top: 20px;
         }
       }
+
       .first-form {
         display: none;
       }
     }
+
     .slide {
       img {
         width: 90vw;
-        margin-right: 0px;
+        margin-right: 0;
       }
+
       width: 100vw;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
+
       .col {
         &:nth-child(1) {
           display: flex;
           justify-content: center;
         }
+
         &:nth-child(2) {
-          padding: 0px 20px;
+          padding: 0 20px;
           margin-bottom: 50px;
         }
       }
     }
   }
+
   .three {
     %display {
       display: none;
     }
+
     &__background-holder {
       @extend %display;
+
       &--right {
         @extend %display;
       }

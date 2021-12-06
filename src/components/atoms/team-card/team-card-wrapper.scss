@@ -1,4 +1,4 @@
-@import 'public/styles/utils.scss';
+@import 'public/styles/utils';
 
 #nine {
   background: var(--second-black);
@@ -30,9 +30,6 @@
         margin: 0;
       }
     }
-  }
-
-  .team {
   }
 
   .team-list {

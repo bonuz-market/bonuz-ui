@@ -1,44 +1,38 @@
+@import 'public/styles/utils';
+
+%display-flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
 .media {
   &__photo {
     display: block;
-
     width: 100%;
     margin-bottom: 24px;
-
     border-radius: 8px;
   }
 
   &__title {
     margin-top: 0;
     margin-bottom: 8px;
-
-    color: #FFFFFF;
-    font-family: Farro, sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 104.4%;
+    @include font(Farro, null, 500, 24px, 104.4%, #ffffff);
   }
 
   &__info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @extend %display-flex-align-center;
 
+    justify-content: space-between;
     margin-bottom: 24px;
 
     &__wrapper {
-      display: flex;
-      align-items: center;
+      @extend %display-flex-align-center;
     }
 
     &__item {
-      display: flex;
-      align-items: center;
+      @extend %display-flex-align-center;
 
-      color: #FFFFFF;
-      font-family: Farro, sans-serif;
-      font-size: 14px;
-      line-height: 14px;
+      @include font(Farro, null, null, 14px, 14px, #ffffff);
 
       &:not(:last-child) {
         margin-right: 20px;
@@ -46,7 +40,6 @@
 
       & > img {
         display: block;
-
         margin-right: 8px;
       }
     }
@@ -60,67 +53,46 @@
 
   &__created {
     display: block;
-
     position: relative;
-
     margin-bottom: 66px;
-
-    color: rgba(255, 255, 255, 0.3);
-    font-family: Farro, sans-serif;
-    font-size: 14px;
-    line-height: 14px;
+    color: rgb(255 255 255 / 30%);
+    @include font(Farro, null, null, 14px, 14px, null);
 
     &::after {
       content: '';
-
       position: absolute;
       right: 0;
       bottom: -32px;
       left: 0;
-
       height: 1px;
-
-      background-color: rgba(255, 255, 255, 0.07);
+      background-color: rgb(255 255 255 / 7%);
     }
   }
 
   &__about {
     position: relative;
-
     margin-bottom: 60px;
 
     &::after {
       content: '';
-
       position: absolute;
       right: 0;
       bottom: -32px;
       left: 0;
-
       height: 1px;
-
-      background-color: rgba(255, 255, 255, 0.07);
+      background-color: rgb(255 255 255 / 7%);
     }
 
     &__title {
       display: block;
-
       margin-bottom: 14px;
-
-      color: #FFFFFF;
-      font-family: Farro, sans-serif;
-      font-size: 16px;
-      line-height: 16px;
+      @include font(Farro, null, null, 16px, 16px, #ffffff);
     }
 
     &__link {
-      display: flex;
-      align-items: center;
+      @extend %display-flex-align-center;
 
-      color: #FFFFFF;
-      font-family: Farro, sans-serif;
-      font-size: 14px;
-      line-height: 14px;
+      @include font(Farro, null, null, 14px, 14px, #ffffff);
 
       &:not(:last-child) {
         margin-bottom: 14px;
@@ -128,7 +100,6 @@
 
       & > img {
         display: block;
-
         margin-right: 8px;
       }
     }
@@ -140,43 +111,36 @@
     &__title {
       display: block;
       margin-bottom: 16px;
-
-      color: #FFFFFF;
-      font-family: Farro, sans-serif;
-      font-size: 16px;
-      line-height: 16px;
+      @include font(Farro, null, null, 16px, 16px, #ffffff);
     }
 
     &__descr {
-      color: #FFFFFF;
-      font-family: Farro, sans-serif;
-      font-size: 14px;
-      line-height: 14px;
+      @include font(Farro, null, null, 14px, 14px, #ffffff);
     }
 
     &__content {
       color: transparent;
-      font-family: Farro, sans-serif;
-      font-size: 14px;
-      line-height: 14px;
+      @include font(Farro, null, null, 14px, 14px, null);
 
       &--shortcode {
-        background: linear-gradient(46.96deg, #CC16FF 20.56%, #48F573 82.71%);
+        background: linear-gradient(46.96deg, #cc16ff 20.56%, #48f573 82.71%);
         background-clip: text;
         -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
       &--url {
-        background: linear-gradient(270.9deg, #EF7188 -2.92%, #FFA34E 99.95%);
+        background: linear-gradient(270.9deg, #ef7188 -2.92%, #ffa34e 99.95%);
         background-clip: text;
         -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     }
 
     &__item {
-      display: flex;
+      @extend %display-flex-align-center;
+
       justify-content: space-between;
-      align-items: center;
 
       &:not(:last-child) {
         margin-bottom: 16px;

@@ -1,4 +1,4 @@
-@import 'public/styles/utils.scss';
+@import 'public/styles/utils';
 @mixin position($top, $right: null, $left: null) {
   @content;
 
@@ -143,18 +143,18 @@
 [dir='rtl'] {
   #seven {
     .slick-slider {
-      @mixin button-direction($left, $right, $degree) {
+      @mixin button-direction-transform($left, $right, $degree) {
         right: $right;
         left: $left;
         transform: rotate($degree);
       }
 
       .action-button--prev {
-        @include button-direction(0, auto, 0);
+        @include button-direction-transform(0, auto, 0);
       }
 
       .action-button--next {
-        @include button-direction(auto, 10px, 180);
+        @include button-direction-transform(auto, 10px, 180);
       }
     }
   }

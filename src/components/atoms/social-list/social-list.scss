@@ -1,4 +1,4 @@
-.icon_list {
+.icon-list {
   a {
     img {
       width: 57px;
@@ -6,6 +6,7 @@
       filter: hue-rotate(0deg);
       transition: all 0.3s;
       transform: scale(1);
+
       &:hover {
         width: 57px;
         height: auto;
@@ -15,8 +16,10 @@
         background-size: contain;
       }
     }
+
     margin-bottom: 15px;
   }
+
   display: flex;
   flex-wrap: wrap;
   width: 203px;

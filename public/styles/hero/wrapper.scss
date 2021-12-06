@@ -1,4 +1,4 @@
-@import 'public/styles/utils.scss';
+@import 'public/styles/utils';
 
 #first {
   background-image: url('/assets/images/hero-background.png');
@@ -6,54 +6,67 @@
   background-size: auto;
   background-position: 100% 0%;
   padding-top: 91px;
+
   .outer {
     display: flex;
     justify-content: center;
     max-width: 100%;
   }
+
   .inner {
     max-width: 1310px;
     width: 100%;
-    padding: 0px 10px;
+    padding: 0 10px;
     position: relative;
     @mixin position($top, $right) {
       position: absolute;
       right: $right;
       top: $top;
     }
-    .logo_bg1 {
-      @include position(180px, -200px);
-    }
-    .logo_bg2 {
-      @include position(500px, 0);
+
+    .logo {
+      &_bg1 {
+        @include position(180px, -200px);
+      }
+
+      &_bg2 {
+        @include position(500px, 0);
+      }
     }
   }
+
   .row {
     &:nth-child(1) {
       display: flex;
       height: 560px;
       margin-top: 60px;
+
       .col {
         position: relative;
         width: max-content;
         z-index: 3;
+
         &:nth-child(1) {
           z-index: 3;
+
           h1 {
             width: 460px;
             margin-top: 19px;
             margin-bottom: 40px;
             @include font(Farro, normal, normal, 64px, 87%, #ffffff);
+
             span {
               background: linear-gradient(
                 270.9deg,
                 var(--gradient-color-1) -2.92%,
                 var(--gradient-color-2) 99.95%
               );
+              background-clip: text;
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
             }
           }
+
           p {
             @include font(
               Roboto Condensed,
@@ -63,6 +76,7 @@
               26px,
               #ffffff
             );
+
             width: 360px;
           }
 
@@ -74,6 +88,7 @@
       }
     }
   }
+
   .blur {
     background: var(--blur);
     width: 783px;
@@ -85,26 +100,32 @@
     transform: skewY(10deg);
     filter: blur(140px);
   }
+
   .buildon {
     width: max-content;
     margin-top: 50px;
     display: flex;
     align-items: center;
     margin-bottom: 32px;
+
     span {
       @include font(Farro, normal, normal, 12px, 12px, #ffffff);
+
       margin-right: 18px;
     }
+
     img {
       width: 23px;
     }
+
     .first {
       padding-right: 15px;
       margin-right: 15px;
-      border-right: 1px solid rgba(255, 255, 255, 0.13);
+      border-right: 1px solid rgb(255 255 255 / 13%);
     }
   }
 }
+
 [dir='rtl'] {
   .slick-slide {
     float: left !important;
@@ -114,17 +135,23 @@
   #first {
     background-size: cover;
     padding-top: 50px;
+
     .inner {
       max-width: 100vw;
       width: 100vw;
       overflow: hidden;
-      .logo_bg1 {
-        display: none;
-      }
-      .logo_bg2 {
-        display: none;
+
+      .logo {
+        &_bg1 {
+          display: none;
+        }
+
+        &_bg2 {
+          display: none;
+        }
       }
     }
+
     .row {
       &:nth-child(1) {
         .col {
@@ -136,6 +163,7 @@
               margin: 0 auto;
               margin-top: 25px;
             }
+
             p {
               font-size: 16px;
               width: 255px;
@@ -143,20 +171,24 @@
               margin: 0 auto;
               margin-top: 30px;
             }
+
             z-index: 1;
             width: 100vw !important;
           }
         }
-        margin-top: 0px;
+
+        margin-top: 0;
         width: calc(100vw - 20px);
         height: auto;
       }
     }
+
     .buildon {
       width: max-content;
       margin: 0 auto;
       margin-top: 25px;
     }
+
     .blur {
       width: 200px;
       left: 100px;
@@ -167,27 +199,33 @@
     .button__group {
       margin-left: calc(50% - 160px);
     }
+
     .ps {
-      width: 0px !important;
+      width: 0 !important;
       position: inherit !important;
     }
+
     .first-form {
       form {
         z-index: 3;
-        padding: 0px 20px;
+        padding: 0 20px;
       }
     }
+
     .celebs {
       .celebs-list {
         transform: none;
       }
     }
+
     .slick-list {
       padding: 0 35% 0 0 !important;
     }
+
     .slick-slide {
       transition: 0.3s;
     }
+
     .slick-slide[aria-hidden='true'] {
       opacity: 0.3;
     }

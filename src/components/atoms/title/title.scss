@@ -1,12 +1,10 @@
+@import 'public/styles/utils';
+
 .title-component {
   margin-top: 0;
   margin-bottom: 24px;
-  color: #ffffff;
-  font-family: Farro;
-  font-size: 32px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 104.4%;
+  @include font(Farro, normal, normal, 32px, 104.4%, #ffffff);
+
   text-align: center;
 }
 @media screen and (max-width: 1050px) {

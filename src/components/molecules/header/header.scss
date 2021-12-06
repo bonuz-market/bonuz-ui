@@ -255,6 +255,11 @@ header {
           .logo {
             width: 80px;
           }
+
+          a {
+            z-index: 10;
+            position: relative;
+          }
         }
 
         &:nth-child(2) {
@@ -310,13 +315,6 @@ header {
             z-index: 10;
             position: relative;
             width: 100px;
-          }
-        }
-
-        &:nth-child(1) {
-          a {
-            z-index: 10;
-            position: relative;
           }
         }
 

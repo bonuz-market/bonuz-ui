@@ -2,20 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   position: relative;
-
   padding: 6px;
-
-  background-color: #040D5B;
+  background-color: #040d5b;
   border-radius: 8px;
 
   &__title {
     display: block;
-
     margin-left: 10px;
-
-    color: #FFFFFF;
+    color: #fff;
     font-family: Farro, sans-serif;
     font-size: 14px;
     line-height: 14px;
@@ -23,10 +18,8 @@
 
   &__trigger {
     display: block;
-
     width: 45px;
     height: 45px;
-
     background-color: transparent;
     border: none;
     border-radius: 8px;

@@ -1,7 +1,9 @@
+@import 'sass:color';
 @keyframes stripe-animation {
   0% {
     background-position: 0 100%;
   }
+
   100% {
     background-position: 100000px 100%;
   }
@@ -10,20 +12,24 @@
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
 }
-@-webkit-keyframes diagramscale {
+@keyframes diagramscale {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
@@ -33,10 +39,12 @@
     background-position: 0% 50%;
     filter: contrast(180%);
   }
+
   50% {
     background-position: 100% 50%;
     filter: contrast(130%);
   }
+
   100% {
     background-position: 0% 50%;
     filter: contrast(150%);
@@ -46,87 +54,102 @@
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.2);
   }
+
   100% {
     transform: scale(1);
   }
 }
-@-webkit-keyframes iconscale {
+@keyframes iconscale {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.2);
   }
+
   100% {
     transform: scale(1);
   }
 }
-@keyframes slideIn {
+@keyframes slide-in {
   0% {
     opacity: 0;
-    transform: translatey(30px);
+    transform: translateY(30px);
   }
+
   100% {
     opacity: 1;
-    transform: translatey(0px);
+    transform: translateY(0);
   }
 }
 @keyframes line-title {
   0% {
     opacity: 0;
-    transform: translatey(100px);
+    transform: translateY(100px);
   }
+
   100% {
     opacity: 100;
-    transform: translatey(0px);
+    transform: translateY(0);
   }
 }
 @keyframes stripe-animation {
   0% {
-    background-position: 0px 100%;
+    background-position: 0 100%;
   }
+
   100% {
     background-position: 100000px 100%;
   }
 }
-@-webkit-keyframes hero-before {
+@keyframes hero-before {
   0% {
-    transform: translatey(0px);
+    transform: translateY(0);
   }
+
   50% {
-    transform: translatey(10px);
+    transform: translateY(10px);
   }
+
   100% {
-    transform: translatey(0px);
+    transform: translateY(0);
   }
 }
 @keyframes hero-before {
   0% {
-    transform: translatey(0px);
+    transform: translateY(0);
   }
+
   50% {
-    transform: translatey(10px);
+    transform: translateY(10px);
   }
+
   100% {
-    transform: translatey(0px);
+    transform: translateY(0);
   }
 }
 @keyframes rainbow {
   0% {
     filter: hue-rotate(300deg) contrast(100%);
   }
+
   25% {
     filter: hue-rotate(350deg) contrast(100%);
   }
+
   50% {
     filter: hue-rotate(300deg) contrast(100%);
   }
+
   75% {
     filter: hue-rotate(350deg) contrast(100%) invert(10%);
   }
+
   100% {
     filter: hue-rotate(300deg) contrast(100%);
   }

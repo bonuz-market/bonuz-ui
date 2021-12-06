@@ -39,7 +39,8 @@
     &__tag {
       background: linear-gradient(270.9deg, #ef7188 -2.92%, #ffa34e 99.95%);
       background-clip: text;
-      color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       @include font(Roboto Condensed, null, null, 14px, 26px, null);
 
       &__wrapper {
