@@ -4,5 +4,6 @@
 @import '~slick-carousel/slick/slick-theme.css';
 @import './animations.scss';
 @import './misc.scss';
+@import './bundle.css';
 
 /* @import './bundle.css'; */
