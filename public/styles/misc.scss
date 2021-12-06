@@ -3,6 +3,11 @@
   outline: none;
 }
 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
 a {
   text-decoration: none;
 }
@@ -12,6 +17,9 @@ body {
   margin: 0;
   overflow-x: hidden;
   background: var(--main-bg-color);
+  font-family: 'Farro', 'Roboto Condensed', 'Roboto', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body.noscroll {

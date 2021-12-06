@@ -6,15 +6,3 @@
 @import './misc.scss';
 
 /* @import './bundle.css'; */
-
-body {
-  margin: 0;
-  font-family: 'Farro', 'Roboto Condensed', 'Roboto', 'Segoe UI', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
