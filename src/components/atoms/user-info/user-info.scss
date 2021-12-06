@@ -1,22 +1,33 @@
-.user-info {
+@import 'public/styles/utils';
+
+%display-flex-align-center {
   display: flex;
   align-items: center;
+}
+
+.user-info {
+  @extend %display-flex-align-center;
 
   &__photo {
     display: block;
-
     position: absolute;
     top: 6px;
     left: 5px;
-
     width: 64px;
     height: 71px;
-
-    clip-path: polygon(50% 0, 50% 0, 100% 25%, 100% 75%, 50% 100%, 50% 100%, 0 75%, 0 25%);
+    clip-path: polygon(
+      50% 0,
+      50% 0,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      50% 100%,
+      0 75%,
+      0 25%
+    );
 
     &__wrapper {
       margin-right: 26px;
-
       position: relative;
     }
   }
@@ -24,50 +35,36 @@
   &__content {
     &__name {
       display: block;
-
-      color: #FFFFFF;
-      font-family: Farro, sans-serif;
-      font-size: 16px;
-      line-height: 16px;
+      @include font(Farro, null, null, 16px, 16px, #ffffff);
     }
 
     &__wrapper {
-      display: flex;
-      align-items: center;
+      @extend %display-flex-align-center;
     }
 
     &__info {
-      display: flex;
-      align-items: center;
+      @extend %display-flex-align-center;
 
       position: relative;
-
-      color: #FFFFFF;
-      font-family: Farro, sans-serif;
-      font-size: 14px;
-      line-height: 14px;
+      @include font(Farro, normal, normal, 14px, 14px, #ffffff);
 
       &:not(:last-child) {
         margin-right: 16px;
 
         &::after {
           content: '';
-
           width: 1px;
-
           position: absolute;
           top: 0;
           bottom: 0;
           right: -8px;
-
-          background: #3A3086;
+          background: #3a3086;
           border-radius: 4px;
         }
       }
 
       & > img {
         display: block;
-
         margin-right: 4px;
       }
     }
@@ -78,7 +75,6 @@
   .user-info {
     &__photo__wrapper {
       order: 2;
-
       margin-right: 0;
       margin-left: 24px;
     }
