@@ -1,6 +1,7 @@
+@import 'public/styles/utils';
+
 .users {
   width: 100%;
-
   border-collapse: separate;
   border-spacing: 0 8px;
 
@@ -11,15 +12,12 @@
   &__cell {
     padding-top: 22px;
     padding-bottom: 22px;
+    @include font(Farro, null, null, 14px, 14px, #ffffff);
 
-    color: #FFFFFF;
-    font-family: Farro, sans-serif;
-    font-size: 14px;
     text-align: left;
-    line-height: 14px;
 
     &:not(.users__cell--head) {
-      background-color: #040D5B;
+      background-color: #040d5b;
 
       &:first-child {
         padding-left: 16px;
@@ -42,13 +40,12 @@
 
       & > img {
         display: block;
-
         margin-right: 8px;
       }
     }
 
     &__level {
-      color: #48F573;
+      color: #48f573;
     }
   }
 }
