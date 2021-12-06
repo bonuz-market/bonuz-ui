@@ -1,3 +1,5 @@
+@import 'public/styles/utils';
+
 .user-card {
   &__photo {
     margin-bottom: 24px;
@@ -11,17 +13,23 @@
       position: absolute;
       top: 11px;
       left: 9px;
-
       width: 112px;
       height: 125px;
-
-      clip-path: polygon(50% 0, 50% 0, 100% 25%, 100% 75%, 50% 100%, 50% 100%, 0 75%, 0 25%);
+      clip-path: polygon(
+        50% 0,
+        50% 0,
+        100% 25%,
+        100% 75%,
+        50% 100%,
+        50% 100%,
+        0 75%,
+        0 25%
+      );
     }
 
     &__wrapper {
       display: flex;
       justify-content: center;
-
       margin-bottom: 16px;
 
       & > div {
@@ -31,25 +39,18 @@
 
     &__short-link {
       display: block;
-
       margin-bottom: 8px;
+      @include font(Farro, null, 500, 20px, 10px, #ffffff);
 
-      color: #FFFFFF;
-      font-family: Farro, sans-serif;
-      font-size: 20px;
-      font-weight: 500;
       text-align: center;
-      line-height: 20px;
     }
 
     &__created {
       display: block;
+      color: rgb(255 255 255 / 30%);
+      @include font(Farro, null, null, 14px, 14px, null);
 
-      color: rgba(255, 255, 255, 0.3);
-      font-family: Farro, sans-serif;
-      font-size: 14px;
       text-align: center;
-      line-height: 14px;
     }
   }
 
@@ -58,19 +59,13 @@
 
     &__title {
       display: block;
-
       margin-bottom: 16px;
-
-      color: #FFFFFF;
-      font-family: Roboto Condensed, sans-serif;
-      font-size: 16px;
-      line-height: 26px;
+      @include font(Roboto Condensed, null, null, 16px, 26px, #ffffff);
     }
 
     &__list {
       margin: 0;
       padding: 0;
-
       list-style: none;
     }
 
@@ -78,10 +73,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       padding: 20px 16px;
-
-      background-color: #040D5B;
+      background-color: #040d5b;
       border-radius: 8px;
 
       &:not(:last-child) {
@@ -90,24 +83,16 @@
     }
 
     &__address {
-      color: #FFFFFF;
-      font-family: Farro, sans-serif;
-      font-size: 14px;
-      line-height: 14px;
+      @include font(Farro, null, null, 14px, 14px, #ffffff);
     }
 
     &__coins {
       display: flex;
       align-items: center;
-
-      color: #FFFFFF;
-      font-family: Farro, sans-serif;
-      font-size: 14px;
-      line-height: 14px;
+      @include font(Farro, null, null, 14px, 14px, #ffffff);
 
       & > img {
         display: block;
-
         margin-right: 8px;
       }
     }
@@ -116,27 +101,18 @@
   &__info {
     &__title {
       display: block;
-
       margin-bottom: 16px;
-
-      color: #FFFFFF;
-      font-family: Roboto Condensed, sans-serif;
-      font-size: 16px;
-      line-height: 26px;
+      @include font(Roboto Condensed, null, null, 16px, 26px, #ffffff);
     }
 
     &__content {
       padding: 22px 16px;
-
       background-color: #281981;
       border-radius: 8px;
     }
 
     &__item {
-      color: #FFFFFF;
-      font-family: Roboto Condensed, sans-serif;
-      font-size: 14px;
-      line-height: 26px;
+      @include font(Roboto Condensed, null, null, 16px, 26px, #ffffff);
 
       &__title {
         opacity: 0.4;
