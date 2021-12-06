@@ -4,6 +4,13 @@ import classnames from 'classnames';
 import { Navigation } from '../../atoms';
 import './header.scss';
 
+const Signup: FC = () => (
+  <div className="sign-up">
+    <a href="#">
+      <span>Sign Up</span>
+    </a>
+  </div>
+);
 export const Header: FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -90,11 +97,6 @@ export const Header: FC = () => {
               <a href="#">
                 <span>Sign In</span>
                 <img src="/assets/images/f_i.svg" alt="" />
-              </a>
-            </div>
-            <div className="sign-up">
-              <a href="#">
-                <span>Sign Up</span>
               </a>
             </div>
           </div>
