@@ -92,6 +92,7 @@
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-typescript": "^1.0.1",
     "sass": "^1.43.5",
+    "sass-loader": "^10.1.1",
     "storybook-css-modules-preset": "^1.1.1",
     "stylelint": "^14.1.0",
     "stylelint-config-prettier": "^9.0.3",
