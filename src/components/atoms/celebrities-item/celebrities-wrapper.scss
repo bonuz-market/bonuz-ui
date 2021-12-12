@@ -35,7 +35,7 @@
 
     p {
       width: 250px;
-      @include font(Roboto Condensed, normal, normal, 16px, 26, #ffffff);
+      @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
     }
   }
 }
