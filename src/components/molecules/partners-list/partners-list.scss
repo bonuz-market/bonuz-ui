@@ -90,6 +90,9 @@
       img {
         height: auto;
         width: auto;
+        max-width: 100%;
+        max-height: 100%;
+        filter: brightness(0) invert(1);
       }
     }
   }
@@ -137,6 +140,14 @@
 
 [dir='rtl'] {
   #ten {
+    .buttons-field {
+      flex-direction: row-reverse;
+
+      > &__wrapper {
+        flex-direction: row-reverse;
+      }
+    }
+
     .prev {
       transform: none;
       right: auto;
@@ -160,6 +171,8 @@
 }
 @media screen and (max-width: 1050px) {
   #ten {
+    padding-top: 60px;
+
     .row {
       &:nth-child(1) {
         h2 {
@@ -207,13 +220,36 @@
       width: 290px;
       display: flex;
       flex-wrap: wrap;
-      margin-top: 155px;
+      margin-top: 80px;
+
+      &__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .button {
+          button {
+            width: 140px;
+          }
+
+          span {
+            white-space: nowrap;
+          }
+
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+        }
+      }
     }
 
     .button {
       &-fill {
+        width: 290px;
+        margin-bottom: 12px;
+
         button {
-          width: 290px;
+          width: 100%;
         }
       }
 
