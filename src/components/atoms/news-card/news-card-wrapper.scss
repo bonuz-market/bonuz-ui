@@ -96,6 +96,10 @@
     }
   }
 
+  .title-component {
+    margin-bottom: 54px;
+  }
+
   .blogs {
     .slick-slider {
       width: 925px;
@@ -262,17 +266,29 @@
     }
 
     .blogs {
+      margin-bottom: 80px;
+
       .slick-slider {
         width: 100%;
         margin: 0 auto;
       }
     }
 
-    .button--fill {
-      margin-top: 110px;
+    .divider {
+      display: none;
+    }
 
-      button {
-        width: 290px;
+    .title-component {
+      margin-bottom: 32px;
+    }
+
+    .button {
+      &--fill {
+        margin-top: 110px;
+
+        button {
+          width: 290px;
+        }
       }
     }
   }
