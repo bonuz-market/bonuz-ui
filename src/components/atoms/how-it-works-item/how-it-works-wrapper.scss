@@ -41,6 +41,10 @@
       z-index: 1;
       position: relative;
     }
+
+    .title-component {
+      margin-bottom: 56px;
+    }
   }
 
   .blocks {
@@ -80,6 +84,14 @@
 
   .slick-track {
     height: 430px !important;
+  }
+
+  .slick-slide {
+    transition: 0.2s ease;
+  }
+
+  .slick-slide[aria-hidden='true'] {
+    opacity: 0.3;
   }
 }
 @media screen and (max-width: 1050px) {
@@ -185,6 +197,10 @@
           left: calc(50% - 150px);
           transition: 0.6s;
           opacity: 0.5;
+        }
+
+        .title-component {
+          margin-bottom: 44px;
         }
       }
     }
