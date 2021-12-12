@@ -68,6 +68,7 @@
         p {
           @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
 
+          white-space: pre-wrap;
           margin-top: 4px;
         }
 
@@ -80,8 +81,6 @@
           top: 0;
           left: 0;
           background-image: url('/assets/images/slide_overlay.svg');
-          background-repeat: no-repeat;
-          background-size: cover;
         }
       }
     }
