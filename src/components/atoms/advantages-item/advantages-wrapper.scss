@@ -53,7 +53,8 @@
 
   .divider {
     background: rgb(255 255 255 / 12%);
-    width: 940px;
+    width: 87.2%;
+    max-width: 940px;
     display: block;
     height: 1px;
     margin: 0 auto;
@@ -135,6 +136,14 @@
 
       right: 0;
       top: 50px;
+    }
+  }
+}
+
+[dir='rtl'] {
+  #second {
+    .divider {
+      max-width: 960px;
     }
   }
 }
