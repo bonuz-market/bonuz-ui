@@ -11,6 +11,7 @@ export type TeamListProps = {
     img: string;
     name: string;
     position: string;
+    link: string;
   }[];
 };
 
@@ -49,6 +50,7 @@ export const TeamList: FC<TeamListProps> = ({ items }) => (
           img={item.img}
           name={item.name}
           position={item.position}
+          link={item.link}
         />
       ))}
     </Slider>
