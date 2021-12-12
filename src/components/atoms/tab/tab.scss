@@ -31,7 +31,7 @@
     }
   }
 
-  &--active &--secondary {
+  &--active.tab--secondary {
     > button {
       background: rgb(255 255 255 / 100%);
       color: #030c5d;
