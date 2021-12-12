@@ -39,3 +39,11 @@
     url('../assets/fonts/roboto-condensed/regular/roboto-condensed-v19-latin-regular.woff')
       format('woff');
 }
+@font-face {
+  font-weight: 700;
+  font-family: 'Anonymous Pro';
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/Anonymous-pro/bold/AnonymousPro-Bold.woff2')
+    format('woff2');
+}
