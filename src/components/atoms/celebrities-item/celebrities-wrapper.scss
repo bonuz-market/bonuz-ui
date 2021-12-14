@@ -64,6 +64,10 @@
       top: -20px;
     }
 
+    .slick-list {
+      padding: 0 35% 0 0 !important;
+    }
+
     .action-button--next {
       @extend %position;
 
@@ -93,8 +97,16 @@
     }
   }
 }
-@media (min-width: 820px) and (max-width: 1050px) {
+@media screen and (max-width: 1050px) {
   .celebs {
+    &-list {
+      transform: translateX(0);
+
+      .slick-slide[aria-hidden='true'] {
+        opacity: 0.3;
+      }
+    }
+
     .slick-slider {
       .action-button--prev {
         right: 20px !important;
