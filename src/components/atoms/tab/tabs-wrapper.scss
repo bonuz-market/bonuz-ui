@@ -4,4 +4,8 @@
   padding: 0;
   margin: 0 0 40px;
   list-style: none;
+
+  li {
+    z-index: 1;
+  }
 }
