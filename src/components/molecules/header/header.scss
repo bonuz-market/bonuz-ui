@@ -213,25 +213,25 @@ header {
     border: none;
     cursor: pointer;
   }
-}
 
-[dir='rtl'] {
-  .header {
-    &-inner {
-      .col {
-        &:nth-child(3) {
-          margin-left: 0;
-          margin-right: auto;
-        }
-
-        .sign-in {
-          margin-right: 0;
-          margin-left: 30px;
-
-          img {
+  [dir='rtl'] {
+    .header {
+      &-inner {
+        .col {
+          &:nth-child(3) {
             margin-left: 0;
-            margin-right: 20px;
-            transform: rotate(180deg);
+            margin-right: auto;
+          }
+
+          .sign-in {
+            margin-right: 0;
+            margin-left: 30px;
+
+            img {
+              margin-left: 0;
+              margin-right: 20px;
+              transform: rotate(180deg);
+            }
           }
         }
       }
@@ -239,65 +239,69 @@ header {
   }
 }
 @media screen and (max-width: 1050px) {
-  .header {
-    &-outer,
-    &__fixed {
-      padding: 0;
-    }
+  header {
+    .header {
+      &-outer,
+      &__fixed {
+        padding: 0;
+      }
 
-    &-inner {
-      padding: 0 25px;
-      margin-top: 5px;
-      max-width: 100vw;
+      &-inner {
+        padding: 0 25px;
+        margin-top: 5px;
+        max-width: 100vw;
 
-      .col {
-        &:nth-child(1) {
-          .logo {
-            width: 80px;
-          }
-
-          a {
-            z-index: 10;
-            position: relative;
-          }
-        }
-
-        &:nth-child(2) {
-          .menu {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 110vh;
-            background: linear-gradient(
-              359.79deg,
-              #510a8c 0.26%,
-              var(--main-bg-color) 99.9%
-            );
-            z-index: 9;
-            user-select: none;
-            pointer-events: none;
-            opacity: 0;
-            transition: 0.3s;
-            transform: translateY(50px);
-            overflow: hidden;
-
-            ul {
-              flex-direction: column;
-              width: max-content;
-              position: absolute;
-              left: 60px;
-              top: 150px;
-              z-index: 11;
+        .col {
+          &:nth-child(1) {
+            .logo {
+              width: 80px;
             }
 
-            li {
-              a {
-                font-size: 20px;
+            a {
+              z-index: 10;
+              position: relative;
+            }
+          }
+
+          &:nth-child(2) {
+            .menu {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 110vh;
+              background: linear-gradient(
+                359.79deg,
+                #510a8c 0.26%,
+                var(--main-bg-color) 99.9%
+              );
+              z-index: 9;
+              user-select: none;
+              pointer-events: none;
+              opacity: 0;
+              transition: 0.3s;
+              transform: translateY(50px);
+              overflow: hidden;
+
+              ul {
+                flex-direction: column;
+                width: max-content;
+                position: absolute;
+                left: 60px;
+                top: 150px;
+                z-index: 11;
               }
 
-              margin-bottom: 30px;
+              li {
+                margin-bottom: 30px;
+
+                a {
+                  font-size: 20px;
+                }
+              }
             }
+
+            margin-left: 0;
           }
 
           .menu.active {
@@ -307,46 +311,44 @@ header {
             transform: translateY(0);
           }
 
-          margin-left: 0;
-        }
+          .sign-up {
+            a {
+              z-index: 10;
+              position: relative;
+              width: 100px;
+            }
+          }
 
-        .sign-up {
-          a {
-            z-index: 10;
-            position: relative;
-            width: 100px;
+          min-width: 100%;
+          justify-content: space-between;
+
+          .sign-in {
+            display: none;
           }
         }
 
-        min-width: 100%;
-        justify-content: space-between;
-
-        .sign-in {
-          display: none;
+        .bg {
+          display: block;
+          right: 0;
         }
-      }
 
-      .bg {
-        display: block;
-        right: 0;
-      }
+        .menu {
+          .sign-in {
+            display: block !important;
 
-      .menu {
-        .sign-in {
-          display: block !important;
-
-          span {
-            font-size: 20px;
+            span {
+              font-size: 20px;
+            }
           }
         }
       }
     }
-  }
 
-  .burger {
-    display: block;
-    z-index: 10;
-    position: relative;
-    order: 2;
+    .burger {
+      display: block;
+      z-index: 10;
+      position: relative;
+      order: 2;
+    }
   }
 }

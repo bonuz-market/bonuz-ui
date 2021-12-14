@@ -79,15 +79,14 @@ export const Header: FC = () => {
                 active: isVisible,
               })}
             >
-              <ul id="menu-menu">
-                <Navigation />
+              <Navigation>
                 <li className="sign-in">
                   <a href="#">
                     <span>Sign In</span>
                     <img src="/assets/images/arrow.svg" alt="" />
                   </a>
                 </li>
-              </ul>
+              </Navigation>
               <img src="/assets/images/menu_bg.svg" className="bg" alt="" />
             </div>
           </div>
