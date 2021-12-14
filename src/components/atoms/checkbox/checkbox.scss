@@ -69,8 +69,7 @@
     }
 
     &-text {
-      font-size: 14px;
-      line-height: 140%;
+      @include font(Roboto Condensed, null, null, null, null, #ffffff);
 
       a {
         color: #f6255a;
