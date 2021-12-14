@@ -21,6 +21,27 @@
     animation: stripe-animation 4500s linear infinite both;
   }
 
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+
+    .text-block--secondary {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 930px;
+      margin-top: 40px;
+      position: relative;
+      padding-left: 53px;
+
+      p {
+        width: 809px;
+        height: 52px;
+        @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
+      }
+    }
+  }
+
   &--secondary {
     &::before {
       background-image: url('/assets/images/f.svg');
@@ -46,8 +67,10 @@
     @include font(Roboto Condensed, null, null, 16px, 26px, #ffffff);
 
     &--large {
-      font-size: 24px;
-      line-height: 26px;
+      width: 310px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      @include font(Farro, normal, normal, 24px, 26px, #ffffff);
     }
   }
 
