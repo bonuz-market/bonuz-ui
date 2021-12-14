@@ -43,12 +43,12 @@
 
   h3 {
     margin: 0;
-    @include font(Farro, normal, normal, 16px, 16px, #ffffff);
+    @include font(Anonymous Pro, normal, bold, 16px, 16px, #ffffff);
   }
 
   p {
     margin: 0;
     opacity: 0.3;
-    @include font(Roboto Condensed, normal, normal, 14px, 26px, #ffffff);
+    @include font(Anonymous Pro, normal, normal, 14px, 20px, #ffffff);
   }
 }

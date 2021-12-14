@@ -42,12 +42,15 @@
 
 .celebs {
   &-list {
-    max-width: 1010px;
-    transform: translateX(245px);
+    display: flex;
+    transform: translateX(-245px);
+    z-index: 8;
+    position: relative;
+    margin-bottom: 50px;
   }
 
   > p {
-    @include font(inherit, normal, bold, 16px, 16, #ffffff);
+    @include font(Anonymous Pro, normal, bold, 16px, 16px, #ffffff);
 
     margin-top: 30px;
     margin-bottom: 25px;

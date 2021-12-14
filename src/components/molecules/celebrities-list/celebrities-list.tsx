@@ -17,30 +17,30 @@ export type CelebritiesListProps = {
 const settings: Settings = {
   className: 'celebs-list',
   dots: false,
-  arrows: true,
+  arrows: false,
   infinite: true,
-  speed: 300,
+  speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: false,
   autoplaySpeed: 2000,
-  prevArrow: <ActionButton type="left" />,
-  nextArrow: <ActionButton type="right" />,
+  pauseOnHover: true,
   responsive: [
     {
-      breakpoint: 1050,
+      breakpoint: 4000,
       settings: {
         slidesToShow: 3,
+        dots: false,
         slidesToScroll: 1,
+        variableWidth: true,
       },
     },
     {
       breakpoint: 820,
       settings: {
-        arrows: false,
         slidesToShow: 1,
-        centerMode: true,
-        centerPadding: '20%',
+        slidesToScroll: 1,
+        arrows: false,
       },
     },
   ],
