@@ -5,7 +5,7 @@ export type TeamCardProps = {
   img: string;
   name: string;
   position: string;
-  link: string;
+  link?: string;
 };
 
 export const TeamCard: FC<TeamCardProps> = ({ img, name, position, link }) => (
@@ -13,7 +13,12 @@ export const TeamCard: FC<TeamCardProps> = ({ img, name, position, link }) => (
     <img src={img} className="pic" alt="" />
     <p>{name}</p>
     <span>
-      <a href={link}>{position}</a>
+      {link && (
+        <div>
+          <a href={link}>{position}</a>
+        </div>
+      )}
+      {!link && position}
     </span>
   </div>
 );

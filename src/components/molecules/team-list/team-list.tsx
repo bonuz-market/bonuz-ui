@@ -11,7 +11,7 @@ export type TeamListProps = {
     img: string;
     name: string;
     position: string;
-    link: string;
+    link?: string;
   }[];
 };
 
