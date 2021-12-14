@@ -4,20 +4,20 @@ import './celebrities-item.scss';
 export type CelebritiesItemProps = {
   img: string;
   name: string;
-  country: string;
+  role: string;
 };
 
 export const CelebritiesItem: FC<CelebritiesItemProps> = ({
   img,
   name,
-  country,
+  role,
 }) => (
   // eslint-disable-next-line jsx-a11y/anchor-is-valid
   <a className="celeb" href="#" draggable={false}>
     <img src={img} alt="" />
     <div>
       <h3>{name}</h3>
-      <p>{country}</p>
+      <p>{role}</p>
     </div>
   </a>
 );

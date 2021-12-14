@@ -10,7 +10,7 @@ export type CelebritiesListProps = {
   celebrities: {
     img: string;
     name: string;
-    country: string;
+    role: string;
   }[];
 };
 
@@ -22,7 +22,7 @@ const settings: Settings = {
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 2000,
   pauseOnHover: true,
   responsive: [
@@ -41,6 +41,7 @@ const settings: Settings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
+        variableWidth: true,
       },
     },
   ],
@@ -53,7 +54,7 @@ export const CelebritiesList: FC<CelebritiesListProps> = ({ celebrities }) => (
         key={`${item.name}-${index}`}
         img={item.img}
         name={item.name}
-        country={item.country}
+        role={item.role}
       />
     ))}
   </Slider>
