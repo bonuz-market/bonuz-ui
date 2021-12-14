@@ -1,6 +1,6 @@
 {
   "name": "@bonuz/bonuz-ui",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "private": false,
   "dependencies": {
     "@storybook/preset-scss": "^1.0.3",
@@ -85,6 +85,7 @@
     "eslint-config-airbnb-typescript": "^16.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.5.0",
+    "postcss": "^8.4.4",
     "prettier": "^2.5.1",
     "rollup": "^2.61.1",
     "rollup-plugin-ignore": "^1.0.10",
