@@ -20,6 +20,6 @@ export const InfoBlock: FC<InfoBlockPropsWithChildren> = ({
     })}
   >
     <div className="info-block__column">{children}</div>
-    <div className="info-block__column">{secondColumn}</div>
+    {secondColumn && <div className="info-block__column">{secondColumn}</div>}
   </div>
 );
