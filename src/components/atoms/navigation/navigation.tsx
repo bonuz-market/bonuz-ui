@@ -4,19 +4,19 @@ import './navigation.scss';
 export const Navigation: FC = ({ children }) => (
   <ul className="nav">
     <li className="nav-item">
-      <a href="#four">How it works</a>
+      <a href="#how-it-works">How it works</a>
     </li>
     <li className="nav-item">
       <a href="#subscribe">Join the Waitlist</a>
     </li>
     <li className="nav-item">
-      <a href="#eight">Token</a>
+      <a href="#supply">Token</a>
     </li>
     <li className="nav-item">
-      <a href="#six">Roadmap</a>
+      <a href="#roadmap">Roadmap</a>
     </li>
     <li className="nav-item">
-      <a href="#nine">Team</a>
+      <a href="#army">Team</a>
     </li>
     <li className="nav-item">
       <a href="#subscribe">Private Sale</a>

@@ -1,6 +1,6 @@
 @import 'public/styles/utils';
 
-#ten {
+#partners {
   background: var(--second-black);
 
   .outer {
@@ -139,7 +139,7 @@
 }
 
 [dir='rtl'] {
-  #ten {
+  #partners {
     .buttons-field {
       flex-direction: row-reverse;
 
@@ -170,7 +170,7 @@
   }
 }
 @media screen and (max-width: 1050px) {
-  #ten {
+  #partners {
     padding-top: 60px;
 
     .row {

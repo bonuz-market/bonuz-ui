@@ -1,6 +1,6 @@
 @import 'public/styles/utils';
 
-#four {
+#how-it-works {
   padding-top: 150px;
   background: url('/assets/images/four-background.svg'), var(--second-black);
   background-repeat: no-repeat;
@@ -95,7 +95,7 @@
   }
 }
 @media screen and (max-width: 1050px) {
-  #four {
+  #how-it-works {
     background: var(--second-black);
     padding-top: 65px;
 
@@ -256,7 +256,7 @@
   }
 
   [dir='rtl'] {
-    #four {
+    #how-it-works {
       .how-it-works-item {
         &:first-child {
           &::before {

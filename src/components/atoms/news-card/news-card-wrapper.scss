@@ -7,7 +7,7 @@
   left: $left;
 }
 
-#seven {
+#news {
   position: relative;
   background: var(--second-black);
 
@@ -126,7 +126,7 @@
   }
 }
 
-.seven {
+.news {
   &__background-holder {
     position: absolute;
     z-index: 1;
@@ -145,7 +145,7 @@
 }
 
 [dir='rtl'] {
-  #seven {
+  #news {
     .slick-slider {
       @mixin button-direction-transform($left, $right, $degree) {
         right: $right;
@@ -164,7 +164,7 @@
   }
 }
 @media screen and (max-width: 1050px) {
-  #seven {
+  #news {
     .inner {
       .logo {
         &_bg1 {
@@ -296,7 +296,7 @@
     display: none;
   }
 
-  .seven {
+  .news {
     &__background-holder {
       @extend %display;
 

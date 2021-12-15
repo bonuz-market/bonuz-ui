@@ -9,7 +9,7 @@ export default {
 } as Meta;
 
 const Template: Story<AdvantagesItemProps> = (args) => (
-  <div id="second">
+  <div id="advantages">
     <AdvantagesItem {...args} />
   </div>
 );

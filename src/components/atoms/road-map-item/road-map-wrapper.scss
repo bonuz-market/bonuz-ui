@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-#six {
+#roadmap {
   background: url('/assets/images/six-background.svg'), var(--second-black);
   background-repeat: no-repeat;
   background-size: auto;
@@ -211,7 +211,7 @@
 }
 
 [dir='rtl'] {
-  #six {
+  #roadmap {
     .row {
       &:nth-child(2) {
         .slide {
@@ -245,7 +245,7 @@
 }
 
 @media screen and (max-width: 1050px) {
-  #six {
+  #roadmap {
     background: var(--second-black);
 
     .slick-list {
@@ -353,7 +353,7 @@
   }
 }
 @media screen and (max-width: 1250px) {
-  #six {
+  #roadmap {
     .prev {
       right: 10px;
     }
@@ -364,7 +364,7 @@
   }
 
   [dir='rtl'] {
-    #six {
+    #roadmap {
       .prev {
         left: auto;
         right: 200px;

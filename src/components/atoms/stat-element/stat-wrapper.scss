@@ -1,6 +1,6 @@
 @import 'public/styles/utils';
 
-#eight {
+#supply {
   position: relative;
   background: url('/assets/images/eight-background.png'), var(--second-black);
   background-repeat: no-repeat;
@@ -237,7 +237,7 @@
   }
 }
 
-.eight {
+.supply {
   %background-holder {
     position: absolute;
     z-index: 0;
@@ -264,7 +264,7 @@
   opacity: 1;
 }
 @media screen and (max-width: 1050px) {
-  #eight {
+  #supply {
     background: var(--second-black);
     margin-top: -6px;
     z-index: 4;
@@ -444,7 +444,7 @@
     }
   }
 
-  .eight {
+  .supply {
     %display {
       display: none;
     }

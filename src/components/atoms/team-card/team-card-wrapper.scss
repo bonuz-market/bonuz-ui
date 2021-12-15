@@ -1,6 +1,6 @@
 @import 'public/styles/utils';
 
-#nine {
+#army {
   background: var(--second-black);
 
   .outer {
@@ -104,7 +104,7 @@
     }
   }
 
-  #nine {
+  #army {
     .prev {
       @include button-position(auto, -90px, '');
 
@@ -119,7 +119,7 @@
   }
 }
 @media screen and (max-width: 1050px) {
-  #nine {
+  #army {
     .slick-slide {
       margin: 0 10px;
       transition: all 0.3s;

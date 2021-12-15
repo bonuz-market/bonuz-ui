@@ -1,6 +1,6 @@
 @import 'public/styles/utils';
 
-#second {
+#advantages {
   position: relative;
 
   .outer {
@@ -147,14 +147,14 @@
 }
 
 [dir='rtl'] {
-  #second {
+  #advantages {
     .divider {
       max-width: 960px;
     }
   }
 }
 @media screen and (max-width: 1050px) {
-  #second {
+  #advantages {
     .inner {
       max-width: 100vw;
       width: 100vw;

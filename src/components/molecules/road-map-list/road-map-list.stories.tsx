@@ -9,7 +9,7 @@ export default {
 } as Meta;
 
 const Template: Story<RoadMapListProps> = (args) => (
-  <div id="six">
+  <div id="roadmap">
     <div className="row" />
     <div className="row" style={{ display: 'flex' }}>
       <RoadMapList {...args} />

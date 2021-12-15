@@ -9,7 +9,7 @@ export default {
 } as Meta;
 
 const Template: Story<RoadMapItemProps> = (args) => (
-  <div id="six">
+  <div id="roadmap">
     <div className="row" />
     <div className="row">
       <div className="slick-slide" style={{ display: 'block' }}>

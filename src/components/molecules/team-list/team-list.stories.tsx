@@ -8,7 +8,7 @@ export default {
 } as Meta;
 
 const Template: Story<TeamListProps> = (args) => (
-  <div id="nine">
+  <div id="army">
     <TeamList {...args} />
   </div>
 );

@@ -8,7 +8,7 @@ export default {
 } as Meta;
 
 const Template: Story<TeamCardProps> = (args) => (
-  <div id="nine">
+  <div id="army">
     <div className="team">
       <TeamCard {...args} />
     </div>
