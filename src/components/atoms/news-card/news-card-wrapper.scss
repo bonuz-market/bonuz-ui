@@ -292,12 +292,11 @@
       }
     }
   }
+  %display {
+    display: none;
+  }
 
   .seven {
-    %display {
-      display: none;
-    }
-
     &__background-holder {
       @extend %display;
 
