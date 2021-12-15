@@ -155,6 +155,12 @@
 }
 @media screen and (max-width: 1050px) {
   #second {
+    .inner {
+      max-width: 100vw;
+      width: 100vw;
+      overflow: hidden;
+    }
+
     .row {
       &:nth-child(1) {
         h2 {
@@ -261,13 +267,26 @@
     .divider {
       display: none;
     }
+
+    .text-block {
+      &__wrapper {
+        padding-left: 10px;
+      }
+
+      &__text {
+        height: auto;
+      }
+
+      &::before {
+        top: 10%;
+      }
+    }
+  }
+  %display {
+    display: none;
   }
 
   .second {
-    %display {
-      display: none;
-    }
-
     &__background-holder {
       @extend %display;
 

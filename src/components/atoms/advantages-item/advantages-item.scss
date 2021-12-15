@@ -42,3 +42,18 @@
     opacity: 0.8;
   }
 }
+@media screen and (max-width: 1050px) {
+  .advantages-item {
+    i {
+      margin: 0 auto;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    h4 {
+      text-align: center;
+    }
+  }
+}
