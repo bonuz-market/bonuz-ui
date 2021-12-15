@@ -32,7 +32,7 @@ const settings: Settings = {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: true,
+        dots: false,
         arrows: false,
         variableWidth: true,
         infinite: false,
