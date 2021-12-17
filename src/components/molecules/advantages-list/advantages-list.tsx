@@ -50,7 +50,6 @@ export const AdvantagesList: FC<AdvantagesListProps> = ({ items }) => (
         title={item.title}
         description={item.description}
         icon={item.icon}
-        iconBlur={item.iconBlur}
       />
     ))}
   </Slider>
