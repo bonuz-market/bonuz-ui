@@ -108,7 +108,7 @@ footer {
       background: none;
       border: 1px solid rgb(255 255 255 / 24%);
       border-width: 0 0 1px;
-      width: 515px;
+      width: 300px;
       padding-bottom: 10px;
     }
   }
@@ -193,6 +193,8 @@ footer {
         &:nth-child(1) {
           p {
             margin-bottom: 40px;
+            width: 50%;
+            text-align: center;
           }
 
           .button--stroke {
@@ -211,6 +213,11 @@ footer {
 
           .form {
             width: auto;
+
+            .input__wrapper > button {
+              margin-right: 0;
+              margin-left: -30px;
+            }
           }
         }
       }
