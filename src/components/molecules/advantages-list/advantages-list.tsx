@@ -11,7 +11,6 @@ export type AdvantagesListProps = {
     title: string;
     description: string;
     icon: string;
-    iconBlur: string;
   }[];
 };
 

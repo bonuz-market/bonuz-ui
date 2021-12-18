@@ -84,7 +84,6 @@ declare module '@bonuz/bonuz-ui' {
       title: string;
       description: string;
       icon: string;
-      iconBlur: string;
     }[];
   };
   type CelebritiesListProps = {
