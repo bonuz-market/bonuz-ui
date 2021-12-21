@@ -2,6 +2,8 @@ import typescript from 'rollup-plugin-typescript2';
 import multiInput from 'rollup-plugin-multi-input';
 import json from '@rollup/plugin-json';
 import scss from 'rollup-plugin-scss';
+import autoprefixer from 'autoprefixer';
+import postcss from 'postcss';
 import { writeFileSync } from 'fs';
 
 export default {
@@ -18,6 +20,7 @@ export default {
     typescript(),
     json(),
     scss({
+      processor: () => postcss([autoprefixer()]),
       output: (styles) => {
         writeFileSync('./public/styles/bundle.css', styles);
       },
