@@ -64,16 +64,10 @@
       background-image: url('/assets/images/post-mask.svg');
       background-size: cover;
       transition: 0.2s ease-in-out;
-    }
 
-    .mask--gradient {
-      opacity: 0;
-      background-image: url('/assets/images/post-mask-hover.svg');
-    }
-
-    &:hover {
-      .mask--gradient {
-        opacity: 1;
+      &--gradient {
+        opacity: 0;
+        background-image: url('/assets/images/post-mask-hover.svg');
       }
     }
   }
@@ -105,6 +99,29 @@
     line-height: 26px;
     color: rgb(255 255 255 / 80%);
     min-height: 78px;
+    max-width: 220px;
+  }
+
+  a:visited {
+    color: inherit;
+  }
+
+  &:hover {
+    .mask {
+      &--gradient {
+        opacity: 1;
+      }
+    }
+
+    h3 {
+      background: linear-gradient(
+        270.9deg,
+        var(--gradient-color-1) -2.92%,
+        var(--gradient-color-2) 99.95%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 }
 
