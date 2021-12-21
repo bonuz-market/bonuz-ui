@@ -6,6 +6,7 @@ export type NewsCardProps = {
   img: string;
   title: string;
   description: string;
+  link: string;
 };
 
 export const NewsCard: FC<NewsCardProps> = ({
@@ -13,15 +14,18 @@ export const NewsCard: FC<NewsCardProps> = ({
   img,
   title,
   description,
+  link,
 }) => (
   <article className="post">
     <div className="date">{created}</div>
-    <a className="img" href="#">
+    <a className="img" href={link}>
       <div className="mask" />
       <div className="mask mask--gradient" />
       <img src={img} className="post-image" alt="" />
     </a>
-    <h3>{title}</h3>
+    <h3>
+      <a href={link}>{title}</a>
+    </h3>
     <p>{description}</p>
   </article>
 );

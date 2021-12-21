@@ -12,6 +12,7 @@ export type NewsRowProps = {
     img: string;
     title: string;
     description: string;
+    link: string;
   }[];
 };
 
@@ -51,6 +52,7 @@ export const NewsRow: FC<NewsRowProps> = ({ news }) => (
           img={item.img}
           title={item.title}
           description={item.description}
+          link={item.link}
         />
       ))}
     </Slider>

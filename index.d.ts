@@ -58,6 +58,7 @@ declare module '@bonuz/bonuz-ui' {
     img: string;
     title: string;
     description: string;
+    link: string;
   };
   type RoadMapItemProps = {
     title: string;
@@ -106,6 +107,7 @@ declare module '@bonuz/bonuz-ui' {
       img: string;
       title: string;
       description: string;
+      link: string;
     }[];
   };
   type PartnersListProps = {
