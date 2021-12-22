@@ -6,4 +6,8 @@ module.exports = {
     'storybook-css-modules-preset',
     '@storybook/preset-scss',
   ],
+  core: {
+    builder: 'webpack5',
+  },
+  staticDirs: ['../public'],
 };
