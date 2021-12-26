@@ -32,6 +32,13 @@ declare module '@bonuz/bonuz-ui' {
     checked?: boolean;
     onChange?: (checked: boolean) => void;
   };
+  type DropdownProps = {
+    options: {
+      label: string;
+      target: string;
+    }[];
+    selectedIndex?: number;
+  };
   type HowItWorksItemProps = {
     img: string;
     title: string;
@@ -220,6 +227,7 @@ declare module '@bonuz/bonuz-ui' {
   export const AdvantagesItem: FC<AdvantagesItemProps>;
   export const CelebritiesItem: FC<CelebritiesItemProps>;
   export const Checkbox: FC<CheckboxProps>;
+  export const DropdownProps: FC<DropdownProps>;
   export const HowItWorksItem: FC<HowItWorksItemProps>;
   export const InfoBlock: FC<InfoBlockProps>;
   export const Input: FC<InputProps>;
