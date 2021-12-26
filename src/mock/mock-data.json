@@ -312,5 +312,14 @@
       "title": "3%",
       "description": "ddff"
     }
+  ],
+  "dropdown": [
+    { "label": "English", "target": "en" },
+    { "label": "Arabic", "target": "ar" },
+    { "label": "French", "target": "fr" },
+    { "label": "German", "target": "de" },
+    { "label": "Italian", "target": "it" },
+    { "label": "Japanese", "target": "ja" },
+    { "label": "Korean", "target": "ko" }
   ]
 }
