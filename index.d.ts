@@ -33,11 +33,7 @@ declare module '@bonuz/bonuz-ui' {
     onChange?: (checked: boolean) => void;
   };
   type DropdownProps = {
-    options: {
-      label: string;
-      target: string;
-    }[];
-    selectedIndex?: number;
+    selected?: number;
   };
   type HowItWorksItemProps = {
     img: string;
@@ -221,6 +217,9 @@ declare module '@bonuz/bonuz-ui' {
       level: string;
     }[];
   };
+  type HeaderProps = {
+    LanguageSelector: FC;
+  };
 
   export const Button: FC<ButtonProps>;
   export const ActionButton: FC<ActionButtonProps>;
@@ -241,7 +240,7 @@ declare module '@bonuz/bonuz-ui' {
   export const AdvantagesList: FC<AdvantagesListProps>;
   export const CelebritiesList: FC<CelebritiesListProps>;
   export const Footer: FC;
-  export const Header: FC;
+  export const Header: FC<HeaderProps>;
   export const HowItWorksList: FC<HowItWorksListProps>;
   export const NewsRow: FC<NewsRowProps>;
   export const PartnersList: FC<PartnersListProps>;
