@@ -11,7 +11,11 @@ const Signup: FC = () => (
     </a>
   </div>
 );
-export const Header: FC = () => {
+
+type HeaderProps = {
+  LanguageSelector?: FC;
+};
+export const Header: FC<HeaderProps> = ({ LanguageSelector }) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
@@ -92,6 +96,7 @@ export const Header: FC = () => {
           </div>
 
           <div className="col">
+            {LanguageSelector}
             <div className="sign-in">
               <a href="#">
                 <span>Sign In</span>
