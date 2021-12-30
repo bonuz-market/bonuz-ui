@@ -3,35 +3,35 @@
   "news": [
     {
       "created": "27 September 2021",
-      "img": "/assets/images/logo.svg",
+      "img": "logo.svg",
       "title": "Bonuz News",
       "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
       "link": "https://bonuz.market"
     },
     {
       "created": "27 September 2021",
-      "img": "/assets/images/logo.svg",
+      "img": "logo.svg",
       "title": "Bonuz News",
       "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
       "link": "https://bonuz.market"
     },
     {
       "created": "27 September 2021",
-      "img": "/assets/images/logo.svg",
+      "img": "logo.svg",
       "title": "Bonuz News",
       "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
       "link": "https://bonuz.market"
     },
     {
       "created": "27 September 2021",
-      "img": "/assets/images/logo.svg",
+      "img": "logo.svg",
       "title": "Bonuz News",
       "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
       "link": "https://bonuz.market"
     },
     {
       "created": "27 September 2021",
-      "img": "/assets/images/logo.svg",
+      "img": "logo.svg",
       "title": "Bonuz News",
       "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
       "link": "https://bonuz.market"
@@ -39,52 +39,52 @@
   ],
   "celebrities": [
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Max Miller",
       "role": "England"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Max Miller",
       "role": "England"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Max Miller",
       "role": "England"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Max Miller",
       "role": "England"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Max Miller",
       "role": "England"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Max Miller",
       "role": "England"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Max Miller",
       "role": "England"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Max Miller",
       "role": "England"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Max Miller",
       "role": "England"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Max Miller",
       "role": "England"
     }
@@ -109,157 +109,157 @@
   ],
   "howItWorks": [
     {
-      "img": "/assets/images/i1.svg",
+      "img": "i1.svg",
       "title": "Buy BONUZ token",
       "circleOffset": -452.389
     },
     {
-      "img": "/assets/images/i2.svg",
+      "img": "i2.svg",
       "title": "Buy your favorite celebrity token",
       "circleOffset": -339.292
     },
     {
-      "img": "/assets/images/i3.svg",
+      "img": "i3.svg",
       "title": "Explore Celebrities and their tokens",
       "circleOffset": -226.195
     },
     {
-      "img": "/assets/images/i4.svg",
+      "img": "i4.svg",
       "title": "Trade tokens",
       "circleOffset": -113.097
     },
     {
-      "img": "/assets/images/i5.svg",
+      "img": "i5.svg",
       "title": "Receive exclusive content, buy exclusive celebrities NFTs, vote, interact, enjoy!",
       "circleOffset": 0
     }
   ],
   "partners": [
-    "/assets/images/pa2.svg",
-    "/assets/images/pa3.svg",
-    "/assets/images/pa5.svg",
-    "/assets/images/pa1.svg",
-    "/assets/images/pa1.svg",
-    "/assets/images/pa3.svg",
-    "/assets/images/pa5.svg",
-    "/assets/images/pa6.svg"
+    "pa2.svg",
+    "pa3.svg",
+    "pa5.svg",
+    "pa1.svg",
+    "pa1.svg",
+    "pa3.svg",
+    "pa5.svg",
+    "pa6.svg"
   ],
   "advantages": [
     {
       "title": "Celebrities",
       "description": "Celebrities can establish a new channel to communicate with and honor their hardcore fans, all while financilly benefiting.",
-      "icon": "/assets/images/block3.svg",
-      "iconBlur": "/assets/images/block3.svg"
+      "icon": "block3.svg",
+      "iconBlur": "block3.svg"
     },
     {
       "title": "Celebrities",
       "description": "Celebrities can establish a new channel to communicate with and honor their hardcore fans, all while financilly benefiting.",
-      "icon": "/assets/images/block2.svg",
-      "iconBlur": "/assets/images/block2.svg"
+      "icon": "block2.svg",
+      "iconBlur": "block2.svg"
     },
     {
       "title": "Celebrities",
       "description": "Celebrities can establish a new channel to communicate with and honor their hardcore fans, all while financilly benefiting.",
-      "icon": "/assets/images/block1.svg",
-      "iconBlur": "/assets/images/block1.svg"
+      "icon": "block1.svg",
+      "iconBlur": "block1.svg"
     }
   ],
   "team": [
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_1"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
-      "name": "Name",
-      "position": "Designer",
-      "link": "https://bonuz.market/",
-      "tabId": "tab_1"
-    },
-    {
-      "img": "/assets/images/celeb_pic.png",
-      "name": "Name",
-      "position": "Designer",
-      "tabId": "tab_1"
-    },
-    {
-      "img": "/assets/images/celeb_pic.png",
-      "name": "Name",
-      "position": "Designer",
-      "tabId": "tab_1"
-    },
-    {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "link": "https://bonuz.market/",
       "tabId": "tab_1"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_1"
+    },
+    {
+      "img": "celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "tabId": "tab_1"
+    },
+    {
+      "img": "celeb_pic.png",
+      "name": "Name",
+      "position": "Designer",
+      "link": "https://bonuz.market/",
+      "tabId": "tab_1"
+    },
+    {
+      "img": "celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "link": "https://bonuz.market/",
       "tabId": "tab_2"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "link": "https://bonuz.market/",
       "tabId": "tab_2"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "link": "https://bonuz.market/",
       "tabId": "tab_2"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "link": "https://bonuz.market/",
       "tabId": "tab_2"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_2"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "link": "https://bonuz.market/",
       "tabId": "tab_3"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "link": "https://bonuz.market/",
       "tabId": "tab_3"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "tabId": "tab_3"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "link": "https://bonuz.market/",
       "tabId": "tab_3"
     },
     {
-      "img": "/assets/images/celeb_pic.png",
+      "img": "celeb_pic.png",
       "name": "Name",
       "position": "Designer",
       "link": "https://bonuz.market/",
@@ -268,47 +268,47 @@
   ],
   "statistic": [
     {
-      "img": "/assets/images/gem3.svg",
+      "img": "gem3.svg",
       "title": "20%",
       "description": "Ecosystem Fund"
     },
     {
-      "img": "/assets/images/gem1.svg",
+      "img": "gem1.svg",
       "title": "25%",
       "description": "Marketing"
     },
     {
-      "img": "/assets/images/gem2.svg",
+      "img": "gem2.svg",
       "title": "14%",
       "description": "Seed & Private Rounds"
     },
     {
-      "img": "/assets/images/gem4.svg",
+      "img": "gem4.svg",
       "title": "6%",
       "description": "Public Rounds"
     },
     {
-      "img": "/assets/images/gem4.svg",
+      "img": "gem4.svg",
       "title": "10%",
       "description": "Team"
     },
     {
-      "img": "/assets/images/gem2.svg",
+      "img": "gem2.svg",
       "title": "10%",
       "description": "Advisiors"
     },
     {
-      "img": "/assets/images/gem3.svg",
+      "img": "gem3.svg",
       "title": "2%",
       "description": "test"
     },
     {
-      "img": "/assets/images/gem1.svg",
+      "img": "gem1.svg",
       "title": "1%",
       "description": "test"
     },
     {
-      "img": "/assets/images/gem4.svg",
+      "img": "gem4.svg",
       "title": "3%",
       "description": "ddff"
     }

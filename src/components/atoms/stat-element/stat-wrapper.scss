@@ -1,8 +1,9 @@
-@import 'public/styles/utils';
+@import '../../../assets/styles/utils';
 
 #supply {
   position: relative;
-  background: url('/assets/images/eight-background.png'), var(--second-black);
+  background: url('/src/assets/images/eight-background.png'),
+    var(--second-black);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 60% 0;

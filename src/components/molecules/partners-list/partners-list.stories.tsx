@@ -15,5 +15,7 @@ const Template: Story<PartnersListProps> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  partners: mockData.partners,
+  partners: mockData.partners.map((item) =>
+    require(`/src/assets/images/${item}`),
+  ),
 };

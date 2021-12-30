@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import './fan-item.scss';
-
+import eyeIcon from '../../../assets/icons/eye.svg';
 export type FanItemProps = {
   avatar: string;
   name: string;
@@ -23,7 +23,7 @@ export const FanItem: FC<FanItemProps> = ({
       <span className="fan-item__name">{name}</span>
       <div className="fan-item__descr">{description}</div>
       <span className="fan-item__viewers">
-        <img src="/assets/icons/eye.svg" alt="" />
+        <img src={eyeIcon} alt="" />
         {viewers}
       </span>
     </div>

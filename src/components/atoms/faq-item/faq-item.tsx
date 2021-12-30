@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import classnames from 'classnames';
 
 import './faq-item.scss';
-
+import arrowIcon from '../../../assets/icons/arrow-small.svg';
 export type FaqItemProps = {
   title: string;
   description: string;
@@ -27,11 +27,7 @@ export const FaqItem: FC<FaqItemProps> = ({ title, description }) => {
         onClick={handleIsOpened}
       >
         <span className="faq-item__title">{title}</span>
-        <img
-          src="/assets/icons/arrow-small.svg"
-          alt=""
-          className="faq-item__arrow"
-        />
+        <img src={arrowIcon} alt="" className="faq-item__arrow" />
       </button>
       <div className="faq-item__content">
         <span className="faq-item__content__descr">{description}</span>

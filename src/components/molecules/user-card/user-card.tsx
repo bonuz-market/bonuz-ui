@@ -1,6 +1,8 @@
 import { FC } from 'react';
 
 import './user-card.scss';
+import userImageMask from '../../../assets/icons/user-info-background.svg';
+import coinIcon from '../../../assets/icons/coin.svg';
 
 export type UserCardProps = {
   photo: string;
@@ -31,7 +33,7 @@ export const UserCard: FC<UserCardProps> = ({
         <div className="user-card__photo__wrapper">
           <div>
             <img
-              src="/assets/icons/user-info-background.svg"
+              src={userImageMask}
               alt=""
               className="user-card__photo__mask"
             />
@@ -52,7 +54,7 @@ export const UserCard: FC<UserCardProps> = ({
                 {item.address}
               </span>
               <span className="user-card__addresses__coins">
-                <img src="/assets/icons/coin.svg" alt="" />
+                <img src={coinIcon} alt="" />
                 {item.coins}
               </span>
             </li>

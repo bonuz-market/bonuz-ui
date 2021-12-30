@@ -15,4 +15,7 @@ const Template: Story<AdvantagesItemProps> = (args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = mockData.advantages[0];
+Primary.args = mockData.advantages.map((item) => ({
+  ...item,
+  icon: require(`/src/assets/images/${item.icon}`),
+}))[0];

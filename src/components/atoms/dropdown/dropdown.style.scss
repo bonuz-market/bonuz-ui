@@ -1,4 +1,4 @@
-@import 'public/styles/utils';
+@import '../../../assets/styles/utils';
 
 .dropdown {
   %text-color-effect {
@@ -27,7 +27,7 @@
     &::before {
       content: '';
       position: absolute;
-      background: url('/assets/images/dropdown-border.svg');
+      background: url('/src/assets/images/dropdown-border.svg');
       background-repeat: no-repeat;
       z-index: -1;
       border-radius: inherit;
@@ -38,13 +38,13 @@
     }
 
     &:not(.active):hover::before {
-      background: url('/assets/images/dropdown-border-hover.svg');
+      background: url('/src/assets/images/dropdown-border-hover.svg');
     }
 
     &::after {
       content: '';
       position: absolute;
-      background: url('/assets/images/arrow-selector-up.svg');
+      background: url('/src/assets/images/arrow-selector-up.svg');
       right: 8px;
       bottom: calc(50% - 3px);
       width: 8px;

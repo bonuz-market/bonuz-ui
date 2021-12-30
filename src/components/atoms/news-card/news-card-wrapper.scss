@@ -1,4 +1,4 @@
-@import 'public/styles/utils';
+@import '../../../assets/styles/utils';
 @mixin position($top, $right: null, $left: null) {
   @content;
 

@@ -15,5 +15,8 @@ const Template: Story<TeamListProps> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  items: mockData.team,
+  items: mockData.team.map((item) => ({
+    ...item,
+    img: require(`/src/assets/images/${item.img}`),
+  })),
 };

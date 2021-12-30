@@ -17,5 +17,8 @@ const Template: Story<NewsRowProps> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  news: mockData.news,
+  news: mockData.news.map((item) => ({
+    ...item,
+    img: require(`/src/assets/images/${item.img}`),
+  })),
 };

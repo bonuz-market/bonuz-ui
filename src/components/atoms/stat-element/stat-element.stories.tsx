@@ -21,4 +21,7 @@ const Template: Story<StatElementProps> = (args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = mockData.statistic[0];
+Primary.args = mockData.statistic.map((item) => ({
+  ...item,
+  img: require(`/src/assets/images/${item.img}`),
+}))[0];
