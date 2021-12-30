@@ -40,8 +40,8 @@ export default {
                   .pop();
                 const file = fs.readFileSync(asset.absolutePath);
 
-                fs.ensureDirSync(path.join(OUT_DIR, '_assets'));
-                const filePath = path.join('_assets', filename);
+                fs.ensureDirSync(path.join(OUT_DIR, 'assets'));
+                const filePath = `assets/${filename}`;
 
                 fs.writeFileSync(path.join(OUT_DIR, filePath), file);
 
