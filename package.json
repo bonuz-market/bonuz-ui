@@ -1,6 +1,6 @@
 {
   "name": "@bonuz/bonuz-ui",
-  "version": "0.6.86",
+  "version": "0.6.88",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
