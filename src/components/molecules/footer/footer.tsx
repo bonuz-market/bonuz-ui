@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import logo from '/src/assets/images/logo.svg';
+import logo from '../../../assets/images/logo.svg';
 import {
   SubscribeToNews,
   Button,

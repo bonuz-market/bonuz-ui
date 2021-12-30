@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import './social-list.scss';
-import telegramIcon from '/src/assets/images/telegram.svg';
-import telegramMessageIcon from '/src/assets/images/message.svg';
-import instagramIcon from '/src/assets/images/instagram.svg';
-import facebookIcon from '/src/assets/images/facebook.svg';
-import twitterIcon from '/src/assets/images/twitter.svg';
-import mediumIcon from '/src/assets/images/medium.svg';
+import telegramIcon from '../../../assets/images/telegram.svg';
+import telegramMessageIcon from '../../../assets/images/message.svg';
+import instagramIcon from '../../../assets/images/instagram.svg';
+import facebookIcon from '../../../assets/images/facebook.svg';
+import twitterIcon from '../../../assets/images/twitter.svg';
+import mediumIcon from '../../../assets/images/medium.svg';
 
 export const SocialList: FC = () => (
   <div className="icon-list">

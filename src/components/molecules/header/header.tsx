@@ -3,12 +3,12 @@ import classnames from 'classnames';
 
 import { Navigation } from '../../atoms';
 import './header.scss';
-import logo from '/src/assets/images/logo.svg';
-import logoHover from '/src/assets/images/logo_2.svg';
-import burgerIcon from '/src/assets/images/burger.svg';
-import arrowIcon from '/src/assets/images/arrow.svg';
-import arrowGradientIcon from '/src/assets/images/f_i.svg';
-import mobileNavigationBackground from '/src/assets/images/menu_bg.svg';
+import logo from '../../../assets/images/logo.svg';
+import logoHover from '../../../assets/images/logo_2.svg';
+import burgerIcon from '../../../assets/images/burger.svg';
+import arrowIcon from '../../../assets/images/arrow.svg';
+import arrowGradientIcon from '../../../assets/images/f_i.svg';
+import mobileNavigationBackground from '../../../assets/images/menu_bg.svg';
 
 const Signup: FC = () => (
   <div className="sign-up">

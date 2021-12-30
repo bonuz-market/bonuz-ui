@@ -3,6 +3,7 @@ import classnames from 'classnames';
 
 import './faq-item.scss';
 import arrowIcon from '../../../assets/icons/arrow-small.svg';
+
 export type FaqItemProps = {
   title: string;
   description: string;

@@ -10,7 +10,7 @@ const Template: Story<UserInfoProps> = (args) => <UserInfo {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  avatar: '/assets/content/user-photo.png',
+  avatar: require(`/src/assets/content/user-photo.png`),
   name: 'Matias Mende',
   balance: 2000,
   followers: '12k',

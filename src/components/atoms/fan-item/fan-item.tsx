@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import './fan-item.scss';
 import eyeIcon from '../../../assets/icons/eye.svg';
+
 export type FanItemProps = {
   avatar: string;
   name: string;

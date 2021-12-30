@@ -5,6 +5,7 @@ import userImageMask from '../../../assets/icons/user-info-background.svg';
 import coinIcon from '../../../assets/icons/coin.svg';
 import followersIcon from '../../../assets/icons/users.svg';
 import postsIcon from '../../../assets/icons/images.svg';
+
 export type UserInfoProps = {
   avatar: string;
   name: string;
