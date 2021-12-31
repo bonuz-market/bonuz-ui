@@ -5,6 +5,7 @@ import scss from 'rollup-plugin-scss';
 import autoprefixer from 'autoprefixer';
 import postcss from 'postcss';
 import svgr from '@svgr/rollup';
+import url from '@rollup/plugin-url';
 import fs from 'fs-extra';
 import path from 'path';
 import postcssUrl from 'postcss-url';
@@ -25,6 +26,7 @@ export default {
     typescript(),
     json(),
     svgr(),
+    url(),
     scss({
       processor: () =>
         postcss({
