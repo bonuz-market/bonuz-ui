@@ -248,6 +248,7 @@ declare module '@bonuz/bonuz-ui' {
   export const TeamList: FC<TeamListProps>;
   export const Title: FC;
   export const Subtitle: FC;
+  export const SocialList: FC;
   export const Tab: FC<TabProps>;
   export const TabTitle: FC<TabTitleProps>;
   export const Tabs: FC<TabsProps>;
