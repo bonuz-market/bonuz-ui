@@ -3,6 +3,12 @@ import classnames from 'classnames';
 
 import { Navigation } from '../../atoms';
 import './header.scss';
+import logo from '../../../assets/images/logo.svg';
+import logoHover from '../../../assets/images/logo_2.svg';
+import burgerIcon from '../../../assets/images/burger.svg';
+import arrowIcon from '../../../assets/images/arrow.svg';
+import arrowGradientIcon from '../../../assets/images/f_i.svg';
+import mobileNavigationBackground from '../../../assets/images/menu_bg.svg';
 
 const Signup: FC = () => (
   <div className="sign-up">
@@ -61,19 +67,11 @@ export const Header: FC<HeaderProps> = ({ LanguageSelector }) => {
               className="burger"
               onClick={handleChangeIsVisible}
             >
-              <img src="/assets/images/menu.svg" alt="" />
+              <img src={burgerIcon} alt="" />
             </button>
             <a href="#" id="up">
-              <img
-                className="logo logo_2"
-                src="/assets/images/logo_2.svg"
-                alt=""
-              />
-              <img
-                className="logo logo_1"
-                src="/assets/images/logo.svg"
-                alt=""
-              />
+              <img className="logo logo_2" src={logoHover} alt="" />
+              <img className="logo logo_1" src={logo} alt="" />
             </a>
           </div>
 
@@ -87,11 +85,11 @@ export const Header: FC<HeaderProps> = ({ LanguageSelector }) => {
                 <li className="sign-in">
                   <a href="#">
                     <span>Sign In</span>
-                    <img src="/assets/images/arrow.svg" alt="" />
+                    <img src={arrowGradientIcon} alt="" />
                   </a>
                 </li>
               </Navigation>
-              <img src="/assets/images/menu_bg.svg" className="bg" alt="" />
+              <img src={mobileNavigationBackground} className="bg" alt="" />
             </div>
           </div>
 
@@ -100,7 +98,7 @@ export const Header: FC<HeaderProps> = ({ LanguageSelector }) => {
             <div className="sign-in">
               <a href="#">
                 <span>Sign In</span>
-                <img src="/assets/images/f_i.svg" alt="" />
+                <img src={arrowIcon} alt="" />
               </a>
             </div>
           </div>

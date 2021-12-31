@@ -20,7 +20,7 @@ declare module '@bonuz/bonuz-ui' {
   type AdvantagesItemProps = {
     title: string;
     description: string;
-    icon: string;
+    icon: any;
   };
   type CelebritiesItemProps = {
     img: string;
@@ -87,7 +87,7 @@ declare module '@bonuz/bonuz-ui' {
     items: {
       title: string;
       description: string;
-      icon: string;
+      icon: any;
     }[];
   };
   type CelebritiesListProps = {
@@ -218,7 +218,7 @@ declare module '@bonuz/bonuz-ui' {
     }[];
   };
   type HeaderProps = {
-    LanguageSelector: FC;
+    LanguageSelector?: FC;
   };
 
   export const Button: FC<ButtonProps>;

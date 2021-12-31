@@ -1,8 +1,8 @@
-@import 'public/styles/utils';
+@import '../../../assets/styles/utils';
 
 #how-it-works {
   padding-top: 150px;
-  background: url('/assets/images/four-background.svg'), var(--second-black);
+  background: url('/src/assets/images/four-background.svg'), var(--second-black);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 50% 22%;

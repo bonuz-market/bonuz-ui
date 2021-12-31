@@ -4,7 +4,7 @@ import './advantages-item.scss';
 export type AdvantagesItemProps = {
   title: string;
   description: string;
-  icon: string;
+  icon: any;
 };
 
 export const AdvantagesItem: FC<AdvantagesItemProps> = ({

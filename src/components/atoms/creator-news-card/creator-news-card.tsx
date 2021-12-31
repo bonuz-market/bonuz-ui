@@ -3,6 +3,7 @@ import classnames from 'classnames';
 
 import './creator-news-card.scss';
 import { cutText } from '../../../utils';
+import shareIcon from '../../../assets/icons/share.svg';
 
 export type CreatorNewsCardProps = {
   img: string;
@@ -31,7 +32,7 @@ export const CreatorNewsCard: FC<CreatorNewsCardProps> = ({
       style={{ backgroundImage: `url('${img}')` }}
     >
       <button type="button" className="creator-news-card__photo__share">
-        <img src="/assets/icons/share.svg" alt="" />
+        <img src={shareIcon} alt="" />
       </button>
     </div>
     <div className="creator-news-card__content">

@@ -17,4 +17,7 @@ const Template: Story<CelebritiesItemProps> = (args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = mockData.celebrities[0];
+Primary.args = mockData.celebrities.map((item) => ({
+  ...item,
+  img: require(`/src/assets/images/${item.img}`),
+}))[0];

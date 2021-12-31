@@ -1,4 +1,4 @@
-@import 'public/styles/utils';
+@import '../../../assets/styles/utils';
 
 .item {
   width: 210px;
@@ -35,7 +35,7 @@
         position: absolute;
         height: 16px;
         width: 16px;
-        background-image: url('/assets/icons/link.png');
+        background-image: url('/src/assets/icons/link.png');
         filter: brightness(0) invert(1);
         background-size: contain;
         top: 50%;

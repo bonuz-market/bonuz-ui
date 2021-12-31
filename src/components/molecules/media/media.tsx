@@ -1,6 +1,11 @@
 import { FC } from 'react';
 
 import './media.scss';
+import eyeIcon from '../../../assets/icons/eye.svg';
+import blobsIcon from '../../../assets/icons/blobs.svg';
+import editIcon from '../../../assets/icons/edit.svg';
+import mailIcon from '../../../assets/icons/mail.svg';
+import mapIcon from '../../../assets/icons/map.svg';
 
 export type MediaProps = {
   img: string;
@@ -34,27 +39,27 @@ export const Media: FC<MediaProps> = ({
     <div className="media__info">
       <div className="media__info__wrapper">
         <span className="media__info__item">
-          <img src="/assets/icons/eye.svg" alt="" />
+          <img src={eyeIcon} alt="" />
           {viewers}
         </span>
         <span className="media__info__item">
-          <img src="/assets/icons/blobs.svg" alt="" />
+          <img src={blobsIcon} alt="" />
           {watermark}
         </span>
       </div>
       <button type="button" className="media__info__edit">
-        <img src="/assets/icons/edit.svg" alt="" />
+        <img src={editIcon} alt="" />
       </button>
     </div>
     <span className="media__created">{created}</span>
     <div className="media__about">
       <span className="media__about__title">{t('tappable')}</span>
       <span className="media__about__link">
-        <img src="/assets/icons/mail.svg" alt="" />
+        <img src={mailIcon} alt="" />
         {shortLink}
       </span>
       <span className="media__about__link">
-        <img src="/assets/icons/map.svg" alt="" />
+        <img src={mapIcon} alt="" />
         {city}
       </span>
     </div>

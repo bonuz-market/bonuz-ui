@@ -1,7 +1,8 @@
 import { FC } from 'react';
+import subscribeIcon from '../../../assets/images/f_i.svg';
 
 export const SubscribeToNews: FC = () => (
   <button type="button">
-    <img src="/assets/images/f_i.svg" alt="" />
+    <img src={subscribeIcon} alt="" />
   </button>
 );

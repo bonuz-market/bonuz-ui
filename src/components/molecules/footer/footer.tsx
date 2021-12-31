@@ -1,5 +1,5 @@
 import { FC } from 'react';
-
+import logo from '../../../assets/images/logo.svg';
 import {
   SubscribeToNews,
   Button,
@@ -15,7 +15,7 @@ export const Footer: FC = () => (
       <div className="inner">
         <div className="row">
           <div className="col">
-            <img src="/assets/images/logo.svg" className="logo" alt="" />
+            <img src={logo} className="logo" alt="" />
             <p>
               A space for creators to BONUZ your fans with exclusive content
             </p>

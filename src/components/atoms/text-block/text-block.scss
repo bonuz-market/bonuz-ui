@@ -1,4 +1,4 @@
-@import 'public/styles/utils';
+@import '../../../assets/styles/utils';
 
 .text-block {
   display: flex;
@@ -11,7 +11,7 @@
     position: absolute;
     width: 37px;
     height: 30px;
-    background-image: url('/assets/images/celeb_f.svg');
+    background-image: url('/src/assets/images/celeb_f.svg');
     background-repeat: repeat-x;
     background-size: contain;
     top: 50%;
@@ -44,7 +44,7 @@
 
   &--secondary {
     &::before {
-      background-image: url('/assets/images/f.svg');
+      background-image: url('/src/assets/images/f.svg');
     }
   }
 

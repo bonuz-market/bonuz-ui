@@ -1,4 +1,4 @@
-@import 'public/styles/utils';
+@import '../../../assets/styles/utils';
 
 #advantages {
   position: relative;
@@ -85,7 +85,7 @@
       position: absolute;
       width: 37px;
       height: 30px;
-      background-image: url('/assets/images/f.svg');
+      background-image: url('/src/assets/images//f.svg');
       background-repeat: x-repeat;
       background-size: contain;
       top: 50%;

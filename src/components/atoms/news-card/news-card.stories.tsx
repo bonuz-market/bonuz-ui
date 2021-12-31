@@ -10,4 +10,7 @@ export default {
 const Template: Story<NewsCardProps> = (args) => <NewsCard {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = mockData.news[0];
+Primary.args = mockData.news.map((item) => ({
+  ...item,
+  img: require(`/src/assets/images/${item.img}`),
+}))[0];

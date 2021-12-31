@@ -1,4 +1,4 @@
-@import 'public/styles/utils';
+@import '../../../assets/styles/utils';
 
 .celebs-blocks {
   display: flex;
@@ -17,7 +17,7 @@
       position: absolute;
       width: 37px;
       height: 30px;
-      background-image: url('/assets/images/celeb_f.svg');
+      background-image: url('/src/assets/images/celeb_f.svg');
       background-repeat: x-repeat;
       background-size: contain;
       top: 50%;

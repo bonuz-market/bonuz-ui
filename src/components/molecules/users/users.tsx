@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import './users.scss';
+import coinIcon from '../../../assets/icons/coin.svg';
 
 export type UsersProps = {
   t: (key: string) => string;
@@ -25,7 +26,7 @@ export const Users: FC<UsersProps> = ({ t, users }) => (
         <td className="users__cell">{item.name}</td>
         <td className="users__cell">
           <span className="users__cell__coins">
-            <img src="/assets/icons/coin.svg" alt="" />
+            <img src={coinIcon} alt="" />
             {item.coins}
           </span>
         </td>
