@@ -221,7 +221,7 @@ declare module '@bonuz/bonuz-ui' {
     options: { label: string; target: string }[];
   };
   type HeaderProps = {
-    LanguageSelector?: FC<LanguageSelectorProps>;
+    LanguageSelector?: ReactElement<LanguageSelectorProps>;
   };
 
   export const Button: FC<ButtonProps>;

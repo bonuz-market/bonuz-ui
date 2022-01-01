@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, ReactElement, useEffect, useState } from 'react';
 import classnames from 'classnames';
 
 import { Navigation } from '../../atoms';
@@ -21,7 +21,7 @@ type LanguageSelectorProps = {
   options: { label: string; target: string }[];
 };
 type HeaderProps = {
-  LanguageSelector?: FC<LanguageSelectorProps>;
+  LanguageSelector?: ReactElement<LanguageSelectorProps>;
 };
 export const Header: FC<HeaderProps> = ({ LanguageSelector }) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
