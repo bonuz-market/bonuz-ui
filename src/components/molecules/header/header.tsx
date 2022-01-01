@@ -17,9 +17,11 @@ const Signup: FC = () => (
     </a>
   </div>
 );
-
+type LanguageSelectorProps = {
+  options: { label: string; target: string }[];
+};
 type HeaderProps = {
-  LanguageSelector?: FC;
+  LanguageSelector?: FC<LanguageSelectorProps>;
 };
 export const Header: FC<HeaderProps> = ({ LanguageSelector }) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
