@@ -16,6 +16,14 @@
       right: 60px;
       bottom: -16px;
     }
+
+    [dir='rtl'] & {
+      width: 277px;
+      height: 1px;
+      right: auto;
+      bottom: -18px;
+      left: 165px;
+    }
   }
 
   &:nth-child(2n) {
@@ -29,6 +37,14 @@
       right: 165px;
       bottom: -18px;
     }
+
+    [dir='rtl'] & {
+      width: 1px;
+      height: 136px;
+      right: auto;
+      bottom: -16px;
+      left: 60px;
+    }
   }
 
   h4 {
@@ -37,6 +53,12 @@
     margin-bottom: 0;
     padding-left: 30px;
     text-align: left;
+
+    [dir='rtl'] & {
+      padding-right: 30px;
+      padding-left: 0;
+      text-align: right;
+    }
   }
 
   p {
@@ -46,6 +68,12 @@
     width: auto;
     padding-left: 30px;
     text-align: left;
+
+    [dir='rtl'] & {
+      padding-left: 0;
+      padding-right: 30px;
+      text-align: right;
+    }
   }
 
   .gem {
@@ -53,5 +81,10 @@
     left: 0;
     top: 45px;
     width: 14px;
+
+    [dir='rtl'] & {
+      right: 0;
+      left: unset;
+    }
   }
 }
