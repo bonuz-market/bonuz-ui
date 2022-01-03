@@ -19,13 +19,17 @@ const DropdownControlled: FC<DropdownControlledProps> = ({
     if (!React.isValidElement(child)) {
       return null;
     }
-    return React.cloneElement(child, {
-      onClick: () => {
-        setSelectedOption(child.props.children);
-        setIsActive(!isActive);
-        child.props.onClick?.();
-      },
-    });
+    return (
+      <li className="dropdown__option">
+        {React.cloneElement(child, {
+          onClick: () => {
+            setSelectedOption(child.props.children);
+            setIsActive(!isActive);
+            child.props.onClick?.();
+          },
+        })}
+      </li>
+    );
   });
   return (
     <div className="dropdown">
@@ -53,17 +57,13 @@ const DropdownUnControlled: FC<DropdownProps> = ({ children }) => {
     if (!React.isValidElement(child)) {
       return null;
     }
-    return (
-      <li className="dropdown__option">
-        {React.cloneElement(child, {
-          onClick: () => {
-            setSelected(child.props.children);
-            setSelectedIndex(index);
-            child.props.onClick?.();
-          },
-        })}
-      </li>
-    );
+    return React.cloneElement(child, {
+      onClick: () => {
+        setSelected(child.props.children);
+        setSelectedIndex(index);
+        child.props.onClick?.();
+      },
+    });
   });
   useEffect(() => {
     const options = React.Children.map(children, (child) => {
