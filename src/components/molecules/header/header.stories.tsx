@@ -27,6 +27,18 @@ const Template: Story = (args) => (
         <a key={2} href="#how-it-works">
           How it works
         </a>,
+        <a key={3} href="#how-it-works">
+          How it works
+        </a>,
+        <a key={4} href="#how-it-works">
+          How it works
+        </a>,
+        <a key={5} href="#how-it-works">
+          How it works
+        </a>,
+        <a key={6} href="#how-it-works">
+          How it works
+        </a>,
       ]}
       signInElement={
         <a className="sign-in" href="#sign-in">

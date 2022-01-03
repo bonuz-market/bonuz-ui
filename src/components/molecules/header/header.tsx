@@ -90,7 +90,7 @@ export const Header: FC<HeaderProps> = ({
               })}
             >
               <Navigation>
-                {NavigationElements.map((element) => element)}
+                {NavigationElements}
                 {SignInElement}
               </Navigation>
               <img src={mobileNavigationBackground} className="bg" alt="" />
