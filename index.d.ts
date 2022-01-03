@@ -222,6 +222,8 @@ declare module '@bonuz/bonuz-ui' {
   };
   type HeaderProps = {
     LanguageSelector?: ReactElement<LanguageSelectorProps>;
+    NavigationElemnents?: ReactElement[];
+    SignInElement?: ReactElement;
   };
 
   export const Button: FC<ButtonProps>;
