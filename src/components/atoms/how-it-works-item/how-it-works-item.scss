@@ -14,7 +14,7 @@
   &::before {
     content: '';
     position: absolute;
-    background-image: url('/src/assets//images/dash.svg');
+    background-image: url('/src/assets/images/dash.svg');
     background-repeat: repeat-x;
     width: 60px;
     height: 5px;
@@ -22,6 +22,15 @@
     right: -30px;
     top: 65px;
     animation: stripe-animation 4500s linear infinite both;
+
+    [dir='rtl'] & {
+      left: -30px;
+      right: auto;
+    }
+  }
+
+  [dir='rtl'] &::before {
+    animation-direction: reverse;
   }
 
   &:last-child::before {
