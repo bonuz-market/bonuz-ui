@@ -49,6 +49,11 @@
       bottom: calc(50% - 3px);
       width: 8px;
       height: 6px;
+
+      [dir='rtl'] & {
+        right: auto;
+        left: 8px;
+      }
     }
 
     &:not(.active)::after {
@@ -66,6 +71,11 @@
 
     > li {
       padding-left: 4px;
+
+      [dir='rtl'] & {
+        padding-left: unset;
+        padding-right: 4px;
+      }
     }
   }
 
