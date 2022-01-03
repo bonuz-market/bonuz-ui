@@ -157,6 +157,11 @@
       &--stroke {
         margin-left: 30px;
 
+        [dir='rtl'] & {
+          margin-left: 0;
+          margin-right: 30px;
+        }
+
         span {
           font-family: 'Anonymous Pro';
           font-weight: bold;
@@ -166,6 +171,16 @@
   }
 }
 
+[dir='rtl'] {
+  .button__group {
+    .button {
+      &--stroke {
+        margin-left: 0;
+        margin-right: 30px;
+      }
+    }
+  }
+}
 @media screen and (max-width: 1050px) {
   .button {
     &__group {
