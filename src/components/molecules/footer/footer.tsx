@@ -9,7 +9,10 @@ import {
 } from '../../atoms';
 import './footer.scss';
 
-export const Footer: FC = () => (
+type FooterProps = {
+  NavigationElements: React.ReactElement[];
+};
+export const Footer: FC<FooterProps> = ({ NavigationElements }) => (
   <footer>
     <div className="outer">
       <div className="inner">
@@ -26,7 +29,7 @@ export const Footer: FC = () => (
           </div>
           <div className="col">
             <p>Navigation:</p>
-            <Navigation />
+            <Navigation>{NavigationElements}</Navigation>
             <div className="form">
               <Input
                 label="Subscribe to news:"
