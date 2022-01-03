@@ -22,8 +22,14 @@ type LanguageSelectorProps = {
 };
 type HeaderProps = {
   LanguageSelector?: ReactElement<LanguageSelectorProps>;
+  NavigationElements: ReactElement[];
+  SignInElement?: ReactElement;
 };
-export const Header: FC<HeaderProps> = ({ LanguageSelector }) => {
+export const Header: FC<HeaderProps> = ({
+  LanguageSelector,
+  NavigationElements,
+  SignInElement,
+}) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
@@ -84,12 +90,8 @@ export const Header: FC<HeaderProps> = ({ LanguageSelector }) => {
               })}
             >
               <Navigation>
-                <li className="sign-in">
-                  <a href="#">
-                    <span>Sign In</span>
-                    <img src={arrowGradientIcon} alt="" />
-                  </a>
-                </li>
+                {NavigationElements.map((element) => element)}
+                {SignInElement}
               </Navigation>
               <img src={mobileNavigationBackground} className="bg" alt="" />
             </div>
@@ -97,12 +99,7 @@ export const Header: FC<HeaderProps> = ({ LanguageSelector }) => {
 
           <div className="col">
             {LanguageSelector}
-            <div className="sign-in">
-              <a href="#">
-                <span>Sign In</span>
-                <img src={arrowIcon} alt="" />
-              </a>
-            </div>
+            {SignInElement && <div className="sign-in">{SignInElement}</div>}
           </div>
         </div>
       </div>
