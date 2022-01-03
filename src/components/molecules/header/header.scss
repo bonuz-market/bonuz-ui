@@ -71,7 +71,7 @@ header {
               padding-left: 0;
               width: 578px;
               display: flex;
-              justify-content: space-between;
+              gap: 20px;
 
               [dir='rtl'] & {
                 padding-left: unset;
@@ -93,22 +93,16 @@ header {
           display: flex;
           justify-content: space-between;
           margin-left: auto;
+          margin-right: 30px;
           gap: 20px;
 
           [dir='rtl'] & {
-            margin-left: 0;
+            margin-left: 30px;
             margin-right: auto;
           }
         }
 
         .sign-in {
-          margin-right: 30px;
-
-          [dir='rtl'] & {
-            margin-right: 0;
-            margin-left: 30px;
-          }
-
           a {
             display: flex;
             align-items: center;
@@ -246,13 +240,12 @@ header {
       &-inner {
         .col {
           &:nth-child(3) {
-            margin-left: 0;
+            margin-left: 30px;
             margin-right: auto;
           }
 
           .sign-in {
             margin-right: 0;
-            margin-left: 30px;
 
             img {
               margin-left: 0;
@@ -378,7 +371,8 @@ header {
 
         .menu {
           .sign-in {
-            display: block !important;
+            display: flex;
+            align-items: center;
 
             span {
               font-size: 20px;
