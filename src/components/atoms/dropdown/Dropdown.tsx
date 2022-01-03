@@ -19,17 +19,13 @@ const DropdownControlled: FC<DropdownControlledProps> = ({
     if (!React.isValidElement(child)) {
       return null;
     }
-    return (
-      <li className="dropdown__option">
-        {React.cloneElement(child, {
-          onClick: () => {
-            setSelectedOption(child.props.children);
-            setIsActive(!isActive);
-            child.props.onClick?.();
-          },
-        })}
-      </li>
-    );
+    return React.cloneElement(child, {
+      onClick: () => {
+        setSelectedOption(child.props.children);
+        setIsActive(!isActive);
+        child.props.onClick?.();
+      },
+    });
   });
   return (
     <div className="dropdown">
