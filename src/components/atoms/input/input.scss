@@ -125,6 +125,10 @@
     > .button--fill {
       %border {
         border-radius: 0 8px 8px 0;
+
+        [dir='rtl'] & {
+          border-radius: 8px 0 0 8px;
+        }
       }
 
       display: flex;
@@ -132,10 +136,6 @@
 
       > button {
         @extend %border;
-
-        [dir='rtl'] & {
-          border-radius: 8px 0 0 8px;
-        }
 
         &::before {
           @extend %border;
