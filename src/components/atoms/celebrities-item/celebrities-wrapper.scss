@@ -12,6 +12,13 @@
     padding-left: 53px;
     position: relative;
 
+    [dir='rtl'] & {
+      margin-right: 0;
+      padding-left: 0;
+      margin-left: 50px;
+      padding-right: 53px;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -85,6 +92,10 @@
 [dir='rtl'] {
   .celebs {
     .slick-slider {
+      .slick-list {
+        padding: 0 0 0 35% !important;
+      }
+
       .action-button--next {
         transform: rotate(180deg);
         left: -20px;

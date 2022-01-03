@@ -11,6 +11,11 @@
   margin-right: 15px;
   position: relative;
 
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 15px;
+  }
+
   &::before {
     content: '';
     position: absolute;
