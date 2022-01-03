@@ -222,8 +222,11 @@ declare module '@bonuz/bonuz-ui' {
   };
   type HeaderProps = {
     LanguageSelector?: ReactElement<LanguageSelectorProps>;
-    NavigationElemnents?: ReactElement[];
+    NavigationElements: ReactElement[];
     SignInElement?: ReactElement;
+  };
+  type FooterProps = {
+    NavigationElements: ReactElement[];
   };
 
   export const Button: FC<ButtonProps>;
@@ -244,7 +247,7 @@ declare module '@bonuz/bonuz-ui' {
   export const TextBlock: FC<TextBlockProps>;
   export const AdvantagesList: FC<AdvantagesListProps>;
   export const CelebritiesList: FC<CelebritiesListProps>;
-  export const Footer: FC;
+  export const Footer: FC<FooterProps>;
   export const Header: FC<HeaderProps>;
   export const HowItWorksList: FC<HowItWorksListProps>;
   export const NewsRow: FC<NewsRowProps>;
