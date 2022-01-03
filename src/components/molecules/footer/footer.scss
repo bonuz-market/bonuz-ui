@@ -210,6 +210,11 @@ footer {
 
           ul {
             margin-left: -80px;
+
+            [dir='rtl'] & {
+              margin-left: 0;
+              margin-right: -80px;
+            }
           }
 
           .form {
@@ -218,6 +223,11 @@ footer {
             .input__wrapper > button {
               margin-right: 0;
               margin-left: -30px;
+
+              [dir='rtl'] & {
+                margin-left: 0;
+                margin-right: -30px;
+              }
             }
           }
         }
@@ -235,6 +245,11 @@ footer {
         width: 140px;
         background: #0f0d67;
         margin-left: 20px;
+
+        [dir='rtl'] & {
+          margin-left: 0;
+          margin-right: 20px;
+        }
       }
     }
 
