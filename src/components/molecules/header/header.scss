@@ -58,6 +58,11 @@ header {
         &:nth-child(2) {
           margin-left: 60px;
 
+          [dir='rtl'] & {
+            margin-left: 0;
+            margin-right: 60px;
+          }
+
           .menu {
             width: max-content;
 
@@ -67,6 +72,11 @@ header {
               width: 578px;
               display: flex;
               justify-content: space-between;
+
+              [dir='rtl'] & {
+                padding-left: unset;
+                padding-right: 0;
+              }
             }
 
             li {
@@ -84,10 +94,20 @@ header {
           justify-content: space-between;
           margin-left: auto;
           gap: 20px;
+
+          [dir='rtl'] & {
+            margin-left: 0;
+            margin-right: auto;
+          }
         }
 
         .sign-in {
           margin-right: 30px;
+
+          [dir='rtl'] & {
+            margin-right: 0;
+            margin-left: 30px;
+          }
 
           a {
             display: flex;
@@ -107,6 +127,12 @@ header {
             margin-left: 20px;
             transition: 0s;
             filter: brightness(4);
+
+            [dir='rtl'] & {
+              margin-left: unset;
+              margin-right: 20px;
+              transform: rotate(180deg);
+            }
           }
 
           &:hover {
@@ -267,6 +293,13 @@ header {
           }
 
           &:nth-child(2) {
+            margin-left: 0;
+
+            [dir='rtl'] & {
+              margin-left: auto;
+              margin-right: 0;
+            }
+
             .menu {
               position: absolute;
               left: 0;
@@ -286,6 +319,11 @@ header {
               transform: translateY(50px);
               overflow: hidden;
 
+              [dir='rtl'] & {
+                left: unset;
+                right: 0;
+              }
+
               ul {
                 flex-direction: column;
                 width: max-content;
@@ -293,6 +331,11 @@ header {
                 left: 60px;
                 top: 150px;
                 z-index: 11;
+
+                [dir='rtl'] & {
+                  left: unset;
+                  right: 60px;
+                }
               }
 
               li {
@@ -303,8 +346,6 @@ header {
                 }
               }
             }
-
-            margin-left: 0;
           }
 
           .menu.active {
