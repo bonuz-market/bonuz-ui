@@ -40,7 +40,7 @@ const Template: Story = (args) => (
           How it works
         </a>,
       ]}
-      signInElement={
+      SignInElement={
         <a className="sign-in" href="#sign-in">
           Sign in
         </a>
