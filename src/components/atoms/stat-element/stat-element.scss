@@ -15,14 +15,14 @@
       position: absolute;
       right: 60px;
       bottom: -16px;
-    }
 
-    [dir='rtl'] & {
-      width: 277px;
-      height: 1px;
-      right: auto;
-      bottom: -18px;
-      left: 165px;
+      [dir='rtl'] & {
+        width: 277px;
+        height: 1px;
+        right: auto;
+        bottom: -18px;
+        left: 165px;
+      }
     }
   }
 
@@ -36,14 +36,14 @@
       position: absolute;
       right: 165px;
       bottom: -18px;
-    }
 
-    [dir='rtl'] & {
-      width: 1px;
-      height: 136px;
-      right: auto;
-      bottom: -16px;
-      left: 60px;
+      [dir='rtl'] & {
+        width: 1px;
+        height: 136px;
+        right: auto;
+        bottom: -16px;
+        left: 60px;
+      }
     }
   }
 
