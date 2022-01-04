@@ -155,11 +155,6 @@ footer {
 
 [dir='rtl'] {
   footer {
-    .button__group {
-      flex-direction: row-reverse;
-      justify-content: flex-end;
-    }
-
     .row {
       .col {
         &:nth-child(2) {
