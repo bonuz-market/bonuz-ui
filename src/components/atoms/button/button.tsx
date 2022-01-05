@@ -7,6 +7,7 @@ type ButtonProps = {
   outline?: boolean;
   disabled?: boolean;
   secondary?: boolean;
+  link?: string;
   type?: 'button' | 'submit' | 'reset';
   onClick?: () => void;
 };
@@ -17,6 +18,7 @@ export const Button: FC<ButtonPropsWithChildren> = ({
   outline,
   disabled,
   secondary,
+  link,
   type = 'button',
   onClick,
   children,
@@ -30,7 +32,13 @@ export const Button: FC<ButtonPropsWithChildren> = ({
     })}
   >
     <button type={type} disabled={disabled} onClick={onClick}>
-      <span>{children}</span>
+      {link ? (
+        <a href={link}>
+          <span>{children}</span>
+        </a>
+      ) : (
+        <span>{children}</span>
+      )}
     </button>
   </div>
 );

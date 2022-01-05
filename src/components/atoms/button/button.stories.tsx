@@ -21,5 +21,6 @@ Outline.args = {
   disabled: false,
   type: 'button',
   outline: true,
+  link: 'https://bonuz.market',
   children: 'Hello, world!',
 };
