@@ -28,6 +28,20 @@ footer {
         z-index: 5;
 
         .button {
+          &__group {
+            display: flex;
+            margin-bottom: 60px;
+
+            & > :last-child {
+              margin-left: 30px;
+
+              [dir='rtl'] & {
+                margin-left: 0;
+                margin-right: 30px;
+              }
+            }
+          }
+
           &--fill {
             button {
               width: 160px;
@@ -88,11 +102,6 @@ footer {
         }
       }
     }
-  }
-
-  .button__group {
-    display: flex;
-    margin-bottom: 60px;
   }
 
   .logo {
