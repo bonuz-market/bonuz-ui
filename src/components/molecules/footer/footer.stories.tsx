@@ -1,15 +1,38 @@
 import { Meta, Story } from '@storybook/react';
 import { Footer } from './footer';
+import { SocialListProps } from '../../atoms/social-list/social-list';
 
+type NavigationProps = {
+  title: string;
+  NavigationElements: React.ReactElement[];
+};
+type FooterProps = {
+  navigation: NavigationProps;
+  leftSideText: string;
+  leftButtons: [
+    { text: string; outline?: boolean; link?: string }?,
+    { text: string; outline?: boolean; link?: string }?,
+  ];
+  privacyPolicy?: { text: string; link: string };
+  newsletterForm: {
+    label: string;
+    placeholderText: string;
+    onSubmit: () => void;
+  };
+  socialMediaLinks: SocialListProps;
+};
 export default {
   title: 'Components/Layout/Footer',
   component: Footer,
 } as Meta;
 
-const Template: Story = (args) => (
-  <Footer
-    {...args}
-    NavigationElements={[
+const Template: Story<FooterProps> = (args) => <Footer {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  navigation: {
+    title: 'Navigation',
+    NavigationElements: [
       <a key={1} href="#how-it-works">
         How it works
       </a>,
@@ -28,8 +51,23 @@ const Template: Story = (args) => (
       <a key={6} href="#how-it-works">
         How it works
       </a>,
-    ]}
-  />
-);
-
-export const Primary = Template.bind({});
+    ],
+  },
+  leftSideText:
+    'A space for creators to BONUZ your fans with exclusive content',
+  leftButtons: [{ text: 'Contact us' }, { text: 'About us', outline: true }],
+  privacyPolicy: { text: 'Privacy policy', link: 'https://bonuz.market' },
+  newsletterForm: {
+    label: 'Subscribe to our newsletter',
+    placeholderText: 'Enter your email',
+    onSubmit: () => {},
+  },
+  socialMediaLinks: {
+    telegram: 'https://t.me/BonuzMarket',
+    twitter: 'https://twitter.com/BonuzMarket',
+    medium: 'https://bonuzmarket.medium.com/',
+    telegramMessage: 'https://t.me/BonuzHQ',
+    instagram: 'https://www.instagram.com/bonuzmarket',
+    facebook: 'https://www.facebook.com/BonuzMarket',
+  },
+};

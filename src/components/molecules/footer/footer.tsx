@@ -1,48 +1,85 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { FC } from 'react';
 import logo from '../../../assets/images/logo.svg';
 import {
-  SubscribeToNews,
+  FormArrowButton,
   Button,
   Navigation,
   Input,
   SocialList,
+  SocialListProps,
 } from '../../atoms';
 import './footer.scss';
 
-type FooterProps = {
+type NavigationProps = {
+  title: string;
   NavigationElements: React.ReactElement[];
 };
-export const Footer: FC<FooterProps> = ({ NavigationElements }) => (
+type FooterProps = {
+  navigation: NavigationProps;
+  leftSideText: string;
+  leftButtons: [
+    { text: string; outline?: boolean; link?: string }?,
+    { text: string; outline?: boolean; link?: string }?,
+  ];
+  privacyPolicy?: { text: string; link: string };
+  newsletterForm: {
+    label: string;
+    placeholderText: string;
+    onSubmit: () => void;
+  };
+  socialMediaLinks: SocialListProps;
+};
+export const Footer: FC<FooterProps> = ({
+  navigation,
+  leftSideText,
+  leftButtons,
+  privacyPolicy,
+  newsletterForm,
+  socialMediaLinks,
+}) => (
   <footer>
     <div className="outer">
       <div className="inner">
         <div className="row">
           <div className="col">
             <img src={logo} className="logo" alt="" />
-            <p>
-              A space for creators to BONUZ your fans with exclusive content
-            </p>
+            <p>{leftSideText}</p>
             <div className="button__group">
-              <Button>Join Community</Button>
-              <Button outline>Whitepaper</Button>
+              {leftButtons.map(
+                (item) =>
+                  item && (
+                    <Button
+                      key={item.text}
+                      outline={item.outline}
+                      link={item.link}
+                    >
+                      {item.text}
+                    </Button>
+                  ),
+              )}
             </div>
           </div>
           <div className="col">
-            <p>Navigation:</p>
-            <Navigation>{NavigationElements}</Navigation>
+            <p>{navigation.title}</p>
+            <Navigation>{navigation.NavigationElements}</Navigation>
             <div className="form">
               <Input
-                label="Subscribe to news:"
-                placeholder="Enter you email"
-                actionButton={<SubscribeToNews />}
+                label={newsletterForm.label}
+                placeholder={newsletterForm.placeholderText}
+                actionButton={
+                  <FormArrowButton onClick={newsletterForm.onSubmit} />
+                }
               />
             </div>
           </div>
           <div className="col">
-            <SocialList />
-            <a href="#" className="policy">
-              Privacy policy and terms
-            </a>
+            <SocialList {...socialMediaLinks} />
+            {privacyPolicy && (
+              <a href={privacyPolicy.link} className="policy">
+                {privacyPolicy.text}
+              </a>
+            )}
           </div>
         </div>
       </div>
