@@ -8,7 +8,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 20px 48px;
     border: none;
     cursor: pointer;
     border-radius: 8px;
@@ -21,6 +20,7 @@
       display: flex;
       align-items: center;
       text-transform: capitalize;
+      padding: 20px 48px;
       white-space: nowrap;
       z-index: 3;
     }
@@ -171,16 +171,6 @@
   }
 }
 
-[dir='rtl'] {
-  .button__group {
-    .button {
-      &--stroke {
-        margin-left: 0;
-        margin-right: 30px;
-      }
-    }
-  }
-}
 @media screen and (max-width: 1050px) {
   .button {
     &__group {
