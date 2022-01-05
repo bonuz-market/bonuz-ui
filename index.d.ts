@@ -242,7 +242,7 @@ declare module '@bonuz/bonuz-ui' {
   export const NewsCard: FC<NewsCardProps>;
   export const RoadMapItem: FC<RoadMapItemProps>;
   export const StatElement: FC<StatElementProps>;
-  export const SubscribeToNews: FC;
+  export const FormArrowButton: FC;
   export const TeamCard: FC<TeamCardProps>;
   export const TextBlock: FC<TextBlockProps>;
   export const AdvantagesList: FC<AdvantagesListProps>;
