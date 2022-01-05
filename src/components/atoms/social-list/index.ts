@@ -1,1 +1,1 @@
-export { SocialList } from './social-list';
+export { SocialList, type SocialListProps } from './social-list';

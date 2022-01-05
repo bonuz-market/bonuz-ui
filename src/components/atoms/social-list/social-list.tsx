@@ -7,7 +7,7 @@ import facebookIcon from '../../../assets/images/facebook.svg';
 import twitterIcon from '../../../assets/images/twitter.svg';
 import mediumIcon from '../../../assets/images/medium.svg';
 
-type SocialListProps = {
+export type SocialListProps = {
   telegram?: string;
   twitter?: string;
   facebook?: string;
