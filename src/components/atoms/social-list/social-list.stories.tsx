@@ -9,4 +9,11 @@ export default {
 const Template: Story = (args) => <SocialList {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  telegram: 'https://t.me/BonuzMarket',
+  twitter: 'https://twitter.com/BonuzMarket',
+  medium: 'https://bonuzmarket.medium.com/',
+  telegramMessage: 'https://t.me/BonuzHQ',
+  instagram: 'https://www.instagram.com/bonuzmarket',
+  facebook: 'https://www.facebook.com/BonuzMarket',
+};

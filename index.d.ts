@@ -231,6 +231,14 @@ declare module '@bonuz/bonuz-ui' {
   type FormArrowButtonProps = {
     onClick: () => void;
   };
+  type SocialListProps = {
+    telegram?: string;
+    twitter?: string;
+    facebook?: string;
+    instagram?: string;
+    medium?: string;
+    telegramMessage?: string;
+  };
 
   export const Button: FC<ButtonProps>;
   export const ActionButton: FC<ActionButtonProps>;
@@ -259,7 +267,7 @@ declare module '@bonuz/bonuz-ui' {
   export const TeamList: FC<TeamListProps>;
   export const Title: FC;
   export const Subtitle: FC;
-  export const SocialList: FC;
+  export const SocialList: FC<SocialListProps>;
   export const Tab: FC<TabProps>;
   export const TabTitle: FC<TabTitleProps>;
   export const Tabs: FC<TabsProps>;
