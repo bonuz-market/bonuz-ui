@@ -8,11 +8,9 @@ type NavigationProps = {
 };
 type FooterProps = {
   navigation: NavigationProps;
-  leftSideText: string;
-  leftButtons: [
-    { text: string; outline?: boolean; link?: string }?,
-    { text: string; outline?: boolean; link?: string }?,
-  ];
+  sideText: string;
+  buttons?: { text: string; outline?: boolean; link?: string }[];
+
   privacyPolicy?: { text: string; link: string };
   newsletterForm: {
     label: string;
@@ -53,9 +51,8 @@ Primary.args = {
       </a>,
     ],
   },
-  leftSideText:
-    'A space for creators to BONUZ your fans with exclusive content',
-  leftButtons: [{ text: 'Contact us' }, { text: 'About us', outline: true }],
+  sideText: 'A space for creators to BONUZ your fans with exclusive content',
+  buttons: [{ text: 'Contact us' }, { text: 'Privacy policy', outline: true }],
   privacyPolicy: { text: 'Privacy policy', link: 'https://bonuz.market' },
   newsletterForm: {
     label: 'Subscribe to our newsletter',

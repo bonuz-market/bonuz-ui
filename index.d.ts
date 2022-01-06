@@ -228,11 +228,8 @@ declare module '@bonuz/bonuz-ui' {
 
   type FooterProps = {
     navigation: { title: string; NavigationElements: React.ReactElement[] };
-    leftSideText: string;
-    leftButtons: [
-      { text: string; outline?: boolean; link?: string }?,
-      { text: string; outline?: boolean; link?: string }?,
-    ];
+    sideText: string;
+    buttons?: { text: string; outline?: boolean; link?: string }[];
     privacyPolicy?: { text: string; link: string };
     newsletterForm: {
       label: string;

@@ -17,11 +17,8 @@ type NavigationProps = {
 };
 type FooterProps = {
   navigation: NavigationProps;
-  leftSideText: string;
-  leftButtons: [
-    { text: string; outline?: boolean; link?: string }?,
-    { text: string; outline?: boolean; link?: string }?,
-  ];
+  sideText: string;
+  buttons?: { text: string; outline?: boolean; link?: string }[];
   privacyPolicy?: { text: string; link: string };
   newsletterForm: {
     label: string;
@@ -32,8 +29,8 @@ type FooterProps = {
 };
 export const Footer: FC<FooterProps> = ({
   navigation,
-  leftSideText,
-  leftButtons,
+  sideText,
+  buttons,
   privacyPolicy,
   newsletterForm,
   socialMediaLinks,
@@ -44,20 +41,21 @@ export const Footer: FC<FooterProps> = ({
         <div className="row">
           <div className="col">
             <img src={logo} className="logo" alt="" />
-            <p>{leftSideText}</p>
+            <p>{sideText}</p>
             <div className="button__group">
-              {leftButtons.map(
-                (item) =>
-                  item && (
-                    <Button
-                      key={item.text}
-                      outline={item.outline}
-                      link={item.link}
-                    >
-                      {item.text}
-                    </Button>
-                  ),
-              )}
+              {buttons &&
+                buttons.map(
+                  (item) =>
+                    item && (
+                      <Button
+                        key={item.text}
+                        outline={item.outline}
+                        link={item.link}
+                      >
+                        {item.text}
+                      </Button>
+                    ),
+                )}
             </div>
           </div>
           <div className="col">
