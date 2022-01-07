@@ -14,6 +14,10 @@
     background-color: rgb(255 255 255 / 10%);
     transition: 0.2s ease;
 
+    a {
+      z-index: 5;
+    }
+
     span {
       @include font(Farro, normal, 500, 16px, 16px, #ffffff);
 
