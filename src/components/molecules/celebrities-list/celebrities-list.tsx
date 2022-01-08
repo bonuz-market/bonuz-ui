@@ -1,9 +1,12 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
-import Slider, { Settings } from 'react-slick';
-
+import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay } from 'swiper';
 import { CelebritiesItem } from '../../atoms';
 import '../../atoms/celebrities-item/celebrities-wrapper.scss';
+import 'swiper/css';
+import mockdata from '../../../mock/mock-data.json';
 
 export type CelebritiesListProps = {
   celebrities: {
@@ -13,48 +16,30 @@ export type CelebritiesListProps = {
   }[];
 };
 
-const settings: Settings = {
+const swiperOptions: SwiperProps = {
   className: 'celebs-list',
-  dots: false,
-  arrows: false,
-  infinite: true,
+  slidesPerView: 'auto',
+  spaceBetween: 32,
+  autoplay: { pauseOnMouseEnter: true, disableOnInteraction: false },
+  loop: true,
   speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  pauseOnHover: true,
-  responsive: [
-    {
-      breakpoint: 4000,
-      settings: {
-        slidesToShow: 3,
-        dots: false,
-        slidesToScroll: 1,
-        variableWidth: true,
-      },
-    },
-    {
-      breakpoint: 820,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        variableWidth: true,
-      },
-    },
-  ],
+  dir: mockdata.rtlLanguages.includes(localStorage.getItem('i18nextLng') || '')
+    ? 'rtl'
+    : 'ltr',
 };
+SwiperCore.use([Autoplay]);
 
 export const CelebritiesList: FC<CelebritiesListProps> = ({ celebrities }) => (
-  <Slider {...settings}>
+  <Swiper {...swiperOptions} loopedSlides={celebrities.length}>
     {celebrities.map((item, index) => (
-      <CelebritiesItem
-        key={`${item.name}-${index}`}
-        img={item.img}
-        name={item.name}
-        role={item.role}
-      />
+      <SwiperSlide>
+        <CelebritiesItem
+          key={`${item.name}-${index}`}
+          img={item.img}
+          name={item.name}
+          role={item.role}
+        />
+      </SwiperSlide>
     ))}
-  </Slider>
+  </Swiper>
 );
