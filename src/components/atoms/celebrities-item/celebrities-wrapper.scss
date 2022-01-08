@@ -63,68 +63,18 @@
     margin-bottom: 25px;
   }
 
-  .slick-slider {
-    %position {
-      position: absolute;
-      width: 54px;
-      height: 62px;
-      top: -20px;
-    }
-
-    .slick-list {
-      padding: 0 35% 0 0 !important;
-    }
-
-    .action-button--next {
-      @extend %position;
-
-      left: 0;
-    }
-
-    .action-button--prev {
-      @extend %position;
-
-      right: -320px;
-    }
+  .swiper-slide {
+    width: 227px;
   }
 }
 
-[dir='rtl'] {
-  .celebs {
-    .slick-slider {
-      .slick-list {
-        padding: 0 0 0 35% !important;
-      }
-
-      .action-button--next {
-        transform: rotate(180deg);
-        left: -20px;
-      }
-
-      .action-button--prev {
-        transform: rotate(0);
-        right: 440px;
-      }
-    }
-  }
-}
 @media screen and (max-width: 1050px) {
   .celebs {
     &-list {
       transform: translateX(0);
 
-      .slick-slide[aria-hidden='true'] {
+      .swiper-slide:not(.swiper-slide-active) {
         opacity: 0.3;
-      }
-    }
-
-    .slick-slider {
-      .action-button--prev {
-        right: 20px !important;
-      }
-
-      .action-button--next {
-        left: 20px !important;
       }
     }
   }
