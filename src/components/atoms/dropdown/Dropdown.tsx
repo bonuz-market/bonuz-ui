@@ -34,13 +34,17 @@ const DropdownControlled: FC<DropdownControlledProps> = ({
   return (
     <div className="dropdown">
       <div
-        className={classnames('dropdown__wrapper', { active: isActive })}
+        className="dropdown__wrapper"
         onClick={() => setIsActive(!isActive)}
         onKeyUp={() => setIsActive(!isActive)}
         role="button"
         tabIndex={0}
       >
-        <ul className=" dropdown__list">
+        <ul
+          className={classnames(' dropdown__list', {
+            active: isActive,
+          })}
+        >
           <li>{selectedOption}</li>
           <ul className={classnames('dropdown__options', { active: isActive })}>
             {childrenModified}
