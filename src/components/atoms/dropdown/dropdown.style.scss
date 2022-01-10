@@ -26,12 +26,10 @@
         )
         1;
     }
-
-    &.active {
-      border-image: linear-gradient(270.9deg, #ce09ff -2.92%, #ffa34e 99.95%) 1;
-
-      &::before {
-        opacity: 0;
+    @media screen and (max-width: 1050px) {
+      &.active {
+        border-image: linear-gradient(270.9deg, #ce09ff -2.92%, #ffa34e 99.95%)
+          1;
       }
     }
 

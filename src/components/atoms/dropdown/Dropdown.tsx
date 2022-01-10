@@ -34,7 +34,9 @@ const DropdownControlled: FC<DropdownControlledProps> = ({
   return (
     <div className="dropdown">
       <div
-        className="dropdown__wrapper"
+        className={classnames('dropdown__wrapper', {
+          active: isActive,
+        })}
         onClick={() => setIsActive(!isActive)}
         onKeyUp={() => setIsActive(!isActive)}
         role="button"
