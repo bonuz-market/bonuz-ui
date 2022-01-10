@@ -68,9 +68,9 @@ declare module '@bonuz/bonuz-ui' {
     description: string;
   };
   type StatElementProps = {
-    img: string;
     title: string;
     description: string;
+    colorHex: string;
   };
   type TeamCardProps = {
     img: string;

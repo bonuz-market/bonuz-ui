@@ -12,5 +12,6 @@ const Template: Story<StatElementProps> = (args) => <StatElement {...args} />;
 export const Primary = Template.bind({});
 Primary.args = mockData.statistic.map((item) => ({
   ...item,
+  colorHex: '#00bcd4',
   img: require(`/src/assets/images/${item.img}`),
 }))[0];
