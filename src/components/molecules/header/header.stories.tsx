@@ -45,6 +45,8 @@ const Template: Story = (args) => (
           Sign in
         </a>
       }
+      logoUrl={require('../../../assets/images/logo.svg')}
+      logoHoverUrl={require('../../../assets/images/logo_2.svg')}
     />
   </div>
 );

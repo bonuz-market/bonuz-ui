@@ -224,6 +224,8 @@ declare module '@bonuz/bonuz-ui' {
     LanguageSelector?: ReactElement<LanguageSelectorProps>;
     NavigationElements: ReactElement[];
     SignInElement?: ReactElement;
+    logoUrl: string;
+    logoHoverUrl?: string;
   };
 
   type FooterProps = {

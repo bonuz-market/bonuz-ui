@@ -3,11 +3,7 @@ import classnames from 'classnames';
 
 import { Navigation } from '../../atoms';
 import './header.scss';
-import logo from '../../../assets/images/logo.svg';
-import logoHover from '../../../assets/images/logo_2.svg';
 import burgerIcon from '../../../assets/images/burger.svg';
-import arrowIcon from '../../../assets/images/arrow.svg';
-import arrowGradientIcon from '../../../assets/images/f_i.svg';
 import mobileNavigationBackground from '../../../assets/images/menu_bg.svg';
 
 const Signup: FC = () => (
@@ -24,11 +20,15 @@ type HeaderProps = {
   LanguageSelector?: ReactElement<LanguageSelectorProps>;
   NavigationElements: ReactElement[];
   SignInElement?: ReactElement;
+  logoUrl: string;
+  logoHoverUrl?: string;
 };
 export const Header: FC<HeaderProps> = ({
   LanguageSelector,
   NavigationElements,
   SignInElement,
+  logoUrl,
+  logoHoverUrl,
 }) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -78,8 +78,16 @@ export const Header: FC<HeaderProps> = ({
               <img src={burgerIcon} alt="" />
             </button>
             <a href="#" id="up">
-              <img className="logo logo_2" src={logoHover} alt="" />
-              <img className="logo logo_1" src={logo} alt="" />
+              {logoHoverUrl && (
+                <img className="logo logo_2" src={logoHoverUrl} alt="" />
+              )}
+              <img
+                className={classnames('logo', {
+                  logo_1: logoHoverUrl,
+                })}
+                src={logoUrl}
+                alt=""
+              />
             </a>
           </div>
 
