@@ -272,6 +272,8 @@ header {
 
         .col {
           &:nth-child(1) {
+            width: 100%;
+
             .logo {
               width: 80px;
             }
@@ -281,6 +283,10 @@ header {
               position: relative;
               margin: 0 auto;
               transform: translateX(14px);
+
+              [dir='rtl'] & {
+                transform: translateX(-14px);
+              }
             }
           }
 
@@ -340,6 +346,10 @@ header {
             }
           }
 
+          &:nth-child(3) {
+            margin: 0;
+          }
+
           .menu.active {
             user-select: auto;
             pointer-events: auto;
@@ -355,7 +365,6 @@ header {
             }
           }
 
-          min-width: 100%;
           justify-content: space-between;
 
           .sign-in {
@@ -385,7 +394,6 @@ header {
       display: block;
       z-index: 10;
       position: relative;
-      order: 2;
     }
   }
 }
