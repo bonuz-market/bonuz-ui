@@ -4,6 +4,12 @@
 /node_modules
 /.pnp
 .pnp.js
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # testing
 /coverage
@@ -13,6 +19,7 @@
 
 # misc
 .DS_Store
+
 .env.local
 .env.development.local
 .env.test.local
@@ -23,3 +30,4 @@ yarn-debug.log*
 yarn-error.log*
 
 /dist
+.env
