@@ -18,7 +18,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/cli@npm:^7.16.0":
+"@babel/cli@npm:^7.16.8":
   version: 7.16.8
   resolution: "@babel/cli@npm:7.16.8"
   dependencies:
@@ -1423,7 +1423,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.11.0, @babel/preset-env@npm:^7.12.1, @babel/preset-env@npm:^7.12.11, @babel/preset-env@npm:^7.15.6, @babel/preset-env@npm:^7.16.4, @babel/preset-env@npm:^7.16.5":
+"@babel/preset-env@npm:^7.11.0, @babel/preset-env@npm:^7.12.1, @babel/preset-env@npm:^7.12.11, @babel/preset-env@npm:^7.15.6, @babel/preset-env@npm:^7.16.4, @babel/preset-env@npm:^7.16.8":
   version: 7.16.8
   resolution: "@babel/preset-env@npm:7.16.8"
   dependencies:
@@ -1535,7 +1535,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-react@npm:^7.12.10, @babel/preset-react@npm:^7.12.5, @babel/preset-react@npm:^7.14.5, @babel/preset-react@npm:^7.16.0, @babel/preset-react@npm:^7.16.5":
+"@babel/preset-react@npm:^7.12.10, @babel/preset-react@npm:^7.12.5, @babel/preset-react@npm:^7.14.5, @babel/preset-react@npm:^7.16.0, @babel/preset-react@npm:^7.16.7":
   version: 7.16.7
   resolution: "@babel/preset-react@npm:7.16.7"
   dependencies:
@@ -1551,7 +1551,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@npm:^7.12.7, @babel/preset-typescript@npm:^7.16.0, @babel/preset-typescript@npm:^7.16.5":
+"@babel/preset-typescript@npm:^7.12.7, @babel/preset-typescript@npm:^7.16.0, @babel/preset-typescript@npm:^7.16.7":
   version: 7.16.7
   resolution: "@babel/preset-typescript@npm:7.16.7"
   dependencies:
@@ -1655,33 +1655,33 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@bonuz/bonuz-ui@workspace:."
   dependencies:
-    "@babel/cli": ^7.16.0
-    "@babel/preset-env": ^7.16.5
-    "@babel/preset-react": ^7.16.5
-    "@babel/preset-typescript": ^7.16.5
+    "@babel/cli": ^7.16.8
+    "@babel/preset-env": ^7.16.8
+    "@babel/preset-react": ^7.16.7
+    "@babel/preset-typescript": ^7.16.7
     "@rollup/plugin-json": ^4.1.0
-    "@rollup/plugin-node-resolve": ^13.1.1
+    "@rollup/plugin-node-resolve": ^13.1.3
     "@rollup/plugin-url": ^6.1.0
-    "@storybook/addon-actions": ^6.4.9
-    "@storybook/addon-essentials": ^6.4.9
-    "@storybook/addon-links": ^6.4.9
-    "@storybook/builder-webpack5": ^6.4.9
-    "@storybook/manager-webpack5": ^6.4.9
+    "@storybook/addon-actions": ^6.4.10
+    "@storybook/addon-essentials": ^6.4.10
+    "@storybook/addon-links": ^6.4.10
+    "@storybook/builder-webpack5": ^6.4.10
+    "@storybook/manager-webpack5": ^6.4.10
     "@storybook/preset-scss": 1.0.3
-    "@storybook/react": ^6.4.9
-    "@svgr/rollup": ^6.1.2
+    "@storybook/react": ^6.4.10
+    "@svgr/rollup": ^6.2.0
     "@testing-library/jest-dom": ^5.16.1
     "@testing-library/react": ^12.1.2
     "@testing-library/user-event": ^13.5.0
-    "@types/jest": ^27.0.3
-    "@types/node": ^17.0.5
+    "@types/jest": ^27.4.0
+    "@types/node": ^17.0.8
     "@types/react": ^17.0.38
     "@types/react-color": 3.0.6
     "@types/react-dom": ^17.0.11
     "@types/react-slick": ^0.23.8
-    "@typescript-eslint/eslint-plugin": ^5.8.1
-    "@typescript-eslint/parser": ^5.8.1
-    autoprefixer: ^10.4.1
+    "@typescript-eslint/eslint-plugin": ^5.9.1
+    "@typescript-eslint/parser": ^5.9.1
+    autoprefixer: ^10.4.2
     classnames: ^2.3.1
     eslint-config-airbnb: 19.0.4
     eslint-config-airbnb-typescript: ^16.1.0
@@ -1698,13 +1698,13 @@ __metadata:
     react-scripts: ^5.0.0
     react-slick: ^0.28.1
     rimraf: ^3.0.2
-    rollup: ^2.62.0
+    rollup: ^2.63.0
     rollup-plugin-ignore: ^1.0.10
     rollup-plugin-import-css: 3.0.2
     rollup-plugin-multi-input: ^1.3.1
     rollup-plugin-scss: ^3.0.0
     rollup-plugin-typescript2: ^0.31.1
-    sass: ^1.45.1
+    sass: ^1.47.0
     sass-loader: ^12.4.0
     slick-carousel: ^1.8.1
     storybook-css-modules-preset: ^1.1.1
@@ -1713,7 +1713,7 @@ __metadata:
     stylelint-config-standard-scss: ^3.0.0
     swiper: ^7.4.1
     typescript: ^4.5.4
-    web-vitals: ^2.1.2
+    web-vitals: ^2.1.3
     webpack: ^5.65.0
   languageName: unknown
   linkType: soft
@@ -2405,7 +2405,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-node-resolve@npm:^13.1.1":
+"@rollup/plugin-node-resolve@npm:^13.1.3":
   version: 13.1.3
   resolution: "@rollup/plugin-node-resolve@npm:13.1.3"
   dependencies:
@@ -2494,7 +2494,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-actions@npm:6.4.10, @storybook/addon-actions@npm:^6.4.9":
+"@storybook/addon-actions@npm:6.4.10, @storybook/addon-actions@npm:^6.4.10":
   version: 6.4.10
   resolution: "@storybook/addon-actions@npm:6.4.10"
   dependencies:
@@ -2683,7 +2683,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-essentials@npm:^6.4.9":
+"@storybook/addon-essentials@npm:^6.4.10":
   version: 6.4.10
   resolution: "@storybook/addon-essentials@npm:6.4.10"
   dependencies:
@@ -2727,7 +2727,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-links@npm:^6.4.9":
+"@storybook/addon-links@npm:^6.4.10":
   version: 6.4.10
   resolution: "@storybook/addon-links@npm:6.4.10"
   dependencies:
@@ -2988,7 +2988,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/builder-webpack5@npm:^6.4.9":
+"@storybook/builder-webpack5@npm:^6.4.10":
   version: 6.4.10
   resolution: "@storybook/builder-webpack5@npm:6.4.10"
   dependencies:
@@ -3447,7 +3447,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/manager-webpack5@npm:^6.4.9":
+"@storybook/manager-webpack5@npm:^6.4.10":
   version: 6.4.10
   resolution: "@storybook/manager-webpack5@npm:6.4.10"
   dependencies:
@@ -3571,7 +3571,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react@npm:^6.4.9":
+"@storybook/react@npm:^6.4.10":
   version: 6.4.10
   resolution: "@storybook/react@npm:6.4.10"
   dependencies:
@@ -4025,7 +4025,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/rollup@npm:^6.1.2":
+"@svgr/rollup@npm:^6.2.0":
   version: 6.2.0
   resolution: "@svgr/rollup@npm:6.2.0"
   dependencies:
@@ -4391,7 +4391,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:*, @types/jest@npm:^27.0.3":
+"@types/jest@npm:*, @types/jest@npm:^27.4.0":
   version: 27.4.0
   resolution: "@types/jest@npm:27.4.0"
   dependencies:
@@ -4455,7 +4455,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^17.0.5":
+"@types/node@npm:*, @types/node@npm:^17.0.8":
   version: 17.0.8
   resolution: "@types/node@npm:17.0.8"
   checksum: f4cadeb9e602027520abc88c77142697e33cf6ac98bb02f8b595a398603cbd33df1f94d01c055c9f13cde0c8eaafc5e396ca72645458d42b4318b845bc7f1d0f
@@ -4780,7 +4780,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.5.0, @typescript-eslint/eslint-plugin@npm:^5.8.1":
+"@typescript-eslint/eslint-plugin@npm:^5.5.0, @typescript-eslint/eslint-plugin@npm:^5.9.1":
   version: 5.9.1
   resolution: "@typescript-eslint/eslint-plugin@npm:5.9.1"
   dependencies:
@@ -4819,7 +4819,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.5.0, @typescript-eslint/parser@npm:^5.8.1":
+"@typescript-eslint/parser@npm:^5.5.0, @typescript-eslint/parser@npm:^5.9.1":
   version: 5.9.1
   resolution: "@typescript-eslint/parser@npm:5.9.1"
   dependencies:
@@ -5919,7 +5919,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.4.1":
+"autoprefixer@npm:^10.4.1, autoprefixer@npm:^10.4.2":
   version: 10.4.2
   resolution: "autoprefixer@npm:10.4.2"
   dependencies:
@@ -17206,7 +17206,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.43.1, rollup@npm:^2.62.0":
+"rollup@npm:^2.43.1, rollup@npm:^2.63.0":
   version: 2.63.0
   resolution: "rollup@npm:2.63.0"
   dependencies:
@@ -17330,7 +17330,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.45.1":
+"sass@npm:^1.47.0":
   version: 1.47.0
   resolution: "sass@npm:1.47.0"
   dependencies:
@@ -19897,7 +19897,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-vitals@npm:^2.1.2":
+"web-vitals@npm:^2.1.3":
   version: 2.1.3
   resolution: "web-vitals@npm:2.1.3"
   checksum: 6d5d961b5e7eb5a3b0c4b05c9692b8765f469be9bc2c077331dbc3f2f38bf9bd5cbb4d1cad9129dfd7ce454c00a442851ce42c235f27678fd07e962bce4ac12e
