@@ -1,24 +1,6 @@
 import { Meta, Story } from '@storybook/react';
-import { Footer } from './footer';
-import { SocialListProps } from '../../atoms/social-list/social-list';
+import { Footer, FooterProps } from './footer';
 
-type NavigationProps = {
-  title: string;
-  NavigationElements: React.ReactElement[];
-};
-type FooterProps = {
-  navigation: NavigationProps;
-  sideText: string;
-  buttons?: { text: string; outline?: boolean; link?: string }[];
-
-  privacyPolicy?: { text: string; link: string };
-  newsletterForm: {
-    label: string;
-    placeholderText: string;
-    onSubmit: () => void;
-  };
-  socialMediaLinks: SocialListProps;
-};
 export default {
   title: 'Components/Layout/Footer',
   component: Footer,
@@ -28,6 +10,7 @@ const Template: Story<FooterProps> = (args) => <Footer {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
+  logoUrl: "https://bonuz.market/wp-content/themes/blankslate/p/logo/bonuz_logo.png",
   navigation: {
     title: 'Navigation',
     NavigationElements: [
