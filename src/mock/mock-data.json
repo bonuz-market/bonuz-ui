@@ -268,47 +268,47 @@
   ],
   "statistic": [
     {
-      "img": "gem3.svg",
+      "color": "#ffffff",
       "title": "20%",
       "description": "Ecosystem Fund"
     },
     {
-      "img": "gem1.svg",
+      "color": "#aaaaaa",
       "title": "25%",
       "description": "Marketing"
     },
     {
-      "img": "gem2.svg",
+      "color": "#cccccc",
       "title": "14%",
       "description": "Seed & Private Rounds"
     },
     {
-      "img": "gem4.svg",
+      "color": "#eeeeee",
       "title": "6%",
       "description": "Public Rounds"
     },
     {
-      "img": "gem4.svg",
+      "color": "#000000",
       "title": "10%",
       "description": "Team"
     },
     {
-      "img": "gem2.svg",
+      "color": "#000000",
       "title": "10%",
       "description": "Advisiors"
     },
     {
-      "img": "gem3.svg",
+      "color": "#000000",
       "title": "2%",
       "description": "test"
     },
     {
-      "img": "gem1.svg",
+      "color": "#000000",
       "title": "1%",
       "description": "test"
     },
     {
-      "img": "gem4.svg",
+      "color": "#000000",
       "title": "3%",
       "description": "ddff"
     }
