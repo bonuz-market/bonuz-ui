@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { FC } from 'react';
-import logo from '../../../assets/images/logo.svg';
 import {
   FormArrowButton,
   Button,
@@ -11,11 +10,12 @@ import {
 } from '../../atoms';
 import './footer.scss';
 
-type NavigationProps = {
+export type NavigationProps = {
   title: string;
   NavigationElements: React.ReactElement[];
 };
-type FooterProps = {
+export type FooterProps = {
+  logoUrl: string;
   navigation: NavigationProps;
   sideText: string;
   buttons?: { text: string; outline?: boolean; link?: string }[];
@@ -28,6 +28,7 @@ type FooterProps = {
   socialMediaLinks: SocialListProps;
 };
 export const Footer: FC<FooterProps> = ({
+  logoUrl,
   navigation,
   sideText,
   buttons,
@@ -40,7 +41,7 @@ export const Footer: FC<FooterProps> = ({
       <div className="inner">
         <div className="row">
           <div className="col">
-            <img src={logo} className="logo" alt="" />
+            <img src={logoUrl} className="logo" alt="" />
             <p>{sideText}</p>
             <div className="button__group">
               {buttons &&
