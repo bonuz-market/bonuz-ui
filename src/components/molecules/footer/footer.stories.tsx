@@ -10,7 +10,7 @@ const Template: Story<FooterProps> = (args) => <Footer {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  logoUrl: "https://bonuz.market/wp-content/themes/blankslate/p/logo/bonuz_logo.png",
+  logo: <img src="https://bonuz.market/wp-content/themes/blankslate/p/logo/bonuz_logo.png" className="logo" alt="" />,
   navigation: {
     title: 'Navigation',
     NavigationElements: [

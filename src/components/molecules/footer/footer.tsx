@@ -10,12 +10,12 @@ import {
 } from '../../atoms';
 import './footer.scss';
 
-export type NavigationProps = {
+type NavigationProps = {
   title: string;
   NavigationElements: React.ReactElement[];
 };
-export type FooterProps = {
-  logoUrl: string;
+type FooterProps = {
+  logo: React.ReactElement;
   navigation: NavigationProps;
   sideText: string;
   buttons?: { text: string; outline?: boolean; link?: string }[];
@@ -27,8 +27,8 @@ export type FooterProps = {
   };
   socialMediaLinks: SocialListProps;
 };
-export const Footer: FC<FooterProps> = ({
-  logoUrl,
+const Footer: FC<FooterProps> = ({
+  logo,
   navigation,
   sideText,
   buttons,
@@ -41,7 +41,7 @@ export const Footer: FC<FooterProps> = ({
       <div className="inner">
         <div className="row">
           <div className="col">
-            <img src={logoUrl} className="logo" alt="" />
+            {logo}
             <p>{sideText}</p>
             <div className="button__group">
               {buttons &&
@@ -85,3 +85,14 @@ export const Footer: FC<FooterProps> = ({
     </div>
   </footer>
 );
+
+/**
+ *      EXPORTS
+ */
+export type {
+  NavigationProps,
+  FooterProps,
+}
+export {
+  Footer
+}
