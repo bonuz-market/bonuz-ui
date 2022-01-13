@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 import { PartnersList, PartnersListProps } from './partners-list';
-import mockData from '../../../mock/mock-data.json';
+import mockdata from '../../../mock/mock-data.json';
 
 export default {
   title: 'Components/Molecules/PartnersList',
@@ -15,7 +15,7 @@ const Template: Story<PartnersListProps> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  partners: mockData.partners.map((item) =>
+  partners: mockdata.partners.map((item) =>
     require(`/src/assets/images/${item}`),
   ),
 };
