@@ -9,7 +9,7 @@ export type TeamCardProps = {
 };
 
 export const TeamCard: FC<TeamCardProps> = ({ img, name, position, link }) => (
-  <div className="item">
+  <div className="team-item">
     <img src={img} className="pic" alt="" />
     <p>{name}</p>
     <span>
