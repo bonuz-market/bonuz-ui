@@ -229,6 +229,7 @@ declare module '@bonuz/bonuz-ui' {
   };
 
   type FooterProps = {
+    logo: React.ReactElement;
     navigation: { title: string; NavigationElements: React.ReactElement[] };
     sideText: string;
     buttons?: { text: string; outline?: boolean; link?: string }[];
