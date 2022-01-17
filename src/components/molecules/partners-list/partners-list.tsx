@@ -28,7 +28,10 @@ const swiperOptions: SwiperProps = {
   dir: mockdata.rtlLanguages.includes(localStorage.getItem('i18nextLng') || '')
     ? 'rtl'
     : 'ltr',
-  pagination: { clickable: true },
+  pagination: {
+    clickable: true,
+    el: '.swiper-pagination',
+  },
   navigation: {
     nextEl: '.action-button--next',
     prevEl: '.action-button--prev',
@@ -48,6 +51,7 @@ SwiperCore.use([Pagination, Navigation]);
 export const PartnersList: FC<PartnersListProps> = ({ partners }) => (
   <div className="partners-block" data-aos="fade-up" data-aos-duration="1300">
     <ActionButton type="left" className="swiper-prev" />
+    <ActionButton type="right" className="swiper-next" />
     <Swiper {...swiperOptions}>
       {partners.map((item, index) => (
         <SwiperSlide>
@@ -59,6 +63,6 @@ export const PartnersList: FC<PartnersListProps> = ({ partners }) => (
         </SwiperSlide>
       ))}
     </Swiper>
-    <ActionButton type="right" className="swiper-next" />
+    <div className="swiper-pagination" />
   </div>
 );
