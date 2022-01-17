@@ -121,6 +121,7 @@ declare module '@bonuz/bonuz-ui' {
       title: string;
       description: string;
     }[];
+    rtl?: boolean;
   };
   type TeamListProps = {
     items: {

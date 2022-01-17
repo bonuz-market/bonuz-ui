@@ -1,62 +1,78 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
-import Slider, { Settings } from 'react-slick';
-
+import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Pagination, Navigation } from 'swiper';
+import classNames from 'classnames';
 import { ActionButton, RoadMapItem } from '../../atoms';
-import mockData from '../../../mock/mock-data.json';
 import '../../atoms/road-map-item/road-map-wrapper.scss';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 export type RoadMapListProps = {
   items: {
     title: string;
     description: string;
   }[];
+  rtl?: boolean;
 };
 
-const settings: Settings = {
-  infinite: false,
-  slidesToShow: 3,
+const swiperOptions: SwiperProps = {
+  className: 'partners',
   speed: 600,
-  prevArrow: <ActionButton type="left" />,
-  nextArrow: <ActionButton type="right" />,
-  rtl: mockData.rtlLanguages.includes(localStorage.getItem('i18nextLng') || ''),
-  customPaging(index: number): JSX.Element {
-    return <button type="button" aria-label={`Go to ${index + 1} slide`} />;
+  slidesPerView: 3,
+  slidesOffsetBefore: 10,
+  pagination: {
+    clickable: true,
+    el: '.swiper-pagination',
+    dynamicBullets: true,
   },
-  responsive: [
-    {
-      breakpoint: 1250,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-      },
+  navigation: {
+    nextEl: '.action-button--next',
+    prevEl: '.action-button--prev',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
     },
-    {
-      breakpoint: 1050,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: false,
-        variableWidth: true,
-        infinite: false,
-      },
+    1050: {
+      slidesPerView: 2,
     },
-  ],
+    1250: {
+      slidesPerView: 3,
+    },
+  },
 };
+SwiperCore.use([Pagination, Navigation]);
 
-export const RoadMapList: FC<RoadMapListProps> = ({ items }) => (
+export const RoadMapList: FC<RoadMapListProps> = ({ items, rtl }) => (
   <div className="slides-block">
-    <Slider {...settings}>
+    <ActionButton
+      type="left"
+      className={classNames({
+        'swiper-prev': !rtl,
+        'swiper-next': rtl,
+      })}
+    />
+    <ActionButton
+      type="right"
+      className={classNames({
+        'swiper-prev': rtl,
+        'swiper-next': !rtl,
+      })}
+    />
+    <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
       {items.map((item, index) => (
-        <div className="slick-slide" key={`${item.title}-${index}`}>
+        <SwiperSlide>
           <RoadMapItem
             key={`${item.title}-${index}`}
             title={item.title}
             description={item.description}
           />
-        </div>
+        </SwiperSlide>
       ))}
-    </Slider>
+    </Swiper>
+    <div className="swiper-pagination" />
   </div>
 );
