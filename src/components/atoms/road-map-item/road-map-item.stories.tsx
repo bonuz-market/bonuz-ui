@@ -12,9 +12,7 @@ const Template: Story<RoadMapItemProps> = (args) => (
   <div id="roadmap">
     <div className="row" />
     <div className="row">
-      <div className="slick-slide" style={{ display: 'block' }}>
-        <RoadMapItem {...args} />
-      </div>
+      <RoadMapItem {...args} />
     </div>
   </div>
 );
