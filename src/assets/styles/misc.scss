@@ -92,21 +92,6 @@ body.noscroll {
   background: rgb(255 255 255 / 12%);
 }
 
-.slick-prev,
-.slick-next {
-  z-index: 10;
-}
-
-.slick-arrow::before {
-  display: none;
-}
-
-.slick-arrow.slick-disabled {
-  pointer-events: none;
-  user-select: none;
-  opacity: 0.4;
-}
-
 .skip-link.screen-reader-text {
   display: none;
 }
