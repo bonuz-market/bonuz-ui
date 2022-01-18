@@ -26,6 +26,14 @@
     &:hover {
       transform: rotate(180deg) scale(1.02);
     }
+
+    [dir='rtl'] & {
+      transform: rotate(0deg);
+
+      &:hover {
+        transform: rotate(0deg) scale(1.02);
+      }
+    }
   }
 
   &--next {
@@ -35,6 +43,14 @@
 
     &:hover {
       transform: scale(1.02);
+    }
+
+    [dir='rtl'] & {
+      transform: rotate(180deg);
+
+      &:hover {
+        transform: rotate(180deg) scale(1.02);
+      }
     }
   }
 }
