@@ -1,10 +1,12 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
-import Slider, { Settings } from 'react-slick';
-
+import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Pagination, Navigation } from 'swiper';
 import { ActionButton, TeamCard } from '../../atoms';
-import mockData from '../../../mock/mock-data.json';
 import '../../atoms/team-card/team-card-wrapper.scss';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 export type TeamListProps = {
   items: {
@@ -13,46 +15,54 @@ export type TeamListProps = {
     position: string;
     link?: string;
   }[];
+  rtl?: boolean;
 };
 
-const settings: Settings = {
-  infinite: false,
+const swiperOptions: SwiperProps = {
   className: 'team',
-  slidesToShow: 4,
-  prevArrow: <ActionButton type="left" />,
-  nextArrow: <ActionButton type="right" />,
   speed: 600,
-  rtl: mockData.rtlLanguages.includes(localStorage.getItem('i18nextLng') || ''),
-  customPaging(index: number): JSX.Element {
-    return <button type="button" aria-label={`Go to ${index + 1} slide`} />;
+  spaceBetween: 20,
+  pagination: {
+    clickable: true,
+    el: '.swiper-pagination',
+    dynamicBullets: true,
   },
-  responsive: [
-    {
-      breakpoint: 1050,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
-        variableWidth: true,
-        infinite: false,
-      },
-    },
-  ],
-};
+  navigation: {
+    nextEl: '.action-button--next',
+    prevEl: '.action-button--prev',
+  },
 
-export const TeamList: FC<TeamListProps> = ({ items }) => (
-  <div className="team-list" data-aos="fade-up" data-aos-duration="1300">
-    <Slider {...settings}>
+  breakpoints: {
+    320: {
+      slidesPerView: 'auto',
+      slidesOffsetBefore: 5,
+    },
+
+    1050: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+    },
+  },
+};
+SwiperCore.use([Pagination, Navigation]);
+
+export const TeamList: FC<TeamListProps> = ({ items, rtl }) => (
+  <div className="team-list">
+    <ActionButton type="left" className="swiper-prev" />
+    <ActionButton type="right" className="swiper-next" />
+    <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
       {items.map((item, index) => (
-        <TeamCard
-          key={`${item.name}-${index}`}
-          img={item.img}
-          name={item.name}
-          position={item.position}
-          link={item.link}
-        />
+        <SwiperSlide>
+          <TeamCard
+            key={`${item.name}-${index}`}
+            img={item.img}
+            name={item.name}
+            position={item.position}
+            link={item.link}
+          />
+        </SwiperSlide>
       ))}
-    </Slider>
+    </Swiper>
+    <div className="swiper-pagination" />
   </div>
 );

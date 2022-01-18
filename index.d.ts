@@ -131,6 +131,7 @@ declare module '@bonuz/bonuz-ui' {
       name: string;
       position: string;
     }[];
+    rtl?: boolean;
   };
   type TabProps = {
     title: string;
