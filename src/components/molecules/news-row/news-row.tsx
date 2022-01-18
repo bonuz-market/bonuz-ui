@@ -42,15 +42,10 @@ const swiperOptions: SwiperProps = {
 SwiperCore.use([Pagination, Navigation]);
 
 export const NewsRow: FC<NewsRowProps> = ({ news, rtl }) => (
-  <div className="row rowseven">
+  <>
     <ActionButton type="left" className="swiper-prev" />
     <ActionButton type="right" className="swiper-next" />
-    <Swiper
-      {...swiperOptions}
-      dir={rtl ? 'rtl' : 'ltr'}
-      data-aos="fade-up"
-      data-aos-duration="1300"
-    >
+    <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
       {news.map((item, index) => (
         <SwiperSlide>
           <NewsCard
@@ -66,5 +61,5 @@ export const NewsRow: FC<NewsRowProps> = ({ news, rtl }) => (
     </Swiper>
 
     <div className="swiper-pagination" />
-  </div>
+  </>
 );
