@@ -177,38 +177,30 @@
   .prev {
     @include position;
 
-    transform: rotate(180deg);
     right: 0;
 
     &:hover {
-      @include button-hover(180deg);
-
       opacity: 1;
     }
 
     [dir='rtl'] & {
       left: 0;
       right: auto;
-      transform: rotate(0deg);
     }
   }
 
   .next {
     @include position;
 
-    transform: rotate(0);
     right: 0;
 
     &:hover {
-      @include button-hover(0);
-
       opacity: 1;
     }
 
     [dir='rtl'] & {
       left: 0;
       right: auto;
-      transform: rotate(180deg);
     }
   }
   %swiper {
