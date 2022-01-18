@@ -99,23 +99,6 @@
     background: var(--second-black);
     padding-top: 65px;
 
-    &::before {
-      content: '';
-      position: absolute;
-      background: linear-gradient(
-        271.2deg,
-        rgb(6 14 78 / 79%) -6.81%,
-        rgb(6 14 78 / 0%) 70.01%
-      );
-      height: 100%;
-      width: 100%;
-      right: 0;
-      top: 0;
-      z-index: 2;
-      pointer-events: none;
-      user-select: none;
-    }
-
     .blocks.mob {
       display: block;
     }
