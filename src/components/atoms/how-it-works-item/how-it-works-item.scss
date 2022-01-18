@@ -11,40 +11,6 @@
     position: relative;
   }
 
-  &::before {
-    content: '';
-    position: absolute;
-    background-image: url('/src/assets/images/dash.svg');
-    background-repeat: repeat-x;
-    width: 60px;
-    height: 5px;
-    z-index: 5;
-    right: -30px;
-    top: 65px;
-    animation: stripe-animation 4500s linear infinite both;
-
-    [dir='rtl'] & {
-      left: -30px;
-      right: auto;
-    }
-  }
-
-  [dir='rtl'] &::before {
-    animation-direction: reverse;
-  }
-
-  &:last-child::before {
-    display: none;
-  }
-
-  [dir='rtl'] &:first-child::before {
-    display: none;
-  }
-
-  [dir='rtl'] &:last-child::before {
-    display: block;
-  }
-
   img {
     width: 50px;
     height: 130px;

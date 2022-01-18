@@ -1,9 +1,11 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
-import Slider, { Settings } from 'react-slick';
-
+import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Pagination } from 'swiper';
 import { HowItWorksItem } from '../../atoms';
-import mockData from '../../../mock/mock-data.json';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 export type HowItWorksListProps = {
   items: {
@@ -11,46 +13,43 @@ export type HowItWorksListProps = {
     title: string;
     circleOffset: number;
   }[];
+  rtl?: boolean;
 };
 
-const settings: Settings = {
-  className: 'blocks',
-  dots: true,
-  arrows: false,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  rtl: mockData.rtlLanguages.includes(localStorage.getItem('i18nextLng') || ''),
-  customPaging(index: number): JSX.Element {
-    return <button type="button" aria-label={`Go to ${index + 1} slide`} />;
+const swiperOptions: SwiperProps = {
+  slidesPerView: 1,
+  pagination: {
+    clickable: true,
+    el: '.swiper-pagination',
+    dynamicBullets: true,
   },
-  responsive: [
-    {
-      breakpoint: 4000,
-      settings: 'unslick',
+  speed: 300,
+  breakpoints: {
+    320: {
+      slidesPerView: 'auto',
     },
-    {
-      breakpoint: 1050,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: false,
-        variableWidth: true,
-      },
+    1050: {
+      slidesPerView: 5,
+      allowTouchMove: false,
     },
-  ],
+  },
 };
+SwiperCore.use([Pagination]);
 
-export const HowItWorksList: FC<HowItWorksListProps> = ({ items }) => (
-  <Slider {...settings}>
-    {items.map((item, index) => (
-      <HowItWorksItem
-        key={`${item.title}-${index}`}
-        img={item.img}
-        title={item.title}
-        circleOffset={item.circleOffset}
-      />
-    ))}
-  </Slider>
+export const HowItWorksList: FC<HowItWorksListProps> = ({ items, rtl }) => (
+  <>
+    <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
+      {items.map((item, index) => (
+        <SwiperSlide>
+          <HowItWorksItem
+            key={`${item.title}-${index}`}
+            img={item.img}
+            title={item.title}
+            circleOffset={item.circleOffset}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+    <div className="swiper-pagination" />
+  </>
 );

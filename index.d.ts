@@ -103,6 +103,7 @@ declare module '@bonuz/bonuz-ui' {
       title: string;
       circleOffset: number;
     }[];
+    rtl?: boolean;
   };
   type NewsRowProps = {
     news: {
