@@ -112,6 +112,7 @@ declare module '@bonuz/bonuz-ui' {
       description: string;
       link: string;
     }[];
+    rtl?: boolean;
   };
   type PartnersListProps = {
     partners: Array<string>;

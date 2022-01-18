@@ -21,4 +21,5 @@ Primary.args = {
     ...item,
     img: require(`/src/assets/images/${item.img}`),
   })),
+  rtl: true,
 };
