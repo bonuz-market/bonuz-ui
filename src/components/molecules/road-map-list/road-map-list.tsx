@@ -3,7 +3,6 @@
 import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, Navigation } from 'swiper';
-import classNames from 'classnames';
 import { ActionButton, RoadMapItem } from '../../atoms';
 import '../../atoms/road-map-item/road-map-wrapper.scss';
 import 'swiper/css';
@@ -48,20 +47,8 @@ SwiperCore.use([Pagination, Navigation]);
 
 export const RoadMapList: FC<RoadMapListProps> = ({ items, rtl }) => (
   <div className="slides-block">
-    <ActionButton
-      type="left"
-      className={classNames({
-        'swiper-prev': !rtl,
-        'swiper-next': rtl,
-      })}
-    />
-    <ActionButton
-      type="right"
-      className={classNames({
-        'swiper-prev': rtl,
-        'swiper-next': !rtl,
-      })}
-    />
+    <ActionButton type="left" className="swiper-prev" />
+    <ActionButton type="right" className="swiper-next" />
     <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
       {items.map((item, index) => (
         <SwiperSlide>

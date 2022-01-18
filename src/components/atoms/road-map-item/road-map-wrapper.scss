@@ -168,11 +168,6 @@
     cursor: pointer;
     transition: all 0.3s;
   }
-  @mixin button-hover($rotation-degree) {
-    transform: rotate($rotation-degree) scale(1.08);
-    filter: brightness(0.7);
-    transition: all 0.3s;
-  }
 
   .prev {
     @include position;
@@ -226,21 +221,21 @@
   .swiper-prev {
     left: -25px;
     @extend %swiper;
-  }
 
-  [dir='rtl'] .swiper-prev {
-    right: -25px;
-    left: auto;
+    [dir='rtl'] & {
+      right: -25px;
+      left: auto;
+    }
   }
 
   .swiper-next {
     right: -25px;
     @extend %swiper;
-  }
 
-  [dir='rtl'] .swiper-next {
-    right: auto;
-    left: -25px;
+    [dir='rtl'] & {
+      right: auto;
+      left: -25px;
+    }
   }
 
   .swiper-button-disabled {
