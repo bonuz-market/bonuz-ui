@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper';
 import { HowItWorksItem } from '../../atoms';
-import './how-it-works-wrapper.scss';
+import '../../atoms/how-it-works-item/how-it-works-wrapper.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
