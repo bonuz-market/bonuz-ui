@@ -1,12 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
-// import Slider, { Settings } from 'react-slick';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, Navigation } from 'swiper';
-import classNames from 'classnames';
 import { ActionButton, NewsCard } from '../../atoms';
-// import mockData from '../../../mock/mock-data.json';
 import '../../atoms/news-card/news-card-wrapper.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
