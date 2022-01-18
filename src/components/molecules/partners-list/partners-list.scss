@@ -158,21 +158,21 @@
   .swiper-prev {
     left: -25px;
     @extend %swiper;
-  }
 
-  [dir='rtl'] .swiper-prev {
-    right: -25px;
-    left: auto;
+    [dir='rtl'] & {
+      right: -25px;
+      left: auto;
+    }
   }
 
   .swiper-next {
     right: -25px;
     @extend %swiper;
-  }
 
-  [dir='rtl'] .swiper-next {
-    right: auto;
-    left: -25px;
+    [dir='rtl'] & {
+      right: auto;
+      left: -25px;
+    }
   }
 }
 

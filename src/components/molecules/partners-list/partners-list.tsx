@@ -3,7 +3,6 @@
 import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, Navigation } from 'swiper';
-import classNames from 'classnames';
 import { ActionButton } from '../../atoms';
 
 import './partners-list.scss';
@@ -47,21 +46,9 @@ SwiperCore.use([Pagination, Navigation]);
 
 export const PartnersList: FC<PartnersListProps> = ({ partners, rtl }) => (
   <div className="partners-block" data-aos="fade-up" data-aos-duration="1300">
-    <ActionButton
-      type="left"
-      className={classNames({
-        'swiper-prev': !rtl,
-        'swiper-next': rtl,
-      })}
-    />
-    <ActionButton
-      type="right"
-      className={classNames({
-        'swiper-prev': rtl,
-        'swiper-next': !rtl,
-      })}
-    />
-    <Swiper {...swiperOptions}>
+    <ActionButton type="left" className="swiper-prev" />
+    <ActionButton type="right" className="swiper-next" />
+    <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
       {partners.map((item, index) => (
         <SwiperSlide>
           <div key={`${item}-${index}`} className="item">
