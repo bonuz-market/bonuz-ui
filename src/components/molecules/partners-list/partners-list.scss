@@ -119,10 +119,10 @@
     @extend %position;
 
     right: 14px;
-    transform: rotate(180deg);
 
-    &:hover {
-      transform: rotate(180deg) scale(1.02);
+    [dir='rtl'] & {
+      left: 14px;
+      right: auto;
     }
   }
 
@@ -131,8 +131,9 @@
 
     left: 14px;
 
-    &:hover {
-      transform: rotate(0) scale(1.02);
+    [dir='rtl'] & {
+      right: 14px;
+      left: auto;
     }
   }
   %swiper {

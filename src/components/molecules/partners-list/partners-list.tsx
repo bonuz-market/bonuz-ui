@@ -3,9 +3,8 @@
 import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, Navigation } from 'swiper';
+import classNames from 'classnames';
 import { ActionButton } from '../../atoms';
-
-import mockdata from '../../../mock/mock-data.json';
 
 import './partners-list.scss';
 import '../../atoms/action-button/action-button.scss';
@@ -14,6 +13,7 @@ import 'swiper/css/pagination';
 
 export type PartnersListProps = {
   partners: Array<string>;
+  rtl?: boolean;
 };
 
 const swiperOptions: SwiperProps = {
@@ -25,9 +25,6 @@ const swiperOptions: SwiperProps = {
     pauseOnMouseEnter: true,
     disableOnInteraction: false,
   },
-  dir: mockdata.rtlLanguages.includes(localStorage.getItem('i18nextLng') || '')
-    ? 'rtl'
-    : 'ltr',
   pagination: {
     clickable: true,
     el: '.swiper-pagination',
@@ -48,10 +45,22 @@ const swiperOptions: SwiperProps = {
 };
 SwiperCore.use([Pagination, Navigation]);
 
-export const PartnersList: FC<PartnersListProps> = ({ partners }) => (
+export const PartnersList: FC<PartnersListProps> = ({ partners, rtl }) => (
   <div className="partners-block" data-aos="fade-up" data-aos-duration="1300">
-    <ActionButton type="left" className="swiper-prev" />
-    <ActionButton type="right" className="swiper-next" />
+    <ActionButton
+      type="left"
+      className={classNames({
+        'swiper-prev': !rtl,
+        'swiper-next': rtl,
+      })}
+    />
+    <ActionButton
+      type="right"
+      className={classNames({
+        'swiper-prev': rtl,
+        'swiper-next': !rtl,
+      })}
+    />
     <Swiper {...swiperOptions}>
       {partners.map((item, index) => (
         <SwiperSlide>
