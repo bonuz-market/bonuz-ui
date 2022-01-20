@@ -24,14 +24,13 @@ const swiperOptions: SwiperProps = {
   spaceBetween: 20,
   pagination: {
     clickable: true,
-    el: '.swiper-pagination',
+    el: '.swiper-pagination-teamlist',
     dynamicBullets: true,
   },
   navigation: {
-    nextEl: '.action-button--next',
-    prevEl: '.action-button--prev',
+    nextEl: '.action-button.swiper-next-teamlist',
+    prevEl: '.action-button.swiper-prev-teamlist',
   },
-
   breakpoints: {
     320: {
       slidesPerView: 'auto',
@@ -48,8 +47,8 @@ SwiperCore.use([Pagination, Navigation]);
 
 export const TeamList: FC<TeamListProps> = ({ items, rtl }) => (
   <div className="team-list">
-    <ActionButton type="left" className="swiper-prev" />
-    <ActionButton type="right" className="swiper-next" />
+    <ActionButton type="left" className="swiper-prev-teamlist" />
+    <ActionButton type="right" className="swiper-next-teamlist" />
     <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
       {items.map((item, index) => (
         <SwiperSlide>
@@ -63,6 +62,6 @@ export const TeamList: FC<TeamListProps> = ({ items, rtl }) => (
         </SwiperSlide>
       ))}
     </Swiper>
-    <div className="swiper-pagination" />
+    <div className="swiper-pagination-teamlist" />
   </div>
 );

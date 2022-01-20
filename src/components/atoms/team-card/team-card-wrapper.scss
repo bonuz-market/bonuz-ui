@@ -93,11 +93,11 @@
       width: auto;
     }
 
-    &-pagination {
+    &-pagination-teamlist {
       display: none;
     }
 
-    &-prev {
+    &-prev-teamlist {
       @extend %swiper;
 
       left: -90px;
@@ -108,7 +108,7 @@
       }
     }
 
-    &-next {
+    &-next-teamlist {
       @extend %swiper;
 
       right: -100px;
@@ -165,16 +165,18 @@
     .swiper {
       width: 100%;
 
-      &-next,
-      &-prev {
+      &-next-teamlist,
+      &-prev-teamlist {
         display: none;
       }
 
       &-pagination {
-        position: absolute;
-        bottom: -60px;
-        display: unset;
-        z-index: 5;
+        &-teamlist {
+          position: absolute;
+          bottom: -60px;
+          display: unset;
+          z-index: 5;
+        }
 
         &-bullet {
           display: inline-block;
