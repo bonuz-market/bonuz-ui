@@ -22,7 +22,7 @@ const swiperOptions: SwiperProps = {
   slidesPerView: 1,
   pagination: {
     clickable: true,
-    el: '.swiper-pagination',
+    el: '.swiper-pagination-howitworks',
     dynamicBullets: true,
   },
   speed: 300,
@@ -52,6 +52,6 @@ export const HowItWorksList: FC<HowItWorksListProps> = ({ items, rtl }) => (
         </SwiperSlide>
       ))}
     </Swiper>
-    <div className="swiper-pagination" />
+    <div className="swiper-pagination-howitworks" />
   </>
 );

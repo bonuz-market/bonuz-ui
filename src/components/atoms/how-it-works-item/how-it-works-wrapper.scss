@@ -117,7 +117,7 @@
       }
     }
 
-    &-pagination {
+    &-pagination-howitworks {
       display: none;
     }
   }
@@ -145,10 +145,12 @@
       }
 
       &-pagination {
-        bottom: -60px;
-        display: block;
-        z-index: 5;
-        list-style: none;
+        &-howitworks {
+          position: absolute;
+          bottom: -30px;
+          display: unset;
+          z-index: 5;
+        }
 
         &-bullet {
           display: inline-block;
