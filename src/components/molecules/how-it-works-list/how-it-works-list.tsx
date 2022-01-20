@@ -2,7 +2,7 @@
 /* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination } from 'swiper';
+import { Pagination } from 'swiper';
 import { HowItWorksItem } from '../../atoms';
 import '../../atoms/how-it-works-item/how-it-works-wrapper.scss';
 import 'swiper/css';
@@ -18,6 +18,7 @@ export type HowItWorksListProps = {
 };
 
 const swiperOptions: SwiperProps = {
+  modules: [Pagination],
   slidesPerView: 1,
   pagination: {
     clickable: true,
@@ -28,6 +29,7 @@ const swiperOptions: SwiperProps = {
   breakpoints: {
     320: {
       slidesPerView: 'auto',
+      allowTouchMove: true,
     },
     1050: {
       slidesPerView: 5,
@@ -35,7 +37,6 @@ const swiperOptions: SwiperProps = {
     },
   },
 };
-SwiperCore.use([Pagination]);
 
 export const HowItWorksList: FC<HowItWorksListProps> = ({ items, rtl }) => (
   <>
