@@ -2,7 +2,7 @@
 /* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination, Navigation } from 'swiper';
+import { Pagination, Navigation } from 'swiper';
 import { ActionButton, RoadMapItem } from '../../atoms';
 import '../../atoms/road-map-item/road-map-wrapper.scss';
 import 'swiper/css';
@@ -18,37 +18,38 @@ export type RoadMapListProps = {
 };
 
 const swiperOptions: SwiperProps = {
-  className: 'partners',
+  modules: [Pagination, Navigation],
   speed: 600,
-  slidesPerView: 3,
-  slidesOffsetBefore: 10,
   pagination: {
     clickable: true,
-    el: '.swiper-pagination',
+    el: '.swiper-pagination-roadmaplist',
     dynamicBullets: true,
   },
   navigation: {
-    nextEl: '.action-button--next',
-    prevEl: '.action-button--prev',
+    nextEl: '.action-button.swiper-next-roadmaplist',
+    prevEl: '.action-button.swiper-prev-roadmaplist',
   },
   breakpoints: {
     320: {
-      slidesPerView: 1,
+      slidesPerView: 'auto',
+      slidesPerGroup: 1,
+      spaceBetween: 20,
+    },
+    720: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
     },
     1050: {
-      slidesPerView: 2,
-    },
-    1250: {
       slidesPerView: 3,
+      slidesPerGroup: 1,
     },
   },
 };
-SwiperCore.use([Pagination, Navigation]);
 
 export const RoadMapList: FC<RoadMapListProps> = ({ items, rtl }) => (
-  <div className="slides-block">
-    <ActionButton type="left" className="swiper-prev" />
-    <ActionButton type="right" className="swiper-next" />
+  <>
+    <ActionButton type="left" className="swiper-prev-roadmaplist" />
+    <ActionButton type="right" className="swiper-next-roadmaplist" />
     <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
       {items.map((item, index) => (
         <SwiperSlide>
@@ -60,6 +61,6 @@ export const RoadMapList: FC<RoadMapListProps> = ({ items, rtl }) => (
         </SwiperSlide>
       ))}
     </Swiper>
-    <div className="swiper-pagination" />
-  </div>
+    <div className="swiper-pagination-roadmaplist" />
+  </>
 );

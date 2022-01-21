@@ -11,8 +11,10 @@ export default {
 const Template: Story<RoadMapListProps> = (args) => (
   <div id="roadmap">
     <div className="row" />
-    <div className="row" style={{ display: 'flex' }}>
-      <RoadMapList {...args} />
+    <div className="row">
+      <div className="slides-block">
+        <RoadMapList {...args} />
+      </div>
     </div>
   </div>
 );
