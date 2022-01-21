@@ -254,10 +254,10 @@
 
     .blogs {
       margin-bottom: 80px;
+      position: relative;
 
       .swiper {
         width: 100%;
-        margin: 0 auto;
 
         &-next-newslist,
         &-prev-newslist {
