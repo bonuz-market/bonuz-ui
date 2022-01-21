@@ -24,17 +24,18 @@ const swiperOptions: SwiperProps = {
   spaceBetween: 20,
   pagination: {
     clickable: true,
-    el: '.swiper-pagination',
+    el: '.swiper-pagination-newslist',
+    dynamicBullets: true,
   },
   navigation: {
-    nextEl: '.action-button--next',
-    prevEl: '.action-button--prev',
+    nextEl: '.action-button.swiper-next-newslist',
+    prevEl: '.action-button.swiper-prev-newslist',
   },
   breakpoints: {
-    1050: {
+    320: {
       slidesPerView: 'auto',
     },
-    1051: {
+    1050: {
       slidesPerView: 3,
     },
   },
@@ -43,8 +44,8 @@ SwiperCore.use([Pagination, Navigation]);
 
 export const NewsRow: FC<NewsRowProps> = ({ news, rtl }) => (
   <>
-    <ActionButton type="left" className="swiper-prev" />
-    <ActionButton type="right" className="swiper-next" />
+    <ActionButton type="left" className="swiper-prev-newslist" />
+    <ActionButton type="right" className="swiper-next-newslist" />
     <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
       {news.map((item, index) => (
         <SwiperSlide>
@@ -60,6 +61,6 @@ export const NewsRow: FC<NewsRowProps> = ({ news, rtl }) => (
       ))}
     </Swiper>
 
-    <div className="swiper-pagination" />
+    <div className="swiper-pagination-newslist" />
   </>
 );

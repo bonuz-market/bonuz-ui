@@ -150,11 +150,11 @@
         width: auto;
       }
 
-      &-pagination {
+      &-pagination-newslist {
         display: none;
       }
 
-      &-prev {
+      &-prev-newslist {
         @extend %swiper;
 
         left: 0;
@@ -165,7 +165,7 @@
         }
       }
 
-      &-next {
+      &-next-newslist {
         @extend %swiper;
 
         right: 0;
@@ -259,21 +259,21 @@
         width: 100%;
         margin: 0 auto;
 
-        &-next,
-        &-prev {
+        &-next-newslist,
+        &-prev-newslist {
           display: none;
         }
 
         &-pagination {
-          position: absolute;
-          bottom: -60px;
-          display: flex !important;
-          justify-content: center;
-          z-index: 5;
-          list-style: none;
+          &-newslist {
+            position: absolute;
+            bottom: -60px;
+            display: unset;
+            z-index: 5;
+          }
 
           &-bullet {
-            display: block;
+            display: inline-block;
             width: 14px;
             height: 14px;
             background: none;
