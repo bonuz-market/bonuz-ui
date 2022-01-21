@@ -2,7 +2,7 @@
 /* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination, Navigation } from 'swiper';
+import { Pagination, Navigation } from 'swiper';
 import { ActionButton, TeamCard } from '../../atoms';
 import '../../atoms/team-card/team-card-wrapper.scss';
 import 'swiper/css';
@@ -20,6 +20,7 @@ export type TeamListProps = {
 
 const swiperOptions: SwiperProps = {
   className: 'team',
+  modules: [Pagination, Navigation],
   speed: 600,
   spaceBetween: 20,
   pagination: {
@@ -43,10 +44,9 @@ const swiperOptions: SwiperProps = {
     },
   },
 };
-SwiperCore.use([Pagination, Navigation]);
 
 export const TeamList: FC<TeamListProps> = ({ items, rtl }) => (
-  <div className="team-list">
+  <>
     <ActionButton type="left" className="swiper-prev-teamlist" />
     <ActionButton type="right" className="swiper-next-teamlist" />
     <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
@@ -63,5 +63,5 @@ export const TeamList: FC<TeamListProps> = ({ items, rtl }) => (
       ))}
     </Swiper>
     <div className="swiper-pagination-teamlist" />
-  </div>
+  </>
 );

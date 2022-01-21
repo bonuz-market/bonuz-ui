@@ -9,7 +9,9 @@ export default {
 
 const Template: Story<TeamListProps> = (args) => (
   <div id="army">
-    <TeamList {...args} />
+    <div className="team-list">
+      <TeamList {...args} />
+    </div>
   </div>
 );
 
