@@ -9,7 +9,9 @@ export default {
 
 const Template: Story<PartnersListProps> = (args) => (
   <div id="partners">
-    <PartnersList {...args} />
+    <div className="partners-block">
+      <PartnersList {...args} />
+    </div>
   </div>
 );
 
