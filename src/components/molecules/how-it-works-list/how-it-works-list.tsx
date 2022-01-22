@@ -19,7 +19,6 @@ export type HowItWorksListProps = {
 
 const swiperOptions: SwiperProps = {
   modules: [Pagination],
-  slidesPerView: 1,
   pagination: {
     clickable: true,
     el: '.swiper-pagination-howitworks',

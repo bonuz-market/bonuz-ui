@@ -51,8 +51,6 @@
     display: flex;
     justify-content: space-between;
     width: 1053px;
-    margin: 0 auto;
-    margin-top: 50px;
   }
 
   .blocks.mob {
@@ -80,6 +78,11 @@
     top: -50px;
     left: calc(50% - 570px);
     z-index: 0;
+  }
+
+  .how-it-works-list {
+    margin: 0 auto;
+    margin-top: 50px;
   }
 
   .swiper {
@@ -126,7 +129,6 @@
   #how-it-works {
     background: var(--second-black);
     padding-top: 65px;
-    position: relative;
 
     .blocks.mob {
       display: block;
@@ -136,13 +138,14 @@
       display: none;
     }
 
+    .how-it-works-list {
+      position: relative;
+      padding: 20px 0;
+      margin: 40px auto;
+    }
+
     .swiper {
       width: 100%;
-      margin: 40px auto;
-
-      &-wrapper {
-        padding: 20px 0;
-      }
 
       &-pagination {
         &-howitworks {

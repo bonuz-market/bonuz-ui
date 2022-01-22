@@ -9,7 +9,9 @@ export default {
 
 const Template: Story<HowItWorksListProps> = (args) => (
   <div id="how-it-works">
-    <HowItWorksList {...args} />
+    <div className="how-it-works-list">
+      <HowItWorksList {...args} />
+    </div>
   </div>
 );
 
