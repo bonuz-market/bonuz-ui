@@ -10,7 +10,9 @@ export default {
 
 const Template: Story<AdvantagesListProps> = (args) => (
   <div id="advantages">
-    <AdvantagesList {...args} />
+    <div className="advantages-list">
+      <AdvantagesList {...args} />
+    </div>
   </div>
 );
 

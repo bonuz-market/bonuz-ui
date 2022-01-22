@@ -89,6 +89,7 @@ declare module '@bonuz/bonuz-ui' {
       description: string;
       icon: any;
     }[];
+    rtl?: boolean;
   };
   type CelebritiesListProps = {
     celebrities: {

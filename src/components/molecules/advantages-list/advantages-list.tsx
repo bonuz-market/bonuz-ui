@@ -1,11 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
-
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination } from 'swiper';
+import { Pagination } from 'swiper';
 import { AdvantagesItem } from '../../atoms';
-import mockData from '../../../mock/mock-data.json';
 import '../../atoms/advantages-item/advantages-wrapper.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -16,39 +14,44 @@ export type AdvantagesListProps = {
     description: string;
     icon: string;
   }[];
+  rtl?: boolean;
 };
 
 const swiperOptions: SwiperProps = {
   className: 'blocks',
+  modules: [Pagination],
   loop: true,
-  dir: mockData.rtlLanguages.includes(localStorage.getItem('i18nextLng') || '')
-    ? 'rtl'
-    : 'ltr',
-  pagination: { clickable: true },
-
+  pagination: {
+    clickable: true,
+    el: '.swiper-pagination-advantageslist',
+    dynamicBullets: true,
+  },
   breakpoints: {
-    1050: {
+    320: {
       slidesPerView: 1,
+      allowTouchMove: true,
     },
-    1051: {
+    1050: {
       slidesPerView: 3,
       allowTouchMove: false,
     },
   },
 };
-SwiperCore.use([Pagination]);
 
-export const AdvantagesList: FC<AdvantagesListProps> = ({ items }) => (
-  <Swiper {...swiperOptions}>
-    {items.map((item, index) => (
-      <SwiperSlide>
-        <AdvantagesItem
-          key={`${item.title}-${index}`}
-          title={item.title}
-          description={item.description}
-          icon={item.icon}
-        />
-      </SwiperSlide>
-    ))}
-  </Swiper>
+export const AdvantagesList: FC<AdvantagesListProps> = ({ items, rtl }) => (
+  <>
+    <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
+      {items.map((item, index) => (
+        <SwiperSlide>
+          <AdvantagesItem
+            key={`${item.title}-${index}`}
+            title={item.title}
+            description={item.description}
+            icon={item.icon}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+    <div className="swiper-pagination-advantageslist" />
+  </>
 );
