@@ -35,12 +35,14 @@ const swiperOptions: SwiperProps = {
   breakpoints: {
     320: {
       slidesPerView: 'auto',
+      slidesPerGroup: 1,
       slidesOffsetBefore: 5,
     },
 
     1050: {
       slidesPerView: 4,
       slidesPerGroup: 4,
+      slidesOffsetBefore: 0,
     },
   },
 };
