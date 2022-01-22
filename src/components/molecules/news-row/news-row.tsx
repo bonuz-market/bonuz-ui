@@ -2,7 +2,7 @@
 /* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination, Navigation } from 'swiper';
+import { Pagination, Navigation } from 'swiper';
 import { ActionButton, NewsCard } from '../../atoms';
 import '../../atoms/news-card/news-card-wrapper.scss';
 import 'swiper/css';
@@ -20,6 +20,7 @@ export type NewsRowProps = {
 };
 
 const swiperOptions: SwiperProps = {
+  modules: [Pagination, Navigation],
   speed: 600,
   spaceBetween: 20,
   pagination: {
@@ -40,7 +41,6 @@ const swiperOptions: SwiperProps = {
     },
   },
 };
-SwiperCore.use([Pagination, Navigation]);
 
 export const NewsRow: FC<NewsRowProps> = ({ news, rtl }) => (
   <>
