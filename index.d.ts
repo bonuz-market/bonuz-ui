@@ -96,6 +96,7 @@ declare module '@bonuz/bonuz-ui' {
       name: string;
       country: string;
     }[];
+    rtl?: boolean;
   };
   type HowItWorksListProps = {
     items: {

@@ -2,11 +2,10 @@
 /* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay } from 'swiper';
+import { Autoplay } from 'swiper';
 import { CelebritiesItem } from '../../atoms';
 import '../../atoms/celebrities-item/celebrities-wrapper.scss';
 import 'swiper/css';
-import mockdata from '../../../mock/mock-data.json';
 
 export type CelebritiesListProps = {
   celebrities: {
@@ -14,23 +13,28 @@ export type CelebritiesListProps = {
     name: string;
     role: string;
   }[];
+  rtl?: boolean;
 };
 
 const swiperOptions: SwiperProps = {
   className: 'celebs-list',
+  modules: [Autoplay],
   slidesPerView: 'auto',
   spaceBetween: 32,
   autoplay: { pauseOnMouseEnter: true, disableOnInteraction: false },
   loop: true,
   speed: 500,
-  dir: mockdata.rtlLanguages.includes(localStorage.getItem('i18nextLng') || '')
-    ? 'rtl'
-    : 'ltr',
 };
-SwiperCore.use([Autoplay]);
 
-export const CelebritiesList: FC<CelebritiesListProps> = ({ celebrities }) => (
-  <Swiper {...swiperOptions} loopedSlides={celebrities.length}>
+export const CelebritiesList: FC<CelebritiesListProps> = ({
+  celebrities,
+  rtl,
+}) => (
+  <Swiper
+    {...swiperOptions}
+    loopedSlides={celebrities.length}
+    dir={rtl ? 'rtl' : 'ltr'}
+  >
     {celebrities.map((item, index) => (
       <SwiperSlide>
         <CelebritiesItem
