@@ -29,6 +29,10 @@
     }
   }
 
+  .content {
+    position: relative;
+  }
+
   .team-list {
     margin: 0 auto;
     position: relative;
@@ -95,10 +99,10 @@
     &-prev-teamlist {
       @extend %swiper;
 
-      left: -90px;
+      left: 0;
 
       [dir='rtl'] & {
-        right: -90px;
+        right: 0;
         left: auto;
       }
     }
@@ -106,11 +110,11 @@
     &-next-teamlist {
       @extend %swiper;
 
-      right: -100px;
+      right: 0;
 
       [dir='rtl'] & {
         right: auto;
-        left: -100px;
+        left: 0;
       }
     }
 
