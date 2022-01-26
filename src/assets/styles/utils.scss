@@ -1,10 +1,10 @@
 @mixin font(
-  $family: Farro,
-  $style: normal,
-  $weight: normal,
-  $size: 24px,
-  $line-height: initial,
-  $color: #ffffff
+  $family: null,
+  $style: null,
+  $weight: null,
+  $size: null,
+  $line-height: null,
+  $color: null
 ) {
   font-family: $family;
   font-style: $style;
