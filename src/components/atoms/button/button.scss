@@ -1,4 +1,5 @@
-@import '../../../assets/styles/utils';
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as utils;
 
 .button {
   button {
@@ -19,7 +20,10 @@
     }
 
     span {
-      @include font(Farro, normal, 500, 16px, 16px, #ffffff);
+      @include utils.font(
+        $size: v.$font-size-medium,
+        $weight: v.$font-weight-medium
+      );
 
       display: flex;
       align-items: center;

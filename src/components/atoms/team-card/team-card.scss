@@ -1,4 +1,5 @@
-@import '../../../assets/styles/utils';
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 
 .team-item {
   width: 210px;
@@ -14,14 +15,14 @@
   }
 
   p {
-    @include font(Farro, normal, bold, 16px, 26px, #ffffff);
+    @include u.font($size: v.$font-size-medium, $weight: v.$font-weight-bold);
 
     margin-bottom: 0;
     text-align: left;
   }
 
   span {
-    @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
+    @include u.font($family: v.$font-secondary, $size: v.$font-size-medium);
 
     opacity: 0.4;
     text-align: left;

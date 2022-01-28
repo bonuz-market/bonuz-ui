@@ -1,4 +1,5 @@
-@import '../../../assets/styles/utils';
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 %input-control {
   width: 100%;
   padding: 16px;
@@ -18,7 +19,7 @@
   &__label {
     display: block;
     margin-bottom: 14px;
-    @include font(Farro, normal, normal, 14px, 14px, #ffffff);
+    @include u.font($size: v.$font-size-small);
   }
 
   &__control {
@@ -27,7 +28,7 @@
     background-color: transparent;
     border: none;
     border-bottom: 1px solid rgb(255 255 255 / 24%);
-    @include font(Roboto Condensed, normal, normal, 14px, 26px, #ffffff);
+    @include u.font($family: v.$font-secondary, $size: v.$font-size-small);
   }
 
   &__wrapper {

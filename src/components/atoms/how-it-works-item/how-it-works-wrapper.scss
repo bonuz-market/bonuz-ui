@@ -1,4 +1,5 @@
-@import '../../../assets/styles/utils';
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 
 #how-it-works {
   padding-top: 150px;
@@ -35,7 +36,7 @@
     }
 
     h2 {
-      @include font(Farro, normal, normal, 32px, 104.4%, #ffffff);
+      @include u.font($size: v.$font-size-h2);
 
       text-align: center;
       z-index: 1;

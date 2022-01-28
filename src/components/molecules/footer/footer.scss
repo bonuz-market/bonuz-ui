@@ -1,4 +1,5 @@
-@import '../../../assets/styles/utils';
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 
 footer {
   background: var(--main-black);
@@ -55,7 +56,11 @@ footer {
         }
 
         p {
-          @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
+          @include u.font(
+            $family: v.$font-secondary,
+            $size: v.$font-size-medium,
+            $line-height: v.$font-line-height-large
+          );
 
           opacity: 0.41;
           width: 219px;
@@ -65,7 +70,7 @@ footer {
 
       &:nth-child(2) {
         p {
-          @include font(Farro, normal, normal, 16px, 16px, #ffffff);
+          @include u.font($size: v.$font-size-medium);
 
           opacity: 0.3;
           margin-top: 40px;
@@ -81,7 +86,7 @@ footer {
 
           a {
             text-decoration: none;
-            @include font(Farro, normal, normal, 14px, 14px, #ffffff);
+            @include u.font($size: v.$font-size-small);
 
             padding: 12px 0;
             display: block;
@@ -91,7 +96,7 @@ footer {
 
         .form {
           p {
-            @include font(Farro, normal, normal, 14px, 14px, #ffffff);
+            @include u.font($size: v.$font-size-small);
 
             opacity: 1;
             margin-top: 57px;
@@ -112,7 +117,12 @@ footer {
 
   .form {
     input {
-      @include font(Roboto Condensed, normal, normal, 14px, 25px, #ffffff);
+      @include u.font(
+        $family: v.$font-secondary,
+        $size: v.$font-size-small,
+        $line-height: v.$font-line-height-large,
+        $color: #fff
+      );
 
       background: none;
       border: 1px solid rgb(255 255 255 / 24%);
@@ -148,7 +158,10 @@ footer {
   }
 
   .policy {
-    @include font(Farro, normal, normal, 14px, 14px, rgba(255, 255, 255, 0.38));
+    @include u.font(
+      $size: v.$font-size-small,
+      $color: rgba(255, 255, 255, 0.38)
+    );
 
     text-transform: capitalize;
     margin-top: 80px;
