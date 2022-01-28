@@ -46,7 +46,7 @@
     @media screen and (min-width: 1051px) {
       &:hover {
         .dropdown__options {
-          padding: 5px 0;
+          padding: 2px 5px;
           margin-top: 15px;
           visibility: visible;
           height: auto;
@@ -59,7 +59,7 @@
     }
     @media screen and (max-width: 1050px) {
       .dropdown__options.active {
-        padding: 5px 0;
+        padding: 2px 5px;
         margin-top: 15px;
         visibility: visible;
         height: auto;
@@ -75,7 +75,7 @@
       position: absolute;
       background: url('/src/assets/images/arrow-selector-down.svg');
       right: 0;
-      bottom: calc(50% - 3px);
+      bottom: calc(50% - 6px);
       width: 8px;
       height: 6px;
 
@@ -90,12 +90,10 @@
     }
 
     > li {
-      padding-left: 4px;
       padding-right: 8px;
 
       [dir='rtl'] & {
         padding-left: 8px;
-        padding-right: 4px;
       }
     }
   }
@@ -110,7 +108,7 @@
   }
 
   &__option {
-    padding: 5px;
+    padding: 2px;
 
     a {
       color: #fff;
