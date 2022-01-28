@@ -4,6 +4,7 @@
 .fan-item {
   display: flex;
   position: relative;
+  gap: 20px;
 
   &:not(:last-child) {
     margin-bottom: 32px;
@@ -24,7 +25,6 @@
   }
 
   &__wrapper:not(:last-child) {
-    margin-right: 20px;
   }
 
   &__name {
@@ -43,11 +43,11 @@
   &__viewers {
     display: flex;
     align-items: center;
+    gap: 8px;
     @include u.font($size: v.$font-size-small);
 
     & > img {
       display: block;
-      margin-right: 8px;
     }
   }
 }
@@ -55,8 +55,6 @@
 @media (min-width: 1050px) {
   .fan-item {
     &:not(:last-child) {
-      margin-bottom: 48px;
-
       &::after {
         bottom: -24px;
       }
