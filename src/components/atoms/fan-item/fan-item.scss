@@ -1,4 +1,5 @@
-@import '../../../assets/styles/utils';
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 
 .fan-item {
   display: flex;
@@ -29,20 +30,20 @@
   &__name {
     display: block;
     margin-bottom: 8px;
-    @include font(Farro, null, null, 14px, 14px, #ffffff);
+    @include u.font($size: v.$font-size-small);
   }
 
   &__descr {
     display: block;
     margin-bottom: 8px;
     opacity: 0.4;
-    @include font(Farro, null, null, 12px, 17px, #ffffff);
+    @include u.font($size: 12px);
   }
 
   &__viewers {
     display: flex;
     align-items: center;
-    @include font(Farro, null, null, 14px, 14px, #ffffff);
+    @include u.font($size: v.$font-size-small);
 
     & > img {
       display: block;

@@ -1,4 +1,5 @@
-@import '../../../assets/styles/utils';
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as utils;
 
 #advantages {
   position: relative;
@@ -25,13 +26,20 @@
   .row {
     &:nth-child(1) {
       h2 {
-        @include font(Farro, normal, 500, 32px, 104.4%, #ffffff);
+        @include utils.font(
+          $weight: v.$font-weight-medium,
+          $size: v.$font-size-h2
+        );
 
         text-align: center;
       }
 
       p {
-        @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
+        @include utils.font(
+          $family: v.$font-secondary,
+          $size: v.$font-size-medium,
+          $line-height: v.$font-line-height-large
+        );
 
         text-align: center;
       }
@@ -106,7 +114,11 @@
     p {
       width: 809px;
       height: 52px;
-      @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
+      @include utils.font(
+        $family: v.$font-secondary,
+        $size: v.$font-size-medium,
+        $line-height: v.$font-line-height-large
+      );
     }
   }
 

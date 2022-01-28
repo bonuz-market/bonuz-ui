@@ -1,4 +1,5 @@
-@import '../../../assets/styles/utils';
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 
 .dropdown {
   %text-color-effect {
@@ -16,7 +17,7 @@
     position: relative;
     user-select: none;
 
-    @include font(Farro, null, null, 14px, 14px, #ffffff);
+    @include u.font($size: v.$font-size-small);
 
     &:hover {
       border-image: linear-gradient(

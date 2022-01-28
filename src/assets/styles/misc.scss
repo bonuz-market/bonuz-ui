@@ -1,6 +1,10 @@
 /* stylelint-disable function-url-quotes */
+@use 'variables' as v;
+@use 'utils' as u;
+
 * {
   outline: none;
+  box-sizing: content-box;
 }
 
 code {
@@ -17,7 +21,16 @@ body {
   margin: 0;
   overflow-x: hidden;
   background: var(--main-bg-color);
-  font-family: 'Farro', 'Roboto Condensed', 'Roboto', 'Segoe UI', sans-serif;
+  @include u.font(
+    $family: (
+      v.$font-main,
+      v.$font-secondary,
+      v.$font-fallback,
+    ),
+    $size: v.$font-size-small,
+    $color: #fff
+  );
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

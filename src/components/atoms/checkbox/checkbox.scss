@@ -1,4 +1,5 @@
-@import '../../../assets/styles/utils';
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 
 .checkbox-container {
   display: flex;
@@ -19,7 +20,7 @@
   }
 
   label {
-    @include font(Farro, normal, normal, 12px, null, #ffffff);
+    @include u.font($weight: v.$font-weight-bold, $size: 12px);
 
     cursor: pointer;
   }
@@ -69,7 +70,7 @@
     }
 
     &-text {
-      @include font(Roboto Condensed, null, null, null, null, #ffffff);
+      @include u.font($family: v.$font-secondary);
 
       a {
         color: #f6255a;

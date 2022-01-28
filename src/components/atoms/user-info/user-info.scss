@@ -1,5 +1,5 @@
-@import '../../../assets/styles/utils';
-
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 %display-flex-align-center {
   display: flex;
   align-items: center;
@@ -35,7 +35,7 @@
   &__content {
     &__name {
       display: block;
-      @include font(Farro, null, null, 16px, 16px, #ffffff);
+      @include u.font($size: v.$font-size-medium);
     }
 
     &__wrapper {
@@ -46,7 +46,7 @@
       @extend %display-flex-align-center;
 
       position: relative;
-      @include font(Farro, normal, normal, 14px, 14px, #ffffff);
+      @include u.font($size: v.$font-size-small);
 
       &:not(:last-child) {
         margin-right: 16px;

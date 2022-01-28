@@ -1,4 +1,5 @@
-@import '../../../assets/styles/utils';
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 
 .how-it-works-block {
   width: 220px;
@@ -20,7 +21,11 @@
   }
 
   p {
-    @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
+    @include u.font(
+      $family: v.$font-secondary,
+      $size: v.$font-size-medium,
+      $line-height: v.$font-line-height-large
+    );
 
     text-align: center;
   }

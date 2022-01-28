@@ -1,10 +1,5 @@
-@import '../../../assets/styles/utils';
-
-@mixin text() {
-  @include font(Farro, normal, normal, 32px, 104.4%, #ffffff);
-
-  text-align: center;
-}
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 
 #roadmap {
   background: url('/src/assets/images/six-background.svg'), var(--second-black);
@@ -29,7 +24,7 @@
   .row {
     &:nth-child(1) {
       h2 {
-        @include text;
+        @include u.font($size: v.$font-size-h2);
 
         z-index: 1;
         position: relative;
@@ -59,14 +54,18 @@
         transition: all 0.3s;
 
         h3 {
-          @include text;
+          @include u.font($size: v.$font-size-h3);
 
           text-align: left;
           margin-bottom: 4px;
         }
 
         p {
-          @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
+          @include u.font(
+            $family: v.$font-secondary,
+            $size: v.$font-size-medium,
+            $line-height: v.$font-line-height-large
+          );
 
           white-space: pre-wrap;
           margin-top: 4px;
@@ -285,7 +284,7 @@
         }
 
         h2 {
-          @include font(Farro, normal, normal, 32px, 104.4%, #ffffff);
+          @include u.font($size: v.$font-size-h2);
 
           text-align: center;
           z-index: 1;

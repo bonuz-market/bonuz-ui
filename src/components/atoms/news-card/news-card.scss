@@ -1,7 +1,11 @@
-@import '../../../assets/styles/utils';
-
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 %text {
-  @include font(Roboto Condensed, normal, 500, 16px, 104.4%, #ffffff);
+  @include u.font(
+    $family: v.$font-secondary,
+    $size: v.$font-size-medium,
+    $weight: v.$font-weight-medium
+  );
 }
 
 .post {

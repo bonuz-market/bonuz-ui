@@ -1,9 +1,10 @@
-@import '../../../assets/styles/utils';
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 
 .title-component {
   margin-top: 0;
   margin-bottom: 24px;
-  @include font(Farro, normal, normal, 32px, 104.4%, #ffffff);
+  @include u.font($size: v.$font-size-h2);
 
   text-align: center;
 }

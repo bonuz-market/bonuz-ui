@@ -1,4 +1,20 @@
+@import '~sanitize.css';
+@import '~sanitize.css/forms.css';
+@import '~sanitize.css/typography.css';
 @import 'variables';
 @import 'fonts';
 @import 'animations';
 @import 'misc';
+
+:root {
+  --main-bg-color: #030c5e;
+  --second-bg-color: #050d50;
+  --gradient-color-1: #ce09ff;
+  --gradient-color-2: #ffa34e;
+  --gradient-color-3: #ce09ff;
+  --gradient-color-4: #48f573;
+  --main-black: #010845;
+  --second-black: #030b4d;
+  --light-bg: #2f1385;
+  --blur: #ff00f5;
+}

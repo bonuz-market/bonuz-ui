@@ -1,4 +1,5 @@
-@import '../../../assets/styles/utils';
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 @mixin position($top, $right: null, $left: null) {
   @content;
 
@@ -50,7 +51,7 @@
   .row {
     &:nth-child(2) {
       h2 {
-        @include font(Farro, normal, normal, 32px, 104.4%, #ffffff);
+        @include u.font($size: v.$font-size-h2);
 
         text-align: center;
         z-index: 1;
@@ -71,7 +72,11 @@
       }
 
       p {
-        @include font(Roboto Condensed, normal, normal, 16px, 26px, #ffffff);
+        @include u.font(
+          $family: v.$font-secondary,
+          $size: v.$font-size-medium,
+          $line-height: v.$font-line-height-large
+        );
 
         text-align: center;
         z-index: 1;
