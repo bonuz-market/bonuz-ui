@@ -5,18 +5,19 @@ export type CelebritiesItemProps = {
   img: string;
   name: string;
   role: string;
+  link?: string;
 };
 
 export const CelebritiesItem: FC<CelebritiesItemProps> = ({
   img,
   name,
   role,
+  link,
 }) => (
-  // eslint-disable-next-line jsx-a11y/anchor-is-valid
-  <a className="celeb" href="#" draggable={false}>
-    <img src={img} alt="" />
+  <a className="celeb" href={link}>
+    <img src={img} alt={name} />
     <div>
-      <h3>{name}</h3>
+      <h4>{name}</h4>
       <p>{role}</p>
     </div>
   </a>
