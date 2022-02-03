@@ -3,7 +3,12 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['airbnb', 'airbnb-typescript', 'prettier'],
+  extends: [
+    'airbnb',
+    'airbnb-typescript',
+    'plugin:storybook/recommended',
+    'prettier',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -38,11 +43,19 @@ module.exports = {
     'import/no-relative-packages': 'off',
     'react/jsx-filename-extension': [
       2,
-      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+      {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
     ],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error'],
-    'prefer-destructuring': ['error', { object: true, array: false }],
+    'prefer-destructuring': [
+      'error',
+      {
+        object: true,
+        array: false,
+      },
+    ],
     'react/no-unstable-nested-components': 'off',
     'react/function-component-definition': [
       2,
