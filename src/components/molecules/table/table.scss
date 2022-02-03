@@ -1,11 +1,12 @@
-@import '../../../assets/styles/utils';
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 
 .table {
   border-collapse: separate;
   border-spacing: 0 8px;
 
   &__cell {
-    @include font(Farro, normal, normal, 14px, 14px, #ffffff);
+    @include u.font($size: v.$font-size-small);
 
     text-align: left;
 
