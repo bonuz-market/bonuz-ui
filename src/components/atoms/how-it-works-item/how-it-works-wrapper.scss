@@ -3,7 +3,8 @@
 
 #how-it-works {
   padding-top: 150px;
-  background: url('/src/assets/images/four-background.svg'), var(--second-black);
+  background: url('../../../assets/images/four-background.svg'),
+    var(--second-black);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 50% 22%;
@@ -100,7 +101,7 @@
       &::after {
         content: '';
         position: absolute;
-        background-image: url('/src/assets/images/dash.svg');
+        background-image: url('../../../assets/images/dash.svg');
         background-repeat: repeat-x;
         width: 60px;
         height: 5px;

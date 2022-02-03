@@ -34,7 +34,7 @@
       width: 37px;
       height: 42px;
       margin-right: 15px;
-      background-image: url('/src/assets/images/read.svg');
+      background-image: url('../../../assets/images/read.svg');
       background-repeat: no-repeat;
     }
   }
@@ -65,13 +65,13 @@
       position: absolute;
       z-index: 3;
       user-select: none;
-      background-image: url('/src/assets/images/post-mask.svg');
+      background-image: url('../../../assets/images/post-mask.svg');
       background-size: cover;
       transition: 0.2s ease-in-out;
 
       &--gradient {
         opacity: 0;
-        background-image: url('/src/assets/images/post-mask-hover.svg');
+        background-image: url('../../../assets/images/post-mask-hover.svg');
       }
     }
   }

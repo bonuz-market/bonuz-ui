@@ -1,5 +1,5 @@
-@import '../../../assets/styles/utils';
-
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 %display-flex-align-center {
   display: flex;
   align-items: center;
@@ -16,7 +16,7 @@
   &__title {
     margin-top: 0;
     margin-bottom: 8px;
-    @include font(Farro, null, 500, 24px, 104.4%, #ffffff);
+    @include u.font($size: v.$font-size-h3, $weight: v.$font-weight-medium);
   }
 
   &__info {
@@ -32,7 +32,7 @@
     &__item {
       @extend %display-flex-align-center;
 
-      @include font(Farro, null, null, 14px, 14px, #ffffff);
+      @include u.font($size: v.$font-size-small);
 
       &:not(:last-child) {
         margin-right: 20px;
@@ -56,7 +56,7 @@
     position: relative;
     margin-bottom: 66px;
     color: rgb(255 255 255 / 30%);
-    @include font(Farro, null, null, 14px, 14px, null);
+    @include u.font($size: v.$font-size-small);
 
     &::after {
       content: '';
@@ -86,13 +86,13 @@
     &__title {
       display: block;
       margin-bottom: 14px;
-      @include font(Farro, null, null, 16px, 16px, #ffffff);
+      @include u.font($size: v.$font-size-medium);
     }
 
     &__link {
       @extend %display-flex-align-center;
 
-      @include font(Farro, null, null, 14px, 14px, #ffffff);
+      @include u.font($size: v.$font-size-small);
 
       &:not(:last-child) {
         margin-bottom: 14px;
@@ -111,16 +111,16 @@
     &__title {
       display: block;
       margin-bottom: 16px;
-      @include font(Farro, null, null, 16px, 16px, #ffffff);
+      @include u.font($size: v.$font-size-medium);
     }
 
     &__descr {
-      @include font(Farro, null, null, 14px, 14px, #ffffff);
+      @include u.font($size: v.$font-size-small);
     }
 
     &__content {
       color: transparent;
-      @include font(Farro, null, null, 14px, 14px, null);
+      @include u.font($size: v.$font-size-small);
 
       &--shortcode {
         background: linear-gradient(46.96deg, #cc16ff 20.56%, #48f573 82.71%);

@@ -73,7 +73,7 @@
     &::after {
       content: '';
       position: absolute;
-      background: url('/src/assets/images/arrow-selector-down.svg');
+      background: url('../../../assets/images/arrow-selector-down.svg');
       right: 0;
       bottom: calc(50% - 6px);
       width: 8px;

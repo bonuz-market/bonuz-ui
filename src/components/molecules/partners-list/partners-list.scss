@@ -1,4 +1,5 @@
-@import '../../../assets/styles/utils';
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 
 #partners {
   background: var(--second-black);
@@ -28,7 +29,7 @@
   .row {
     &:nth-child(1) {
       h2 {
-        @include font(Farro, normal, normal, 32px, 104.4%, #ffffff);
+        @include u.font($size: v.$font-size-h2);
 
         text-align: center;
         z-index: 1;
@@ -62,7 +63,10 @@
       transition: 0.6s;
 
       span {
-        @include font(Farro, normal, 500, 16px, 16px, #ffffff);
+        @include u.font(
+          $size: v.$font-size-medium,
+          $weight: v.$font-weight-medium
+        );
 
         display: flex;
         align-items: center;

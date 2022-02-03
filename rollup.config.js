@@ -1,9 +1,8 @@
 import typescript from 'rollup-plugin-typescript2';
 import multiInput from 'rollup-plugin-multi-input';
 import json from '@rollup/plugin-json';
-import scss from 'rollup-plugin-scss';
 import autoprefixer from 'autoprefixer';
-import postcss from 'postcss';
+import postcss from 'rollup-plugin-postcss';
 import svgr from '@svgr/rollup';
 import url from '@rollup/plugin-url';
 import fs from 'fs-extra';
@@ -13,9 +12,13 @@ import postcssUrl from 'postcss-url';
 const ASSETS_RX = /\.(png|jpe?g|gif|webp|svg|woff|woff2)$/;
 const OUT_DIR = 'dist';
 export default {
-  input: ['src/components/**/*.ts', 'src/components/**/*.tsx'],
+  input: [
+    'src/components/**/*.ts',
+    'src/components/**/*.tsx',
+    'src/assets/styles/style.scss',
+  ],
   output: {
-    dir: 'dist',
+    dir: OUT_DIR,
     format: 'cjs',
     exports: 'named',
     sourcemap: false,
@@ -27,37 +30,38 @@ export default {
     json(),
     svgr(),
     url(),
-    scss({
-      processor: () =>
-        postcss({
-          plugins: [
-            autoprefixer(),
-            postcssUrl({
-              url: (asset) => {
-                if (!ASSETS_RX.test(asset.url)) return asset.url;
-                const filename = asset.absolutePath
-                  .split('\\')
-                  .pop()
-                  .split('/')
-                  .pop();
-                const file = fs.readFileSync(asset.absolutePath);
 
-                fs.ensureDirSync(path.join(OUT_DIR, 'assets'));
-                const filePath = `assets/${filename}`;
+    postcss({
+      extract: 'bonuz.css',
+      exclude: 'src/assets/styles/style.scss',
+      minimize: true,
+      plugins: [
+        autoprefixer(),
+        postcssUrl({
+          url: (asset) => {
+            if (!ASSETS_RX.test(asset.url)) return asset.url;
+            const filename = asset.absolutePath
+              .split('\\')
+              .pop()
+              .split('/')
+              .pop();
+            const file = fs.readFileSync(asset.absolutePath);
 
-                fs.writeFileSync(path.join(OUT_DIR, filePath), file);
+            fs.ensureDirSync(path.join(OUT_DIR, 'assets'));
+            const filePath = `assets/${filename}`;
 
-                return filePath;
-              },
-            }),
-          ],
-          extract: true,
+            fs.writeFileSync(path.join(OUT_DIR, filePath), file);
+
+            return filePath;
+          },
         }),
-      output: (styles) => {
-        fs.writeFileSync(`./${OUT_DIR}/styles.css`, styles);
-      },
-      prefix: `@import "src/assets/styles/style.scss";`,
-      outputStyle: 'compressed',
+      ],
+    }),
+    postcss({
+      extract: 'foundation.css',
+      exclude: ['src/components/**/*.scss'],
+      minimize: true,
+      plugins: [autoprefixer()],
     }),
   ],
   external: ['react', 'react-dom'],

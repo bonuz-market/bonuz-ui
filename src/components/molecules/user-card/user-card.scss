@@ -1,4 +1,5 @@
-@import '../../../assets/styles/utils';
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
 
 .user-card {
   &__photo {
@@ -40,7 +41,11 @@
     &__short-link {
       display: block;
       margin-bottom: 8px;
-      @include font(Farro, null, 500, 20px, 10px, #ffffff);
+      @include u.font(
+        $size: 20px,
+        $weight: v.$font-weight-medium,
+        $line-height: 10px
+      );
 
       text-align: center;
     }
@@ -48,7 +53,7 @@
     &__created {
       display: block;
       color: rgb(255 255 255 / 30%);
-      @include font(Farro, null, null, 14px, 14px, null);
+      @include u.font($size: v.$font-size-small);
 
       text-align: center;
     }
@@ -60,7 +65,11 @@
     &__title {
       display: block;
       margin-bottom: 16px;
-      @include font(Roboto Condensed, null, null, 16px, 26px, #ffffff);
+      @include u.font(
+        $family: v.$font-secondary,
+        $size: v.$font-size-medium,
+        $line-height: v.$font-line-height-large
+      );
     }
 
     &__list {
@@ -83,13 +92,13 @@
     }
 
     &__address {
-      @include font(Farro, null, null, 14px, 14px, #ffffff);
+      @include u.font($size: v.$font-size-small);
     }
 
     &__coins {
       display: flex;
       align-items: center;
-      @include font(Farro, null, null, 14px, 14px, #ffffff);
+      @include u.font($size: v.$font-size-small);
 
       & > img {
         display: block;
@@ -102,7 +111,11 @@
     &__title {
       display: block;
       margin-bottom: 16px;
-      @include font(Roboto Condensed, null, null, 16px, 26px, #ffffff);
+      @include u.font(
+        $family: v.$font-secondary,
+        $size: v.$font-size-medium,
+        $line-height: v.$font-line-height-large
+      );
     }
 
     &__content {
@@ -112,7 +125,11 @@
     }
 
     &__item {
-      @include font(Roboto Condensed, null, null, 16px, 26px, #ffffff);
+      @include u.font(
+        $family: v.$font-secondary,
+        $size: v.$font-size-medium,
+        $line-height: v.$font-line-height-large
+      );
 
       &__title {
         opacity: 0.4;
