@@ -18,6 +18,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "public"],
   "exclude": ["node_modules", "dist"]
 }
