@@ -1,10 +1,9 @@
-@import '~sanitize.css';
-@import '~sanitize.css/forms.css';
-@import '~sanitize.css/typography.css';
-@import 'variables';
-@import 'fonts';
-@import 'animations';
-@import 'misc';
+@use '~sanitize.css/sanitize';
+@use '~sanitize.css/typography';
+@use '~sanitize.css/forms';
+@use 'fonts';
+@use 'animations';
+@use 'misc';
 
 :root {
   --main-bg-color: #030c5e;
