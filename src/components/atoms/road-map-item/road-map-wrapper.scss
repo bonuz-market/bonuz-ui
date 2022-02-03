@@ -2,7 +2,8 @@
 @use '../../../assets/styles/utils' as u;
 
 #roadmap {
-  background: url('/src/assets/images/six-background.svg'), var(--second-black);
+  background: url('../../../assets/images/six-background.svg'),
+    var(--second-black);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 55% 91%;
@@ -79,7 +80,7 @@
           border-radius: 8px;
           top: 0;
           left: 0;
-          background-image: url('/src/assets/images/slide_overlay.svg');
+          background-image: url('../../../assets/images/slide_overlay.svg');
         }
       }
     }
