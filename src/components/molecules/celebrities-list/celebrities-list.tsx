@@ -36,13 +36,8 @@ export const CelebritiesList: FC<CelebritiesListProps> = ({
     dir={rtl ? 'rtl' : 'ltr'}
   >
     {celebrities.map((item, index) => (
-      <SwiperSlide>
-        <CelebritiesItem
-          key={`${item.name}-${index}`}
-          img={item.img}
-          name={item.name}
-          role={item.role}
-        />
+      <SwiperSlide key={`${item.name}-${index}`}>
+        <CelebritiesItem img={item.img} name={item.name} role={item.role} />
       </SwiperSlide>
     ))}
   </Swiper>

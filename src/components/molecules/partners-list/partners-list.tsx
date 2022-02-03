@@ -51,8 +51,8 @@ export const PartnersList: FC<PartnersListProps> = ({ partners, rtl }) => (
     <ActionButton type="right" className="swiper-next-partnerslist" />
     <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
       {partners.map((item, index) => (
-        <SwiperSlide>
-          <div key={`${item}-${index}`} className="item">
+        <SwiperSlide key={`${item}-${index}`}>
+          <div className="item">
             <div className="block">
               <img src={item} alt={`partner ${index}`} />
             </div>

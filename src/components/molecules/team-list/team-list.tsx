@@ -53,9 +53,8 @@ export const TeamList: FC<TeamListProps> = ({ items, rtl }) => (
     <ActionButton type="right" className="swiper-next-teamlist" />
     <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
       {items.map((item, index) => (
-        <SwiperSlide>
+        <SwiperSlide key={`${item.name}-${index}`}>
           <TeamCard
-            key={`${item.name}-${index}`}
             img={item.img}
             name={item.name}
             position={item.position}

@@ -41,9 +41,8 @@ export const HowItWorksList: FC<HowItWorksListProps> = ({ items, rtl }) => (
   <>
     <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
       {items.map((item, index) => (
-        <SwiperSlide>
+        <SwiperSlide key={`${item.title}-${index}`}>
           <HowItWorksItem
-            key={`${item.title}-${index}`}
             img={item.img}
             title={item.title}
             circleOffset={item.circleOffset}

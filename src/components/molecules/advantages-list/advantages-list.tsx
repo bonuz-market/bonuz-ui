@@ -42,9 +42,8 @@ export const AdvantagesList: FC<AdvantagesListProps> = ({ items, rtl }) => (
   <>
     <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
       {items.map((item, index) => (
-        <SwiperSlide>
+        <SwiperSlide key={`${item.title}-${index}`}>
           <AdvantagesItem
-            key={`${item.title}-${index}`}
             title={item.title}
             description={item.description}
             icon={item.icon}

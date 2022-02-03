@@ -48,9 +48,8 @@ export const NewsRow: FC<NewsRowProps> = ({ news, rtl }) => (
     <ActionButton type="right" className="swiper-next-newslist" />
     <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
       {news.map((item, index) => (
-        <SwiperSlide>
+        <SwiperSlide key={`${item.title}-${index}`}>
           <NewsCard
-            key={`${item.created}-${index}`}
             created={item.created}
             img={item.img}
             title={item.title}

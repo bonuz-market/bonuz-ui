@@ -52,12 +52,8 @@ export const RoadMapList: FC<RoadMapListProps> = ({ items, rtl }) => (
     <ActionButton type="right" className="swiper-next-roadmaplist" />
     <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
       {items.map((item, index) => (
-        <SwiperSlide>
-          <RoadMapItem
-            key={`${item.title}-${index}`}
-            title={item.title}
-            description={item.description}
-          />
+        <SwiperSlide key={`${item.title}-${index}`}>
+          <RoadMapItem title={item.title} description={item.description} />
         </SwiperSlide>
       ))}
     </Swiper>
