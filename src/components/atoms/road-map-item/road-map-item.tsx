@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import './road-map-item.scss';
 
 export type RoadMapItemProps = {
   title: string;

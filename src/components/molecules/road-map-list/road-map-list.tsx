@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
 import { ActionButton, RoadMapItem } from '../../atoms';
-import '../../atoms/road-map-item/road-map-wrapper.scss';
+import './road-map-list.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
