@@ -4,7 +4,6 @@ import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
 import { AdvantagesItem } from '../../atoms';
-import '../../atoms/advantages-item/advantages-wrapper.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
 

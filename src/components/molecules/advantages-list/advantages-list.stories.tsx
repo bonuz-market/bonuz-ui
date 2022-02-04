@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import { AdvantagesList, AdvantagesListProps } from './advantages-list';
 import mockData from '../../../mock/mock-data.json';
-import '../../atoms/advantages-item/advantages-wrapper.scss';
+import './advantages-list.scss';
 
 export default {
   title: 'Components/Molecules/AdvantagesList',
@@ -9,11 +9,7 @@ export default {
 } as Meta;
 
 const Template: Story<AdvantagesListProps> = (args) => (
-  <div id="advantages">
-    <div className="advantages-list">
-      <AdvantagesList {...args} />
-    </div>
-  </div>
+  <AdvantagesList {...args} />
 );
 
 export const Primary = Template.bind({});
