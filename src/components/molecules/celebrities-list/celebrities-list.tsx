@@ -4,7 +4,6 @@ import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
 import { CelebritiesItem } from '../../atoms';
-import '../../atoms/celebrities-item/celebrities-wrapper.scss';
 import 'swiper/css';
 
 export type CelebritiesListProps = {
