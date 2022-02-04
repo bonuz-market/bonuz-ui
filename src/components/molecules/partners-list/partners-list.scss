@@ -1,84 +1,7 @@
-@use '../../../assets/styles/variables' as v;
-@use '../../../assets/styles/utils' as u;
-
-#partners {
-  background: var(--second-black);
-
-  .outer {
-    display: flex;
-    justify-content: center;
-    max-width: 100vw;
-    width: 100%;
-  }
-
-  .inner {
-    max-width: 1360px;
-    width: 100%;
-    padding: 0 10px;
-    position: relative;
-    padding-bottom: 130px;
-
-    .logo_bg2 {
-      position: absolute;
-      left: -154px;
-      top: -484px;
-      width: 390px;
-    }
-  }
-
-  .row {
-    &:nth-child(1) {
-      h2 {
-        @include u.font($size: v.$font-size-h2);
-
-        text-align: center;
-        z-index: 1;
-        position: relative;
-        margin: 0;
-      }
-    }
-  }
-
-  .buttons-field {
-    width: 630px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 55px;
-  }
-
-  .button {
-    a {
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      width: 180px;
-      height: 56px;
-      border-radius: 8px;
-      text-decoration: none;
-      background: rgb(255 255 255 / 10%);
-      transition: 0.6s;
-
-      span {
-        @include u.font(
-          $size: v.$font-size-medium,
-          $weight: v.$font-weight-medium
-        );
-
-        display: flex;
-        align-items: center;
-        text-transform: capitalize;
-        z-index: 3;
-      }
-
-      &:hover {
-        background: rgb(255 255 255 / 19%);
-      }
-    }
-  }
+.partners-block {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 55px;
 
   .item {
     .block {
@@ -98,12 +21,6 @@
         filter: brightness(0) invert(1);
       }
     }
-  }
-
-  .partners-block {
-    position: relative;
-    margin: 0 auto;
-    margin-top: 55px;
   }
   %position {
     top: -40px;
@@ -198,86 +115,9 @@
     }
   }
 }
-
-[dir='rtl'] {
-  #partners {
-    .buttons-field {
-      flex-direction: row-reverse;
-
-      > &__wrapper {
-        flex-direction: row-reverse;
-      }
-    }
-  }
-}
 @media screen and (max-width: 1050px) {
-  #partners {
-    padding-top: 60px;
-
-    .row {
-      &:nth-child(1) {
-        h2 {
-          font-size: 24px;
-        }
-      }
-    }
-
-    .inner {
-      width: 295px;
-      margin: 0 auto;
-      padding-bottom: 60px;
-
-      .logo_bg2 {
-        display: none;
-      }
-    }
-
-    .partners-block {
-      position: relative;
-    }
-
-    .buttons-field {
-      width: 290px;
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 80px;
-
-      &__wrapper {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-
-        .button {
-          button {
-            width: 140px;
-          }
-
-          span {
-            white-space: nowrap;
-          }
-
-          &:not(:last-child) {
-            margin-right: 10px;
-          }
-        }
-      }
-    }
-
-    .button {
-      &--fill {
-        width: 290px;
-        margin-bottom: 12px;
-
-        button {
-          width: 100% !important;
-        }
-      }
-
-      button {
-        width: 140px;
-        margin-top: 10px;
-      }
-    }
+  .partners-block {
+    position: relative;
 
     .swiper {
       width: 295px;
