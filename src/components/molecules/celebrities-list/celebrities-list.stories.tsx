@@ -1,7 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 import { CelebritiesList, CelebritiesListProps } from './celebrities-list';
 import mockData from '../../../mock/mock-data.json';
-import './celebrities-list.scss';
 
 export default {
   title: 'Components/Molecules/CelebritiesList',
@@ -9,7 +8,9 @@ export default {
 } as Meta;
 
 const Template: Story<CelebritiesListProps> = (args) => (
-  <CelebritiesList {...args} />
+  <div className="celebrities__list">
+    <CelebritiesList {...args} />
+  </div>
 );
 
 export const Primary = Template.bind({});

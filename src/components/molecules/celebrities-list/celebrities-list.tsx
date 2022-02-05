@@ -4,6 +4,7 @@ import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
 import { CelebritiesItem } from '../../atoms';
+import './celebrities-list.scss';
 import 'swiper/css';
 
 export type CelebritiesListProps = {
@@ -16,7 +17,6 @@ export type CelebritiesListProps = {
 };
 
 const swiperOptions: SwiperProps = {
-  className: 'celebs-list',
   modules: [Autoplay],
   slidesPerView: 'auto',
   spaceBetween: 32,
