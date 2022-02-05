@@ -8,7 +8,7 @@ export default {
 } as Meta;
 
 const Template: Story<RoadMapListProps> = (args) => (
-  <div className="slides-block">
+  <div className="roadmap__list">
     <RoadMapList {...args} />
   </div>
 );
