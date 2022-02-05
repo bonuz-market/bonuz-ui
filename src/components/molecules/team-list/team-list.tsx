@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
 import { ActionButton, TeamCard } from '../../atoms';
-import '../../atoms/team-card/team-card-wrapper.scss';
+import './team-list.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
 

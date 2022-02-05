@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import './road-map-item.scss';
 
 export type RoadMapItemProps = {
   title: string;
@@ -6,7 +7,7 @@ export type RoadMapItemProps = {
 };
 
 export const RoadMapItem: FC<RoadMapItemProps> = ({ title, description }) => (
-  <div className="slide">
+  <div className="roadmap__item">
     <h3>{title}</h3>
     <p>{description}</p>
     <div className="overlay" />

@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
 import { AdvantagesItem } from '../../atoms';
-import '../../atoms/advantages-item/advantages-wrapper.scss';
+import './advantages-list.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -18,7 +18,6 @@ export type AdvantagesListProps = {
 };
 
 const swiperOptions: SwiperProps = {
-  className: 'blocks',
   modules: [Pagination],
   loop: true,
   pagination: {

@@ -8,10 +8,8 @@ export default {
 } as Meta;
 
 const Template: Story<NewsRowProps> = (args) => (
-  <div id="news">
-    <div className="blogs">
-      <NewsRow {...args} />
-    </div>
+  <div className="blogs">
+    <NewsRow {...args} />
   </div>
 );
 

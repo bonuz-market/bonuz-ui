@@ -1,0 +1,46 @@
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
+
+.roadmap {
+  &__item {
+    padding: 40px;
+    width: 220px;
+    height: 182px;
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.3s;
+
+    h3 {
+      @include u.font($size: v.$font-size-h3);
+
+      text-align: left;
+      margin-bottom: 4px;
+
+      [dir='rtl'] & {
+        text-align: right;
+      }
+    }
+
+    p {
+      @include u.font(
+        $family: v.$font-secondary,
+        $size: v.$font-size-medium,
+        $line-height: v.$font-line-height-large
+      );
+
+      white-space: pre-wrap;
+      margin-top: 4px;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      border-radius: 8px;
+      top: 0;
+      left: 0;
+      background-image: url('../../../assets/images/slide_overlay.svg');
+    }
+  }
+}

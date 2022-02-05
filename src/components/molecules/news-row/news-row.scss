@@ -1,27 +1,4 @@
-.partners-block {
-  position: relative;
-  margin: 0 auto;
-  margin-top: 55px;
-
-  .item {
-    .block {
-      height: 111px;
-      background: rgb(255 255 255 / 14%);
-      border-radius: 8px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
-
-      img {
-        height: auto;
-        width: auto;
-        max-width: 100%;
-        max-height: 100%;
-        filter: brightness(0) invert(1);
-      }
-    }
-  }
+.blogs {
   %position {
     top: -40px;
     width: 75px;
@@ -60,6 +37,7 @@
       right: auto;
     }
   }
+
   %swiper {
     border: none;
     cursor: pointer;
@@ -73,20 +51,23 @@
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 20px;
+    z-index: 5;
   }
 
   .swiper {
-    width: 930px;
+    width: 925px;
+    margin: 0 auto;
+    margin-bottom: 70px;
 
     &-slide {
       width: auto;
     }
 
-    &-pagination-partnerslist {
+    &-pagination-newslist {
       display: none;
     }
 
-    &-prev-partnerslist {
+    &-prev-newslist {
       @extend %swiper;
 
       left: 0;
@@ -97,7 +78,7 @@
       }
     }
 
-    &-next-partnerslist {
+    &-next-newslist {
       @extend %swiper;
 
       right: 0;
@@ -116,19 +97,20 @@
   }
 }
 @media screen and (max-width: 1050px) {
-  .partners-block {
+  .blogs {
+    margin-bottom: 80px;
     position: relative;
 
     .swiper {
-      width: 295px;
+      width: 100%;
 
-      &-next-partnerslist,
-      &-prev-partnerslist {
+      &-next-newslist,
+      &-prev-newslist {
         display: none;
       }
 
       &-pagination {
-        &-partnerslist {
+        &-newslist {
           position: absolute;
           bottom: -30px;
           display: unset;

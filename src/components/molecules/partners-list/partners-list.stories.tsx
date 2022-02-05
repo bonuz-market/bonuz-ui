@@ -8,10 +8,8 @@ export default {
 } as Meta;
 
 const Template: Story<PartnersListProps> = (args) => (
-  <div id="partners">
-    <div className="partners-block">
-      <PartnersList {...args} />
-    </div>
+  <div className="partners-block">
+    <PartnersList {...args} />
   </div>
 );
 

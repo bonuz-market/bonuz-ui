@@ -1,0 +1,26 @@
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
+
+.celebrities {
+  &__list {
+    display: flex;
+    z-index: 8;
+    position: relative;
+    margin-bottom: 50px;
+
+    .swiper-slide {
+      width: 227px;
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .celebrities {
+    &__list {
+      .swiper-slide:not(.swiper-slide-active) {
+        opacity: 0.3;
+        user-select: none;
+      }
+    }
+  }
+}
