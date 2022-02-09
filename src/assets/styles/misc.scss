@@ -8,10 +8,11 @@
   --gradient-color-1: #{v.$color-gradient-1};
   --gradient-color-2: #{v.$color-gradient-2};
   --gradient-color-3: #{v.$color-gradient-3};
+  --gradient-color-4: #{v.$color-gradient-4};
   --main-black: #{v.$color-black-main};
   --second-black: #{v.$color-black-secondary};
   --light-bg: #{v.$color-light-bg};
-  --blur: #{v.$color-blur};
+  --color-base: #{v.$color-base};
 }
 
 * {
