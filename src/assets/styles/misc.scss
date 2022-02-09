@@ -13,6 +13,15 @@
   --second-black: #{v.$color-black-secondary};
   --light-bg: #{v.$color-light-bg};
   --color-base: #{v.$color-base};
+  --color-base-10: #{v.$color-base-10};
+  --color-base-20: #{v.$color-base-20};
+  --color-base-30: #{v.$color-base-30};
+  --color-base-40: #{v.$color-base-40};
+  --color-base-50: #{v.$color-base-50};
+  --color-base-60: #{v.$color-base-60};
+  --color-base-70: #{v.$color-base-70};
+  --color-base-80: #{v.$color-base-80};
+  --color-base-90: #{v.$color-base-90};
 }
 
 $color-font: var(--color-base);
