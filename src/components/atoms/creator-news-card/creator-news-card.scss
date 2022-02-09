@@ -2,15 +2,14 @@
 @use '../../../assets/styles/utils' as u;
 
 $color-background: var(--light-bg);
-$color-base: #fff;
-$color-background-icon: rgb($color-base, 10%);
+$color-background-icon: var(--color-base-10);
 $color-gradient: linear-gradient(
   270deg,
   var(--gradient-color-4),
   var(--gradient-color-2)
 );
-$color-timestamp: rgb($color-base, 20%);
-$color-description: rgb($color-base, 50%);
+$color-timestamp: var(--color-base-20);
+$color-description: var(--color-base-50);
 
 .creator-news-card {
   display: flex;

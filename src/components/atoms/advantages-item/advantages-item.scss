@@ -1,7 +1,7 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
-$color-card-hover: rgba(#fff, 5%);
+$color-card-hover: var(--color-base-10);
 
 .advantages-item {
   i {

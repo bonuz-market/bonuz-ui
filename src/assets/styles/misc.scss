@@ -26,7 +26,7 @@
 
 $color-font: var(--color-base);
 $color-background: var(--main-bg-color);
-$color-divider: rgb(#fff, 10%);
+$color-divider: var(--color-base-10);
 $color-circle-stroke: #666;
 
 * {

@@ -1,9 +1,8 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
-$color-base: #fff;
-$color-background-date: rgb($color-base, 20%);
-$color-font-text: rgb($color-base, 80%);
+$color-background-date: var(--color-base-20);
+$color-font-text: var(--color-base-80);
 $color-font-title: linear-gradient(
   270deg,
   var(--gradient-color-1),

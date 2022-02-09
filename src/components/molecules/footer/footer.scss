@@ -1,9 +1,8 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
-$color-base: #fff;
-$color-font-policy: rgb($color-base, 30%);
-$color-font-policy-hover: $color-base;
+$color-font-policy: var(--color-base-30);
+$color-font-policy-hover: var(--color-base);
 $color-button-stroke: var(--main-black);
 
 footer {

@@ -7,7 +7,7 @@ $color-gradient-1: linear-gradient(
   var(--gradient-color-1),
   var(--gradient-color-2)
 );
-$color-divider: rgb(#fff, 10%);
+$color-divider: var(--color-base-10);
 
 .faq-item {
   position: relative;

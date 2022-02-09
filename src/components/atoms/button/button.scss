@@ -1,9 +1,8 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as utils;
 
-$color-base: #fff;
-$color-background: rgba($color-base, 10%);
-$color-background-disabled: rgba($color-base, 20%);
+$color-background: var(--color-base-10);
+$color-background-disabled: var(--color-base-20);
 $color-background-stroke: v.$color-main-bg;
 $color-gradient-1: linear-gradient(
   270deg,

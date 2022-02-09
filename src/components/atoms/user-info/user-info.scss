@@ -1,7 +1,7 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
-$color-divider: rgb(#fff, 10%);
+$color-divider: var(--color-base-10);
 %display-flex-align-center {
   display: flex;
   align-items: center;

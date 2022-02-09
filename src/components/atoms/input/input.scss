@@ -1,10 +1,9 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
-$color-base: #fff;
-$color-input-background: rgb($color-base, 20%);
+$color-input-background: var(--color-base-20);
 $color-input-focus: var(--second-black);
-$color-input-border: rgb($color-base, 20%);
+$color-input-border: var(--color-base-20);
 %input-control {
   width: 100%;
   padding: 16px;

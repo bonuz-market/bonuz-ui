@@ -1,7 +1,6 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
-$color-base: #fff;
 $color-background: var(--main-black);
 $color-tab-active: linear-gradient(
   270deg,
@@ -9,8 +8,8 @@ $color-tab-active: linear-gradient(
   var(--gradient-color-2)
 );
 $color-font-text: var(--second-black);
-$color-background-secondary: rgb($color-base, 10%);
-$color-background-secondary-hover: $color-base;
+$color-background-secondary: var(--color-base-10);
+$color-background-secondary-hover: var(--color-base);
 
 .tab {
   > button {

@@ -1,9 +1,8 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
-$color-base: #fff;
-$color-divider: rgb($color-base, 10%);
-$color-timestamp: rgb($color-base, 20%);
+$color-divider: var(--color-base-10);
+$color-timestamp: var(--color-base-20);
 $color-font-shortcode: linear-gradient(
   90deg,
   var(--gradient-color-1),

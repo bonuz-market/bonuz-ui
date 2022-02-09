@@ -1,8 +1,7 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
-$color-base: #fff;
-$color-font-timestamp: rgb($color-base, 20%);
+$color-font-timestamp: var(--color-base-20);
 $color-background-info: var(--light-bg);
 
 .user-card {
