@@ -1,37 +1,40 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
+$color-base: #fff;
+$color-background: var(--main-black);
+$color-tab-active: linear-gradient(
+  270deg,
+  var(--gradient-color-1),
+  var(--gradient-color-2)
+);
+$color-font-text: var(--second-black);
+$color-background-secondary: rgb($color-base, 10%);
+$color-background-secondary-hover: $color-base;
+
 .tab {
   > button {
     padding: 16px 20px;
-    background-color: var(--main-black);
+    background-color: $color-background;
     border: none;
     cursor: pointer;
     transition: 0.2s ease;
-    @include u.font(
-      $size: v.$font-size-medium,
-      $weight: v.$font-weight-medium,
-      $color: #fff
-    );
+    @include u.font($size: v.$font-size-medium, $weight: v.$font-weight-medium);
   }
 
   &--active {
     > button {
-      background: linear-gradient(
-        270.9deg,
-        var(--gradient-color-1) -2.92%,
-        var(--gradient-color-2) 99.95%
-      );
+      background: $color-tab-active;
     }
   }
 
   &--secondary {
     > button {
-      background-color: rgb(255 255 255 / 10%);
+      background-color: $color-background-secondary;
 
       &:hover {
-        background: rgb(255 255 255 / 100%);
-        color: #030c5d;
+        background: $color-background-secondary-hover;
+        color: $color-font-text;
       }
     }
   }
@@ -39,7 +42,7 @@
   &--active.tab--secondary {
     > button {
       background: rgb(255 255 255 / 100%);
-      color: #030c5d;
+      color: $color-font-text;
     }
   }
 

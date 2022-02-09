@@ -1,15 +1,20 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
+
+$color-base: #fff;
+$color-input-background: rgb($color-base, 20%);
+$color-input-focus: var(--second-black);
+$color-input-border: rgb($color-base, 20%);
 %input-control {
   width: 100%;
   padding: 16px;
-  background-color: rgb(255 255 255 / 30%);
+  background-color: $color-input-background;
   border-bottom: none;
   border-radius: 8px 0 0 8px;
   transition: 0.3s ease;
 
   &:focus {
-    background-color: #19094b;
+    background-color: $color-input-focus;
   }
 }
 
@@ -27,7 +32,7 @@
     padding-bottom: 10px;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid rgb(255 255 255 / 24%);
+    border-bottom: 1px solid $color-input-border;
     @include u.font($family: v.$font-secondary, $size: v.$font-size-small);
   }
 

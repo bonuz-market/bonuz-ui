@@ -1,8 +1,15 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
+$color-background: var(--light-bg);
+$color-gradient-1: linear-gradient(
+  90deg,
+  var(--gradient-color-2),
+  var(--gradient-color-3)
+);
+
 .celeb {
-  background: #2f1385;
+  background: $color-background;
   border-radius: 16px;
   width: 227px;
   height: 82px;
@@ -18,11 +25,7 @@
     bottom: -1px;
     left: -1px;
     right: -1px;
-    background: linear-gradient(
-      31deg,
-      var(--gradient-color-2),
-      var(--gradient-color-4)
-    );
+    background: $color-gradient-1;
     border-radius: 17px;
     z-index: -1;
     opacity: 0;
@@ -43,17 +46,13 @@
 
   h4 {
     margin: 0;
-    @include u.font(
-      $size: v.$font-size-h4,
-      $weight: v.$font-weight-regular,
-      $color: #fff
-    );
+    @include u.font($size: v.$font-size-h4, $weight: v.$font-weight-regular);
   }
 
   p {
     margin-top: 5px;
     margin-bottom: 0;
     opacity: 0.3;
-    @include u.font($size: v.$font-size-medium, $color: #fff);
+    @include u.font($size: v.$font-size-medium);
   }
 }

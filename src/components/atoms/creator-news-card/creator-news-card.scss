@@ -1,9 +1,20 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
+$color-background: var(--light-bg);
+$color-base: #fff;
+$color-background-icon: rgb($color-base, 10%);
+$color-gradient: linear-gradient(
+  270deg,
+  var(--gradient-color-4),
+  var(--gradient-color-2)
+);
+$color-timestamp: rgb($color-base, 20%);
+$color-description: rgb($color-base, 50%);
+
 .creator-news-card {
   display: flex;
-  background: #281981;
+  background: $color-background;
   border-radius: 10px;
 
   &__photo {
@@ -24,7 +35,7 @@
       width: 40px;
       height: 40px;
       padding: 0;
-      background-color: rgb(255 255 255 / 10%);
+      background-color: $color-background-icon;
       backdrop-filter: blur(34px);
       border: none;
       border-radius: 100px;
@@ -38,7 +49,7 @@
     padding: 16px;
 
     &__tag {
-      background: linear-gradient(270.9deg, #ef7188 -2.92%, #ffa34e 99.95%);
+      background: $color-gradient;
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -57,7 +68,7 @@
 
       &__created {
         display: none;
-        color: rgb(255 255 255 / 20%);
+        color: $color-timestamp;
         @include u.font($size: 12px);
       }
     }
@@ -71,12 +82,12 @@
     &__descr {
       display: none;
       margin: 0;
-      color: rgb(255 255 255 / 50%);
+      color: $color-description;
       @include u.font($family: v.$font-secondary, $size: v.$font-size-small);
     }
 
     &__created {
-      color: rgb(255 255 255 / 20%);
+      color: $color-timestamp;
       @include u.font($size: 12px);
     }
   }
