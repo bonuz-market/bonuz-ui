@@ -5,13 +5,13 @@
 :root {
   --main-bg-color: #{v.$color-main-bg};
   --second-bg-color: #{v.$color-second-bg};
-  --gradient-color-1: #{v.$color-gradient-1};
-  --gradient-color-2: #{v.$color-gradient-2};
-  --gradient-color-3: #{v.$color-gradient-3};
-  --gradient-color-4: #{v.$color-gradient-4};
   --main-black: #{v.$color-black-main};
   --second-black: #{v.$color-black-secondary};
   --light-bg: #{v.$color-light-bg};
+  --color-1: #{v.$color-1};
+  --color-2: #{v.$color-2};
+  --color-3: #{v.$color-3};
+  --color-4: #{v.$color-4};
   --color-base: #{v.$color-base};
   --color-base-10: #{v.$color-base-10};
   --color-base-20: #{v.$color-base-20};

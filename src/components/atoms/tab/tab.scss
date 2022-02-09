@@ -2,11 +2,7 @@
 @use '../../../assets/styles/utils' as u;
 
 $color-background: var(--main-black);
-$color-tab-active: linear-gradient(
-  270deg,
-  var(--gradient-color-1),
-  var(--gradient-color-2)
-);
+$color-tab-active: linear-gradient(270deg, var(--color-1), var(--color-2));
 $color-font-text: var(--second-black);
 $color-background-secondary: var(--color-base-10);
 $color-background-secondary-hover: var(--color-base);

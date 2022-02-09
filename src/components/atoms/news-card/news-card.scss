@@ -3,11 +3,7 @@
 
 $color-background-date: var(--color-base-20);
 $color-font-text: var(--color-base-80);
-$color-font-title: linear-gradient(
-  270deg,
-  var(--gradient-color-1),
-  var(--gradient-color-2)
-);
+$color-font-title: linear-gradient(270deg, var(--color-1), var(--color-2));
 %text {
   @include u.font(
     $family: v.$font-secondary,

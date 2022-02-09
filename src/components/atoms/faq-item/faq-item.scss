@@ -2,11 +2,7 @@
 @use '../../../assets/styles/utils' as u;
 
 $color-background: var(--light-bg);
-$color-gradient-1: linear-gradient(
-  270deg,
-  var(--gradient-color-1),
-  var(--gradient-color-2)
-);
+$color-gradient-1: linear-gradient(270deg, var(--color-1), var(--color-2));
 $color-divider: var(--color-base-10);
 
 .faq-item {

@@ -3,11 +3,7 @@
 
 $color-background: var(--light-bg);
 $color-background-icon: var(--color-base-10);
-$color-gradient: linear-gradient(
-  270deg,
-  var(--gradient-color-4),
-  var(--gradient-color-2)
-);
+$color-gradient: linear-gradient(270deg, var(--color-4), var(--color-2));
 $color-timestamp: var(--color-base-20);
 $color-description: var(--color-base-50);
 

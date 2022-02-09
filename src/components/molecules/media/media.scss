@@ -3,16 +3,8 @@
 
 $color-divider: var(--color-base-10);
 $color-timestamp: var(--color-base-20);
-$color-font-shortcode: linear-gradient(
-  90deg,
-  var(--gradient-color-1),
-  var(--gradient-color-3)
-);
-$color-font-url: linear-gradient(
-  270deg,
-  var(--gradient-color-4),
-  var(--gradient-color-2)
-);
+$color-font-shortcode: linear-gradient(90deg, var(--color-1), var(--color-3));
+$color-font-url: linear-gradient(270deg, var(--color-4), var(--color-2));
 
 %display-flex-align-center {
   display: flex;
