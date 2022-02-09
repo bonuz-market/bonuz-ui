@@ -1,3 +1,8 @@
+@use '../../../assets/styles/variables' as v;
+
+$color-base: #fff;
+$color-background: rgb($color-base, 20%);
+
 .partners-block {
   position: relative;
   margin: 0 auto;
@@ -6,7 +11,7 @@
   .item {
     .block {
       height: 111px;
-      background: rgb(255 255 255 / 14%);
+      background: $color-background;
       border-radius: 8px;
       display: flex;
       justify-content: center;

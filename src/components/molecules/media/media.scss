@@ -1,5 +1,20 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
+
+$color-base: #fff;
+$color-divider: rgb($color-base, 10%);
+$color-timestamp: rgb($color-base, 20%);
+$color-font-shortcode: linear-gradient(
+  90deg,
+  var(--gradient-color-1),
+  var(--gradient-color-3)
+);
+$color-font-url: linear-gradient(
+  270deg,
+  var(--gradient-color-4),
+  var(--gradient-color-2)
+);
+
 %display-flex-align-center {
   display: flex;
   align-items: center;
@@ -55,7 +70,7 @@
     display: block;
     position: relative;
     margin-bottom: 66px;
-    color: rgb(255 255 255 / 30%);
+    color: $color-timestamp;
     @include u.font($size: v.$font-size-small);
 
     &::after {
@@ -65,7 +80,7 @@
       bottom: -32px;
       left: 0;
       height: 1px;
-      background-color: rgb(255 255 255 / 7%);
+      background-color: $color-divider;
     }
   }
 
@@ -80,7 +95,7 @@
       bottom: -32px;
       left: 0;
       height: 1px;
-      background-color: rgb(255 255 255 / 7%);
+      background-color: $color-divider;
     }
 
     &__title {
@@ -124,6 +139,7 @@
 
       &--shortcode {
         background: linear-gradient(46.96deg, #cc16ff 20.56%, #48f573 82.71%);
+        background: $color-font-shortcode;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -131,6 +147,7 @@
 
       &--url {
         background: linear-gradient(270.9deg, #ef7188 -2.92%, #ffa34e 99.95%);
+        background: $color-font-url;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
