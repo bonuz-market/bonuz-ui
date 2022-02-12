@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Meta, Story } from '@storybook/react';
 import { Input, InputProps } from './input';
+import icon from '../../../assets/images/f_i.svg';
 
 export default {
   title: 'Components/Atoms/Input',
@@ -61,7 +62,7 @@ WithActionButton.args = {
   placeholder: 'Enter you email',
   actionButton: (
     <button type="button">
-      <img src="/assets/images/f_i.svg" alt="" />
+      <img src={icon} alt="" />
     </button>
   ),
 };
