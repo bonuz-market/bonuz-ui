@@ -1,7 +1,7 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
-$color-background-date: var(--color-base-20);
+$color-background-timestamp: var(--color-base-20);
 $color-font-text: var(--color-base-80);
 $color-font-title: linear-gradient(270deg, var(--color-1), var(--color-2));
 %text {
@@ -87,7 +87,7 @@ $color-font-title: linear-gradient(270deg, var(--color-1), var(--color-2));
     position: absolute;
     padding: 5px;
     width: max-content;
-    background: $color-background-date;
+    background: $color-background-timestamp;
     z-index: 4;
     left: -15px;
     top: 20px;
