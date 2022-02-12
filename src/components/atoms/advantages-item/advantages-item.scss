@@ -1,6 +1,8 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
+$color-card-hover: var(--color-base-10);
+
 .advantages-item {
   i {
     position: relative;
@@ -28,8 +30,7 @@
   transition: all 0.3s;
 
   &:hover {
-    background: rgb(255 255 255 / 5%);
-    backdrop-filter: blur(15px);
+    background: $color-card-hover;
     transition: all 0.3s;
   }
 

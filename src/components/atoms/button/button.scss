@@ -1,6 +1,14 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as utils;
 
+$color-background: var(--color-base-10);
+$color-background-disabled: var(--color-base-20);
+$color-background-stroke: v.$color-main-bg;
+$color-gradient-1: linear-gradient(270deg, var(--color-1), var(--color-2));
+$color-gradient-2: linear-gradient(90deg, var(--color-1), var(--color-3));
+$color-gradient-3: linear-gradient(90deg, var(--color-1), var(--color-2));
+$color-gradient-4: linear-gradient(90deg, var(--color-2), var(--color-3));
+
 .button {
   button {
     overflow: hidden;
@@ -12,7 +20,7 @@
     border: none;
     cursor: pointer;
     border-radius: 8px;
-    background-color: rgb(255 255 255 / 10%);
+    background-color: $color-background;
     transition: 0.2s ease;
     padding: 0;
 
@@ -40,7 +48,7 @@
     }
 
     &:hover:not(:disabled) {
-      background-color: rgb(255 255 255 / 20%);
+      background-color: $color-background-disabled;
     }
   }
 
@@ -59,20 +67,12 @@
       }
 
       &::before {
-        background: linear-gradient(
-          270.9deg,
-          var(--gradient-color-1) -2.92%,
-          var(--gradient-color-2) 99.95%
-        );
+        background: $color-gradient-1;
         opacity: 1;
       }
 
       &::after {
-        background: linear-gradient(
-          71.22deg,
-          var(--gradient-color-3) 11.83%,
-          var(--gradient-color-4) 95.13%
-        );
+        background: $color-gradient-2;
         opacity: 0;
       }
 
@@ -94,7 +94,7 @@
 
   &--stroke {
     position: relative;
-    background: var(--main-bg-color);
+    background: $color-background-stroke;
     border-radius: 10px;
     width: 184px;
     height: 56px;
@@ -125,20 +125,12 @@
     }
 
     &::before {
-      background: linear-gradient(
-        90deg,
-        var(--gradient-color-2),
-        var(--gradient-color-4)
-      );
+      background: $color-gradient-4;
       opacity: 1;
     }
 
     &::after {
-      background: linear-gradient(
-        90deg,
-        var(--gradient-color-3),
-        var(--gradient-color-2)
-      );
+      background: $color-gradient-3;
       opacity: 0;
     }
 
@@ -190,7 +182,6 @@
     &--stroke {
       min-width: 140px;
       width: 140px;
-      background: #0f0d67;
     }
   }
 }

@@ -1,6 +1,8 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
+$color-level: #48f573;
+
 .users {
   width: 100%;
   border-collapse: separate;
@@ -18,8 +20,6 @@
     text-align: left;
 
     &:not(.users__cell--head) {
-      background-color: #040d5b;
-
       &:first-child {
         padding-left: 16px;
         border-radius: 8px 0 0 8px;
@@ -46,7 +46,7 @@
     }
 
     &__level {
-      color: #48f573;
+      color: $color-level;
     }
   }
 }

@@ -1,8 +1,13 @@
-@import '../../../assets/styles/utils';
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/utils' as u;
+
+$color-background: var(--light-bg);
+$color-gradient-1: linear-gradient(270deg, var(--color-1), var(--color-2));
+$color-divider: var(--color-base-10);
 
 .faq-item {
   position: relative;
-  background-color: #281981;
+  background-color: $color-background;
   border-radius: 8px;
 
   &:not(:last-child) {
@@ -17,7 +22,7 @@
     bottom: 0;
     left: 0;
     z-index: 0;
-    background: linear-gradient(270.9deg, #ce09ff -2.92%, #ffa34e 99.95%);
+    background: $color-gradient-1;
     border-radius: 8px;
     opacity: 0;
     transition: 0.3s ease;
@@ -41,7 +46,7 @@
   }
 
   &__title {
-    @include font(Farro, null, 500, 14px, 104.4%, #ffffff);
+    @include u.font($weight: v.$font-weight-medium, $size: v.$font-size-small);
   }
 
   &__content {
@@ -59,11 +64,15 @@
       right: 0;
       left: 0;
       height: 1px;
-      background-color: rgb(255 255 255 / 20%);
+      background-color: $color-divider;
     }
 
     &__descr {
-      @include font(Roboto Condensed, null, null, 14px, 26px, #ffffff);
+      @include u.font(
+        $family: v.$font-secondary,
+        $size: v.$font-size-small,
+        $line-height: v.$font-line-height-large
+      );
     }
   }
 

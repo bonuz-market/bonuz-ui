@@ -2,6 +2,33 @@
 @use 'variables' as v;
 @use 'utils' as u;
 
+:root {
+  --main-bg-color: #{v.$color-main-bg};
+  --second-bg-color: #{v.$color-second-bg};
+  --main-black: #{v.$color-black-main};
+  --second-black: #{v.$color-black-secondary};
+  --light-bg: #{v.$color-light-bg};
+  --color-1: #{v.$color-1};
+  --color-2: #{v.$color-2};
+  --color-3: #{v.$color-3};
+  --color-4: #{v.$color-4};
+  --color-base: #{v.$color-base};
+  --color-base-10: #{v.$color-base-10};
+  --color-base-20: #{v.$color-base-20};
+  --color-base-30: #{v.$color-base-30};
+  --color-base-40: #{v.$color-base-40};
+  --color-base-50: #{v.$color-base-50};
+  --color-base-60: #{v.$color-base-60};
+  --color-base-70: #{v.$color-base-70};
+  --color-base-80: #{v.$color-base-80};
+  --color-base-90: #{v.$color-base-90};
+}
+
+$color-font: var(--color-base);
+$color-background: var(--main-bg-color);
+$color-divider: var(--color-base-10);
+$color-circle-stroke: #666;
+
 * {
   outline: none;
   box-sizing: content-box;
@@ -21,7 +48,7 @@ body {
   width: 100vw;
   margin: 0;
   overflow-x: hidden;
-  background: var(--main-bg-color);
+  background: $color-background;
   @include u.font(
     $family: (
       v.$font-main,
@@ -29,7 +56,7 @@ body {
       v.$font-fallback,
     ),
     $size: v.$font-size-small,
-    $color: #fff
+    $color: $color-font
   );
 
   -webkit-font-smoothing: antialiased;
@@ -41,7 +68,7 @@ body.noscroll {
 }
 
 #svg circle {
-  stroke: #666;
+  stroke: $color-circle-stroke;
   stroke-width: 1em;
   transition: stroke-dashoffset 1s linear;
   stroke-dashoffset: 0;
@@ -103,7 +130,7 @@ body.noscroll {
   width: 100%;
   height: 1px;
   margin: 0 auto;
-  background: rgb(255 255 255 / 12%);
+  background: $color-divider;
 }
 
 .skip-link.screen-reader-text {

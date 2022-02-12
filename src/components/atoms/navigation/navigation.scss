@@ -1,6 +1,8 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
+$color-font-hover: linear-gradient(270deg, var(--color-1), var(--color-2));
+
 .nav {
   margin: 0;
   padding: 0;
@@ -8,17 +10,13 @@
 
   &-item {
     a {
-      @include u.font($size: v.$font-size-small, $color: #fff);
+      @include u.font($size: v.$font-size-small);
 
       position: relative;
       width: max-content;
 
       &:hover {
-        background: linear-gradient(
-          270.9deg,
-          var(--gradient-color-1) -2.92%,
-          var(--gradient-color-2) 99.95%
-        );
+        background: $color-font-hover;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }

@@ -1,6 +1,10 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
+$color-gradient-1: linear-gradient(90deg, var(--color-1), var(--color-3));
+$color-gradient-2: linear-gradient(270deg, var(--color-1), var(--color-2));
+$color-background-options: var(--second-black);
+
 .dropdown {
   %text-color-effect {
     background-clip: text;
@@ -20,17 +24,11 @@
     @include u.font($size: v.$font-size-small);
 
     &:hover {
-      border-image: linear-gradient(
-          71.22deg,
-          var(--gradient-color-3) 11.83%,
-          var(--gradient-color-4) 95.13%
-        )
-        1;
+      border-image: $color-gradient-1 0 0 1 0;
     }
     @media screen and (max-width: 1050px) {
       &.active {
-        border-image: linear-gradient(270.9deg, #ce09ff -2.92%, #ffa34e 99.95%)
-          1;
+        border-image: $color-gradient-2 0 0 1 0;
       }
     }
 
@@ -100,7 +98,7 @@
 
   &__options {
     padding: 0 5px;
-    background: #030b4d;
+    background: $color-background-options;
     border-radius: 8px;
     display: block;
     visibility: hidden;
@@ -111,24 +109,14 @@
     padding: 2px;
 
     a {
-      color: #fff;
-
       &:hover {
-        background: linear-gradient(
-          71.22deg,
-          var(--gradient-color-3) 11.83%,
-          var(--gradient-color-4) 95.13%
-        );
+        background: $color-gradient-1;
         @extend %text-color-effect;
       }
     }
 
     .selected {
-      background: linear-gradient(
-        270.9deg,
-        var(--gradient-color-1) -2.92%,
-        var(--gradient-color-2) 99.95%
-      );
+      background: $color-gradient-2;
       @extend %text-color-effect;
     }
   }

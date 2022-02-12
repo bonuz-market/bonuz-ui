@@ -1,9 +1,11 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
+$color-background: var(--second-black);
+
 .media {
   &__fans {
-    background-color: #040d5b;
+    background-color: $color-background;
     padding-top: 32px;
 
     &__title {

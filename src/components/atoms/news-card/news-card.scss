@@ -1,5 +1,9 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
+
+$color-background-timestamp: var(--color-base-20);
+$color-font-text: var(--color-base-80);
+$color-font-title: linear-gradient(270deg, var(--color-1), var(--color-2));
 %text {
   @include u.font(
     $family: v.$font-secondary,
@@ -83,10 +87,11 @@
     position: absolute;
     padding: 5px;
     width: max-content;
-    background: #1f276f;
+    background: $color-background-timestamp;
     z-index: 4;
     left: -15px;
     top: 20px;
+    backdrop-filter: blur(10px);
   }
 
   h3 {
@@ -101,7 +106,7 @@
 
     font-size: 16px;
     line-height: 26px;
-    color: rgb(255 255 255 / 80%);
+    color: $color-font-text;
     min-height: 78px;
     max-width: 220px;
   }
@@ -118,11 +123,7 @@
     }
 
     h3 {
-      background: linear-gradient(
-        270.9deg,
-        var(--gradient-color-1) -2.92%,
-        var(--gradient-color-2) 99.95%
-      );
+      background: $color-font-title;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }

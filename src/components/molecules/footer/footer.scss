@@ -1,6 +1,10 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
+$color-font-policy: var(--color-base-30);
+$color-font-policy-hover: var(--color-base);
+$color-button-stroke: var(--main-black);
+
 footer {
   background: var(--main-black);
 
@@ -51,7 +55,7 @@ footer {
 
           &--stroke {
             width: 140px;
-            background: var(--main-black);
+            background: $color-button-stroke;
           }
         }
 
@@ -120,13 +124,10 @@ footer {
       @include u.font(
         $family: v.$font-secondary,
         $size: v.$font-size-small,
-        $line-height: v.$font-line-height-large,
-        $color: #fff
+        $line-height: v.$font-line-height-large
       );
 
       background: none;
-      border: 1px solid rgb(255 255 255 / 24%);
-      border-width: 0 0 1px;
       width: 300px;
       padding-bottom: 10px;
     }
@@ -158,10 +159,7 @@ footer {
   }
 
   .policy {
-    @include u.font(
-      $size: v.$font-size-small,
-      $color: rgba(255, 255, 255, 0.38)
-    );
+    @include u.font($size: v.$font-size-small, $color: $color-font-policy);
 
     text-transform: capitalize;
     margin-top: 80px;
@@ -170,7 +168,7 @@ footer {
     text-align: center;
 
     &:hover {
-      color: #fff;
+      @include u.font($color: $color-font-policy-hover);
     }
   }
 }
@@ -260,7 +258,6 @@ footer {
       &--stroke {
         min-width: 125px;
         width: 140px;
-        background: #0f0d67;
         margin-left: 20px;
 
         [dir='rtl'] & {

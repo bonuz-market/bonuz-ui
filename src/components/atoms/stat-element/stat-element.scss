@@ -1,6 +1,8 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
+$color-divider: var(--color-base-10);
+
 .stat-element {
   width: 170px;
   flex-basis: 50%;
@@ -12,7 +14,7 @@
       display: block;
       width: 1px;
       height: 136px;
-      background: rgb(255 255 255 / 12%);
+      background: $color-divider;
       position: absolute;
       right: 60px;
       bottom: -16px;
@@ -33,7 +35,7 @@
       display: block;
       width: 277px;
       height: 1px;
-      background: rgb(255 255 255 / 12%);
+      background: $color-divider;
       position: absolute;
       right: 165px;
       bottom: -18px;

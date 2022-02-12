@@ -1,6 +1,15 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
 
+$color-main: #111752;
+$color-secondary: #510a8c;
+$color-background-nav-fixed: $color-main;
+$color-background-nav-mobile: linear-gradient(
+  0deg,
+  $color-secondary,
+  var(--main-bg-color)
+);
+
 header {
   .header {
     &-outer {
@@ -171,8 +180,8 @@ header {
 
               background: linear-gradient(
                 270.9deg,
-                var(--gradient-color-1) -2.92%,
-                var(--gradient-color-2) 99.95%
+                var(--color-1) -2.92%,
+                var(--color-2) 99.95%
               );
               opacity: 1;
             }
@@ -182,8 +191,8 @@ header {
 
               background: linear-gradient(
                 71.22deg,
-                var(--gradient-color-3) 11.83%,
-                var(--gradient-color-4) 95.13%
+                var(--color-1) 11.83%,
+                var(--color-3) 95.13%
               );
               opacity: 0;
             }
@@ -230,7 +239,7 @@ header {
 
     &__fixed {
       padding: 10px 0;
-      background-color: #111752;
+      background-color: $color-background-nav-fixed;
       transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     }
   }
@@ -314,11 +323,7 @@ header {
               top: 0;
               width: 100%;
               height: 110vh;
-              background: linear-gradient(
-                359.79deg,
-                #510a8c 0.26%,
-                var(--main-bg-color) 99.9%
-              );
+              background: $color-background-nav-mobile;
               z-index: 9;
               user-select: none;
               pointer-events: none;

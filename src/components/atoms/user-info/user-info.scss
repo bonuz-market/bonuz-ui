@@ -1,5 +1,7 @@
 @use '../../../assets/styles/variables' as v;
 @use '../../../assets/styles/utils' as u;
+
+$color-divider: var(--color-base-10);
 %display-flex-align-center {
   display: flex;
   align-items: center;
@@ -58,7 +60,7 @@
           top: 0;
           bottom: 0;
           right: -8px;
-          background: #3a3086;
+          background: $color-divider;
           border-radius: 4px;
         }
       }
