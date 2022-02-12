@@ -61,10 +61,10 @@ export const Input: FC<InputProps> = ({
             value={defaultValue}
             onChange={handleChangeInput}
           />
+          {actionButton}
         </span>
       </label>
       {withDefaultActionButton && <Button>{defaultActionButtonLabel}</Button>}
-      {actionButton}
     </div>
   );
 };
