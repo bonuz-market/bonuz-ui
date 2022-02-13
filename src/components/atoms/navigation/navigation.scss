@@ -10,7 +10,7 @@ $color-font-hover: linear-gradient(270deg, var(--color-1), var(--color-2));
 
   &-item {
     a {
-      @include u.font($size: v.$font-size-small);
+      @include u.font($size: var(--font-size-small));
 
       position: relative;
       width: max-content;

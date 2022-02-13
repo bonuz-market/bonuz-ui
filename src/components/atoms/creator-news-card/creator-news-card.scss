@@ -49,9 +49,9 @@ $color-description: var(--color-base-50);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       @include u.font(
-        $family: v.$font-secondary,
-        $size: v.$font-size-small,
-        $line-height: v.$font-line-height-large
+        $family: var(--font-secondary),
+        $size: var(--font-size-small),
+        $line-height: var(--font-line-height-large)
       );
 
       &__wrapper {
@@ -71,14 +71,17 @@ $color-description: var(--color-base-50);
     &__title {
       display: block;
       margin-bottom: 20px;
-      @include u.font($size: v.$font-size-medium);
+      @include u.font($size: var(--font-size-medium));
     }
 
     &__descr {
       display: none;
       margin: 0;
       color: $color-description;
-      @include u.font($family: v.$font-secondary, $size: v.$font-size-small);
+      @include u.font(
+        $family: var(--font-secondary),
+        $size: var(--font-size-small)
+      );
     }
 
     &__created {

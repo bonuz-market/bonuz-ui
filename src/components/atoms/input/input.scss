@@ -23,7 +23,7 @@ $color-input-border: var(--color-base-20);
   &__label {
     display: block;
     margin-bottom: 14px;
-    @include u.font($size: v.$font-size-small);
+    @include u.font($size: var(--font-size-small));
   }
 
   &__control {
@@ -32,7 +32,10 @@ $color-input-border: var(--color-base-20);
     background-color: transparent;
     border: none;
     border-bottom: 1px solid $color-input-border;
-    @include u.font($family: v.$font-secondary, $size: v.$font-size-small);
+    @include u.font(
+      $family: var(--font-secondary),
+      $size: var(--font-size-small)
+    );
   }
 
   &__wrapper {

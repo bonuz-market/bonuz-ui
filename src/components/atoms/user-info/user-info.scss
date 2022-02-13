@@ -37,7 +37,7 @@ $color-divider: var(--color-base-10);
   &__content {
     &__name {
       display: block;
-      @include u.font($size: v.$font-size-medium);
+      @include u.font($size: var(--font-size-medium));
     }
 
     &__wrapper {
@@ -48,7 +48,7 @@ $color-divider: var(--color-base-10);
       @extend %display-flex-align-center;
 
       position: relative;
-      @include u.font($size: v.$font-size-small);
+      @include u.font($size: var(--font-size-small));
 
       &:not(:last-child) {
         margin-right: 16px;

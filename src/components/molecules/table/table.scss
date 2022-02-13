@@ -6,7 +6,7 @@
   border-spacing: 0 8px;
 
   &__cell {
-    @include u.font($size: v.$font-size-small);
+    @include u.font($size: var(--font-size-small));
 
     text-align: left;
 

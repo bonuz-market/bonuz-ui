@@ -19,9 +19,9 @@ $color-background: var(--light-bg);
     margin-left: 32px;
 
     @include u.font(
-      $family: v.$font-secondary,
-      $size: v.$font-size-medium,
-      $line-height: v.$font-line-height-large
+      $family: var(--font-secondary),
+      $size: var(--font-size-medium),
+      $line-height: var(--font-line-height-large)
     );
   }
 

@@ -15,14 +15,20 @@
   }
 
   p {
-    @include u.font($size: v.$font-size-medium, $weight: v.$font-weight-bold);
+    @include u.font(
+      $size: var(--font-size-medium),
+      $weight: var(--font-weight-bold)
+    );
 
     margin-bottom: 0;
     text-align: left;
   }
 
   span {
-    @include u.font($family: v.$font-secondary, $size: v.$font-size-medium);
+    @include u.font(
+      $family: var(--font-secondary),
+      $size: var(--font-size-medium)
+    );
 
     opacity: 0.4;
     text-align: left;

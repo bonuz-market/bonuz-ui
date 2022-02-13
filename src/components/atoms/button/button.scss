@@ -30,8 +30,8 @@ $color-gradient-4: linear-gradient(90deg, var(--color-2), var(--color-3));
 
     span {
       @include utils.font(
-        $size: v.$font-size-medium,
-        $weight: v.$font-weight-medium
+        $size: var(--font-size-medium),
+        $weight: var(--font-weight-medium)
       );
 
       display: flex;

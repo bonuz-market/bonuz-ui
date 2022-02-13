@@ -4,7 +4,7 @@
 .title-component {
   margin-top: 0;
   margin-bottom: 24px;
-  @include u.font($size: v.$font-size-h2);
+  @include u.font($size: var(--font-size-h2));
 
   text-align: center;
 }

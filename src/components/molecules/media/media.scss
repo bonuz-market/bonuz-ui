@@ -22,7 +22,10 @@ $color-font-url: linear-gradient(270deg, var(--color-4), var(--color-2));
   &__title {
     margin-top: 0;
     margin-bottom: 8px;
-    @include u.font($size: v.$font-size-h3, $weight: v.$font-weight-medium);
+    @include u.font(
+      $size: var(--font-size-h3),
+      $weight: var(--font-weight-medium)
+    );
   }
 
   &__info {
@@ -38,7 +41,7 @@ $color-font-url: linear-gradient(270deg, var(--color-4), var(--color-2));
     &__item {
       @extend %display-flex-align-center;
 
-      @include u.font($size: v.$font-size-small);
+      @include u.font($size: var(--font-size-small));
 
       &:not(:last-child) {
         margin-right: 20px;
@@ -62,7 +65,7 @@ $color-font-url: linear-gradient(270deg, var(--color-4), var(--color-2));
     position: relative;
     margin-bottom: 66px;
     color: $color-timestamp;
-    @include u.font($size: v.$font-size-small);
+    @include u.font($size: var(--font-size-small));
 
     &::after {
       content: '';
@@ -92,13 +95,13 @@ $color-font-url: linear-gradient(270deg, var(--color-4), var(--color-2));
     &__title {
       display: block;
       margin-bottom: 14px;
-      @include u.font($size: v.$font-size-medium);
+      @include u.font($size: var(--font-size-medium));
     }
 
     &__link {
       @extend %display-flex-align-center;
 
-      @include u.font($size: v.$font-size-small);
+      @include u.font($size: var(--font-size-small));
 
       &:not(:last-child) {
         margin-bottom: 14px;
@@ -117,16 +120,16 @@ $color-font-url: linear-gradient(270deg, var(--color-4), var(--color-2));
     &__title {
       display: block;
       margin-bottom: 16px;
-      @include u.font($size: v.$font-size-medium);
+      @include u.font($size: var(--font-size-medium));
     }
 
     &__descr {
-      @include u.font($size: v.$font-size-small);
+      @include u.font($size: var(--font-size-small));
     }
 
     &__content {
       color: transparent;
-      @include u.font($size: v.$font-size-small);
+      @include u.font($size: var(--font-size-small));
 
       &--shortcode {
         background: linear-gradient(46.96deg, #cc16ff 20.56%, #48f573 82.71%);

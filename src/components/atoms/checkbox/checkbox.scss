@@ -23,7 +23,7 @@ $color-checkmark: #fe9f53;
   }
 
   label {
-    @include u.font($weight: v.$font-weight-bold, $size: 12px);
+    @include u.font($weight: var(--font-weight-bold), $size: 12px);
 
     cursor: pointer;
   }
@@ -73,7 +73,7 @@ $color-checkmark: #fe9f53;
     }
 
     &-text {
-      @include u.font($family: v.$font-secondary);
+      @include u.font($family: var(--font-secondary));
 
       a {
         color: #f6255a;

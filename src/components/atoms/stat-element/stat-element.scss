@@ -51,7 +51,7 @@ $color-divider: var(--color-base-10);
   }
 
   h4 {
-    @include u.font($size: v.$font-size-h2);
+    @include u.font($size: var(--font-size-h2));
 
     margin-bottom: 0;
     padding-left: 30px;
@@ -65,7 +65,10 @@ $color-divider: var(--color-base-10);
   }
 
   p {
-    @include u.font($family: v.$font-secondary, $size: v.$font-size-small);
+    @include u.font(
+      $family: var(--font-secondary),
+      $size: var(--font-size-small)
+    );
 
     opacity: 0.8;
     width: auto;
