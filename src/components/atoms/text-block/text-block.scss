@@ -39,9 +39,9 @@
         width: 809px;
         height: 52px;
         @include u.font(
-          $family: v.$font-secondary,
-          $size: v.$font-size-medium,
-          $line-height: v.$font-line-height-large
+          $family: var(--font-secondary),
+          $size: var(--font-size-medium),
+          $line-height: var(--font-line-height-large)
         );
       }
     }
@@ -70,9 +70,9 @@
   &__text {
     margin: 0;
     @include u.font(
-      $family: v.$font-secondary,
-      $size: v.$font-size-medium,
-      $line-height: v.$font-line-height-large
+      $family: var(--font-secondary),
+      $size: var(--font-size-medium),
+      $line-height: var(--font-line-height-large)
     );
 
     &--large {
@@ -86,7 +86,10 @@
   &__title {
     display: block;
     margin-bottom: 16px;
-    @include u.font($size: v.$font-size-medium, $weight: v.$font-weight-medium);
+    @include u.font(
+      $size: var(--font-size-medium),
+      $weight: var(--font-weight-medium)
+    );
   }
 }
 

@@ -21,7 +21,7 @@ $color-background-options: var(--second-black);
     position: relative;
     user-select: none;
 
-    @include u.font($size: v.$font-size-small);
+    @include u.font($size: var(--font-size-small));
 
     &:hover {
       border-image: $color-gradient-1 0 0 1 0;

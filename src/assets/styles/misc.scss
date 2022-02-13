@@ -22,6 +22,21 @@
   --color-base-70: #{v.$color-base-70};
   --color-base-80: #{v.$color-base-80};
   --color-base-90: #{v.$color-base-90};
+  --font-main: #{v.$font-main};
+  --font-secondary: #{v.$font-secondary};
+  --font-fallback: #{v.$font-fallback};
+  --font-size-small: #{v.$font-size-small};
+  --font-size-medium: #{v.$font-size-medium};
+  --font-size-h1: #{v.$font-size-h1};
+  --font-size-h2: #{v.$font-size-h2};
+  --font-size-h3: #{v.$font-size-h3};
+  --font-size-h4: #{v.$font-size-h4};
+  --font-size-h5: #{v.$font-size-h5};
+  --font-line-height-medium: #{v.$font-line-height-medium};
+  --font-line-height-large: #{v.$font-line-height-large};
+  --font-weight-regular: #{v.$font-weight-regular};
+  --font-weight-medium: #{v.$font-weight-medium};
+  --font-weight-bold: #{v.$font-weight-bold};
 }
 
 $color-font: var(--color-base);
@@ -51,11 +66,11 @@ body {
   background: $color-background;
   @include u.font(
     $family: (
-      v.$font-main,
-      v.$font-secondary,
-      v.$font-fallback,
+      var(--font-main),
+      var(--font-secondary),
+      var(--font-fallback),
     ),
-    $size: v.$font-size-small,
+    $size: var(--font-size-small),
     $color: $color-font
   );
 

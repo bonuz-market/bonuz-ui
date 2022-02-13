@@ -46,7 +46,10 @@ $color-divider: var(--color-base-10);
   }
 
   &__title {
-    @include u.font($weight: v.$font-weight-medium, $size: v.$font-size-small);
+    @include u.font(
+      $weight: var(--font-weight-medium),
+      $size: var(--font-size-small)
+    );
   }
 
   &__content {
@@ -69,9 +72,9 @@ $color-divider: var(--color-base-10);
 
     &__descr {
       @include u.font(
-        $family: v.$font-secondary,
-        $size: v.$font-size-small,
-        $line-height: v.$font-line-height-large
+        $family: var(--font-secondary),
+        $size: var(--font-size-small),
+        $line-height: var(--font-line-height-large)
       );
     }
   }

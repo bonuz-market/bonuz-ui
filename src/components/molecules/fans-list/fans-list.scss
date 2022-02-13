@@ -12,7 +12,7 @@ $color-background: var(--second-black);
       display: flex;
       align-items: center;
       margin-bottom: 24px;
-      @include u.font($size: v.$font-size-medium);
+      @include u.font($size: var(--font-size-medium));
 
       & > span {
         display: block;

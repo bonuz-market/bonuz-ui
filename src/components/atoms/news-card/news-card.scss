@@ -6,9 +6,9 @@ $color-font-text: var(--color-base-80);
 $color-font-title: linear-gradient(270deg, var(--color-1), var(--color-2));
 %text {
   @include u.font(
-    $family: v.$font-secondary,
-    $size: v.$font-size-medium,
-    $weight: v.$font-weight-medium
+    $family: var(--font-secondary),
+    $size: var(--font-size-medium),
+    $weight: var(--font-weight-medium)
   );
 }
 

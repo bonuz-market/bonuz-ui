@@ -11,7 +11,7 @@
     transition: all 0.3s;
 
     h3 {
-      @include u.font($size: v.$font-size-h3);
+      @include u.font($size: var(--font-size-h3));
 
       text-align: left;
       margin-bottom: 4px;
@@ -23,9 +23,9 @@
 
     p {
       @include u.font(
-        $family: v.$font-secondary,
-        $size: v.$font-size-medium,
-        $line-height: v.$font-line-height-large
+        $family: var(--font-secondary),
+        $size: var(--font-size-medium),
+        $line-height: var(--font-line-height-large)
       );
 
       white-space: pre-wrap;

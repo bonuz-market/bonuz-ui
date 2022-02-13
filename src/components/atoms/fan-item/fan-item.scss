@@ -32,7 +32,7 @@ $color-divider: var(--color-base-10);
   &__name {
     display: block;
     margin-bottom: 8px;
-    @include u.font($size: v.$font-size-small);
+    @include u.font($size: var(--font-size-small));
   }
 
   &__descr {
@@ -46,7 +46,7 @@ $color-divider: var(--color-base-10);
     display: flex;
     align-items: center;
     gap: 8px;
-    @include u.font($size: v.$font-size-small);
+    @include u.font($size: var(--font-size-small));
 
     & > img {
       display: block;

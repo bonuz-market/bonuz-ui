@@ -15,7 +15,7 @@ $color-level: #48f573;
   &__cell {
     padding-top: 22px;
     padding-bottom: 22px;
-    @include u.font($size: v.$font-size-small);
+    @include u.font($size: var(--font-size-small));
 
     text-align: left;
 
