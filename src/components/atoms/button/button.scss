@@ -3,7 +3,7 @@
 
 $color-background: var(--color-base-10);
 $color-background-disabled: var(--color-base-20);
-$color-background-stroke: v.$color-main-bg;
+$color-background-stroke: var(--main-bg-color);
 $color-gradient-1: linear-gradient(270deg, var(--color-1), var(--color-2));
 $color-gradient-2: linear-gradient(90deg, var(--color-1), var(--color-3));
 $color-gradient-3: linear-gradient(90deg, var(--color-1), var(--color-2));
