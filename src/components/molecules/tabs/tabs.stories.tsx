@@ -1,7 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 import { Tabs, TabsProps } from './tabs';
 import { Tab } from '../../atoms';
-import '../../atoms/tab/tabs.scss';
 
 export default {
   title: 'Components/Molecules/Tabs',
@@ -9,7 +8,7 @@ export default {
 } as Meta;
 
 const Template: Story<TabsProps> = (args) => (
-  <Tabs type={args.type}>
+  <Tabs {...args}>
     <Tab title="First tab">This is example text from first tab</Tab>
     <Tab title="Second tab">This is example text from second tab</Tab>
     <Tab title="Third tab">This is example text from third tab</Tab>
