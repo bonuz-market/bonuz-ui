@@ -70,7 +70,7 @@ export const Header: FC<HeaderProps> = ({
             >
               <img src={burgerIcon} alt="" />
             </button>
-            <a href="#" id="up">
+            <a href="/">
               {logoHoverUrl && (
                 <img className="logo logo_2" src={logoHoverUrl} alt="" />
               )}
