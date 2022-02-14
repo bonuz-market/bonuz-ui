@@ -39,28 +39,30 @@ header {
             width: 126px;
             height: 43px;
             position: relative;
-            %position-absolute {
-              position: absolute;
-              transition: 0.4s;
-              left: 0;
-              top: 0;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          %position-absolute {
+            position: absolute;
+            transition: 0.4s;
+            left: 0;
+            top: 0;
+          }
+
+          .logo {
+            &_1 {
+              @extend %position-absolute;
+
+              &:hover {
+                opacity: 0;
+              }
             }
 
-            .logo {
-              width: 126px;
-              height: 43px;
-
-              &_1 {
-                @extend %position-absolute;
-
-                &:hover {
-                  opacity: 0;
-                }
-              }
-
-              &_2 {
-                @extend %position-absolute;
-              }
+            &_2 {
+              @extend %position-absolute;
             }
           }
         }
@@ -216,18 +218,15 @@ header {
           &:nth-child(1) {
             width: 100%;
 
-            .logo {
-              width: 80px;
-            }
-
             a {
               z-index: 10;
-              position: relative;
               margin: 0 auto;
-              transform: translateX(14px);
+              height: 32px;
+              width: 94px;
 
-              [dir='rtl'] & {
-                transform: translateX(-14px);
+              img {
+                width: 100%;
+                height: 100%;
               }
             }
           }
