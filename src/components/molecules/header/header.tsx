@@ -6,13 +6,6 @@ import './Header.scss';
 import burgerIcon from '../../../assets/images/burger.svg';
 import mobileNavigationBackground from '../../../assets/images/menu_bg.svg';
 
-const Signup: FC = () => (
-  <div className="sign-up">
-    <a href="#">
-      <span>Sign Up</span>
-    </a>
-  </div>
-);
 type LanguageSelectorProps = {
   options: { label: string; target: string }[];
 };
