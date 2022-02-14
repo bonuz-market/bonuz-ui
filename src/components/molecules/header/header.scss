@@ -8,6 +8,7 @@ $color-background-nav-mobile: linear-gradient(
   $color-secondary,
   var(--main-bg-color)
 );
+$color-burger-icon: var(--color-base);
 
 header {
   .header {
@@ -173,11 +174,6 @@ header {
 
   .burger {
     display: none;
-    width: 14px;
-    height: auto;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
   }
 
   [dir='rtl'] {
@@ -324,10 +320,72 @@ header {
       }
     }
 
+    %burger {
+      pointer-events: none;
+      display: block;
+      content: '';
+      width: 14px;
+      border-radius: 0.25em;
+      background-color: $color-burger-icon;
+      height: 1.5px;
+      position: absolute;
+      transform: rotate(0);
+      transition: 0.2s top 0.2s, 0.1s left, 0.2s transform,
+        0.4s background-color 0.2s;
+    }
+
+    %burger-transition-open {
+      transition: 0.2s background-color, 0.2s top, 0.2s left,
+        0.2s transform 0.15s;
+    }
+
     .burger {
       display: block;
       z-index: 10;
+      height: 11.5px;
+      width: 14px;
+      cursor: pointer;
       position: relative;
+      transition: 0.2s all;
+      border: none;
+
+      &-lines::after {
+        top: -5px;
+        @extend %burger;
+      }
+
+      &-lines::before {
+        top: 5px;
+        @extend %burger;
+      }
+
+      &-lines {
+        top: 50%;
+
+        @extend %burger;
+      }
+
+      &.open {
+        .burger-lines {
+          @extend %burger-transition-open;
+
+          background-color: transparent;
+        }
+
+        .burger-lines::after {
+          @extend %burger-transition-open;
+
+          top: 0;
+          transform: rotate(45deg);
+        }
+
+        .burger-lines::before {
+          @extend %burger-transition-open;
+
+          top: 0;
+          transform: rotate(-45deg);
+        }
+      }
     }
   }
 }

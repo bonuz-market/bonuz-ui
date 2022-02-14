@@ -3,7 +3,6 @@ import classnames from 'classnames';
 
 import { Navigation } from '../../atoms';
 import './Header.scss';
-import burgerIcon from '../../../assets/images/burger.svg';
 import mobileNavigationBackground from '../../../assets/images/menu_bg.svg';
 
 type LanguageSelectorProps = {
@@ -65,10 +64,12 @@ export const Header: FC<HeaderProps> = ({
           <div className="col">
             <button
               type="button"
-              className="burger"
+              className={classnames('burger', {
+                open: isVisible,
+              })}
               onClick={handleChangeIsVisible}
             >
-              <img src={burgerIcon} alt="" />
+              <div className="burger-lines" />
             </button>
             <a href="/">
               {logoHoverUrl && (
