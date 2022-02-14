@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 import { PropsWithChildren } from 'react';
-import { Subtitle } from './subtitle';
+import { Subtitle } from './Subtitle';
 
 export default {
   title: 'Components/Atoms/Subtitle',

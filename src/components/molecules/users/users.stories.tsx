@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react';
-import { Users, UsersProps } from './users';
+import { Users, UsersProps } from './Users';
 
 export default {
   title: 'Components/Molecules/Users',

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Input, InputProps } from './input';
+import { Input, InputProps } from './Input';
 import icon from '../../../assets/images/f_i.svg';
 
 export default {

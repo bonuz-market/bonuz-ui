@@ -1,0 +1,1 @@
+export { HowItWorksList } from './HowItWorksList';

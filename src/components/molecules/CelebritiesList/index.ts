@@ -1,0 +1,1 @@
+export { CelebritiesList } from './CelebritiesList';

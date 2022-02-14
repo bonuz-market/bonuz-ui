@@ -1,0 +1,1 @@
+export { NewsRow } from './NewsRow';

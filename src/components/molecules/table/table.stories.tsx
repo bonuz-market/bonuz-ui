@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react';
-import { Table, TableProps } from './table';
+import { Table, TableProps } from './Table';
 
 export default {
   title: 'Components/Molecules/Table',

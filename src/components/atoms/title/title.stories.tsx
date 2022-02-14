@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Title } from './title';
+import { Title } from './Title';
 
 export default {
   title: 'Components/Atoms/Title',

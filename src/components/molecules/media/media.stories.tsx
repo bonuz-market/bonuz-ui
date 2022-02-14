@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react';
-import { Media, MediaProps } from './media';
+import { Media, MediaProps } from './Media';
 
 export default {
   title: 'Components/Molecules/Media',

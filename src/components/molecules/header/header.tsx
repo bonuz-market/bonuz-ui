@@ -2,7 +2,7 @@ import { FC, ReactElement, useEffect, useState } from 'react';
 import classnames from 'classnames';
 
 import { Navigation } from '../../atoms';
-import './header.scss';
+import './Header.scss';
 import burgerIcon from '../../../assets/images/burger.svg';
 import mobileNavigationBackground from '../../../assets/images/menu_bg.svg';
 

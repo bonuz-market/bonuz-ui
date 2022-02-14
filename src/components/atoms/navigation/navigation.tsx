@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import './navigation.scss';
+import './Navigation.scss';
 
 export const Navigation: FC = ({ children }) => {
   const childrenModified = React.Children.map(children, (child) => {

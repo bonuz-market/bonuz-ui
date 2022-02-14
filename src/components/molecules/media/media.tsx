@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import './media.scss';
+import './Media.scss';
 import eyeIcon from '../../../assets/icons/eye.svg';
 import blobsIcon from '../../../assets/icons/blobs.svg';
 import editIcon from '../../../assets/icons/edit.svg';

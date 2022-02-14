@@ -1,0 +1,1 @@
+export { AdvantagesItem } from './AdvantagesItem';

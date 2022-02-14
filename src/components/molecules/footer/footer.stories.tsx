@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react';
-import { Footer, FooterProps } from './footer';
+import { Footer, FooterProps } from './Footer';
 
 export default {
   title: 'Components/Layout/Footer',
@@ -10,7 +10,13 @@ const Template: Story<FooterProps> = (args) => <Footer {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  logo: <img src="https://bonuz.market/wp-content/themes/blankslate/p/logo/bonuz_logo.png" className="logo" alt="" />,
+  logo: (
+    <img
+      src="https://bonuz.market/wp-content/themes/blankslate/p/logo/bonuz_logo.png"
+      className="logo"
+      alt=""
+    />
+  ),
   navigation: {
     title: 'Navigation',
     NavigationElements: [

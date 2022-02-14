@@ -8,7 +8,7 @@ import {
   SocialList,
   SocialListProps,
 } from '../../atoms';
-import './footer.scss';
+import './Footer.scss';
 
 type NavigationProps = {
   title: string;
@@ -89,10 +89,5 @@ const Footer: FC<FooterProps> = ({
 /**
  *      EXPORTS
  */
-export type {
-  NavigationProps,
-  FooterProps,
-}
-export {
-  Footer
-}
+export type { NavigationProps, FooterProps };
+export { Footer };

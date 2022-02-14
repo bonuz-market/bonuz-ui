@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react';
-import { Button, ButtonPropsWithChildren } from './button';
+import { Button, ButtonPropsWithChildren } from './Button';
 
 export default {
   title: 'Components/Atoms/Button',

@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react';
 
-import './table.scss';
+import './Table.scss';
 import { Checkbox } from '../../atoms';
 
 type Column = {

@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 import { Dropdown } from '../../atoms';
-import { Header } from './header';
+import { Header } from './Header';
 import mockData from '../../../mock/mock-data.json';
 
 export default {

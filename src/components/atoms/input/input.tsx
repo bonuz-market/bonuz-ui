@@ -1,7 +1,7 @@
 import { ChangeEvent, FC, ReactNode, useState } from 'react';
 import classnames from 'classnames';
-import { Button } from '../button';
-import './input.scss';
+import { Button } from '../Button';
+import './Input.scss';
 
 export type InputProps = {
   label?: string;

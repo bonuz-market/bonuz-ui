@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import './users.scss';
+import './Users.scss';
 import coinIcon from '../../../assets/icons/coin.svg';
 
 export type UsersProps = {

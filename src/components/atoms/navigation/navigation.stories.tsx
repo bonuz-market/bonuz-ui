@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react';
-import { Navigation } from './navigation';
+import { Navigation } from './Navigation';
 
 export default {
   title: 'Components/Atoms/Navigation',

@@ -1,5 +1,5 @@
 import React, { FC, useEffect } from 'react';
-import './dropdown.style.scss';
+import './Dropdown.scss';
 import classnames from 'classnames';
 
 export type DropdownProps = {

@@ -1,0 +1,1 @@
+export { FaqItem } from './FaqItem';
