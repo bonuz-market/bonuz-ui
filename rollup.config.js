@@ -1,6 +1,5 @@
 import typescript from 'rollup-plugin-typescript2';
 import multiInput from 'rollup-plugin-multi-input';
-import json from '@rollup/plugin-json';
 import autoprefixer from 'autoprefixer';
 import postcss from 'rollup-plugin-postcss';
 import svgr from '@svgr/rollup';
@@ -8,6 +7,11 @@ import url from '@rollup/plugin-url';
 import fs from 'fs-extra';
 import path from 'path';
 import postcssUrl from 'postcss-url';
+import eslint from '@rbnlffl/rollup-plugin-eslint';
+import commonjs from '@rollup/plugin-commonjs';
+import cleanup from 'rollup-plugin-cleanup';
+import analyze from 'rollup-plugin-analyzer';
+import { terser } from 'rollup-plugin-terser';
 
 const ASSETS_RX = /\.(png|jpe?g|gif|webp|svg|woff|woff2)$/;
 const OUT_DIR = 'dist';
@@ -26,11 +30,10 @@ export default {
   },
   plugins: [
     multiInput(),
+    commonjs(),
     typescript(),
-    json(),
     svgr(),
     url(),
-
     postcss({
       extract: 'bonuz.css',
       exclude: 'src/assets/styles/style.scss',
@@ -63,6 +66,17 @@ export default {
       minimize: true,
       plugins: [autoprefixer()],
     }),
+    terser(),
+    eslint({
+      filterExclude: [
+        'node_modules/**',
+        'src/components/**/*.scss',
+        'src/assets/styles/style.scss',
+      ],
+      fix: true,
+    }),
+    cleanup(),
+    analyze(),
   ],
   external: ['react', 'react-dom'],
 };
