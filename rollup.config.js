@@ -12,9 +12,13 @@ import commonjs from '@rollup/plugin-commonjs';
 import cleanup from 'rollup-plugin-cleanup';
 import analyze from 'rollup-plugin-analyzer';
 import { terser } from 'rollup-plugin-terser';
+import flexFixes from 'postcss-flexbugs-fixes';
+import sorting from 'postcss-sorting';
+import cssConfig from './css.config.ts';
 
 const ASSETS_RX = /\.(png|jpe?g|gif|webp|svg|woff|woff2)$/;
 const OUT_DIR = 'dist';
+
 export default {
   input: [
     'src/components/**/*.ts',
@@ -58,13 +62,15 @@ export default {
             return filePath;
           },
         }),
+        flexFixes(),
+        sorting(cssConfig),
       ],
     }),
     postcss({
       extract: 'foundation.css',
       exclude: ['src/components/**/*.scss'],
       minimize: true,
-      plugins: [autoprefixer()],
+      plugins: [autoprefixer(), flexFixes(), sorting(cssConfig)],
     }),
     terser(),
     eslint({
