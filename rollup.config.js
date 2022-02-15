@@ -14,7 +14,7 @@ const OUT_DIR = 'dist';
 export default {
   input: [
     'src/components/**/*.ts',
-    'src/components/**/*.tsx',
+    'src/components/**/*.[^stories.]tsx',
     'src/assets/styles/style.scss',
   ],
   output: {
