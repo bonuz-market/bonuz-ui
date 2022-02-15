@@ -27,7 +27,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "publish:build": "rimraf ./dist && rollup -c &&  rimraf ./dist/**/*.stories.js"
+    "publish:build": "rimraf ./dist && rollup -c"
   },
   "files": [
     "dist",
