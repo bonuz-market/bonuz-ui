@@ -1,0 +1,54 @@
+@use '../../../assets/styles/utils' as u;
+
+$color-background-hover: var(--light-bg);
+$color-date: var(--color-2);
+$color-location: var(--color-4);
+$color-link: var(--color-1);
+
+.calendar-entry {
+  padding: 30px 40px;
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: all 0.3s;
+}
+
+.calendar-entry:hover {
+  background-color: $color-background-hover;
+  border-radius: 16px;
+}
+
+.calendar-entry > div {
+  display: flex;
+  column-gap: 5px;
+  align-items: baseline;
+}
+
+.calendar-entry svg {
+  height: 16px;
+}
+
+.calendar-entry h2 {
+  @include u.font($size: var(--font-size-h2));
+}
+
+.calendar-entry p {
+  margin: 0;
+}
+
+.calendar-entry .date {
+  color: $color-date;
+}
+
+.calendar-entry .location svg {
+  color: $color-location;
+}
+
+.calendar-entry .link svg {
+  color: $color-link;
+}
+
+.calendar-entry .link a:hover {
+  text-decoration: underline;
+}

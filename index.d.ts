@@ -259,7 +259,12 @@ declare module '@bonuz/bonuz-ui' {
     medium?: string;
     telegramMessage?: string;
   };
-
+  type CalendarItemProps = {
+    title: string;
+    date?: string;
+    location?: string;
+    link?: string;
+  };
   export const Button: FC<ButtonProps>;
   export const ActionButton: FC<ActionButtonProps>;
   export const AdvantagesItem: FC<AdvantagesItemProps>;
