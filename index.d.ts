@@ -269,6 +269,7 @@ declare module '@bonuz/bonuz-ui' {
   export const ActionButton: FC<ActionButtonProps>;
   export const AdvantagesItem: FC<AdvantagesItemProps>;
   export const CelebritiesItem: FC<CelebritiesItemProps>;
+  export const CalendarItem: FC<CalendarItemProps>;
   export const Checkbox: FC<CheckboxProps>;
   export const Dropdown: FC<DropdownProps>;
   export const HowItWorksItem: FC<HowItWorksItemProps>;
