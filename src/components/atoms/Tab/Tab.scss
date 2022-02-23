@@ -1,0 +1,79 @@
+@use '../../../assets/styles/utils' as u;
+
+$color-background: var(--main-black);
+$color-tab-active: linear-gradient(270deg, var(--color-1), var(--color-2));
+$color-font-text: var(--second-black);
+$color-background-secondary: var(--color-base-10);
+$color-background-secondary-hover: var(--color-base);
+
+.tab {
+  > button {
+    padding: 16px 20px;
+    background-color: $color-background;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+    @include u.font(
+      $size: var(--font-size-medium),
+      $weight: var(--font-weight-medium)
+    );
+  }
+
+  &--active {
+    > button {
+      background: $color-tab-active;
+    }
+  }
+
+  &--secondary {
+    > button {
+      background-color: $color-background-secondary;
+
+      &:hover {
+        background: $color-background-secondary-hover;
+        color: $color-font-text;
+      }
+    }
+  }
+
+  &--active.tab--secondary {
+    > button {
+      background: rgb(255 255 255 / 100%);
+      color: $color-font-text;
+    }
+  }
+
+  &:first-child {
+    > button {
+      border-radius: 16px 0 0 16px;
+    }
+
+    &:last-child {
+      > button {
+        border-radius: 16px;
+      }
+    }
+  }
+
+  &:last-child {
+    > button {
+      border-radius: 0 16px 16px 0;
+    }
+  }
+}
+
+[dir='rtl'] {
+  .tab {
+    &:first-child {
+      > button {
+        border-radius: 0 16px 16px 0;
+      }
+    }
+
+    &:last-child {
+      > button {
+        border-radius: 16px 0 0 16px;
+      }
+    }
+  }
+}

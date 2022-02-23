@@ -1,0 +1,24 @@
+@use '../../../assets/styles/utils' as u;
+
+$color-font-hover: linear-gradient(270deg, var(--color-1), var(--color-2));
+
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &-item {
+    a {
+      @include u.font($size: var(--font-size-small));
+
+      position: relative;
+      width: max-content;
+
+      &:hover {
+        background: $color-font-hover;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}

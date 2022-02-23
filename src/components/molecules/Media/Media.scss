@@ -1,0 +1,160 @@
+@use '../../../assets/styles/utils' as u;
+
+$color-divider: var(--color-base-10);
+$color-timestamp: var(--color-base-20);
+$color-font-shortcode: linear-gradient(90deg, var(--color-1), var(--color-3));
+$color-font-url: linear-gradient(270deg, var(--color-4), var(--color-2));
+
+%display-flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.media {
+  &__photo {
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+    border-radius: 8px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    @include u.font(
+      $size: var(--font-size-h3),
+      $weight: var(--font-weight-medium)
+    );
+  }
+
+  &__info {
+    @extend %display-flex-align-center;
+
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    &__wrapper {
+      @extend %display-flex-align-center;
+    }
+
+    &__item {
+      @extend %display-flex-align-center;
+
+      @include u.font($size: var(--font-size-small));
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      & > img {
+        display: block;
+        margin-right: 8px;
+      }
+    }
+
+    &__edit {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__created {
+    display: block;
+    position: relative;
+    margin-bottom: 66px;
+    color: $color-timestamp;
+    @include u.font($size: var(--font-size-small));
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -32px;
+      left: 0;
+      height: 1px;
+      background-color: $color-divider;
+    }
+  }
+
+  &__about {
+    position: relative;
+    margin-bottom: 60px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -32px;
+      left: 0;
+      height: 1px;
+      background-color: $color-divider;
+    }
+
+    &__title {
+      display: block;
+      margin-bottom: 14px;
+      @include u.font($size: var(--font-size-medium));
+    }
+
+    &__link {
+      @extend %display-flex-align-center;
+
+      @include u.font($size: var(--font-size-small));
+
+      &:not(:last-child) {
+        margin-bottom: 14px;
+      }
+
+      & > img {
+        display: block;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__meta {
+    margin-bottom: 36px;
+
+    &__title {
+      display: block;
+      margin-bottom: 16px;
+      @include u.font($size: var(--font-size-medium));
+    }
+
+    &__descr {
+      @include u.font($size: var(--font-size-small));
+    }
+
+    &__content {
+      color: transparent;
+      @include u.font($size: var(--font-size-small));
+
+      &--shortcode {
+        background: linear-gradient(46.96deg, #cc16ff 20.56%, #48f573 82.71%);
+        background: $color-font-shortcode;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &--url {
+        background: linear-gradient(270.9deg, #ef7188 -2.92%, #ffa34e 99.95%);
+        background: $color-font-url;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &__item {
+      @extend %display-flex-align-center;
+
+      justify-content: space-between;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

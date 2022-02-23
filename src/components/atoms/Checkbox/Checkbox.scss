@@ -1,0 +1,88 @@
+@use '../../../assets/styles/utils' as u;
+
+$color-background: #6c58a4;
+$color-checkmark: #fe9f53;
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+
+  input[type='checkbox'] {
+    display: none;
+
+    &:checked ~ .checkbox::before,
+    &:checked ~ .checkbox::after {
+      width: 12px;
+      transition-delay: 0ms;
+    }
+
+    &:checked ~ .checkbox::after {
+      transition-delay: 150ms;
+    }
+  }
+
+  label {
+    @include u.font($weight: var(--font-weight-bold), $size: 12px);
+
+    cursor: pointer;
+  }
+
+  .checkbox {
+    display: inline-block;
+    flex: 0 0 auto;
+    width: 24px;
+    height: 24px;
+    background: $color-background;
+    border-radius: 4px;
+    margin-right: 8px;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: 8px;
+      position: relative;
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 3px;
+      background: $color-checkmark;
+      border-radius: 60px;
+      transform: translate(10px, 15px) rotate(-45deg);
+      transform-origin: left;
+      transition: all 150ms;
+      transition-delay: 0ms;
+    }
+
+    &::before {
+      transform: translate(3px, 6px) rotate(45deg);
+      transition-delay: 150ms;
+    }
+
+    [dir='rtl'] &::after,
+    [dir='rtl'] &::before {
+      transform: translate(-10px, -15px) rotate(45deg);
+      bottom: 0;
+    }
+
+    [dir='rtl'] &::before {
+      transform: translate(-3px, -6px) rotate(-45deg);
+    }
+
+    &-text {
+      @include u.font($family: var(--font-secondary));
+
+      a {
+        color: #f6255a;
+        text-decoration: underline;
+        transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+
+        &:hover {
+          color: #e6063e;
+        }
+      }
+    }
+  }
+}

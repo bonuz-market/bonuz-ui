@@ -1,0 +1,122 @@
+@use '../../../assets/styles/utils' as u;
+
+$color-gradient-1: linear-gradient(90deg, var(--color-1), var(--color-3));
+$color-gradient-2: linear-gradient(270deg, var(--color-1), var(--color-2));
+$color-background-options: var(--second-black);
+
+.dropdown {
+  %text-color-effect {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__wrapper {
+    cursor: pointer;
+    border-radius: 30px;
+    border-bottom: 1px solid transparent;
+    width: fit-content;
+    height: 32px;
+    position: relative;
+    user-select: none;
+
+    @include u.font($size: var(--font-size-small));
+
+    &:hover {
+      border-image: $color-gradient-1 0 0 1 0;
+    }
+    @media screen and (max-width: 1050px) {
+      &.active {
+        border-image: $color-gradient-2 0 0 1 0;
+      }
+    }
+
+    ul {
+      list-style: none;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 10px 5px 10px 0;
+
+    @media screen and (min-width: 1051px) {
+      &:hover {
+        .dropdown__options {
+          padding: 2px 5px;
+          margin-top: 15px;
+          visibility: visible;
+          height: auto;
+        }
+      }
+
+      &:hover::after {
+        transform: rotate(180deg);
+      }
+    }
+    @media screen and (max-width: 1050px) {
+      .dropdown__options.active {
+        padding: 2px 5px;
+        margin-top: 15px;
+        visibility: visible;
+        height: auto;
+      }
+
+      &.active::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background: url('../../../assets/images/arrow-selector-down.svg');
+      right: 0;
+      bottom: calc(50% - 6px);
+      width: 8px;
+      height: 6px;
+
+      [dir='rtl'] & {
+        right: auto;
+        left: 0;
+      }
+    }
+
+    [dir='rtl'] & {
+      padding: 10px 0 10px 5px;
+    }
+
+    > li {
+      padding-right: 8px;
+
+      [dir='rtl'] & {
+        padding-left: 8px;
+      }
+    }
+  }
+
+  &__options {
+    padding: 0 5px;
+    background: $color-background-options;
+    border-radius: 8px;
+    display: block;
+    visibility: hidden;
+    height: 0;
+  }
+
+  &__option {
+    padding: 2px;
+
+    a {
+      &:hover {
+        background: $color-gradient-1;
+        @extend %text-color-effect;
+      }
+    }
+
+    .selected {
+      background: $color-gradient-2;
+      @extend %text-color-effect;
+    }
+  }
+}

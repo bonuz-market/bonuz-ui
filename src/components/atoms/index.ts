@@ -13,7 +13,7 @@ export { TeamCard } from './TeamCard';
 export { Checkbox } from './Checkbox';
 export { StatElement } from './StatElement';
 export { NewsCard } from './NewsCard';
-export { FormArrowButton } from './formArrowButton';
+export { FormArrowButton } from './FormArrowButton';
 export { Title } from './Title';
 export { Subtitle } from './Subtitle';
 export { TabTitle, Tab } from './Tab';
