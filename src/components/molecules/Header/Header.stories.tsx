@@ -4,7 +4,7 @@ import { Header } from './Header';
 import mockData from '../../../mock/mock-data.json';
 
 export default {
-  title: 'Components/Layout/Header',
+  title: 'Components/Layout/Header/Primary',
   component: Header,
 } as Meta;
 const Template: Story = (args) => (
