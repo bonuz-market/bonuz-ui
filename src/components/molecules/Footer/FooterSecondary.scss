@@ -1,0 +1,69 @@
+@use '../../../assets/styles/utils' as u;
+
+.footer {
+  padding: 62px 0 52px;
+  background-image: url('../../../assets/images/footer-background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__logo {
+    margin-bottom: 42px;
+  }
+
+  &__text {
+    @include u.font(
+      var(--font-secondary),
+      var(--font-size-medium),
+      var(--font-weight-regular),
+      $line-height: 162%
+    );
+
+    max-width: 490px;
+    opacity: 0.41;
+    margin: 0 auto 40px;
+  }
+
+  .icon-list {
+    width: unset;
+    margin: 0;
+
+    a + a {
+      margin-left: 16px;
+    }
+  }
+}
+@media screen and (max-width: 950px) {
+  .footer {
+    background-position: 50% 100%;
+
+    &__logo {
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      margin-bottom: 20px;
+    }
+
+    .icon-list {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      a {
+        flex: 0 0 30%;
+        margin-top: 20px;
+
+        + a {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

@@ -271,6 +271,11 @@ declare module '@bonuz/bonuz-ui' {
     title: string;
     description?: string;
   };
+  type FooterSecondaryProps = {
+    logo?: string;
+    description?: string;
+    socailMediaLinks?: SocialListProps;
+  };
 
   export const Button: FC<ButtonProps>;
   export const ActionButton: FC<ActionButtonProps>;
@@ -293,6 +298,7 @@ declare module '@bonuz/bonuz-ui' {
   export const CelebritiesList: FC<CelebritiesListProps>;
   export const Footer: FC<FooterProps>;
   export const Header: FC<HeaderProps>;
+  export const FooterSecondary: FC<FooterSecondaryProps>;
   export const HeaderSecondary: FC<HeaderSecondaryProps>;
   export const HowItWorksList: FC<HowItWorksListProps>;
   export const NewsRow: FC<NewsRowProps>;
