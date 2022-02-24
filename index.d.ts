@@ -311,6 +311,7 @@ declare module '@bonuz/bonuz-ui' {
   export const Tab: FC<TabProps>;
   export const TabTitle: FC<TabTitleProps>;
   export const Tabs: FC<TabsProps>;
+  export const TabsSecondary: FC;
   export const FanItem: FC<FanItemProps>;
   export const Table: FC<TableProps>;
   export const CreatorNewsCard: FC<CreatorNewsCardProps>;
