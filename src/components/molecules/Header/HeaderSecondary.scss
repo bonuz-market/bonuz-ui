@@ -99,6 +99,13 @@
     text-align: center;
     margin: 0 auto 92px;
   }
+
+  .container {
+    max-width: 1266px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+  }
 }
 @media (max-width: 950px) {
   .header {
