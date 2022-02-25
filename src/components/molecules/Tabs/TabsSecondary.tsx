@@ -3,6 +3,8 @@ import './TabsSecondary.scss';
 
 export const TabsSecondary: FC = ({ children }) => (
   <div className="tabs--secondary sticky">
-    <ul>{children}</ul>
+    <div className="container">
+      <ul>{children}</ul>
+    </div>
   </div>
 );
