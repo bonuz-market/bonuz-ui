@@ -89,40 +89,9 @@ body.noscroll {
   stroke-dashoffset: 0;
 }
 
-#svg .bar,
-#bar,
-#bar1,
-#bar2,
-#bar3,
-#bar4,
-#bar5 {
+#svg .bar {
   stroke-linecap: round;
   stroke: url(#MyGradient);
-}
-
-#svg #bar6 {
-  stroke-linecap: round;
-  stroke: url(#MyGradient1);
-}
-
-#svg #bar7 {
-  stroke-linecap: round;
-  stroke: url(#MyGradient2);
-}
-
-#svg #bar8 {
-  stroke-linecap: round;
-  stroke: url(#MyGradient3);
-}
-
-#svg #bar9 {
-  stroke-linecap: round;
-  stroke: url(#MyGradient4);
-}
-
-#svg #bar10 {
-  stroke-linecap: round;
-  stroke: url(#MyGradient5);
 }
 
 #svg #back {
@@ -148,30 +117,6 @@ body.noscroll {
   background: $color-divider;
 }
 
-.skip-link.screen-reader-text {
-  display: none;
-}
-
-.header-inner .col .sign-up a {
-  display: none;
-}
-
-.wpcf7 form.invalid .wpcf7-response-output,
-.wpcf7 form.unaccepted .wpcf7-response-output,
-.wpcf7 form.sent .wpcf7-response-output {
-  position: absolute;
-  bottom: 7px;
-  z-index: 3;
-  width: 300px;
-  height: 20px;
-  margin: 0;
-  margin-left: -10px;
-  font-family: 'Anonymous Pro', monospace;
-  font-size: 12px;
-  color: white;
-  border-color: transparent;
-}
-
 .sticky {
   position: sticky;
   top: 0;
@@ -186,13 +131,8 @@ body.noscroll {
   }
 
   #cont {
-    position: absolute;
     top: -35px;
     left: -43px;
-    display: block;
-    margin: 2em auto;
-    border-radius: 100%;
     transform: scale(0.67);
-    transform-origin: left top;
   }
 }
