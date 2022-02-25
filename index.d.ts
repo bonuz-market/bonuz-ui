@@ -274,7 +274,7 @@ declare module '@bonuz/bonuz-ui' {
   type FooterSecondaryProps = {
     logo?: string;
     description?: string;
-    socailMediaLinks?: SocialListProps;
+    socialMediaLinks?: SocialListProps;
   };
 
   export const Button: FC<ButtonProps>;
