@@ -33,10 +33,10 @@ $color-card-hover: var(--color-base-10);
     transition: all 0.3s;
   }
 
-  h4 {
+  h3 {
     @include u.font(
       $weight: var(--font-weight-medium),
-      $size: var(--font-size-h4)
+      $size: var(--font-size-h3)
     );
   }
 

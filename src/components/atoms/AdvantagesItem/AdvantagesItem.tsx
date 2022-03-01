@@ -17,9 +17,9 @@ export const AdvantagesItem: FC<AdvantagesItemProps> = ({
       <img src={icon} alt="" className="blur" />
       <img src={icon} alt="" />
     </i>
-    <h4 data-aos="fade-up" data-aos-duration="1300" data-aos-delay="50">
+    <h3 data-aos="fade-up" data-aos-duration="1300" data-aos-delay="50">
       {title}
-    </h4>
+    </h3>
     <p data-aos="fade-up" data-aos-duration="1300" data-aos-delay="150">
       {description}
     </p>
