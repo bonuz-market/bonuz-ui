@@ -88,6 +88,8 @@ $color-background-options: var(--second-black);
 
     > li {
       padding-right: 8px;
+      font-size: 16px;
+      font-weight: 500;
 
       [dir='rtl'] & {
         padding-left: 8px;
