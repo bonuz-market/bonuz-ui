@@ -181,29 +181,6 @@ header {
   .burger {
     display: none;
   }
-
-  [dir='rtl'] {
-    .header {
-      &-inner {
-        .col {
-          &:nth-child(3) {
-            margin-left: 30px;
-            margin-right: auto;
-          }
-
-          .sign-in {
-            margin-right: 0;
-
-            img {
-              margin-left: 0;
-              margin-right: 20px;
-              transform: rotate(180deg);
-            }
-          }
-        }
-      }
-    }
-  }
 }
 @media screen and (max-width: 1050px) {
   header {
@@ -227,6 +204,15 @@ header {
               margin: 0 auto;
               height: 32px;
               width: 94px;
+              left: 50%;
+              transform: translate(-50%);
+              position: absolute;
+
+              [dir='rtl'] & {
+                left: unset;
+                right: 50%;
+                transform: translate(50%);
+              }
 
               img {
                 width: 100%;
@@ -248,7 +234,7 @@ header {
               left: 0;
               top: 0;
               width: 100%;
-              height: 110vh;
+              height: 100vh;
               background: $color-background-nav-mobile;
               z-index: 9;
               user-select: none;
@@ -268,7 +254,7 @@ header {
                 width: max-content;
                 position: absolute;
                 left: 60px;
-                top: 150px;
+                top: 90px;
                 z-index: 11;
 
                 [dir='rtl'] & {
@@ -296,6 +282,7 @@ header {
             pointer-events: auto;
             opacity: 1;
             transform: translateY(0);
+            overflow: auto;
           }
 
           justify-content: space-between;
