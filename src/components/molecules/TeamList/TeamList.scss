@@ -17,6 +17,11 @@
 
     left: 0;
 
+    [dir='rtl'] {
+      left: auto;
+      right: 0;
+    }
+
     &:hover {
       opacity: 1;
     }
@@ -26,6 +31,11 @@
     @extend %position;
 
     right: 0;
+
+    [dir='rtl'] & {
+      left: 0;
+      right: auto;
+    }
 
     &:hover {
       opacity: 1;
