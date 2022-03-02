@@ -7,18 +7,28 @@ export type CelebritiesItemProps = {
   role: string;
   link?: string;
 };
+const Item: FC<CelebritiesItemProps> = ({ img, name, role }) => (
+  <>
+    <img src={img} alt={name} />
+    <div>
+      <h4>{name}</h4>
+      <p>{role}</p>
+    </div>
+  </>
+);
 
 export const CelebritiesItem: FC<CelebritiesItemProps> = ({
   img,
   name,
   role,
   link,
-}) => (
-  <a className="celeb" href={link}>
-    <img src={img} alt={name} />
-    <div>
-      <h4>{name}</h4>
-      <p>{role}</p>
+}) =>
+  link ? (
+    <a className="celeb" href={link}>
+      <Item img={img} name={name} role={role} />
+    </a>
+  ) : (
+    <div className="celeb">
+      <Item img={img} name={name} role={role} />
     </div>
-  </a>
-);
+  );
