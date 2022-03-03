@@ -17,7 +17,7 @@
 
     left: 0;
 
-    [dir='rtl'] {
+    [dir='rtl'] & {
       left: auto;
       right: 0;
     }
