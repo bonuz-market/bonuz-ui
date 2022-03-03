@@ -17,7 +17,6 @@ export { FormArrowButton } from './FormArrowButton';
 export { Title } from './Title';
 export { Subtitle } from './Subtitle';
 export { TabTitle, Tab } from './Tab';
-export type { TabProps } from './Tab';
 export { CreatorNewsCard } from './CreatorNewsCard';
 export { UserInfo } from './UserInfo';
 export { FaqItem } from './FaqItem';

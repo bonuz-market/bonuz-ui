@@ -1,7 +1,11 @@
 /* eslint-disable react/no-array-index-key */
 import { FC, useState, ReactElement } from 'react';
-import { TabTitle, TabProps } from '../../atoms';
+import { TabTitle } from '../../atoms';
 import './Tabs.scss';
+
+type TabProps = {
+  title: string;
+};
 
 export type TabsProps = {
   type?: 'primary' | 'secondary';
