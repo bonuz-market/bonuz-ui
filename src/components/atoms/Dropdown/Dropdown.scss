@@ -23,7 +23,6 @@ $color-background-options: var(--second-black);
 
   &__list {
     margin: 0;
-    padding: 10px 0;
     position: relative;
 
     &.active {
@@ -47,6 +46,7 @@ $color-background-options: var(--second-black);
 
       border-bottom: 1px solid transparent;
       width: max-content;
+      padding-top: 1px;
 
       &::after {
         content: '';
@@ -72,6 +72,7 @@ $color-background-options: var(--second-black);
       top: 100%;
       margin-inline-start: -4px;
       padding-inline-start: 4px;
+      margin-block-start: 0.725rem;
     }
   }
 
