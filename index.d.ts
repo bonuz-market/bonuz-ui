@@ -276,7 +276,11 @@ declare module '@bonuz/bonuz-ui' {
     description?: string;
     socialMediaLinks?: SocialListProps;
   };
-
+  type ModalProps = {
+    closeText?: string;
+    footerText?: string;
+    video?: string;
+  };
   export const Button: FC<ButtonProps>;
   export const ActionButton: FC<ActionButtonProps>;
   export const AdvantagesItem: FC<AdvantagesItemProps>;
@@ -287,6 +291,7 @@ declare module '@bonuz/bonuz-ui' {
   export const HowItWorksItem: FC<HowItWorksItemProps>;
   export const InfoBlock: FC<InfoBlockProps>;
   export const Input: FC<InputProps>;
+  export const Modal: FC<ModalProps>;
   export const Navigation: FC;
   export const NewsCard: FC<NewsCardProps>;
   export const RoadMapItem: FC<RoadMapItemProps>;

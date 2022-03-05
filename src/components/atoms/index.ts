@@ -25,3 +25,4 @@ export { FanItem } from './FanItem';
 export type { FanItemProps } from './FanItem';
 export { ColorPicker } from './ColorPicker';
 export { CalendarItem } from './CalendarItem';
+export { Modal } from './Modal';

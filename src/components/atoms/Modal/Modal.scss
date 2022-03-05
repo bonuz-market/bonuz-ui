@@ -1,0 +1,106 @@
+@use '../../../assets/styles/utils' as u;
+
+$color-modal-background: rgb(0 0 0 / 70%);
+$color-header: var(--second-black);
+$color-footer: linear-gradient(270deg, var(--color-1), var(--color-2));
+
+%button {
+  text-transform: uppercase;
+  display: block;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  letter-spacing: 2px;
+  padding: 10px;
+  box-sizing: border-box;
+  @include u.font($size: 12px, $weight: var(--font-weight-bold));
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1055;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  background-color: $color-modal-background;
+
+  &-dialog {
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 3.5rem);
+    margin: 1.75rem auto;
+    max-width: 960px;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    background-clip: padding-box;
+    width: 100%;
+    padding: 0 3%;
+  }
+
+  &-header {
+    background: $color-header;
+    border-radius: 8px 8px 0 0;
+
+    button {
+      @extend %button;
+
+      text-align: end;
+    }
+  }
+
+  &-body {
+    position: relative;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+
+    &.video {
+      padding-bottom: 56.25%;
+
+      iframe {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    background: $color-footer;
+    border-radius: 0 0 8px 8px;
+
+    button {
+      @extend %button;
+
+      text-align: center;
+
+      &::after {
+        content: '';
+        background-image: url('../../../assets/icons/link.png');
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        filter: brightness(0) invert(1);
+        background-size: contain;
+        margin-inline-start: 0.275rem;
+      }
+    }
+  }
+}
