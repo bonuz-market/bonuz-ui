@@ -9,6 +9,7 @@ export default {
 const Template: Story<ModalProps> = (args) => (
   <Modal {...args}>
     <iframe
+      title="video"
       src="https://www.youtube.com/embed/NTaIzbQaB3s"
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

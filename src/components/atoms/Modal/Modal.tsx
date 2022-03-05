@@ -5,7 +5,7 @@ import './Modal.scss';
 export type ModalProps = {
   closeText: string;
   footerText?: string;
-  video?: string;
+  video?: boolean;
 };
 export const Modal: FC<ModalProps> = ({
   children,

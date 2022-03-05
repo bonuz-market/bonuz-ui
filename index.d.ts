@@ -279,7 +279,7 @@ declare module '@bonuz/bonuz-ui' {
   type ModalProps = {
     closeText?: string;
     footerText?: string;
-    video?: string;
+    video?: boolean;
   };
   export const Button: FC<ButtonProps>;
   export const ActionButton: FC<ActionButtonProps>;
