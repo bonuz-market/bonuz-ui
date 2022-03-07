@@ -62,6 +62,9 @@ const Footer: FC<FooterProps> = ({
           <div className="col">
             <p>{navigation.title}</p>
             <Navigation>{navigation.NavigationElements}</Navigation>
+          </div>
+          <div className="col">
+            <SocialList {...socialMediaLinks} />
             <div className="form">
               <Input
                 label={newsletterForm.label}
@@ -71,9 +74,6 @@ const Footer: FC<FooterProps> = ({
                 }
               />
             </div>
-          </div>
-          <div className="col">
-            <SocialList {...socialMediaLinks} />
             {privacyPolicy && (
               <a href={privacyPolicy.link} className="policy">
                 {privacyPolicy.text}
