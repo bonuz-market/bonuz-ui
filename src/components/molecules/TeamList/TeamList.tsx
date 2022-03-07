@@ -2,7 +2,7 @@
 /* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper';
+import { Navigation } from 'swiper';
 import { ActionButton, TeamCard } from '../../atoms';
 import './TeamList.scss';
 import 'swiper/css';
@@ -20,14 +20,9 @@ export type TeamListProps = {
 
 const swiperOptions: SwiperProps = {
   className: 'team',
-  modules: [Pagination, Navigation],
+  modules: [Navigation],
   speed: 600,
   spaceBetween: 20,
-  pagination: {
-    clickable: true,
-    el: '.swiper-pagination-teamlist',
-    dynamicBullets: true,
-  },
   navigation: {
     nextEl: '.action-button.swiper-next-teamlist',
     prevEl: '.action-button.swiper-prev-teamlist',
@@ -63,6 +58,5 @@ export const TeamList: FC<TeamListProps> = ({ items, rtl }) => (
         </SwiperSlide>
       ))}
     </Swiper>
-    <div className="swiper-pagination-teamlist" />
   </>
 );
