@@ -4,6 +4,12 @@
   gap: 4rem;
   place-items: center;
 
+  .item {
+    img {
+      width: 100%;
+    }
+  }
+
   @media screen and (max-width: 1050px) {
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
