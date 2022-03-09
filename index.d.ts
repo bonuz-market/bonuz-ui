@@ -76,6 +76,9 @@ declare module '@bonuz/bonuz-ui' {
     img: string;
     name: string;
     position: string;
+    link?: string;
+    rounded?: boolean;
+    centered?: boolean;
   };
   type TextBlockProps = PropsWithChildren<{
     type?: 'primary' | 'secondary';
@@ -129,11 +132,7 @@ declare module '@bonuz/bonuz-ui' {
     rtl?: boolean;
   };
   type TeamListProps = {
-    items: {
-      img: string;
-      name: string;
-      position: string;
-    }[];
+    items: TeamCardProps[];
     rtl?: boolean;
   };
   type TabProps = {

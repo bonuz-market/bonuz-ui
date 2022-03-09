@@ -7,46 +7,33 @@ import { ActionButton, TeamCard } from '../../atoms';
 import './TeamList.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { TeamCardProps } from '../../atoms/TeamCard/TeamCard';
 
 export type TeamListProps = {
-  items: {
-    img: string;
-    name: string;
-    position: string;
-    link?: string;
-  }[];
+  items: TeamCardProps[];
   rtl?: boolean;
+  options?: SwiperProps;
 };
-
 const swiperOptions: SwiperProps = {
   className: 'team',
   modules: [Navigation],
+  slidesPerView: 'auto',
+  spaceBetween: 50,
+  slidesPerGroupAuto: true,
+  slidesPerGroup: 1,
   speed: 600,
-  spaceBetween: 20,
+  rewind: true,
   navigation: {
     nextEl: '.action-button.swiper-next-teamlist',
     prevEl: '.action-button.swiper-prev-teamlist',
   },
-  breakpoints: {
-    320: {
-      slidesPerView: 'auto',
-      slidesPerGroup: 1,
-      slidesOffsetBefore: 5,
-    },
-
-    1050: {
-      slidesPerView: 4,
-      slidesPerGroup: 4,
-      slidesOffsetBefore: 0,
-    },
-  },
 };
 
-export const TeamList: FC<TeamListProps> = ({ items, rtl }) => (
+export const TeamList: FC<TeamListProps> = ({ items, rtl, options }) => (
   <>
     <ActionButton type="left" className="swiper-prev-teamlist" />
     <ActionButton type="right" className="swiper-next-teamlist" />
-    <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
+    <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'} {...options}>
       {items.map((item, index) => (
         <SwiperSlide key={`${item.name}-${index}`}>
           <TeamCard
@@ -54,6 +41,8 @@ export const TeamList: FC<TeamListProps> = ({ items, rtl }) => (
             name={item.name}
             position={item.position}
             link={item.link}
+            rounded={item.rounded}
+            centered={item.centered}
           />
         </SwiperSlide>
       ))}

@@ -1,7 +1,22 @@
 @use '../../../assets/styles/utils' as u;
 
 .team-item {
-  width: 210px;
+  width: min-content;
+
+  &.rounded {
+    img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      clip-path: none;
+    }
+  }
+
+  &.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   img {
     clip-path: path(
