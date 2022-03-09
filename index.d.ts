@@ -120,7 +120,7 @@ declare module '@bonuz/bonuz-ui' {
     }[];
     rtl?: boolean;
   };
-  type PartnersListProps = {
+  type GalleryProps = {
     items: { image: string; link?: string }[];
   };
   type RoadMapListProps = {
@@ -305,7 +305,7 @@ declare module '@bonuz/bonuz-ui' {
   export const HeaderSecondary: FC<HeaderSecondaryProps>;
   export const HowItWorksList: FC<HowItWorksListProps>;
   export const NewsRow: FC<NewsRowProps>;
-  export const PartnersList: FC<PartnersListProps>;
+  export const Gallery: FC<GalleryProps>;
   export const RoadMapList: FC<RoadMapListProps>;
   export const TeamList: FC<TeamListProps>;
   export const Title: FC;

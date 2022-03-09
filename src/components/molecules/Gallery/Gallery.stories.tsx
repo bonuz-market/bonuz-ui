@@ -1,15 +1,15 @@
 import { Meta, Story } from '@storybook/react';
-import { PartnersList, PartnersListProps } from './PartnersList';
+import { Gallery, GalleryProps } from './Gallery';
 import mockdata from '../../../mock/mock-data.json';
 
 export default {
-  title: 'Components/Molecules/PartnersList',
-  component: PartnersList,
+  title: 'Components/Molecules/Gallery',
+  component: Gallery,
 } as Meta;
 
-const Template: Story<PartnersListProps> = (args) => (
+const Template: Story<GalleryProps> = (args) => (
   <div style={{ margin: '5rem 0' }}>
-    <PartnersList {...args} />
+    <Gallery {...args} />
   </div>
 );
 
