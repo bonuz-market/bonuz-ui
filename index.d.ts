@@ -121,8 +121,7 @@ declare module '@bonuz/bonuz-ui' {
     rtl?: boolean;
   };
   type PartnersListProps = {
-    partners: Array<string>;
-    rtl?: boolean;
+    items: { image: string; link?: string }[];
   };
   type RoadMapListProps = {
     items: {

@@ -8,14 +8,15 @@ export default {
 } as Meta;
 
 const Template: Story<PartnersListProps> = (args) => (
-  <div className="partners-block">
+  <div style={{ margin: '5rem 0' }}>
     <PartnersList {...args} />
   </div>
 );
 
 export const Primary = Template.bind({});
 Primary.args = {
-  partners: mockdata.partners.map((item) =>
-    require(`/src/assets/images/${item}`),
-  ),
+  items: mockdata.partners.map((item) => ({
+    image: require(`/src/assets/images/${item}`),
+    link: 'https://bonuz.market',
+  })),
 };
