@@ -7,7 +7,6 @@ export { Gallery } from './Gallery';
 export { AdvantagesList } from './AdvantagesList';
 export { TeamList } from './TeamList';
 export { Tabs, TabsSecondary } from './Tabs';
-export { NewsRow } from './NewsRow';
 export { Media } from './Media';
 export { Users } from './Users';
 export { FansList } from './FansList';

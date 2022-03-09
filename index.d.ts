@@ -110,16 +110,6 @@ declare module '@bonuz/bonuz-ui' {
     }[];
     rtl?: boolean;
   };
-  type NewsRowProps = {
-    news: {
-      created: string;
-      img: string;
-      title: string;
-      description: string;
-      link: string;
-    }[];
-    rtl?: boolean;
-  };
   type GalleryProps = {
     items: { image: string; link?: string }[];
   };
@@ -304,7 +294,6 @@ declare module '@bonuz/bonuz-ui' {
   export const FooterSecondary: FC<FooterSecondaryProps>;
   export const HeaderSecondary: FC<HeaderSecondaryProps>;
   export const HowItWorksList: FC<HowItWorksListProps>;
-  export const NewsRow: FC<NewsRowProps>;
   export const Gallery: FC<GalleryProps>;
   export const RoadMapList: FC<RoadMapListProps>;
   export const TeamList: FC<TeamListProps>;
