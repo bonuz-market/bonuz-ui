@@ -123,6 +123,9 @@ declare module '@bonuz/bonuz-ui' {
   type TeamListProps = {
     items: TeamCardProps[];
     rtl?: boolean;
+    rounded?: boolean;
+    centered?: boolean;
+    options?: SwiperProps;
   };
   type TabProps = {
     title: string;

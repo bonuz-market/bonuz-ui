@@ -12,6 +12,8 @@ import { TeamCardProps } from '../../atoms/TeamCard/TeamCard';
 export type TeamListProps = {
   items: TeamCardProps[];
   rtl?: boolean;
+  rounded?: boolean;
+  centered?: boolean;
   options?: SwiperProps;
 };
 const swiperOptions: SwiperProps = {
@@ -29,7 +31,13 @@ const swiperOptions: SwiperProps = {
   },
 };
 
-export const TeamList: FC<TeamListProps> = ({ items, rtl, options }) => (
+export const TeamList: FC<TeamListProps> = ({
+  items,
+  rtl,
+  options,
+  rounded,
+  centered,
+}) => (
   <>
     <ActionButton type="left" className="swiper-prev-teamlist" />
     <ActionButton type="right" className="swiper-next-teamlist" />
@@ -41,8 +49,8 @@ export const TeamList: FC<TeamListProps> = ({ items, rtl, options }) => (
             name={item.name}
             position={item.position}
             link={item.link}
-            rounded={item.rounded}
-            centered={item.centered}
+            rounded={rounded}
+            centered={centered}
           />
         </SwiperSlide>
       ))}
