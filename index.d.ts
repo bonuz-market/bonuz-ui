@@ -26,6 +26,7 @@ declare module '@bonuz/bonuz-ui' {
     img: string;
     name: string;
     country: string;
+    link?: string;
   };
   type CheckboxProps = {
     label: string;
