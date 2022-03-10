@@ -19,66 +19,52 @@ $color-background-slides-3: linear-gradient(
 
 .roadmap {
   &__list {
-    margin: 0 auto;
-    margin-bottom: 120px;
-    margin-top: 60px;
+    position: relative;
 
     @mixin position() {
-      top: -40px;
-      width: 75px;
-      height: 85px;
+      top: 50%;
       position: absolute;
-      cursor: pointer;
-      transition: all 0.3s;
+      transition: all 0.3s ease-in-out;
+      transform: translateY(-50%) !important;
     }
 
     .prev {
       @include position;
 
-      left: 0;
+      inset-inline-start: 0;
+      transform: translateY(-50%) rotate(180deg) !important;
+
+      [dir='rtl'] & {
+        transform: translateY(-50%) rotate(0deg) !important;
+      }
 
       &:hover {
         opacity: 1;
-      }
-
-      [dir='rtl'] & {
-        left: auto;
-        right: 0;
       }
     }
 
     .next {
       @include position;
 
-      right: 0;
+      inset-inline-end: 0;
+
+      [dir='rtl'] & {
+        transform: translateY(-50%) rotate(180deg) !important;
+      }
 
       &:hover {
         opacity: 1;
       }
-
-      [dir='rtl'] & {
-        left: 0;
-        right: auto;
-      }
     }
     %swiper {
-      border: none;
-      cursor: pointer;
-      display: block;
-      font-size: 0;
-      height: 20px;
-      line-height: 0;
-      padding: 0;
       position: absolute;
       top: 50%;
-      -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
-      width: 20px;
       z-index: 5;
     }
 
     .swiper {
-      width: 940px;
+      width: 90%;
 
       &-slide {
         width: auto;
@@ -91,10 +77,6 @@ $color-background-slides-3: linear-gradient(
           transform: scale(1.08);
         }
         @extend %transition;
-
-        .roadmap__item {
-          margin: auto;
-        }
 
         &:hover {
           filter: contrast(150%);
@@ -180,26 +162,23 @@ $color-background-slides-3: linear-gradient(
         pointer-events: none;
       }
     }
+
+    .pagination {
+      width: 90%;
+      position: relative;
+      display: flex;
+      place-content: center;
+      margin-top: 20px;
+    }
   }
 }
 @media screen and (max-width: 1050px) {
   .roadmap {
     &__list {
-      margin: 0 auto;
-      margin-bottom: 140px;
-      border-radius: 8px;
       position: relative;
 
       .swiper {
         width: 100%;
-
-        &-slide {
-          .roadmap {
-            &__item {
-              margin: unset;
-            }
-          }
-        }
 
         &-next-roadmaplist,
         &-prev-roadmaplist {
@@ -207,10 +186,9 @@ $color-background-slides-3: linear-gradient(
         }
 
         &-pagination-roadmaplist {
-          position: absolute;
-          bottom: -60px;
-          display: unset;
+          display: block;
           z-index: 5;
+          transform: none !important;
         }
 
         &-pagination-bullet {

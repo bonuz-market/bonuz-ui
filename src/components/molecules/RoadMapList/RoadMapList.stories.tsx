@@ -15,7 +15,7 @@ const Template: Story<RoadMapListProps> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  items: mockData.roadMap,
+  items: mockData.roadMap.concat(mockData.roadMap),
 };
 export const RTL = Template.bind({});
 RTL.args = {

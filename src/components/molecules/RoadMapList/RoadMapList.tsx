@@ -29,21 +29,9 @@ const swiperOptions: SwiperProps = {
     nextEl: '.action-button.swiper-next-roadmaplist',
     prevEl: '.action-button.swiper-prev-roadmaplist',
   },
-  breakpoints: {
-    320: {
-      slidesPerView: 'auto',
-      slidesPerGroup: 1,
-      spaceBetween: 20,
-    },
-    720: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-    },
-    1050: {
-      slidesPerView: 3,
-      slidesPerGroup: 1,
-    },
-  },
+  slidesPerView: 'auto',
+  spaceBetween: 50,
+  rewind: true,
 };
 
 export const RoadMapList: FC<RoadMapListProps> = ({ items, rtl }) => (
@@ -57,6 +45,8 @@ export const RoadMapList: FC<RoadMapListProps> = ({ items, rtl }) => (
         </SwiperSlide>
       ))}
     </Swiper>
-    <div className="swiper-pagination-roadmaplist" />
+    <div className="pagination">
+      <div className="swiper-pagination-roadmaplist" />
+    </div>
   </>
 );
