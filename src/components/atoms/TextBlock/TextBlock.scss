@@ -11,7 +11,7 @@
     position: absolute;
     width: 37px;
     height: 30px;
-    background-image: url('../../../assets/images/celeb_f.svg');
+    background-image: url('../../../assets/images/pattern_primary.png');
     background-repeat: repeat-x;
     background-size: contain;
     top: 50%;
@@ -48,7 +48,7 @@
 
   &--secondary {
     &::before {
-      background-image: url('../../../assets/images/f.svg');
+      background-image: url('../../../assets/images/pattern_secondary.png');
     }
   }
 
