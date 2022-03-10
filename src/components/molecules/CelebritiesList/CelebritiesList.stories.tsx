@@ -18,5 +18,6 @@ Primary.args = {
   celebrities: mockData.celebrities.map((item) => ({
     ...item,
     img: require(`/src/assets/images/${item.img}`),
+    link: 'asdasd',
   })),
 };

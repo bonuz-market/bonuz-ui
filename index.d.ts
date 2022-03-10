@@ -96,11 +96,7 @@ declare module '@bonuz/bonuz-ui' {
     rtl?: boolean;
   };
   type CelebritiesListProps = {
-    celebrities: {
-      img: string;
-      name: string;
-      country: string;
-    }[];
+    celebrities: CelebritiesItemProps[];
     rtl?: boolean;
   };
   type HowItWorksListProps = {
