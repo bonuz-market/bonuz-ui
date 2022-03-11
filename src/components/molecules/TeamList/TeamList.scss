@@ -4,22 +4,20 @@
   margin-top: 55px;
   z-index: 2;
   %position {
-    top: -40px;
-    width: 75px;
-    height: 85px;
+    top: 50%;
     position: absolute;
-    cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-50%) !important;
   }
 
   .prev {
     @extend %position;
 
-    left: 0;
+    inset-inline-start: 0;
+    transform: translateY(-50%) rotate(180deg) !important;
 
     [dir='rtl'] & {
-      left: auto;
-      right: 0;
+      transform: translateY(-50%) rotate(0deg) !important;
     }
 
     &:hover {
@@ -30,37 +28,24 @@
   .next {
     @extend %position;
 
-    right: 0;
+    inset-inline-end: 0;
 
     [dir='rtl'] & {
-      left: 0;
-      right: auto;
+      transform: translateY(-50%) rotate(180deg) !important;
     }
 
     &:hover {
       opacity: 1;
     }
   }
-
   %swiper {
-    border: none;
-    cursor: pointer;
-    display: block;
-    font-size: 0;
-    height: 20px;
-    line-height: 0;
-    padding: 0;
     position: absolute;
     top: 50%;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    width: 20px;
     z-index: 5;
   }
 
   .swiper {
-    width: 925px;
-
     &-slide {
       width: auto;
     }
@@ -72,23 +57,13 @@
     &-prev-teamlist {
       @extend %swiper;
 
-      left: 0;
-
-      [dir='rtl'] & {
-        right: 0;
-        left: auto;
-      }
+      inset-inline-start: 0;
     }
 
     &-next-teamlist {
       @extend %swiper;
 
-      right: 0;
-
-      [dir='rtl'] & {
-        right: auto;
-        left: 0;
-      }
+      inset-inline-end: 0;
     }
 
     &-button-disabled {

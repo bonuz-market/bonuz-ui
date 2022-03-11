@@ -11,29 +11,34 @@ import { TeamCardProps } from '../../atoms/TeamCard/TeamCard';
 
 export type TeamListProps = {
   items: TeamCardProps[];
-  rtl?: boolean;
   rounded?: boolean;
   centered?: boolean;
   options?: SwiperProps;
 };
 const swiperOptions: SwiperProps = {
-  className: 'team',
   modules: [Navigation],
-  slidesPerView: 'auto',
-  spaceBetween: 50,
-  slidesPerGroupAuto: true,
-  slidesPerGroup: 1,
   speed: 600,
   rewind: true,
   navigation: {
     nextEl: '.action-button.swiper-next-teamlist',
     prevEl: '.action-button.swiper-prev-teamlist',
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 'auto',
+      slidesPerGroupAuto: true,
+      slidesPerGroup: 1,
+      spaceBetween: 30,
+    },
+    1050: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+    },
+  },
 };
 
 export const TeamList: FC<TeamListProps> = ({
   items,
-  rtl,
   options,
   rounded,
   centered,
@@ -41,7 +46,7 @@ export const TeamList: FC<TeamListProps> = ({
   <>
     <ActionButton type="left" className="swiper-prev-teamlist" />
     <ActionButton type="right" className="swiper-next-teamlist" />
-    <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'} {...options}>
+    <Swiper {...swiperOptions} {...options}>
       {items.map((item, index) => (
         <SwiperSlide key={`${item.name}-${index}`}>
           <TeamCard
