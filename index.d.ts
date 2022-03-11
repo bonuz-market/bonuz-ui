@@ -105,11 +105,8 @@ declare module '@bonuz/bonuz-ui' {
     items: { image: string; link?: string }[];
   };
   type RoadMapListProps = {
-    items: {
-      title: string;
-      description: string;
-    }[];
-    rtl?: boolean;
+    items: RoadMapItemProps[];
+    options?: SwiperProps;
   };
   type TeamListProps = {
     items: TeamCardProps[];

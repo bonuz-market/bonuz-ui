@@ -64,8 +64,6 @@ $color-background-slides-3: linear-gradient(
     }
 
     .swiper {
-      width: 90%;
-
       &-slide {
         width: auto;
         %transition {
@@ -162,24 +160,19 @@ $color-background-slides-3: linear-gradient(
         pointer-events: none;
       }
     }
-
-    .pagination {
-      width: 90%;
-      position: relative;
-      display: flex;
-      place-content: center;
-      margin-top: 20px;
-    }
   }
 }
 @media screen and (max-width: 1050px) {
   .roadmap {
     &__list {
-      position: relative;
+      .pagination {
+        width: 100%;
+        display: flex;
+        place-content: center;
+        margin-top: 20px;
+      }
 
       .swiper {
-        width: 100%;
-
         &-next-roadmaplist,
         &-prev-roadmaplist {
           display: none;
@@ -189,6 +182,7 @@ $color-background-slides-3: linear-gradient(
           display: block;
           z-index: 5;
           transform: none !important;
+          text-align: center;
         }
 
         &-pagination-bullet {

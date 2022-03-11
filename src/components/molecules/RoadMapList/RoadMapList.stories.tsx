@@ -46,5 +46,7 @@ RTL.args = {
       description: 'تحقق whitepaper للخطوات المتبقية.',
     },
   ],
-  rtl: true,
+  options: {
+    dir: 'rtl',
+  },
 };
