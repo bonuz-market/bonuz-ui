@@ -94,8 +94,8 @@ declare module '@bonuz/bonuz-ui' {
     options?: SwiperProps;
   };
   type CelebritiesListProps = {
-    celebrities: CelebritiesItemProps[];
-    rtl?: boolean;
+    items: CelebritiesItemProps[];
+    options?: SwiperProps;
   };
   type HowItWorksListProps = {
     items: {

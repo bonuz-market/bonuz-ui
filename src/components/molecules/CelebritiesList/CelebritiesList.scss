@@ -49,8 +49,6 @@
     }
 
     .swiper {
-      width: 90%;
-
       &-prev-celebritiesList {
         @extend %swiper;
 
@@ -86,8 +84,6 @@
       }
 
       .swiper {
-        width: auto;
-
         &-prev-celebritiesList,
         &-next-celebritiesList {
           display: none;

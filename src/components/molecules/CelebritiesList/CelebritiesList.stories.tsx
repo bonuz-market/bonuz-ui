@@ -15,9 +15,10 @@ const Template: Story<CelebritiesListProps> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  celebrities: mockData.celebrities.map((item) => ({
+  items: mockData.celebrities.map((item) => ({
     ...item,
     img: require(`/src/assets/images/${item.img}`),
-    link: 'asdasd',
+    link: 'https://bonuz.market',
+    category: 'Brand',
   })),
 };

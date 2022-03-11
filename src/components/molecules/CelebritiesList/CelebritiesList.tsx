@@ -10,14 +10,12 @@ import 'swiper/css/navigation';
 import { CelebritiesItemProps } from '../../atoms/CelebritiesItem/CelebritiesItem';
 
 export type CelebritiesListProps = {
-  celebrities: CelebritiesItemProps[];
-  rtl?: boolean;
+  items: CelebritiesItemProps[];
+  options?: SwiperProps;
 };
 
 const swiperOptions: SwiperProps = {
   modules: [Autoplay, Navigation],
-  slidesPerView: 'auto',
-  spaceBetween: 30,
   navigation: {
     nextEl: '.action-button.swiper-next-celebritiesList',
     prevEl: '.action-button.swiper-prev-celebritiesList',
@@ -25,23 +23,33 @@ const swiperOptions: SwiperProps = {
   autoplay: { pauseOnMouseEnter: true, disableOnInteraction: false },
   rewind: true,
   speed: 500,
+  breakpoints: {
+    320: {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+    },
+    1050: {
+      slidesPerView: 4,
+    },
+  },
 };
 
 export const CelebritiesList: FC<CelebritiesListProps> = ({
-  celebrities,
-  rtl,
+  items,
+  options,
 }) => (
   <>
     <ActionButton type="left" className="swiper-prev-celebritiesList" />
     <ActionButton type="right" className="swiper-next-celebritiesList" />
-    <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
-      {celebrities.map((item, index) => (
+    <Swiper {...swiperOptions} {...options}>
+      {items.map((item, index) => (
         <SwiperSlide key={`${item.name}-${index}`}>
           <CelebritiesItem
             img={item.img}
             name={item.name}
             role={item.role}
             link={item.link}
+            category={item.category}
           />
         </SwiperSlide>
       ))}
