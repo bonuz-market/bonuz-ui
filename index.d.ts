@@ -27,6 +27,7 @@ declare module '@bonuz/bonuz-ui' {
     name: string;
     country: string;
     link?: string;
+    category?: string;
   };
   type CheckboxProps = {
     label: string;

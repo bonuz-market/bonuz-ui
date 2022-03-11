@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { Button } from '../Button';
 import './CelebritiesItem.scss';
 
 export type CelebritiesItemProps = {
@@ -7,8 +6,15 @@ export type CelebritiesItemProps = {
   name: string;
   role: string;
   link?: string;
+  category?: string;
 };
-const Item: FC<CelebritiesItemProps> = ({ img, name, role, link }) => (
+const Item: FC<CelebritiesItemProps> = ({
+  img,
+  name,
+  role,
+  link,
+  category,
+}) => (
   <>
     <img src={img} alt={name} />
     <div>
@@ -18,7 +24,7 @@ const Item: FC<CelebritiesItemProps> = ({ img, name, role, link }) => (
       </div>
       {link && (
         <button type="button">
-          <a href={link}>Celebrity </a>
+          <a href={link}>{category}</a>
         </button>
       )}
     </div>
@@ -30,8 +36,9 @@ export const CelebritiesItem: FC<CelebritiesItemProps> = ({
   name,
   role,
   link,
+  category,
 }) => (
   <div className="celeb">
-    <Item img={img} name={name} role={role} link={link} />
+    <Item img={img} name={name} role={role} link={link} category={category} />
   </div>
 );
