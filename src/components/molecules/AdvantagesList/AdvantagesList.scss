@@ -1,9 +1,5 @@
 .advantages {
   &__list {
-    width: 940px;
-    margin-top: 60px;
-    margin-bottom: 40px;
-
     .swiper-pagination-advantageslist {
       display: none;
     }
@@ -13,19 +9,24 @@
 @media screen and (max-width: 1050px) {
   .advantages {
     &__list {
-      width: 275px;
-      margin: 0 auto;
-      margin-top: 25px;
-      position: relative;
+      .pagination {
+        display: flex;
+        place-content: center;
+        width: 100%;
+        margin-top: 20px;
+      }
 
       .swiper {
+        &-slide {
+          width: auto;
+        }
+
         &-pagination {
           &-advantageslist {
-            position: absolute;
-            bottom: -30px;
-            display: unset;
+            display: block;
             z-index: 5;
             text-align: center;
+            transform: none !important;
           }
 
           &-bullet {

@@ -1,5 +1,6 @@
 import { ReactNode, FC, PropsWithChildren, ReactElement } from 'react';
 import { ColorResult } from 'react-color';
+import { SwiperProps } from 'swiper/react';
 
 declare module '@bonuz/bonuz-ui' {
   type ButtonProps = PropsWithChildren<{
@@ -89,12 +90,8 @@ declare module '@bonuz/bonuz-ui' {
     mobileColumn?: boolean;
   }>;
   type AdvantagesListProps = {
-    items: {
-      title: string;
-      description: string;
-      icon: any;
-    }[];
-    rtl?: boolean;
+    items: AdvantagesItemProps[];
+    options?: SwiperProps;
   };
   type CelebritiesListProps = {
     celebrities: CelebritiesItemProps[];
