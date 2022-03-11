@@ -5,7 +5,13 @@ export type CelebritiesItemProps = {
   img: string;
   name: string;
   role: string;
+  /**
+   * Must be used with category prop
+   */
   link?: string;
+  /**
+   * Must be used with link prop
+   */
   category?: string;
 };
 const Item: FC<CelebritiesItemProps> = ({
@@ -22,9 +28,9 @@ const Item: FC<CelebritiesItemProps> = ({
         <h4>{name}</h4>
         <p>{role}</p>
       </div>
-      {link && (
+      {link && category && (
         <button type="button">
-          <a href={link}>{category}</a>
+          <a href={link}>{category}</a>}
         </button>
       )}
     </div>

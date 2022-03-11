@@ -27,7 +27,13 @@ declare module '@bonuz/bonuz-ui' {
     img: string;
     name: string;
     country: string;
+    /**
+     * Must be used with category prop
+     */
     link?: string;
+    /**
+     * Must be used with link prop
+     */
     category?: string;
   };
   type CheckboxProps = {
