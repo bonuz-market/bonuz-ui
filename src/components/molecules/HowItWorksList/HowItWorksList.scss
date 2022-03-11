@@ -1,7 +1,4 @@
 .how-it-works-list {
-  margin: 0 auto;
-  margin-top: 50px;
-
   .swiper {
     display: flex;
     justify-content: space-between;
@@ -44,19 +41,22 @@
 }
 @media screen and (max-width: 1050px) {
   .how-it-works-list {
-    position: relative;
-    padding: 20px 0;
-    margin: 40px auto;
+    .pagination {
+      display: flex;
+      place-content: center;
+      width: 100%;
+      margin-top: 20px;
+    }
 
     .swiper {
       width: 100%;
 
       &-pagination {
         &-howitworks {
-          position: absolute;
-          bottom: -30px;
-          display: unset;
+          display: block;
           z-index: 5;
+          transform: none !important;
+          text-align: center;
         }
 
         &-bullet {

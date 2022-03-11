@@ -98,12 +98,8 @@ declare module '@bonuz/bonuz-ui' {
     options?: SwiperProps;
   };
   type HowItWorksListProps = {
-    items: {
-      img: string;
-      title: string;
-      circleOffset: number;
-    }[];
-    rtl?: boolean;
+    items: HowItWorksItemProps[];
+    options?: SwiperProps;
   };
   type GalleryProps = {
     items: { image: string; link?: string }[];
