@@ -30,7 +30,7 @@ const Item: FC<CelebritiesItemProps> = ({
       </div>
       {link && category && (
         <button type="button">
-          <a href={link}>{category}</a>}
+          <a href={link}>{category}</a>
         </button>
       )}
     </div>
