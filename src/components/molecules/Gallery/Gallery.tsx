@@ -4,7 +4,7 @@ import { FC } from 'react';
 import './Gallery.scss';
 
 export type GalleryProps = {
-  items: { image: string; link?: string }[];
+  items: { image: string; link?: string; alt?: string }[];
 };
 
 export const Gallery: FC<GalleryProps> = ({ items }) => (
@@ -13,10 +13,10 @@ export const Gallery: FC<GalleryProps> = ({ items }) => (
       <div className="item" key={index}>
         {item.link ? (
           <a href={item.link} target="_blank" rel="noreferrer">
-            <img src={item.image} alt={`item ${index}`} />
+            <img src={item.image} alt={item.alt || `item ${index}`} />
           </a>
         ) : (
-          <img src={item.image} alt={`item ${index}`} />
+          <img src={item.image} alt={item.alt || `item ${index}`} />
         )}
       </div>
     ))}

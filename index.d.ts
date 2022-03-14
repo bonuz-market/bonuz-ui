@@ -108,7 +108,7 @@ declare module '@bonuz/bonuz-ui' {
     options?: SwiperProps;
   };
   type GalleryProps = {
-    items: { image: string; link?: string }[];
+    items: { image: string; link?: string; alt?: string }[];
   };
   type RoadMapListProps = {
     items: RoadMapItemProps[];
