@@ -30,7 +30,12 @@ const Item: FC<CelebritiesItemProps> = ({
       </div>
       {link && category && (
         <button type="button">
-          <a href={link}>{category}</a>
+          {link === '#' && <a href={link}>{category}</a>}
+          {link !== '#' && (
+            <a href={link} target="_blank" rel="noreferrer">
+              {category}
+            </a>
+          )}
         </button>
       )}
     </div>
