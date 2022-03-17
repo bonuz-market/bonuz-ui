@@ -9,6 +9,7 @@ export type InputProps = {
   placeholder?: string;
   icon?: ReactNode;
   value?: string;
+  type?: string;
   actionButton?: ReactNode;
   withDefaultActionButton?: boolean;
   defaultActionButtonLabel?: string;
@@ -22,6 +23,7 @@ export const Input: FC<InputProps> = ({
   placeholder,
   icon,
   value,
+  type,
   actionButton,
   withDefaultActionButton,
   defaultActionButtonLabel,
@@ -56,7 +58,7 @@ export const Input: FC<InputProps> = ({
           {icon && <span className="input__icon">{icon}</span>}
           <input
             className="input__control"
-            type="text"
+            type={type || 'text'}
             placeholder={placeholder}
             value={defaultValue}
             onChange={handleChangeInput}
