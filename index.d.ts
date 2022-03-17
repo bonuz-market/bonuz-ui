@@ -235,9 +235,13 @@ declare module '@bonuz/bonuz-ui' {
     newsletterForm: {
       label: string;
       placeholderText: string;
+      value: string;
+      onChange: (value: string) => void;
       onSubmit: () => void;
+      statusTextOptions?: StatusTextProps;
     };
     socialMediaLinks: SocialListProps;
+    statusTextOptions?: StatusTextProps;
   };
   type FormArrowButtonProps = {
     onClick: () => void;
