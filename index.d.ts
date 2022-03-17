@@ -96,6 +96,12 @@ declare module '@bonuz/bonuz-ui' {
     title?: string;
     mobileColumn?: boolean;
   }>;
+  type StatusTextProps = {
+    message: string;
+    type: 'success' | 'error' | 'warning' | '';
+    alwaysVisible?: boolean;
+    timeout?: number;
+  };
   type AdvantagesListProps = {
     items: AdvantagesItemProps[];
     options?: SwiperProps;
@@ -284,6 +290,7 @@ declare module '@bonuz/bonuz-ui' {
   export const FormArrowButton: FC<FormArrowButtonProps>;
   export const TeamCard: FC<TeamCardProps>;
   export const TextBlock: FC<TextBlockProps>;
+  export const StatusText: FC<StatusTextProps>;
   export const AdvantagesList: FC<AdvantagesListProps>;
   export const CelebritiesList: FC<CelebritiesListProps>;
   export const Footer: FC<FooterProps>;
