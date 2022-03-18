@@ -94,6 +94,11 @@ declare module '@bonuz/bonuz-ui' {
     link?: string;
     rounded?: boolean;
     centered?: boolean;
+    lazy?: boolean;
+    /**
+     * Should be used  with swiper slider
+     */
+    lazySwiper?: boolean;
   };
   type TextBlockProps = PropsWithChildren<{
     type?: 'primary' | 'secondary';

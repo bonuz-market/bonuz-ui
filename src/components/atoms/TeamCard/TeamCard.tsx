@@ -9,6 +9,11 @@ export type TeamCardProps = {
   link?: string;
   rounded?: boolean;
   centered?: boolean;
+  lazy?: boolean;
+  /**
+   * Should be used  with swiper slider
+   */
+  lazySwiper?: boolean;
 };
 
 export const TeamCard: FC<TeamCardProps> = ({
@@ -18,6 +23,8 @@ export const TeamCard: FC<TeamCardProps> = ({
   link,
   rounded,
   centered,
+  lazy,
+  lazySwiper,
 }) => (
   <div
     className={classNames('team-item', {
@@ -25,7 +32,10 @@ export const TeamCard: FC<TeamCardProps> = ({
       centered,
     })}
   >
-    <img src={img} className="pic" alt="" />
+    {!lazySwiper && (
+      <img src={img} alt={name} loading={lazy ? 'lazy' : undefined} />
+    )}
+    {lazySwiper && <img data-src={img} className="swiper-lazy" alt={name} />}
     <p>{name}</p>
     <span>
       {link && (
