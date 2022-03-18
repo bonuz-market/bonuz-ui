@@ -126,6 +126,7 @@ declare module '@bonuz/bonuz-ui' {
   };
   type GalleryProps = {
     items: { image: string; link?: string; alt?: string }[];
+    lazy?: boolean;
   };
   type RoadMapListProps = {
     items: RoadMapItemProps[];
