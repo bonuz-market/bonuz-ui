@@ -35,6 +35,11 @@ declare module '@bonuz/bonuz-ui' {
      * Must be used with link prop
      */
     category?: string;
+    lazy?: boolean;
+    /**
+     * Should be used  with swiper slider
+     */
+    lazySwiper?: boolean;
   };
   type CheckboxProps = {
     label: string;

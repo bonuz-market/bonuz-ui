@@ -13,6 +13,11 @@ export type CelebritiesItemProps = {
    * Must be used with link prop
    */
   category?: string;
+  lazy?: boolean;
+  /**
+   * Should be used  with swiper slider
+   */
+  lazySwiper?: boolean;
 };
 const Item: FC<CelebritiesItemProps> = ({
   img,
@@ -20,9 +25,14 @@ const Item: FC<CelebritiesItemProps> = ({
   role,
   link,
   category,
+  lazy,
+  lazySwiper,
 }) => (
   <>
-    <img src={img} alt={name} />
+    {!lazySwiper && (
+      <img src={img} alt={name} loading={lazy ? 'lazy' : undefined} />
+    )}
+    {lazySwiper && <img alt={name} data-src={link} className="swiper-lazy" />}
     <div>
       <div className="celeb__info">
         <h4>{name}</h4>
@@ -48,8 +58,18 @@ export const CelebritiesItem: FC<CelebritiesItemProps> = ({
   role,
   link,
   category,
+  lazy,
+  lazySwiper,
 }) => (
   <div className="celeb">
-    <Item img={img} name={name} role={role} link={link} category={category} />
+    <Item
+      img={img}
+      name={name}
+      role={role}
+      link={link}
+      category={category}
+      lazy={lazy}
+      lazySwiper={lazySwiper}
+    />
   </div>
 );
