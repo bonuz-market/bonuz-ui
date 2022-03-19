@@ -31,7 +31,7 @@
         &::after {
           content: '';
           position: absolute;
-          background-image: url(http://localhost:6006/static/media/src/assets/images/dash.svg);
+          background-image: url('../../../assets/images/dash.svg');
           background-repeat: repeat-x;
           width: 144px;
           height: 2px;
