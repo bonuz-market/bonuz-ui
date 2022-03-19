@@ -3,22 +3,27 @@
 .text-block {
   display: flex;
   align-items: center;
-  padding-left: 53px;
   position: relative;
+  column-gap: 0.725rem;
 
-  &::before {
-    content: '';
-    position: absolute;
+  &__stripe {
     width: 37px;
+    position: relative;
     height: 30px;
-    background-image: url('../../../assets/images/pattern_primary.png');
-    background-repeat: repeat-x;
-    background-size: contain;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
     overflow: hidden;
-    animation: stripe-animation 4500s linear infinite both;
+    flex-shrink: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 74px;
+      height: 30px;
+      background-image: url(http://localhost:6006/static/media/src/assets/images/pattern_primary.png);
+      background-repeat: repeat-x;
+      background-size: contain;
+      left: -18.5px;
+      animation: stripe-animation 1.5s linear infinite both;
+    }
   }
 
   &__wrapper {
@@ -47,8 +52,12 @@
   }
 
   &--secondary {
-    &::before {
-      background-image: url('../../../assets/images/pattern_secondary.png');
+    .text-block {
+      &__stripe {
+        &::before {
+          background-image: url('../../../assets/images/pattern_secondary.png');
+        }
+      }
     }
   }
 
