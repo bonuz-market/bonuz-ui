@@ -66,65 +66,47 @@ $color-background-slides-3: linear-gradient(
     .swiper {
       &-slide {
         width: auto;
+        transition: all 0.3s;
         %transition {
           transition: all 0.3s;
         }
-        %transition-transform {
-          @extend %transition;
 
-          transform: scale(1.08);
+        .roadmap {
+          &__item {
+            h3,
+            p {
+              @extend %transition;
+            }
+          }
         }
-        @extend %transition;
 
         &:hover {
-          filter: contrast(150%);
-          @extend %transition;
+          filter: contrast(1.5);
 
           .roadmap {
             &__item {
-              h3 {
-                @extend %transition-transform;
-              }
-
+              h3,
               p {
-                @extend %transition-transform;
+                transform: scale(1.08);
               }
             }
           }
         }
-        %item {
-          background-size: 200% 200%;
-          animation: gradient 3s ease infinite;
-        }
 
-        &:nth-child(1n + 1) {
-          .roadmap {
-            &__item {
-              @extend %item;
+        $i: 0;
 
-              background: $color-background-slides-1;
+        @each $color in $color-background-slides-1, $color-background-slides-2,
+          $color-background-slides-3
+        {
+          &:nth-child(#{$i}n + #{$i}) {
+            .roadmap {
+              &__item {
+                background: #{$color};
+              }
             }
           }
-        }
 
-        &:nth-child(2n + 2) {
-          .roadmap {
-            &__item {
-              @extend %item;
-
-              background: $color-background-slides-2;
-            }
-          }
-        }
-
-        &:nth-child(3n + 3) {
-          .roadmap {
-            &__item {
-              @extend %item;
-
-              background: $color-background-slides-3;
-            }
-          }
+          $i: $i + 1;
         }
       }
 
