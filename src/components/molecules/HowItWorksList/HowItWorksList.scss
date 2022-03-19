@@ -1,3 +1,13 @@
+@keyframes dash {
+  0% {
+    transform: translateX(-36px);
+  }
+
+  100% {
+    transform: translateX(36px);
+  }
+}
+
 .how-it-works-list {
   .swiper {
     display: flex;
@@ -10,27 +20,36 @@
       width: auto;
       padding-top: 7px;
 
-      &::after {
-        content: '';
-        position: absolute;
-        background-image: url('../../../assets/images/dash.svg');
-        background-repeat: repeat-x;
+      .slide-stripe {
         width: 60px;
-        height: 5px;
-        z-index: 5;
-        right: -30px;
-        top: 65px;
-        animation: stripe-animation 4500s linear infinite both;
+        height: 2px;
+        overflow: hidden;
+        position: absolute;
+        inset-block-start: 65px;
+        inset-inline-end: -35px;
 
-        [dir='rtl'] & {
-          left: -30px;
-          right: auto;
-          animation-direction: reverse;
+        &::after {
+          content: '';
+          position: absolute;
+          background-image: url(http://localhost:6006/static/media/src/assets/images/dash.svg);
+          background-repeat: repeat-x;
+          width: 144px;
+          height: 2px;
+          inset-inline-start: -36px;
+          animation: dash 3s linear infinite;
+
+          [dir='rtl'] & {
+            animation-direction: reverse;
+          }
         }
       }
 
-      &:last-child::after {
-        display: none;
+      &:last-child {
+        .slide-stripe {
+          &::after {
+            display: none;
+          }
+        }
       }
     }
 

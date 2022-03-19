@@ -44,6 +44,7 @@ export const HowItWorksList: FC<HowItWorksListProps> = ({ items, options }) => (
             title={item.title}
             circleOffset={item.circleOffset}
           />
+          <div className="slide-stripe" />
         </SwiperSlide>
       ))}
     </Swiper>
