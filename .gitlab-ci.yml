@@ -36,9 +36,11 @@ publish:
     - yarn cache clean
     - YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn install
     # - yarn publish:build
-    - rm -rf ./dist
-    - sudo apt-get install rollup -y
-    - rollup -c
+    - npm install --global rimraf
+    - npm install --global rollup
+    # - rimraf ./dist
+    # - rollup -c
+    - yarn publish:build
     # For testing purposes flag --dry-run added. Remove the flag to proceed with publishing
     - npm publish --dry-run
     #- npm publish
