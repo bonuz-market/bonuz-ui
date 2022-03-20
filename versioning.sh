@@ -56,7 +56,9 @@ function minor() {
   IFS='.' read -a tag_split <<< "${tag_string}"
   bumped_minor_vers=$((tag_split[1]+1))
   tag_increment="${tag_split[0]}.$bumped_minor_vers.0"
-  tag_generator="$tag_increment$tag_suffix-$TIMESTAMP"
+  #tag_generator="$tag_increment$tag_suffix-$TIMESTAMP"
+  ## Simplify generated tag by removing Suffix and Timestamp
+  tag_generator="$tag_increment"
 }
 
 # put it into array, trim, split, increment the last build no ONLY, add <date>
@@ -65,7 +67,8 @@ function patch() {
   IFS='.' read -a tag_split <<< "${tag_string}"
   bumped_patch_vers=$((tag_split[2]+1))
   tag_increment="${tag_split[0]}.${tag_split[1]}.$bumped_patch_vers"
-  tag_generator="$tag_increment$tag_suffix-$TIMESTAMP"
+  #tag_generator="$tag_increment$tag_suffix-$TIMESTAMP"
+  tag_generator="$tag_increment"
 }
 
 # should increment the release candidate number only
@@ -111,14 +114,14 @@ function update() {
     read -e -p "Major version: " -i $vMajor major
     read -e -p "Minor version: " -i $vMinor minor
     read -e -p "Patch version: " -i $vPatch patch
-    read -e -p "Suffix: " -i $vSuffix tag_suffix
-    tagging_manual="$major.$minor.$patch$tag_suffix"
-    read -p "Do you want to include a timestamp as suffix for this version? [Y/N] " -i $TIMESTAMP includeTimestamp
+    # read -e -p "Suffix: " -i $vSuffix tag_suffix
+    # tagging_manual="$major.$minor.$patch$tag_suffix"
+    # read -p "Do you want to include a timestamp as suffix for this version? [Y/N] " -i $TIMESTAMP includeTimestamp
     read -p "Your TAG message (optional)? " tagging_message
-    if [ $includeTimestamp = "Y" ]
-      then
-        tagging_manual="$major.$minor.$patch$tag_suffix-$TIMESTAMP"
-    fi
+    # if [ $includeTimestamp = "Y" ]
+    #   then
+    #     tagging_manual="$major.$minor.$patch$tag_suffix-$TIMESTAMP"
+    # fi
     echo
     echo "Alright, The new version TAG is $tagging_manual"
     echo
@@ -140,10 +143,25 @@ function update() {
   else
 	  read -p "Alright, let's add a TAG message (optional)       : " tagging_message
     echo
-    echo "Awesome! Adding the proposed version TAG now..."
+    echo "Awesome! Tagging new version now..."
     echo
     git tag -a $tag_generator -m "$tagging_message"
-    echo "Completed!"
+    ## Grab latest git tag and replace the version value in package.json ##
+    export OLD_TAG=\"$(git tag --sort v:refname | tail -n2 | head -n 1)\"
+    env | grep "OLD_TAG"
+    export NEW_TAG=\"$(git tag --sort v:refname | tail -n1)\"
+    env | grep "NEW_TAG"
+    sed -i "s/$OLD_TAG/$NEW_TAG/" package.json
+    git commit -am "[versioning] bumped version to $NEW_TAG"
+    echo "New package version:" $(head -n 5 package.json | grep version)
+    echo
+    echo "Pushing all commits to the codebase"
+    git push --follow-tag
+    echo 
+    echo "Pipelines is currently publishing the package ..."
+    echo "Once its complete, its status will be notified via Slack Channel"
+    echo 
+    echo "Good bye!"
   fi
 }
 
@@ -161,14 +179,15 @@ function manualUpdate() {
     read -e -p "Major version: " -i $vMajor major
     read -e -p "Minor version: " -i $vMinor minor
     read -e -p "Patch version: " -i $vPatch patch
-    read -e -p "Suffix: " -i $vSuffix tag_suffix
-    read -p "Do you want to include a timestamp as suffix for this version? [Y/N] " -i $TIMESTAMP includeTimestamp
+    # read -e -p "Suffix: " -i $vSuffix tag_suffix
+    # read -p "Do you want to include a timestamp as suffix for this version? [Y/N] " -i $TIMESTAMP includeTimestamp
     read -p "Your TAG message (optional)? " tagging_message
-    tagging_manual="$major.$minor.$patch$tag_suffix"
-    if [ $includeTimestamp = "Y" ]
-      then
-        tagging_manual="$major.$minor.$patch$tag_suffix-$TIMESTAMP"
-    fi
+    tagging_manual="$major.$minor.$patch"
+    # tagging_manual="$major.$minor.$patch$tag_suffix"
+    # if [ $includeTimestamp = "Y" ]
+    #   then
+    #     tagging_manual="$major.$minor.$patch$tag_suffix-$TIMESTAMP"
+    # fi
     echo
     echo "Alright, The new version TAG is $tagging_manual"
     echo
