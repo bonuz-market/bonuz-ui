@@ -36,8 +36,8 @@ publish:
     - yarn cache clean
     - YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn install
     # - yarn publish:build
-    - npm install --global rimraf
-    - npm install --global rollup
+    - npm install rimraf || true
+    - npm install rollup || true
     # - rimraf ./dist
     # - rollup -c
     - yarn publish:build
