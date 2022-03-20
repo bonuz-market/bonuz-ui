@@ -18,10 +18,10 @@ publish:
     - git fetch origin --tags --force
     - git tag --sort=-v:refname | head -n 5
     ## Grab latest git tag and replace the version value in package.json ##
-    - export OLD_TAG=\"$(git tag --sort=-v:refname | head -n2 | tail -n1)\"
-    - env | grep "OLD_TAG"
-    - export NEW_TAG=\"$(git tag --sort=-v:refname | head -n1)\"
-    - env | grep "NEW_TAG"
+    - export OLD_TAG=\"$(git tag --sort=-v:refname | head -n2 | tail -n1)\" || true
+    - env | grep "OLD_TAG" || true
+    - export NEW_TAG=\"$(git tag --sort=-v:refname | head -n1)\" || true
+    - env | grep "NEW_TAG" || true
     #- sed -i "s/$OLD_TAG/$NEW_TAG/" package.json
     ## Reveal bumped version that will be published ##
     - head -n 5 package.json | grep -E 'name|version
