@@ -39,6 +39,6 @@ publish:
     - rm -rf ./dist
     - apt-get install rollup -y
     - rollup -c
-    # For testing purposes flag --dry-run added. Removed the flag to proceed with publishing
+    # For testing purposes flag --dry-run added. Remove the flag to proceed with publishing
     - npm publish --dry-run
     #- npm publish
