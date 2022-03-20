@@ -6,33 +6,36 @@ publish:
   tags: 
     - runner-one
   only: 
-    - release
+    - staging
   environment: 
-    name: release
+    name: staging
   artifacts:
     when: always
     expire_in: 15 days
   before_script:
-    ## Fetch tags ##
-    - git fetch --all --tags
-    - git tag --sort v:refname
+    ## Ensuring our runner's to always get the same tag records from the origin ##
+    - git tag -l | xargs git tag -d
+    - git fetch origin --tags --force
+    - git tag --sort=-v:refname | head -n 5
     ## Grab latest git tag and replace the version value in package.json ##
-    - export GITOLDRAW=$(git tag --sort v:refname | tail -n2 | head -n 1) || true
-    - env | grep "GITOLDRAW"
-    - export GITNEWRAW=$(git tag --sort v:refname | tail -n1) || true
-    - env | grep "GITNEWRAW"
-    - sed -i "s/$GITOLDRAW/$GITNEWRAW/" package.json || true
-    - head -n 5 package.json
+    - export OLD_TAG=\"$(git tag --sort=-v:refname | head -n2 | tail -n1)\"
+    - env | grep "OLD_TAG"
+    - export NEW_TAG=\"$(git tag --sort=-v:refname | head -n1)\"
+    - env | grep "NEW_TAG"
+    #- sed -i "s/$OLD_TAG/$NEW_TAG/" package.json
+    ## Reveal bumped version that will be published ##
+    - head -n 5 package.json | grep -E 'name|version
   script:
+    ## Prep project registry and authentication
     - echo "@bonuz:registry https://code.bonuz.team/api/v4/projects/18/packages/npm/" > .npmrc
     - echo "//code.bonuz.team/api/v4/projects/18/packages/npm/:_authToken=${NPM_TOKEN}" >> .npmrc
     - cat .npmrc
     # This following command is based on the information on yarnPath' key value on .yarnrc.yml
     - yarn set version 3.2.0
     - yarn -v
-    - yarn install
-    # - yarn publish:build
-    # For testing purposes, uncomment following line
+    - yarn cache clean
+    - YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn install
+    - yarn publish:build
+    # For testing purposes flag --dry-run added. Removed the flag to proceed with publishing
     - npm publish --dry-run
-    # ONLY uncomment following line once the publish workflow is usable!
-    # - npm publish --dry-run
+    #- npm publish
