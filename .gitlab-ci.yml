@@ -24,7 +24,7 @@ publish:
     - env | grep "NEW_TAG" || true
     #- sed -i "s/$OLD_TAG/$NEW_TAG/" package.json
     ## Reveal bumped version that will be published ##
-    - head -n 5 package.json | grep -E 'name|version
+    - head -n 5 package.json | grep -E 'name|version'
   script:
     ## Prep project registry and authentication
     - echo "@bonuz:registry https://code.bonuz.team/api/v4/projects/18/packages/npm/" > .npmrc
