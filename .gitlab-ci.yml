@@ -9,9 +9,17 @@ publish:
     - staging
   environment: 
     name: staging
-  artifacts:
-    when: always
-    expire_in: 15 days
+  # artifacts:
+  #   when: always
+  #   expire_in: 15 days
+  cache:
+    - key: $CI_COMMIT_REF_SLUG
+    - key:
+        files:
+          - yarn.lock
+      paths:
+        - .yarn-cache/
+        - .npm/
   before_script:
     ## Ensuring our runner's to always get the same tag records from the origin ##
     - git tag -l | xargs git tag -d
@@ -25,6 +33,9 @@ publish:
     #- sed -i "s/$OLD_TAG/$NEW_TAG/" package.json
     ## Reveal bumped version that will be published ##
     - head -n 5 package.json | grep -E 'name|version'
+    ## Use cache
+    - echo 'yarn-offline-mirror ".yarn-cache/"' >> .yarnrc
+    - echo 'yarn-offline-mirror-pruning true' >> .yarnrc
   script:
     ## Prep project registry and authentication
     - echo "@bonuz:registry https://code.bonuz.team/api/v4/projects/18/packages/npm/" > .npmrc
@@ -33,12 +44,11 @@ publish:
     # This following command is based on the information on yarnPath' key value on .yarnrc.yml
     - yarn set version 3.2.0
     - yarn -v
-    - yarn cache clean
+    # - yarn cache clean
     - npm install rimraf || true
     - npm install rollup || true
-    # - rimraf ./dist
-    # - rollup -c
-    - yarn install || true
+    # - yarn install --cache-folder .yarn-cache || true
+    - yarn install --frozen-lockfile --no-progress || true
     - yarn publish:build || true
     # For testing purposes flag --dry-run added. Remove the flag to proceed with publishing
     - npm publish --dry-run
