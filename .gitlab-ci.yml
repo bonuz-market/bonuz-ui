@@ -38,7 +38,7 @@ publish:
     - npm install rollup || true
     # - rimraf ./dist
     # - rollup -c
-    - YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn install
+    - YARN_ENABLE_IMMUTABLE_INSTALLS=true yarn install || true
     - yarn publish:build || true
     # For testing purposes flag --dry-run added. Remove the flag to proceed with publishing
     - npm publish --dry-run
