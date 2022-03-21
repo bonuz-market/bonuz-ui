@@ -48,7 +48,7 @@ publish:
     - npm install rimraf || true
     - npm install rollup || true
     # - yarn install --cache-folder .yarn-cache || true
-    - yarn install --frozen-lockfile --no-progress || true
+    - yarn install --frozen-lockfile || true
     - yarn publish:build || true
     # For testing purposes flag --dry-run added. Remove the flag to proceed with publishing
     - npm publish --dry-run
