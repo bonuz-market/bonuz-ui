@@ -12,17 +12,17 @@ publish:
   # artifacts:
   #   when: always
   #   expire_in: 15 days
-  # cache:
-  #   # key: $CI_COMMIT_REF_SLUG
-  #   # paths:
-  #   #   - .npm/
-  #   key:
-  #     files:
-  #     - package-lock.json
-  #   paths:
-  #     - .npm/
-  #     - node_modules/
-  #     - build/
+  cache:
+    # key: $CI_COMMIT_REF_SLUG
+    # paths:
+    #   - .npm/
+    key:
+      files:
+      - package-lock.json
+    paths:
+      - .npm/
+      - node_modules/
+      - build/
   before_script:
     ## Ensuring our runner's to always get the same tag records from the origin ##
     - git tag -l | xargs git tag -d
@@ -45,9 +45,6 @@ publish:
     - echo "//code.bonuz.team/api/v4/projects/18/packages/npm/:_authToken=${NPM_TOKEN}" >> .npmrc
     - cat .npmrc
     - yarn install
-    # - npm install rimraf || true
-    # - npm install rollup || true
-    # - rimraf ./dist && rollup -c || true
     - yarn publish:build
     # For testing purposes flag --dry-run added. Remove the flag to proceed with publishing
     - npm publish --dry-run
