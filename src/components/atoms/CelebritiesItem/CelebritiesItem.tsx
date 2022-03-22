@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import './CelebritiesItem.scss';
+import placeholder from '../../../assets/images/placeholder.svg';
 
 export type CelebritiesItemProps = {
   img: string;
@@ -32,7 +33,14 @@ const Item: FC<CelebritiesItemProps> = ({
     {!lazySwiper && (
       <img src={img} alt={name} loading={lazy ? 'lazy' : undefined} />
     )}
-    {lazySwiper && <img alt={name} data-src={img} className="swiper-lazy" />}
+    {lazySwiper && (
+      <img
+        alt={name}
+        data-src={img}
+        src={placeholder}
+        className="swiper-lazy"
+      />
+    )}
     <div>
       <div className="celeb__info">
         <h4>{name}</h4>

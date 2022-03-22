@@ -1,5 +1,7 @@
 @use '../../../assets/styles/utils' as u;
 
+$swiper-loading-color: var(--color-base);
+
 .celebrities {
   &__list {
     display: flex;
@@ -49,6 +51,8 @@
     }
 
     .swiper {
+      --swiper-preloader-color: $swiper-loading-color;
+
       &-prev-celebritiesList {
         @extend %swiper;
 

@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import { FC } from 'react';
 import './TeamCard.scss';
+import placeholder from '../../../assets/images/placeholder.svg';
 
 export type TeamCardProps = {
   img: string;
@@ -35,7 +36,14 @@ export const TeamCard: FC<TeamCardProps> = ({
     {!lazySwiper && (
       <img src={img} alt={name} loading={lazy ? 'lazy' : undefined} />
     )}
-    {lazySwiper && <img data-src={img} className="swiper-lazy" alt={name} />}
+    {lazySwiper && (
+      <img
+        data-src={img}
+        src={placeholder}
+        className="swiper-lazy"
+        alt={name}
+      />
+    )}
     <p>{name}</p>
     <span>
       {link && (

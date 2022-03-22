@@ -17,6 +17,7 @@ const Template: Story<TeamListProps> = (args) => {
         {...args}
         options={{
           onReachEnd: () => setShowButton(true),
+          lazy: true,
         }}
       />
       {showButton && <Button>Join Team</Button>}
