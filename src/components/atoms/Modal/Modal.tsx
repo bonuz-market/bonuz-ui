@@ -4,13 +4,13 @@ import './Modal.scss';
 
 export type ModalProps = {
   closeText: string;
-  footerText?: string;
+  footer?: { text: string; link?: string };
   video?: boolean;
 };
 export const Modal: FC<ModalProps> = ({
   children,
   closeText,
-  footerText,
+  footer,
   video,
 }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -35,9 +35,16 @@ export const Modal: FC<ModalProps> = ({
           >
             {children}
           </div>
-          {footerText && (
+          {footer && (
             <div className="modal-footer">
-              <button type="button">{footerText}</button>
+              <button type="button">
+                {footer.link && (
+                  <a href={footer.link} target="_blank" rel="noreferrer">
+                    {footer.text}
+                  </a>
+                )}
+                {!footer.link && footer.text}
+              </button>
             </div>
           )}
         </div>
