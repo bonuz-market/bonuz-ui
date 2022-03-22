@@ -9,16 +9,17 @@ publish:
     - staging
   environment:
     name: staging
-  # artifacts:
-  #   when: always
-  #   expire_in: 15 days
+  artifacts:
+    when: always
+    expire_in: 15 days
   cache:
-    # key: $CI_COMMIT_REF_SLUG
-    # paths:
-    #   - .npm/
+    key: $CI_COMMIT_REF_SLUG
+    paths:
+      - .npm/
     key:
       files:
         - package-lock.json
+        - yarn.lock
     paths:
       - .npm/
       - node_modules/
@@ -33,4 +34,3 @@ publish:
   script:
     - yarn publish:build
     - npx semantic-release
-    #- npm publish
