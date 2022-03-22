@@ -27,7 +27,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "publish:build": "rimraf ./dist && rollup -c"
+    "publish:build": "rimraf ./dist && rollup -c",
+    "semantic-release": "semantic-release"
   },
   "files": [
     "dist",
@@ -73,6 +74,8 @@
     "@rbnlffl/rollup-plugin-eslint": "^3.0.0",
     "@rollup/plugin-commonjs": "^21.0.2",
     "@rollup/plugin-url": "^6.1.0",
+    "@semantic-release/gitlab": "^8.0.0",
+    "@semantic-release/gitlab-config": "^10.0.0",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-links": "^6.4.19",
@@ -114,6 +117,7 @@
     "rollup-plugin-typescript2": "^0.31.2",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
+    "semantic-release": "^19.0.2",
     "storybook-css-modules-preset": "^1.1.1",
     "style-loader": "^3.3.1",
     "stylelint": "^14.5.3",
