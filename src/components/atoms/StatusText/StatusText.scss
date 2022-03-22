@@ -1,0 +1,18 @@
+$color-success: #198754;
+$color-error: #dc3545;
+$color-warning: #ffc107;
+
+.status-box {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  &.success {
+    color: $color-success;
+  }
+  &.error {
+    color: $color-error;
+  }
+  &.warning {
+    color: $color-warning;
+  }
+}

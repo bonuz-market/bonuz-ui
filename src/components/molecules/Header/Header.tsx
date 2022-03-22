@@ -73,14 +73,18 @@ export const Header: FC<HeaderProps> = ({
             </button>
             <a href="/">
               {logoHoverUrl && (
-                <img className="logo logo_2" src={logoHoverUrl} alt="" />
+                <img
+                  className="logo logo_2"
+                  src={logoHoverUrl}
+                  alt="Bonuz logo"
+                />
               )}
               <img
                 className={classnames('logo', {
                   logo_1: logoHoverUrl,
                 })}
                 src={logoUrl}
-                alt=""
+                alt="Bonuz Logo"
               />
             </a>
           </div>

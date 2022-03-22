@@ -1,27 +1,38 @@
 @use '../../../assets/styles/utils' as u;
 
 $color-background: var(--light-bg);
-$color-gradient-1: linear-gradient(90deg, var(--color-2), var(--color-3));
+$color-gradient-1: linear-gradient(270deg, var(--color-1), var(--color-2));
+$color-info-box: var(--light-bg);
+$color-box-shadow: linear-gradient(
+  180deg,
+  rgb(40 25 129 / 25%) 30%,
+  var(--light-bg) 100%
+);
 
 .celeb {
   background: $color-background;
   border-radius: 16px;
-  width: 227px;
-  height: 82px;
+  width: 224px;
+  height: 290px;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   position: relative;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+  }
 
   &::before {
     content: '';
     position: absolute;
-    top: -1px;
-    bottom: -1px;
-    left: -1px;
-    right: -1px;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
     background: $color-gradient-1;
-    border-radius: 17px;
+    border-radius: 16px;
     z-index: -1;
     opacity: 0;
     transition: 0.3s;
@@ -31,26 +42,92 @@ $color-gradient-1: linear-gradient(90deg, var(--color-2), var(--color-3));
     opacity: 1;
   }
 
+  &::after {
+    content: '';
+    background: $color-box-shadow;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+  }
+
   img {
-    width: 48px;
-    height: 48px;
-    border-radius: 48px;
-    margin-right: 15px;
-    margin-left: 25px;
+    border-radius: inherit;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
-  h4 {
-    margin: 0;
-    @include u.font(
-      $size: var(--font-size-h4),
-      $weight: var(--font-weight-regular)
-    );
-  }
+  > div {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-self: flex-end;
+    align-items: center;
+    background: $color-info-box;
+    padding: 0.725rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border-radius: inherit;
+    gap: 10px;
 
-  p {
-    margin-top: 5px;
-    margin-bottom: 0;
-    opacity: 0.3;
-    @include u.font($size: var(--font-size-medium));
+    a {
+      width: 100%;
+    }
+
+    button {
+      width: 90%;
+      background-color: inherit;
+      border-radius: 16px;
+      padding: 0.5rem;
+      border: 0;
+      outline: 0;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-gradient-1;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: -1px;
+        bottom: -1px;
+        left: -1px;
+        right: -1px;
+        background: $color-gradient-1;
+        border-radius: 16px;
+        z-index: -1;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+
+    h4 {
+      margin: 0;
+      @include u.font(
+        $size: var(--font-size-h4),
+        $weight: var(--font-weight-regular)
+      );
+    }
+
+    p {
+      margin: 0;
+      opacity: 0.3;
+      @include u.font($size: var(--font-size-small));
+    }
   }
 }

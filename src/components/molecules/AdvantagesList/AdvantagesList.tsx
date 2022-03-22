@@ -7,39 +7,35 @@ import { AdvantagesItem } from '../../atoms';
 import './AdvantagesList.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { AdvantagesItemProps } from '../../atoms/AdvantagesItem/AdvantagesItem';
 
 export type AdvantagesListProps = {
-  items: {
-    title: string;
-    description: string;
-    icon: string;
-  }[];
-  rtl?: boolean;
+  items: AdvantagesItemProps[];
+  options?: SwiperProps;
 };
 
 const swiperOptions: SwiperProps = {
   modules: [Pagination],
-  loop: true,
   pagination: {
     clickable: true,
     el: '.swiper-pagination-advantageslist',
     dynamicBullets: true,
   },
+  rewind: true,
   breakpoints: {
     320: {
-      slidesPerView: 1,
-      allowTouchMove: true,
+      slidesPerView: 'auto',
+      spaceBetween: 30,
     },
     1050: {
       slidesPerView: 3,
-      allowTouchMove: false,
     },
   },
 };
 
-export const AdvantagesList: FC<AdvantagesListProps> = ({ items, rtl }) => (
+export const AdvantagesList: FC<AdvantagesListProps> = ({ items, options }) => (
   <>
-    <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
+    <Swiper {...swiperOptions} {...options}>
       {items.map((item, index) => (
         <SwiperSlide key={`${item.title}-${index}`}>
           <AdvantagesItem
@@ -50,6 +46,8 @@ export const AdvantagesList: FC<AdvantagesListProps> = ({ items, rtl }) => (
         </SwiperSlide>
       ))}
     </Swiper>
-    <div className="swiper-pagination-advantageslist" />
+    <div className="pagination">
+      <div className="swiper-pagination-advantageslist" />
+    </div>
   </>
 );

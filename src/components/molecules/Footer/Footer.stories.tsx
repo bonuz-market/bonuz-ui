@@ -47,6 +47,10 @@ Primary.args = {
     label: 'Subscribe to our newsletter',
     placeholderText: 'Enter your email',
     onSubmit: () => {},
+    statusTextOptions: {
+      message: 'This is a success message, it disappear after 5 seconds',
+      type: 'success',
+    },
   },
   socialMediaLinks: {
     telegram: 'https://t.me/BonuzMarket',
