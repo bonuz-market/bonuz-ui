@@ -40,7 +40,9 @@ export const TeamCard: FC<TeamCardProps> = ({
     <span>
       {link && (
         <div>
-          <a href={link}>{position}</a>
+          <a href={link} target="_blank" rel="noreferrer">
+            {position}
+          </a>
         </div>
       )}
       {!link && position}

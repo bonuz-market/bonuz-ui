@@ -85,7 +85,12 @@ const Footer: FC<FooterProps> = ({
               )}
             </div>
             {privacyPolicy && (
-              <a href={privacyPolicy.link} className="policy">
+              <a
+                href={privacyPolicy.link}
+                className="policy"
+                target="_blank"
+                rel="noreferrer"
+              >
                 {privacyPolicy.text}
               </a>
             )}
