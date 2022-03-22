@@ -3,64 +3,46 @@
 $color-divider: var(--color-base-10);
 
 .stat-element {
-  width: 170px;
-  flex-basis: 50%;
+  width: min-content;
   position: relative;
+  padding: 1rem;
 
-  &:nth-child(2n + 1) {
+  .title {
+    display: flex;
+    place-items: center;
+    gap: 1rem;
+  }
+
+  &:nth-child(odd) {
     &::after {
       content: '';
       display: block;
       width: 1px;
-      height: 136px;
+      height: 100%;
       background: $color-divider;
       position: absolute;
-      right: 60px;
-      bottom: -16px;
-
-      [dir='rtl'] & {
-        width: 277px;
-        height: 1px;
-        right: auto;
-        bottom: -18px;
-        left: 165px;
-      }
+      inset-inline-end: 0;
+      inset-block-end: 0;
     }
   }
 
-  &:nth-child(2n) {
+  &:nth-child(even) {
     &::after {
       content: '';
       display: block;
-      width: 277px;
+      width: 200%;
       height: 1px;
       background: $color-divider;
       position: absolute;
-      right: 165px;
-      bottom: -18px;
-
-      [dir='rtl'] & {
-        width: 1px;
-        height: 136px;
-        right: auto;
-        bottom: -16px;
-        left: 60px;
-      }
+      inset-inline-end: 0;
+      inset-block-end: 0;
     }
   }
 
   h4 {
     @include u.font($size: var(--font-size-h2));
 
-    margin-bottom: 0;
-    padding-left: 30px;
-    text-align: left;
-
-    [dir='rtl'] & {
-      padding-right: 30px;
-      padding-left: 0;
-      text-align: right;
-    }
+    margin: 0;
   }
 
   p {
@@ -70,25 +52,6 @@ $color-divider: var(--color-base-10);
     );
 
     opacity: 0.8;
-    width: auto;
-    padding-left: 30px;
-    text-align: left;
-
-    [dir='rtl'] & {
-      padding-left: 0;
-      padding-right: 30px;
-      text-align: right;
-    }
-  }
-
-  svg {
-    position: absolute;
-    left: 0;
-    width: 14px;
-
-    [dir='rtl'] & {
-      right: 0;
-      left: unset;
-    }
+    max-width: 15ch;
   }
 }

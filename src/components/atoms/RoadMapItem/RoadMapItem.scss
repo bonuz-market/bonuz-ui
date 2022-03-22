@@ -1,5 +1,15 @@
 @use '../../../assets/styles/utils' as u;
 
+@keyframes overlay {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(20%) scale(1.2);
+  }
+}
+
 .roadmap {
   &__item {
     padding: 40px;
@@ -12,12 +22,7 @@
     h3 {
       @include u.font($size: var(--font-size-h3));
 
-      text-align: left;
       margin-bottom: 4px;
-
-      [dir='rtl'] & {
-        text-align: right;
-      }
     }
 
     p {
@@ -32,14 +37,27 @@
     }
 
     .overlay {
+      overflow: hidden;
+      width: inherit;
+      height: inherit;
+      padding: inherit;
       position: absolute;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      border-radius: 8px;
-      top: 0;
-      left: 0;
-      background-image: url('../../../assets/images/slide_overlay.svg');
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      pointer-events: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 125%;
+        height: 100%;
+        background-size: 100%;
+        border-radius: 8px;
+        inset-block-start: 0;
+        left: -25%;
+        animation: overlay 7s ease infinite;
+        background-image: url('../../../assets/images/slide_overlay.svg');
+      }
     }
   }
 }

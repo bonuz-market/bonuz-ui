@@ -7,7 +7,9 @@ import {
   Input,
   SocialList,
   SocialListProps,
+  StatusText,
 } from '../../atoms';
+import { StatusTextProps } from '../../atoms/StatusText/StatusText';
 import './Footer.scss';
 
 type NavigationProps = {
@@ -23,7 +25,10 @@ type FooterProps = {
   newsletterForm: {
     label: string;
     placeholderText: string;
+    value: string;
+    onChange: (value: string) => void;
     onSubmit: () => void;
+    statusTextOptions?: StatusTextProps;
   };
   socialMediaLinks: SocialListProps;
 };
@@ -62,6 +67,9 @@ const Footer: FC<FooterProps> = ({
           <div className="col">
             <p>{navigation.title}</p>
             <Navigation>{navigation.NavigationElements}</Navigation>
+          </div>
+          <div className="col">
+            <SocialList {...socialMediaLinks} />
             <div className="form">
               <Input
                 label={newsletterForm.label}
@@ -69,13 +77,20 @@ const Footer: FC<FooterProps> = ({
                 actionButton={
                   <FormArrowButton onClick={newsletterForm.onSubmit} />
                 }
+                value={newsletterForm.value}
+                onChange={newsletterForm.onChange}
               />
+              {newsletterForm.statusTextOptions && (
+                <StatusText {...newsletterForm.statusTextOptions} />
+              )}
             </div>
-          </div>
-          <div className="col">
-            <SocialList {...socialMediaLinks} />
             {privacyPolicy && (
-              <a href={privacyPolicy.link} className="policy">
+              <a
+                href={privacyPolicy.link}
+                className="policy"
+                target="_blank"
+                rel="noreferrer"
+              >
                 {privacyPolicy.text}
               </a>
             )}

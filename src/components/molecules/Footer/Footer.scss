@@ -27,6 +27,11 @@ footer {
     justify-content: space-between;
 
     .col {
+      display: flex;
+      flex-direction: column;
+      padding: 40px 0;
+      gap: 20px;
+
       &:nth-child(1) {
         position: relative;
         z-index: 5;
@@ -34,7 +39,6 @@ footer {
         .button {
           &__group {
             display: flex;
-            margin-bottom: 60px;
 
             & > :last-child {
               margin-left: 30px;
@@ -67,7 +71,6 @@ footer {
 
           opacity: 0.41;
           width: 219px;
-          margin-bottom: 105px;
         }
       }
 
@@ -76,16 +79,14 @@ footer {
           @include u.font($size: var(--font-size-medium));
 
           opacity: 0.3;
-          margin-top: 40px;
+          margin: 0;
         }
 
         ul {
           list-style: none;
           padding: 0;
-          height: 120px;
           display: flex;
-          flex-flow: column wrap;
-          align-content: baseline;
+          flex-flow: column;
 
           a {
             text-decoration: none;
@@ -93,20 +94,7 @@ footer {
 
             padding: 6px 0;
             display: block;
-            margin-right: 80px;
           }
-        }
-
-        .form {
-          p {
-            @include u.font($size: var(--font-size-small));
-
-            opacity: 1;
-            margin-top: 57px;
-          }
-
-          margin-top: 57px;
-          width: calc(100% - 30px);
         }
       }
     }
@@ -115,20 +103,26 @@ footer {
   .logo {
     width: 125px;
     height: auto;
-    margin-top: 40px;
+  }
+
+  .icon-list {
+    margin: 0;
+    width: 250px;
+    justify-content: center;
+    gap: inherit;
   }
 
   .form {
     input {
-      @include u.font(
-        $family: var(--font-secondary),
-        $size: var(--font-size-small),
-        $line-height: var(--font-line-height-large)
-      );
-
       background: none;
-      width: 300px;
-      padding-bottom: 10px;
+      width: 100%;
+      padding-inline-end: 40px;
+    }
+
+    p {
+      @include u.font($size: var(--font-size-small));
+
+      opacity: 1;
     }
   }
 
@@ -161,7 +155,6 @@ footer {
     @include u.font($size: var(--font-size-small), $color: $color-font-policy);
 
     text-transform: capitalize;
-    margin-top: 80px;
     display: block;
     transition: all 0.3s;
     text-align: center;
@@ -172,22 +165,6 @@ footer {
   }
 }
 
-[dir='rtl'] {
-  footer {
-    .row {
-      .col {
-        &:nth-child(2) {
-          ul {
-            a {
-              margin-right: 0;
-              margin-left: 80px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 @media screen and (max-width: 1050px) {
   footer {
     overflow: hidden;
@@ -199,16 +176,11 @@ footer {
       flex-direction: column;
 
       .col {
-        width: calc(100vw - 40px);
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
         align-items: center;
 
         &:nth-child(1) {
           p {
-            margin-bottom: 40px;
-            width: 50%;
+            width: auto;
             text-align: center;
           }
 
@@ -221,29 +193,26 @@ footer {
           p {
             margin-top: 0;
           }
+        }
+      }
+    }
 
-          ul {
-            margin-left: -80px;
+    .form {
+      width: auto;
 
-            [dir='rtl'] & {
-              margin-left: 0;
-              margin-right: -80px;
-            }
-          }
+      .input__wrapper > button {
+        margin-right: 0;
+        margin-left: -30px;
 
-          .form {
-            width: auto;
+        [dir='rtl'] & {
+          margin-left: 0;
+          margin-right: -30px;
+        }
+      }
 
-            .input__wrapper > button {
-              margin-right: 0;
-              margin-left: -30px;
-
-              [dir='rtl'] & {
-                margin-left: 0;
-                margin-right: -30px;
-              }
-            }
-          }
+      form {
+        input[type='email'] {
+          width: calc(100% - 10px);
         }
       }
     }
@@ -251,7 +220,6 @@ footer {
     .button {
       &__group {
         display: flex;
-        margin-bottom: 0;
       }
 
       &--stroke {
@@ -272,14 +240,7 @@ footer {
     }
 
     .policy {
-      margin-top: 40px;
       text-align: center;
-    }
-
-    form {
-      input[type='email'] {
-        width: calc(100% - 10px);
-      }
     }
   }
 }

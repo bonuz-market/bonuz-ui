@@ -25,32 +25,32 @@ export const SocialList: FC<SocialListProps> = ({
 }) => (
   <div className="icon-list">
     {telegram && (
-      <a href={telegram}>
+      <a href={telegram} target="_blank" rel="noreferrer">
         <img src={telegramIcon} alt="" />
       </a>
     )}
     {twitter && (
-      <a href={twitter}>
+      <a href={twitter} target="_blank" rel="noreferrer">
         <img src={twitterIcon} alt="" />
       </a>
     )}
     {medium && (
-      <a href={medium}>
+      <a href={medium} target="_blank" rel="noreferrer">
         <img src={mediumIcon} alt="" />
       </a>
     )}
     {telegramMessage && (
-      <a href={telegramMessage}>
+      <a href={telegramMessage} target="_blank" rel="noreferrer">
         <img src={telegramMessageIcon} alt="" />
       </a>
     )}
     {instagram && (
-      <a href={instagram}>
+      <a href={instagram} target="_blank" rel="noreferrer">
         <img src={instagramIcon} alt="" />
       </a>
     )}
     {facebook && (
-      <a href={facebook}>
+      <a href={facebook} target="_blank" rel="noreferrer">
         <img src={facebookIcon} alt="" />
       </a>
     )}

@@ -17,9 +17,9 @@ header {
       width: 100%;
       justify-content: center;
       position: fixed;
-      z-index: 9999;
+      z-index: 1000;
       padding: 40px 0;
-      transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      transition: all 0.2s ease-in-out;
     }
 
     &-inner {
@@ -43,6 +43,7 @@ header {
             img {
               width: 100%;
               height: 100%;
+              object-fit: contain;
             }
           }
           %position-absolute {
@@ -174,7 +175,7 @@ header {
     }
 
     &__fixed {
-      padding: 10px 0;
+      padding: 20px 0;
       background-color: $color-background-nav-fixed;
       transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     }
@@ -193,8 +194,7 @@ header {
       }
 
       &-inner {
-        padding: 0 25px;
-        margin-top: 5px;
+        padding: 20px 25px;
         max-width: 100vw;
 
         .col {
@@ -203,7 +203,6 @@ header {
 
             a {
               z-index: 10;
-              margin: 0 auto;
               height: 32px;
               width: 94px;
               left: 50%;
@@ -214,11 +213,6 @@ header {
                 left: unset;
                 right: 50%;
                 transform: translate(50%);
-              }
-
-              img {
-                width: 100%;
-                height: 100%;
               }
             }
           }
@@ -255,19 +249,14 @@ header {
                 flex-direction: column;
                 width: max-content;
                 position: absolute;
-                left: 60px;
-                top: 90px;
+                inset-inline-start: 60px;
+                top: 0;
+                margin-top: 5rem;
                 z-index: 11;
-
-                [dir='rtl'] & {
-                  left: unset;
-                  right: 60px;
-                }
+                gap: 2rem;
               }
 
               li {
-                margin-bottom: 30px;
-
                 a {
                   @include u.font($size: 20px);
                 }

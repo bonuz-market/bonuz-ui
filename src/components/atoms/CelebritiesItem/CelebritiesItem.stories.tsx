@@ -15,4 +15,6 @@ export const Primary = Template.bind({});
 Primary.args = mockData.celebrities.map((item) => ({
   ...item,
   img: require(`/src/assets/images/${item.img}`),
+  category: 'Brand',
+  link: 'https://bonuz.market',
 }))[0];
