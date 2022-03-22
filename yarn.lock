@@ -1897,8 +1897,10 @@ __metadata:
     "@rbnlffl/rollup-plugin-eslint": ^3.0.0
     "@rollup/plugin-commonjs": ^21.0.2
     "@rollup/plugin-url": ^6.1.0
+    "@semantic-release/git": ^10.0.1
     "@semantic-release/gitlab": ^8.0.0
     "@semantic-release/gitlab-config": ^10.0.0
+    "@semantic-release/npm": ^9.0.1
     "@storybook/addon-actions": ^6.4.19
     "@storybook/addon-essentials": ^6.4.19
     "@storybook/addon-links": ^6.4.19
@@ -3127,6 +3129,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@semantic-release/git@npm:^10.0.1":
+  version: 10.0.1
+  resolution: "@semantic-release/git@npm:10.0.1"
+  dependencies:
+    "@semantic-release/error": ^3.0.0
+    aggregate-error: ^3.0.0
+    debug: ^4.0.0
+    dir-glob: ^3.0.0
+    execa: ^5.0.0
+    lodash: ^4.17.4
+    micromatch: ^4.0.0
+    p-reduce: ^2.0.0
+  peerDependencies:
+    semantic-release: ">=18.0.0"
+  checksum: b0a346acaf13d1bbd8d8d895bb0dee025dd6d4742769b5dd875018fff8fcfe0f5414299dbe1ed026e53b8f8b04eeceef49a3d56c5f6506016c656df95d2ced04
+  languageName: node
+  linkType: hard
+
 "@semantic-release/github@npm:^8.0.0":
   version: 8.0.2
   resolution: "@semantic-release/github@npm:8.0.2"
@@ -3211,7 +3231,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/npm@npm:^9.0.0":
+"@semantic-release/npm@npm:^9.0.0, @semantic-release/npm@npm:^9.0.1":
   version: 9.0.1
   resolution: "@semantic-release/npm@npm:9.0.1"
   dependencies:
@@ -15813,7 +15833,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromatch@npm:^4.0.2, micromatch@npm:^4.0.4":
+"micromatch@npm:^4.0.0, micromatch@npm:^4.0.2, micromatch@npm:^4.0.4":
   version: 4.0.4
   resolution: "micromatch@npm:4.0.4"
   dependencies:
