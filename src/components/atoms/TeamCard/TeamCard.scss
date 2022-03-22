@@ -1,12 +1,12 @@
 @use '../../../assets/styles/utils' as u;
 
+$color-background: var(--color-base-10);
+
 .team-item {
   width: min-content;
 
   &.rounded {
     img {
-      width: 90px;
-      height: 90px;
       border-radius: 50%;
       clip-path: none;
     }
@@ -22,9 +22,9 @@
     clip-path: path(
       'M8 0C3.58172 0 0 3.58172 0 8V144.083C0 145.967 0.664728 147.79 1.8771 149.232L34.6024 188.149C36.1224 189.956 38.3635 191 40.7253 191H203C207.418 191 211 187.418 211 183V8C211 3.58172 207.418 0 203 0H8Z'
     );
-    width: 211px;
-    height: 191px;
-    object-fit: cover;
+    width: auto;
+    height: auto;
+    background: $color-background;
     border-radius: 8px;
   }
 
@@ -34,6 +34,7 @@
       $weight: var(--font-weight-bold)
     );
 
+    white-space: nowrap;
     margin-bottom: 0;
     text-align: left;
   }
