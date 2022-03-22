@@ -32,6 +32,5 @@ publish:
     - yarn install
   script:
     - yarn publish:build
-    # For testing purposes flag --dry-run added. Remove the flag to proceed with publishing
     - npx semantic-release
     #- npm publish

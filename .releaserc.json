@@ -1,7 +1,6 @@
 {
   "branches": ["staging"],
   "extends": "@semantic-release/gitlab-config",
-  "dryRun": true,
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
