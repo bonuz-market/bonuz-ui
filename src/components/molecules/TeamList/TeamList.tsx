@@ -63,9 +63,7 @@ export const TeamList: FC<TeamListProps> = ({
               centered={centered}
               lazySwiper={options?.lazy !== undefined}
             />
-            {options?.lazy && (
-              <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
-            )}
+            {options?.lazy && <div className="swiper-lazy-preloader" />}
           </SwiperSlide>
         ))}
       </Swiper>

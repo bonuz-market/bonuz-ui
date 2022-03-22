@@ -1,3 +1,5 @@
+$swiper-loading-color: var(--light-bg);
+
 .team-list {
   margin: 0 auto;
   position: relative;
@@ -46,6 +48,8 @@
   }
 
   .swiper {
+    --swiper-preloader-color: #{$swiper-loading-color};
+
     &-slide {
       width: auto;
     }
