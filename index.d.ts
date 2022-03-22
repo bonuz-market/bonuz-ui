@@ -1,5 +1,4 @@
 import { ReactNode, FC, PropsWithChildren, ReactElement } from 'react';
-import { ColorResult } from 'react-color';
 import { SwiperProps } from 'swiper/react';
 
 declare module '@bonuz/bonuz-ui' {
@@ -179,9 +178,6 @@ declare module '@bonuz/bonuz-ui' {
     created: string;
     type?: 'main' | 'default';
   };
-  type ColorPickerProps = {
-    onChange?: (color: ColorResult) => void;
-  };
   type FaqItemProps = {
     title: string;
     description: string;
@@ -326,7 +322,6 @@ declare module '@bonuz/bonuz-ui' {
   export const FanItem: FC<FanItemProps>;
   export const Table: FC<TableProps>;
   export const CreatorNewsCard: FC<CreatorNewsCardProps>;
-  export const ColorPicker: FC<ColorPickerProps>;
   export const FaqItem: FC<FaqItemProps>;
   export const FansList: FC<FansListProps>;
   export const Media: FC<MediaProps>;
