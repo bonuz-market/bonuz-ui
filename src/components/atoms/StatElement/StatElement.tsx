@@ -26,8 +26,10 @@ export const StatElement: FC<StatElementProps> = ({
   description,
 }) => (
   <div className="stat-element">
-    {svgWithColor(colorHex)}
-    <h4>{title}</h4>
+    <div className="title">
+      {svgWithColor(colorHex)}
+      <h4>{title}</h4>
+    </div>
     <p>{description}</p>
   </div>
 );

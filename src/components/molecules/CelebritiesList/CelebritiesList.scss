@@ -5,10 +5,72 @@
     display: flex;
     z-index: 8;
     position: relative;
-    margin-bottom: 50px;
 
-    .swiper-slide {
-      width: 227px;
+    @mixin position() {
+      top: 50%;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+      transform: translateY(-50%) !important;
+    }
+
+    .prev {
+      @include position;
+
+      inset-inline-start: 0;
+      transform: translateY(-50%) rotate(180deg) !important;
+
+      [dir='rtl'] & {
+        transform: translateY(-50%) rotate(0deg) !important;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .next {
+      @include position;
+
+      inset-inline-end: 0;
+
+      [dir='rtl'] & {
+        transform: translateY(-50%) rotate(180deg) !important;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+    %swiper {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+    }
+
+    .swiper {
+      &-prev-celebritiesList {
+        @extend %swiper;
+
+        inset-inline-start: 0;
+      }
+
+      &-next-celebritiesList {
+        @extend %swiper;
+
+        inset-inline-end: 0;
+      }
+
+      &-button-disabled {
+        opacity: 0.4;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .swiper-slide {
+        width: auto;
+        padding: 2px;
+      }
     }
   }
 }
@@ -19,6 +81,13 @@
       .swiper-slide:not(.swiper-slide-active) {
         opacity: 0.3;
         user-select: none;
+      }
+
+      .swiper {
+        &-prev-celebritiesList,
+        &-next-celebritiesList {
+          display: none;
+        }
       }
     }
   }

@@ -8,13 +8,11 @@ import './RoadMapList.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { RoadMapItemProps } from '../../atoms/RoadMapItem/RoadMapItem';
 
 export type RoadMapListProps = {
-  items: {
-    title: string;
-    description: string;
-  }[];
-  rtl?: boolean;
+  items: RoadMapItemProps[];
+  options?: SwiperProps;
 };
 
 const swiperOptions: SwiperProps = {
@@ -29,34 +27,32 @@ const swiperOptions: SwiperProps = {
     nextEl: '.action-button.swiper-next-roadmaplist',
     prevEl: '.action-button.swiper-prev-roadmaplist',
   },
+  slidesPerView: 'auto',
+  rewind: true,
   breakpoints: {
     320: {
       slidesPerView: 'auto',
-      slidesPerGroup: 1,
-      spaceBetween: 20,
-    },
-    720: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
+      spaceBetween: 30,
     },
     1050: {
       slidesPerView: 3,
-      slidesPerGroup: 1,
     },
   },
 };
 
-export const RoadMapList: FC<RoadMapListProps> = ({ items, rtl }) => (
+export const RoadMapList: FC<RoadMapListProps> = ({ items, options }) => (
   <>
     <ActionButton type="left" className="swiper-prev-roadmaplist" />
     <ActionButton type="right" className="swiper-next-roadmaplist" />
-    <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
+    <Swiper {...swiperOptions} {...options}>
       {items.map((item, index) => (
         <SwiperSlide key={`${item.title}-${index}`}>
           <RoadMapItem title={item.title} description={item.description} />
         </SwiperSlide>
       ))}
     </Swiper>
-    <div className="swiper-pagination-roadmaplist" />
+    <div className="pagination">
+      <div className="swiper-pagination-roadmaplist" />
+    </div>
   </>
 );

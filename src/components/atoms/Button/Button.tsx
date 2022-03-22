@@ -33,7 +33,7 @@ export const Button: FC<ButtonPropsWithChildren> = ({
   >
     <button type={type} disabled={disabled} onClick={onClick}>
       {link ? (
-        <a href={link}>
+        <a href={link} target="_blank" rel="noreferrer">
           <span>{children}</span>
         </a>
       ) : (

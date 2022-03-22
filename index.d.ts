@@ -1,5 +1,6 @@
 import { ReactNode, FC, PropsWithChildren, ReactElement } from 'react';
 import { ColorResult } from 'react-color';
+import { SwiperProps } from 'swiper/react';
 
 declare module '@bonuz/bonuz-ui' {
   type ButtonProps = PropsWithChildren<{
@@ -26,6 +27,19 @@ declare module '@bonuz/bonuz-ui' {
     img: string;
     name: string;
     country: string;
+    /**
+     * Must be used with category prop
+     */
+    link?: string;
+    /**
+     * Must be used with link prop
+     */
+    category?: string;
+    lazy?: boolean;
+    /**
+     * Should be used  with swiper slider
+     */
+    lazySwiper?: boolean;
   };
   type CheckboxProps = {
     label: string;
@@ -50,6 +64,7 @@ declare module '@bonuz/bonuz-ui' {
     placeholder?: string;
     icon?: ReactNode;
     value?: string;
+    type?: string;
     actionButton?: ReactNode;
     withDefaultActionButton?: boolean;
     defaultActionButtonLabel?: string;
@@ -76,6 +91,14 @@ declare module '@bonuz/bonuz-ui' {
     img: string;
     name: string;
     position: string;
+    link?: string;
+    rounded?: boolean;
+    centered?: boolean;
+    lazy?: boolean;
+    /**
+     * Should be used  with swiper slider
+     */
+    lazySwiper?: boolean;
   };
   type TextBlockProps = PropsWithChildren<{
     type?: 'primary' | 'secondary';
@@ -83,58 +106,37 @@ declare module '@bonuz/bonuz-ui' {
     title?: string;
     mobileColumn?: boolean;
   }>;
+  type StatusTextProps = {
+    message: string;
+    type: 'success' | 'error' | 'warning' | '';
+    alwaysVisible?: boolean;
+    timeout?: number;
+  };
   type AdvantagesListProps = {
-    items: {
-      title: string;
-      description: string;
-      icon: any;
-    }[];
-    rtl?: boolean;
+    items: AdvantagesItemProps[];
+    options?: SwiperProps;
   };
   type CelebritiesListProps = {
-    celebrities: {
-      img: string;
-      name: string;
-      country: string;
-    }[];
-    rtl?: boolean;
+    items: CelebritiesItemProps[];
+    options?: SwiperProps;
   };
   type HowItWorksListProps = {
-    items: {
-      img: string;
-      title: string;
-      circleOffset: number;
-    }[];
-    rtl?: boolean;
+    items: HowItWorksItemProps[];
+    options?: SwiperProps;
   };
-  type NewsRowProps = {
-    news: {
-      created: string;
-      img: string;
-      title: string;
-      description: string;
-      link: string;
-    }[];
-    rtl?: boolean;
-  };
-  type PartnersListProps = {
-    partners: Array<string>;
-    rtl?: boolean;
+  type GalleryProps = {
+    items: { image: string; link?: string; alt?: string }[];
+    lazy?: boolean;
   };
   type RoadMapListProps = {
-    items: {
-      title: string;
-      description: string;
-    }[];
-    rtl?: boolean;
+    items: RoadMapItemProps[];
+    options?: SwiperProps;
   };
   type TeamListProps = {
-    items: {
-      img: string;
-      name: string;
-      position: string;
-    }[];
-    rtl?: boolean;
+    items: TeamCardProps[];
+    rounded?: boolean;
+    centered?: boolean;
+    options?: SwiperProps;
   };
   type TabProps = {
     title: string;
@@ -244,9 +246,13 @@ declare module '@bonuz/bonuz-ui' {
     newsletterForm: {
       label: string;
       placeholderText: string;
+      value: string;
+      onChange: (value: string) => void;
       onSubmit: () => void;
+      statusTextOptions?: StatusTextProps;
     };
     socialMediaLinks: SocialListProps;
+    statusTextOptions?: StatusTextProps;
   };
   type FormArrowButtonProps = {
     onClick: () => void;
@@ -278,7 +284,7 @@ declare module '@bonuz/bonuz-ui' {
   };
   type ModalProps = {
     closeText?: string;
-    footerText?: string;
+    footer?: { text: string; link?: string };
     video?: boolean;
   };
   export const Button: FC<ButtonProps>;
@@ -299,6 +305,7 @@ declare module '@bonuz/bonuz-ui' {
   export const FormArrowButton: FC<FormArrowButtonProps>;
   export const TeamCard: FC<TeamCardProps>;
   export const TextBlock: FC<TextBlockProps>;
+  export const StatusText: FC<StatusTextProps>;
   export const AdvantagesList: FC<AdvantagesListProps>;
   export const CelebritiesList: FC<CelebritiesListProps>;
   export const Footer: FC<FooterProps>;
@@ -306,8 +313,7 @@ declare module '@bonuz/bonuz-ui' {
   export const FooterSecondary: FC<FooterSecondaryProps>;
   export const HeaderSecondary: FC<HeaderSecondaryProps>;
   export const HowItWorksList: FC<HowItWorksListProps>;
-  export const NewsRow: FC<NewsRowProps>;
-  export const PartnersList: FC<PartnersListProps>;
+  export const Gallery: FC<GalleryProps>;
   export const RoadMapList: FC<RoadMapListProps>;
   export const TeamList: FC<TeamListProps>;
   export const Title: FC;

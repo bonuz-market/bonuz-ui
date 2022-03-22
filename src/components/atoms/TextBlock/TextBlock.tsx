@@ -26,6 +26,7 @@ export const TextBlock: FC<TextBlockPropsWithChildren> = ({
       'text-block--mobile-column': mobileColumn,
     })}
   >
+    <div className="text-block__stripe" />
     {title && <span className="text-block__title">{title}</span>}
     <p
       className={classnames('text-block__text', {

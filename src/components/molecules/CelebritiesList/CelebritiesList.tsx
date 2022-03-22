@@ -2,42 +2,67 @@
 /* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper';
-import { CelebritiesItem } from '../../atoms';
+import { Autoplay, Lazy, Navigation } from 'swiper';
+import { ActionButton, CelebritiesItem } from '../../atoms';
 import './CelebritiesList.scss';
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/lazy';
+import { CelebritiesItemProps } from '../../atoms/CelebritiesItem/CelebritiesItem';
 
 export type CelebritiesListProps = {
-  celebrities: {
-    img: string;
-    name: string;
-    role: string;
-  }[];
-  rtl?: boolean;
+  items: CelebritiesItemProps[];
+  options?: SwiperProps;
 };
 
 const swiperOptions: SwiperProps = {
-  modules: [Autoplay],
-  slidesPerView: 'auto',
-  spaceBetween: 32,
+  modules: [Autoplay, Navigation],
+  navigation: {
+    nextEl: '.action-button.swiper-next-celebritiesList',
+    prevEl: '.action-button.swiper-prev-celebritiesList',
+  },
   autoplay: { pauseOnMouseEnter: true, disableOnInteraction: false },
-  loop: true,
+  rewind: true,
   speed: 500,
+  breakpoints: {
+    320: {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+    },
+    1050: {
+      slidesPerView: 4,
+    },
+  },
 };
 
 export const CelebritiesList: FC<CelebritiesListProps> = ({
-  celebrities,
-  rtl,
-}) => (
-  <Swiper
-    {...swiperOptions}
-    loopedSlides={celebrities.length}
-    dir={rtl ? 'rtl' : 'ltr'}
-  >
-    {celebrities.map((item, index) => (
-      <SwiperSlide key={`${item.name}-${index}`}>
-        <CelebritiesItem img={item.img} name={item.name} role={item.role} />
-      </SwiperSlide>
-    ))}
-  </Swiper>
-);
+  items,
+  options,
+}) => {
+  if (options?.lazy) {
+    swiperOptions.modules?.push(Lazy);
+  }
+  return (
+    <>
+      <ActionButton type="left" className="swiper-prev-celebritiesList" />
+      <ActionButton type="right" className="swiper-next-celebritiesList" />
+      <Swiper {...swiperOptions} {...options}>
+        {items.map((item, index) => (
+          <SwiperSlide key={`${item.name}-${index}`}>
+            <CelebritiesItem
+              img={item.img}
+              name={item.name}
+              role={item.role}
+              link={item.link}
+              category={item.category}
+              lazySwiper={options?.lazy !== undefined}
+            />
+            {options?.lazy && (
+              <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
+            )}
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
+  );
+};

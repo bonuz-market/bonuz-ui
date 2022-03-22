@@ -7,14 +7,11 @@ import { HowItWorksItem } from '../../atoms';
 import './HowItWorksList.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { HowItWorksItemProps } from '../../atoms/HowItWorksItem/HowItWorksItem';
 
 export type HowItWorksListProps = {
-  items: {
-    img: string;
-    title: string;
-    circleOffset: number;
-  }[];
-  rtl?: boolean;
+  items: HowItWorksItemProps[];
+  options?: SwiperProps;
 };
 
 const swiperOptions: SwiperProps = {
@@ -25,6 +22,7 @@ const swiperOptions: SwiperProps = {
     dynamicBullets: true,
   },
   speed: 300,
+  rewind: true,
   breakpoints: {
     320: {
       slidesPerView: 'auto',
@@ -32,14 +30,13 @@ const swiperOptions: SwiperProps = {
     },
     1050: {
       slidesPerView: 5,
-      allowTouchMove: false,
     },
   },
 };
 
-export const HowItWorksList: FC<HowItWorksListProps> = ({ items, rtl }) => (
+export const HowItWorksList: FC<HowItWorksListProps> = ({ items, options }) => (
   <>
-    <Swiper {...swiperOptions} dir={rtl ? 'rtl' : 'ltr'}>
+    <Swiper {...swiperOptions} {...options}>
       {items.map((item, index) => (
         <SwiperSlide key={`${item.title}-${index}`}>
           <HowItWorksItem
@@ -47,9 +44,12 @@ export const HowItWorksList: FC<HowItWorksListProps> = ({ items, rtl }) => (
             title={item.title}
             circleOffset={item.circleOffset}
           />
+          <div className="slide-stripe" />
         </SwiperSlide>
       ))}
     </Swiper>
-    <div className="swiper-pagination-howitworks" />
+    <div className="pagination">
+      <div className="swiper-pagination-howitworks" />
+    </div>
   </>
 );
