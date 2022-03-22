@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
 
 import './FansList.scss';
@@ -15,8 +16,9 @@ export const FansList: FC<FansListProps> = ({ t, fans }) => (
       <span>{fans.length}</span>
     </span>
     <ul className="media__fans__list">
-      {fans.map((item) => (
+      {fans.map((item, index) => (
         <FanItem
+          key={`${item.name} ${index}`}
           avatar={item.avatar}
           name={item.name}
           description={item.description}
