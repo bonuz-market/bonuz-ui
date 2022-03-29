@@ -1,0 +1,21 @@
+
+.container {
+  display: inline-flex;
+  position: relative;
+  &:hover{
+    .containerOpacity{
+      opacity: 1;
+    }
+  }
+  &Child{
+    display: inline-flex;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  &Opacity{
+    transition: all .4s ease-in-out;
+    opacity: 0;
+  }
+}

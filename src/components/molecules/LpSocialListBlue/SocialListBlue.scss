@@ -1,0 +1,13 @@
+.card {
+  &Bg2 {
+    &Links {
+      display: flex;
+      padding: 11px 8px 32px ;
+
+      & > *:not(:last-child) {
+        margin-right: 16px;
+      }
+
+    }
+  }
+}
