@@ -1,0 +1,125 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 24px;
+  z-index: 20;
+  background: transparent;
+  transition: padding 0.5s ease;
+
+  &Active {
+    padding: 0;
+  }
+
+  &Wrapper {
+    padding: 16px 16px 16px 32px;
+    border-radius: 8px;
+    background: linear-gradient(270.9deg, #CE09FF -2.92%, #FFA34E 99.95%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: border-radius 0.5s ease;
+
+
+    &Active {
+      border-radius: 0;
+    }
+  }
+}
+
+.logoWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.search {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.mobMenu {
+  display: none;
+
+  &Bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .logoWrapper,
+  .wrapper {
+    flex: initial;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .headerWrapper {
+    padding: 11px 24px 11px 29px;
+  }
+
+  .navWrapper,
+  .btnWrapper {
+    display: none;
+  }
+
+  .search {
+    margin: 0;
+  }
+
+  .mobMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -100;
+    background: #170B71;
+    padding: 142px 62px 62px;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s;
+    opacity: 0;
+    transform: translate(0, -100%);
+
+    &.active {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .mobMenu {
+    padding: 142px 52px 52px;
+  }
+}
