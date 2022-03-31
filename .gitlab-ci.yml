@@ -13,7 +13,7 @@ publish:
     expire_in: 15 days
   cache:
     policy: pull
-    untracked: true
+    untracked: false
     key: $CI_COMMIT_REF_SLUG
     key:
       files:
