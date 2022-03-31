@@ -1,4 +1,3 @@
-image: node:latest
 stages:
   - package-release
 publish:
@@ -18,7 +17,7 @@ publish:
     key: $CI_COMMIT_REF_SLUG
     paths:
       - .yarn
-      - node_modules/
+      - node_modules
       - 'packages/*/node_modules'
   before_script:
     - echo "@${CI_PROJECT_ROOT_NAMESPACE}:registry=${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/npm/" > .npmrc
