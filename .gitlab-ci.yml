@@ -24,14 +24,13 @@ publish:
       - .yarn
       - node_modules/
       - 'packages/*/node_modules'
-      - build/
   before_script:
     ## Prep project registry and authentication
     - echo "@${CI_PROJECT_ROOT_NAMESPACE}:registry=${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/npm/" > .npmrc
     - echo "${CI_API_V4_URL#https?}/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=\${CI_JOB_TOKEN}" >> .npmrc
     - cat .npmrc
     ## instal dependencies
-    - yarn install
+    - yarn install --cache-folder .yarn
   script:
     - yarn publish:build
     - npx semantic-release
