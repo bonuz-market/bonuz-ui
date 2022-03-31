@@ -13,16 +13,17 @@ publish:
     when: always
     expire_in: 15 days
   cache:
+    policy: pull
+    untracked: true
     key: $CI_COMMIT_REF_SLUG
-    paths:
-      - .npm/
     key:
       files:
         - package-lock.json
         - yarn.lock
     paths:
-      - .npm/
+      - .yarn
       - node_modules/
+      - 'packages/*/node_modules'
       - build/
   before_script:
     ## Prep project registry and authentication
