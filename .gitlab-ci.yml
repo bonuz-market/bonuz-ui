@@ -15,6 +15,7 @@ publish:
     policy: pull
     untracked: true
     key: $CI_COMMIT_REF_SLUG
+    key:
       files:
         - yarn.lock
     paths:
