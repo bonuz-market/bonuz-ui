@@ -16,10 +16,10 @@ publish:
     policy: pull
     untracked: true
     key: $CI_COMMIT_REF_SLUG
-    key:
-      files:
-        - package-lock.json
-        - yarn.lock
+    # key:
+    #   files:
+    #     - package-lock.json
+    #     - yarn.lock
     paths:
       - .yarn
       - node_modules/
@@ -30,7 +30,7 @@ publish:
     - echo "${CI_API_V4_URL#https?}/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=\${CI_JOB_TOKEN}" >> .npmrc
     - cat .npmrc
     ## instal dependencies
-    - yarn install --cache-folder .yarn
+    - yarn install
   script:
     - yarn publish:build
     - npx semantic-release
