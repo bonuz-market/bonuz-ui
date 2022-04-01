@@ -1,0 +1,1 @@
+export {DoubleBgCard} from './DoubleBgCard'

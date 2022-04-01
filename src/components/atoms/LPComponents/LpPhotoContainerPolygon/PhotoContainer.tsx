@@ -2,11 +2,11 @@ import React, {FC} from 'react';
 import  './PhotoContainer.scss'
 
 type TPhotoContainer = {
-    image: object,
+    image: object|string,
     id: any
 }
 
-const PhotoContainer: FC<TPhotoContainer> = ({image, id}) => {
+export const PhotoContainer: FC<TPhotoContainer> = ({image, id}) => {
     return (
         <div className='polygon'
              key={`${image}`}
@@ -79,5 +79,3 @@ const PhotoContainer: FC<TPhotoContainer> = ({image, id}) => {
         </div>
     );
 };
-
-export default PhotoContainer;

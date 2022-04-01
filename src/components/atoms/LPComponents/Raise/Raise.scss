@@ -1,0 +1,48 @@
+
+.card {
+  &Bg2 {
+    &Raise {
+      display: flex;
+      justify-content: space-between;
+
+      &Total {
+        position: relative;
+        padding-right: 19px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: 1px;
+          background: rgba(255, 255, 255, 0.1);
+        }
+
+      }
+
+      &Person {
+        margin-right: -14px;
+
+        .cardBg2RaiseSubTitle {
+          background: linear-gradient(270.9deg, #CE09FF -2.92%, #FFA34E 99.95%);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      &Title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 8px;
+      }
+
+      &SubTitle {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 104.4%;
+      }
+    }
+  }
+}

@@ -26,5 +26,5 @@ export { FanItem } from './FanItem';
 export type { FanItemProps } from './FanItem';
 export { ColorPicker } from './ColorPicker';
 export { CalendarItem } from './CalendarItem';
-export { Hamburger } from './Hamburger'
-export { Navigation_lp } from './Navigation_lp'
+export { Hamburger } from './LPComponents/Hamburger'
+export { Navigation_lp } from './LPComponents/Navigation_lp'

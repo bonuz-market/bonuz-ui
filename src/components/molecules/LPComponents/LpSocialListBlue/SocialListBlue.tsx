@@ -1,10 +1,10 @@
 import React, {FC} from 'react';
 import './SocialListBlue.scss';
-import { IconBlueContainer } from '../../atoms/LpIconBlueContainer';
-import Telegram from '../../../assets/iconComponents/Telegram';
-import Twitter from '../../../assets/iconComponents/Twitter';
-import Medium from '../../../assets/iconComponents/Medium';
-import Instagram from "../../../assets/iconComponents/Instagram";
+import { IconBlueContainer } from '../../../atoms/LPComponents/LpIconBlueContainer';
+import Telegram from '../../../../assets/iconComponents/Telegram';
+import Twitter from '../../../../assets/iconComponents/Twitter';
+import Medium from '../../../../assets/iconComponents/Medium';
+import Instagram from "../../../../assets/iconComponents/Instagram";
 
 export type SocialListBlueProps = {
     telegram?: string;
@@ -13,7 +13,8 @@ export type SocialListBlueProps = {
     medium?: string;
 };
 
-const SocialListBlue:FC<SocialListBlueProps> = ({
+
+export const SocialListBlue:FC<SocialListBlueProps> = ({
                                                 instagram,
                                                 medium,
                                                 telegram,
@@ -55,5 +56,3 @@ const SocialListBlue:FC<SocialListBlueProps> = ({
         </nav>
     );
 };
-
-export default SocialListBlue;

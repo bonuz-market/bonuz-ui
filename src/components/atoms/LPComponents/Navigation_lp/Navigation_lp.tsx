@@ -9,7 +9,7 @@ import s from './styles.module.scss'
 /**
  *      INTERFACE
  */
-import {LinksItems} from '../../molecules/Header/ThirdHeader'
+import {LinksItems} from '../../../molecules/Header/ThirdHeader'
 
 type Iprops = {
     links?: LinksItems[]
