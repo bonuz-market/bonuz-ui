@@ -8,7 +8,7 @@ export default {
   component: Header,
 } as Meta;
 const Template: Story = (args) => (
-  <div style={{ height: '200vh' }}>
+  <div>
     <Header
       {...args}
       LanguageSelector={

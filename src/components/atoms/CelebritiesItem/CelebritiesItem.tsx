@@ -1,24 +1,83 @@
 import { FC } from 'react';
 import './CelebritiesItem.scss';
+import placeholder from '../../../assets/images/placeholder.svg';
 
 export type CelebritiesItemProps = {
   img: string;
   name: string;
   role: string;
+  /**
+   * Must be used with category prop
+   */
   link?: string;
+  /**
+   * Must be used with link prop
+   */
+  category?: string;
+  lazy?: boolean;
+  /**
+   * Should be used  with swiper slider
+   */
+  lazySwiper?: boolean;
 };
+const Item: FC<CelebritiesItemProps> = ({
+  img,
+  name,
+  role,
+  link,
+  category,
+  lazy,
+  lazySwiper,
+}) => (
+  <>
+    {!lazySwiper && (
+      <img src={img} alt={name} loading={lazy ? 'lazy' : undefined} />
+    )}
+    {lazySwiper && (
+      <img
+        alt={name}
+        data-src={img}
+        src={placeholder}
+        className="swiper-lazy"
+      />
+    )}
+    <div>
+      <div className="celeb__info">
+        <h4>{name}</h4>
+        <p>{role}</p>
+      </div>
+      {link && category && (
+        <button type="button">
+          {link === '#' && <a href={link}>{category}</a>}
+          {link !== '#' && (
+            <a href={link} target="_blank" rel="noreferrer">
+              {category}
+            </a>
+          )}
+        </button>
+      )}
+    </div>
+  </>
+);
 
 export const CelebritiesItem: FC<CelebritiesItemProps> = ({
   img,
   name,
   role,
   link,
+  category,
+  lazy,
+  lazySwiper,
 }) => (
-  <a className="celeb" href={link}>
-    <img src={img} alt={name} />
-    <div>
-      <h4>{name}</h4>
-      <p>{role}</p>
-    </div>
-  </a>
+  <div className="celeb">
+    <Item
+      img={img}
+      name={name}
+      role={role}
+      link={link}
+      category={category}
+      lazy={lazy}
+      lazySwiper={lazySwiper}
+    />
+  </div>
 );
