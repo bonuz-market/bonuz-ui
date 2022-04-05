@@ -18,13 +18,15 @@ export const NewsCard: FC<NewsCardProps> = ({
 }) => (
   <article className="post">
     <div className="date">{created}</div>
-    <a className="img" href={link}>
+    <a className="img" href={link} target="_blank" rel="noreferrer">
       <div className="mask" />
       <div className="mask mask--gradient" />
       <img src={img} className="post-image" alt="" />
     </a>
     <h3>
-      <a href={link}>{title}</a>
+      <a href={link} target="_blank" rel="noreferrer">
+        {title}
+      </a>
     </h3>
     <p>{description}</p>
   </article>

@@ -17,9 +17,9 @@ header {
       width: 100%;
       justify-content: center;
       position: fixed;
-      z-index: 9999;
+      z-index: 1000;
       padding: 40px 0;
-      transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      transition: all 0.2s ease-in-out;
     }
 
     &-inner {
@@ -43,6 +43,7 @@ header {
             img {
               width: 100%;
               height: 100%;
+              object-fit: contain;
             }
           }
           %position-absolute {
@@ -116,7 +117,9 @@ header {
           }
 
           .dropdown {
-            align-self: flex-start;
+            &__list > li {
+              @include u.font($size: var(--font-size-medium));
+            }
           }
         }
 
@@ -172,7 +175,7 @@ header {
     }
 
     &__fixed {
-      padding: 10px 0;
+      padding: 20px 0;
       background-color: $color-background-nav-fixed;
       transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     }
@@ -180,29 +183,6 @@ header {
 
   .burger {
     display: none;
-  }
-
-  [dir='rtl'] {
-    .header {
-      &-inner {
-        .col {
-          &:nth-child(3) {
-            margin-left: 30px;
-            margin-right: auto;
-          }
-
-          .sign-in {
-            margin-right: 0;
-
-            img {
-              margin-left: 0;
-              margin-right: 20px;
-              transform: rotate(180deg);
-            }
-          }
-        }
-      }
-    }
   }
 }
 @media screen and (max-width: 1050px) {
@@ -214,8 +194,7 @@ header {
       }
 
       &-inner {
-        padding: 0 25px;
-        margin-top: 5px;
+        padding: 20px 25px;
         max-width: 100vw;
 
         .col {
@@ -224,13 +203,16 @@ header {
 
             a {
               z-index: 10;
-              margin: 0 auto;
               height: 32px;
               width: 94px;
+              left: 50%;
+              transform: translate(-50%);
+              position: absolute;
 
-              img {
-                width: 100%;
-                height: 100%;
+              [dir='rtl'] & {
+                left: unset;
+                right: 50%;
+                transform: translate(50%);
               }
             }
           }
@@ -248,7 +230,7 @@ header {
               left: 0;
               top: 0;
               width: 100%;
-              height: 110vh;
+              height: 100vh;
               background: $color-background-nav-mobile;
               z-index: 9;
               user-select: none;
@@ -267,19 +249,14 @@ header {
                 flex-direction: column;
                 width: max-content;
                 position: absolute;
-                left: 60px;
-                top: 150px;
+                inset-inline-start: 60px;
+                top: 0;
+                margin-top: 5rem;
                 z-index: 11;
-
-                [dir='rtl'] & {
-                  left: unset;
-                  right: 60px;
-                }
+                gap: 2rem;
               }
 
               li {
-                margin-bottom: 30px;
-
                 a {
                   @include u.font($size: 20px);
                 }
@@ -296,6 +273,7 @@ header {
             pointer-events: auto;
             opacity: 1;
             transform: translateY(0);
+            overflow: auto;
           }
 
           justify-content: space-between;
