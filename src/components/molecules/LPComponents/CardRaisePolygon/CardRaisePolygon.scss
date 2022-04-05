@@ -1,0 +1,60 @@
+
+.card.cardPolygon {
+  position: relative;
+  width: 327px;
+  min-height: 494px;
+  display: flex;
+  flex-direction: column;
+
+  .cardImg {
+    position: absolute;
+    z-index: 5;
+    top: 6px;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+
+  .cardMain {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin-top: 150px;
+    min-height: calc(494px - 150px);
+    background: linear-gradient(180deg, #24197E 0%, rgba(19, 10, 88, 0) 100%);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+
+    & > * {
+      flex: 1 50%;
+    }
+  }
+
+  .cardBg1 {
+
+    &Title {
+      margin-top: 80px;
+      padding-left: 8px;
+
+      & > *:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+      &Name {
+        font-weight: 500;
+        font-size: var(--font-size-h3);
+        line-height: 104.4%;
+        color: #FFFFFF;
+      }
+
+      &Type {
+        line-height: 18px;
+        opacity: 0.8;
+        margin-bottom: 10px;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,1 @@
+export {DoubleBgCardRotate} from './DoubleBgCardRotate'
