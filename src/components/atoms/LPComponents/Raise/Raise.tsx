@@ -16,7 +16,7 @@ export const Raise: FC<TRaise> = ({total,totalRaise, personalAlocation,personalA
                     {total}
                 </div>
                 <div className="cardBg2RaiseSubTitle">
-                    ${totalRaise}
+                    {totalRaise}
                 </div>
 
             </div>
@@ -26,7 +26,7 @@ export const Raise: FC<TRaise> = ({total,totalRaise, personalAlocation,personalA
                     {personalAlocation}
                 </div>
                 <div className="cardBg2RaiseSubTitle">
-                    ${personalAlocationRaise}
+                    {personalAlocationRaise}
                 </div>
 
             </div>

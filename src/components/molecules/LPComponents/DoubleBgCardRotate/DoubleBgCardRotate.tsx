@@ -18,20 +18,20 @@ export const DoubleBgCardRotate: FC<IDoubleBgCardRotate> = (
 ) => {
 
     return (
-        <div className={`DoubleBgCardRotate card ${right?'right':''} ${left?'left':''}`}
+        <div className={`DoubleBgCardRotate ${right?'right':''} ${left?'left':''}`}
             >
-            <div className='cardBg1'
+            <div className='DoubleBgCardRotateBg1'
                  style={{
                      background: `url(${image}) center/cover no-repeat`
                  }}
             > </div>
-            <div className='cardBg2'> </div>
+            <div className='DoubleBgCardRotateBg2'> </div>
 
-            <div className='cardFlag'>
-                <div className='cardFlagTitle'>
+            <div className='DoubleBgCardRotateFlag'>
+                <div className='DoubleBgCardRotateFlagTitle'>
                     {title}
                 </div>
-                <div className='cardFlagSubTitle'>
+                <div className='DoubleBgCardRotateFlagSubTitle'>
                     {subtitle}
                 </div>
             </div>

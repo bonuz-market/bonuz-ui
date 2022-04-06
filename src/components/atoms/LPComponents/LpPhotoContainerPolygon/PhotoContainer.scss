@@ -1,5 +1,7 @@
 
 .polygon{
+  cursor: pointer;
+  display: inline-block;
   &:hover{
     .polygonDefs{
       opacity: 1;

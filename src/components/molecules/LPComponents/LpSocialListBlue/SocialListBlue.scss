@@ -1,3 +1,12 @@
+*{
+  box-sizing: border-box;
+}
+ul{
+  margin: 0;
+  li{
+    box-sizing: border-box;
+  }
+}
 .card {
   &Bg2 {
     &Links {
@@ -7,7 +16,6 @@
       & > *:not(:last-child) {
         margin-right: 16px;
       }
-
     }
   }
 }

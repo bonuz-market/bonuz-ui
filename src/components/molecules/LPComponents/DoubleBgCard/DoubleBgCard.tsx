@@ -7,24 +7,26 @@ export interface IDoubleBgCard{
   title:string
   subtitle:string
   buttonTitle:string
+  onClick?:()=>void
 }
 
-export const DoubleBgCard: FC<IDoubleBgCard> = ({ image, title, subtitle,buttonTitle }) => {
+export const DoubleBgCard: FC<IDoubleBgCard> = ({onClick, image, title, subtitle,buttonTitle }) => {
   return (
-    <div className='card DoubleBgCard'>
+    <div className='DoubleBgCard'>
       <div
-        className='cardBg1'
+        className='DoubleBgCardBg1'
         style={{
           background: `url(${image}) center/cover no-repeat`,
         }}
+        onClick={onClick}
       >
         <Button>{buttonTitle}</Button>
       </div>
-      <div className='cardBg2'> </div>
+      <div className='DoubleBgCardBg2'> </div>
 
-      <div className='cardFlag'>
-        <div className='cardFlagTitle'>{title}</div>
-        <div className='cardFlagSubTitle'>{subtitle}</div>
+      <div className='DoubleBgCardFlag'>
+        <div className='DoubleBgCardFlagTitle'>{title}</div>
+        <div className='DoubleBgCardFlagSubTitle'>{subtitle}</div>
       </div>
     </div>
   );

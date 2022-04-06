@@ -1,33 +1,35 @@
 
-.card.DoubleBgCardRotate{
+.DoubleBgCardRotate{
     position: relative;
     width: 302px;
     height: 424px;
     border-radius: 8px;
   &.left{
     transform: rotate(-11.36deg);
-    .cardBg2{
+    .DoubleBgCardRotateBg2{
       left: -61px;
       top: -32px;
     }
-    .cardFlag {
+    .DoubleBgCardRotateFlag {
       right: -12px;
       top: 44px;
+      left:unset;
     }
   }
   &.right{
     transform: rotate(14.62deg);
-    .cardBg2{
+    .DoubleBgCardRotateBg2{
       width: 230.36px;
       left: 45.5px;
       top: -20px;
     }
-    .cardFlag {
+    .DoubleBgCardRotateFlag {
       left: -26.5px;
       bottom: 103.5px;
+      top:unset;
     }
   }
-  .cardBg1{
+  .DoubleBgCardRotateBg1{
     width: 100%;
     height: 100%;
     border-radius: 8px;
@@ -40,8 +42,10 @@
       background: linear-gradient(180deg, rgba(23, 11, 113, 0.26) 0%, #170B71 100%);
     }
   }
-  .cardBg2{
+  .DoubleBgCardRotateBg2{
     position: absolute;
+    top:-10px;
+    left:-20px;
     width: 100%;
     height: 100%;
     border-radius: 8px;
@@ -49,7 +53,9 @@
     background: linear-gradient(270.9deg, #CE09FF -2.92%, #FFA34E 99.95%);
   }
 
-  .cardFlag {
+  .DoubleBgCardRotateFlag {
+    top:20px;
+    left:20px;
     position: absolute;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(64px);
@@ -83,16 +89,16 @@
 }
 
 @media (max-width: 770px) {
-  .card.DoubleBgCardRotate {
+  .DoubleBgCardRotate {
     &.left{
       transform-origin: left;
       transform: rotate(-11.36deg) scale(0.54);
-      .cardBg2{
+      .DoubleBgCardRotateBg2{
         left: unset;
         right: 28px;
         top: -18px;
       }
-      .cardFlag {
+      .DoubleBgCardRotateFlag {
         right: -50px;
         top: 44px;
       }
@@ -101,12 +107,12 @@
     &.right{
       transform-origin: right;
       transform: rotate(14.62deg) scale(0.54);
-      .cardBg2{
+      .DoubleBgCardRotateBg2{
         width: 230.36px;
         left: 45.5px;
         top: -18px;
       }
-      .cardFlag {
+      .DoubleBgCardRotateFlag {
         left: -50px;
         bottom: 103.5px;
       }

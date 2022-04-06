@@ -1,10 +1,11 @@
 
-.card.DoubleBgCard {
+.DoubleBgCard {
   position: relative;
   width: 303px;
   height: 340px;
 
-  .cardBg1 {
+  &Bg1 {
+    border-radius: 8px;
     position: absolute;
     width: 256px;
     height: 328px;
@@ -12,8 +13,11 @@
     z-index: 1;
     right: 0;
     bottom: 0;
-    .button-fill button {
+    .button--fill button {
       padding: 0 ;
+      span{
+        padding: 0 ;
+      }
       width: 100%;
       min-height: 32px;
       backdrop-filter: blur(94px);
@@ -22,13 +26,13 @@
         border-radius: 4px;
       }
     }
-    .button-fill button span{
+    .button--fill button span{
       font-size: 14px;
       font-weight: 400;
     }
   }
 
-  .cardBg2 {
+  &Bg2 {
     position: absolute;
     width: 230px;
     height: calc(100% - 3px);
@@ -38,7 +42,7 @@
     border-radius: 8px;
   }
 
-  .cardFlag {
+  &Flag {
     position: absolute;
     bottom: 24px;
     left: 0;

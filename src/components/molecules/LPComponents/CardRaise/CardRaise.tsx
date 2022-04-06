@@ -12,6 +12,7 @@ export interface ICardRaise {
   buttonTitle?: string
   links:SocialListBlueProps
   raise:TRaise
+  onClick?:()=>void
 }
 
 export const CardRaise: FC<ICardRaise> = (
@@ -21,7 +22,8 @@ export const CardRaise: FC<ICardRaise> = (
     subTitleName,
     buttonTitle,
     links,
-    raise
+    raise,
+    onClick
   }
 ) => {
 
@@ -32,7 +34,7 @@ export const CardRaise: FC<ICardRaise> = (
       }}> </div>
       <div className="cardMain">
         <div className="cardBg1">
-          <Button>
+          <Button onClick={onClick}>
             {buttonTitle}
           </Button>
           <div className="cardBg1Title">

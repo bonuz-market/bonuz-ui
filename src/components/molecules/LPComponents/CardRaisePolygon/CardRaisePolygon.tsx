@@ -6,7 +6,8 @@ import { SocialListBlue } from "../LpSocialListBlue";
 import { Raise } from "../../../atoms/LPComponents/Raise";
 
 export interface ICardRaisePolygon extends ICardRaise {
-  id:any
+  id:any,
+  onClick?:()=>void
 }
 
 export const CardRaisePolygon: FC<ICardRaisePolygon> = (
@@ -16,12 +17,13 @@ export const CardRaisePolygon: FC<ICardRaisePolygon> = (
       subTitleName,
       links,
       raise,
-      id
+      id,
+      onClick
     }
 ) => {
     return (
         <div className='card cardPolygon'>
-            <div className='cardImg'>
+            <div className='cardImg' onClick={onClick}>
                 <PhotoContainer id={id}  image={image}/>
             </div>
             <div className='cardMain'>

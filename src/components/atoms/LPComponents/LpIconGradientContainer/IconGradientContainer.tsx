@@ -3,20 +3,16 @@
  */
 import React, { FC } from "react";
 /**
- *      ROUTING
- */
-import { Link } from "react-router-dom";
-/**
  *      STYLES
  */
-import  "./IconGradientContainer.scss";
+import "./IconGradientContainer.scss";
 
-const IconGradientContainer: FC<{ to?: string }> = ({ children, to = "/" }) => {
+export const IconGradientContainer: FC<{ href: string }> = ({ children, href = "/" }) => {
 
   return (
-    <Link
-      to={to}
-      className='container'
+    <a
+      href={href}
+      className="container"
     >
       <svg
         width="57"
@@ -46,7 +42,7 @@ const IconGradientContainer: FC<{ to?: string }> = ({ children, to = "/" }) => {
         </defs>
 
         <svg
-          className='containerOpacity'
+          className="containerOpacity"
           width="57"
           height="64"
           viewBox="0 0 57 64"
@@ -72,9 +68,9 @@ const IconGradientContainer: FC<{ to?: string }> = ({ children, to = "/" }) => {
           </defs>
         </svg>
       </svg>
-      <div className='containerChild'>{children}</div>
-    </Link>
+      <div className="containerChild">{children}</div>
+    </a>
   );
 };
 
-export default IconGradientContainer;
+

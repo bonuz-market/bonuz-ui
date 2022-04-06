@@ -1,10 +1,10 @@
 import React, {FC} from 'react';
 import './SocialListBlue.scss';
 import { IconBlueContainer } from '../../../atoms/LPComponents/LpIconBlueContainer';
-import Telegram from '../../../../assets/iconComponents/Telegram';
-import Twitter from '../../../../assets/iconComponents/Twitter';
-import Medium from '../../../../assets/iconComponents/Medium';
-import Instagram from "../../../../assets/iconComponents/Instagram";
+import Telegram from '../../../../assets/icons/Telegram';
+import Twitter from '../../../../assets/icons/Twitter';
+import Medium from '../../../../assets/icons/Medium';
+import Instagram from "../../../../assets/icons/Instagram";
 
 export type SocialListBlueProps = {
     telegram?: string;

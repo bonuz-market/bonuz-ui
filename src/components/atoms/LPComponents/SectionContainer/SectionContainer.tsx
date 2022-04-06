@@ -7,7 +7,7 @@ import React, { FC } from "react";
  */
 import   "./SectionContainer.scss";
 
-type SectionContainerProps = {
+export type SectionContainerProps = {
   className?: string;
 };
 

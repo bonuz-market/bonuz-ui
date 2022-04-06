@@ -11,7 +11,7 @@ export interface IconBlueContainerProps {
     href: string;
 }
 
-const IconBlueContainer: FC<IconBlueContainerProps> = ({
+export const IconBlueContainer: FC<IconBlueContainerProps> = ({
                                                            children,
                                                            href ,
                                                        }) => (
@@ -32,5 +32,3 @@ const IconBlueContainer: FC<IconBlueContainerProps> = ({
         <div className='containerChild'>{children}</div>
     </a>
 );
-
-export default IconBlueContainer;

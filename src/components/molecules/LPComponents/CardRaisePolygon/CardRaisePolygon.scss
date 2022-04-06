@@ -1,5 +1,13 @@
-
+*{
+  box-sizing: border-box;
+  line-height: 1;
+}
 .card.cardPolygon {
+  box-sizing: border-box;
+
+  background: none;
+  padding: 0;
+  border-radius: unset;
   position: relative;
   width: 327px;
   min-height: 494px;
@@ -7,6 +15,11 @@
   flex-direction: column;
 
   .cardImg {
+    &:before{
+      display: none;
+    }
+    height: unset;
+    width: unset;
     position: absolute;
     z-index: 5;
     top: 6px;

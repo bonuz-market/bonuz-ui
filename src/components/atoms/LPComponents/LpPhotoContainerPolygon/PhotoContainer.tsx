@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import  './PhotoContainer.scss'
 
-type TPhotoContainer = {
+export type TPhotoContainer = {
     image: object|string,
     id: any
 }
@@ -9,7 +9,7 @@ type TPhotoContainer = {
 export const PhotoContainer: FC<TPhotoContainer> = ({image, id}) => {
     return (
         <div className='polygon'
-             key={`${image}`}
+             key={`${image+id}`}
         >
             <svg
                 width="192"
