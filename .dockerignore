@@ -1,1 +1,7 @@
 .yarnrc.yml
+package.lock.json
+yarn.lock
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore
