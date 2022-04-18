@@ -81,7 +81,7 @@ deploy:
     - "cat ${ARTIFACT_FILENAME}"
     - gcloud run deploy ${CI_PROJECT_NAME}-${CI_COMMIT_BRANCH} >-
       --image ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
-      --port ${PORT} --region ${GCP_REGION} --platform managed --allow-unauthenticated --service-account=${GCP_SERVICE_ACCOUNT}
+      --port ${PORT} --region ${GCP_REGION} --platform managed --allow-unauthenticated --service-account=${CR_SERVICE_ACCOUNT}
     - >
       gcloud run services describe ${CI_PROJECT_NAME}-${CI_COMMIT_BRANCH}
       --region ${GCP_REGION} | head -n 10 >> ${ARTIFACT_FILENAME}
