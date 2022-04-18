@@ -74,6 +74,7 @@ deploy:
   script:
     # - gcloud builds submit --tag $GCP_REGISTRY/$GCP_PROJECT_ID/$GCP_CONTAINER_REG:${CI_PIPELINE_ID}
     - docker build . -t ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
+    - docker push ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
     - >
       echo "Image ID: ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}" 
       >> ${ARTIFACT_FILENAME}
