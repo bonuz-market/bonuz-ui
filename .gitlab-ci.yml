@@ -19,13 +19,9 @@ stages:
     exclude:
       - gcloud-service-key.json
   before_script:
-    - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
-    - eval $(ssh-agent -s)
-    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-    - mkdir -p ~/.ssh
-    - chmod 700 ~/.ssh
-    - echo $GCP_SERVICE_ACCOUNT > gcloud-service-key.json
+    - echo ${GCP_SERVICE_ACCOUNT} > gcloud-service-key.json
     - gcloud auth activate-service-account --key-file gcloud-service-key.json
+    - gcloud auth configure-docker ${GCP_REGISTRY} --quiet
     - gcloud config set project ${GCP_PROJECT_ID}
 
 publish:
@@ -69,7 +65,7 @@ deploy:
   cache:
     policy: pull
     untracked: false
-    key: $CI_COMMIT_REF_SLUG
+    key: ${CI_COMMIT_REF_SLUG}
     key:
       files:
         - yarn.lock
