@@ -2,6 +2,16 @@ stages:
   - package-release
   - deployment
 
+cache:
+  policy: pull
+  untracked: false
+  key: ${CI_COMMIT_REF_SLUG}
+  key:
+    files:
+      - yarn.lock
+  paths:
+    - node_modules/
+
 .auth_step:
   timeout: 30m
   image: google/cloud-sdk:latest
@@ -60,15 +70,6 @@ deploy:
     - staging
   environment:
     name: staging
-  cache:
-    policy: pull
-    untracked: false
-    key: ${CI_COMMIT_REF_SLUG}
-    key:
-      files:
-        - yarn.lock
-    paths:
-      - node_modules/
   script:
     # - gcloud builds submit --tag $GCP_REGISTRY/$GCP_PROJECT_ID/$GCP_CONTAINER_REG:${CI_PIPELINE_ID}
     - docker build . -t ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
