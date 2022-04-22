@@ -1,5 +1,5 @@
 {
-  "branches": ["staging"],
+  "branches": ["master"],
   "extends": "@semantic-release/gitlab-config",
   "plugins": [
     "@semantic-release/commit-analyzer",
