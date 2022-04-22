@@ -34,14 +34,33 @@ cache:
     - gcloud auth configure-docker ${GCP_REGISTRY} --quiet
     - gcloud config set project ${GCP_PROJECT_ID}
 
+.deploy:
+  extends:
+    - .auth_step
+  script:
+    # - gcloud builds submit --tag $GCP_REGISTRY/$GCP_PROJECT_ID/$GCP_CONTAINER_REG:${CI_PIPELINE_ID}
+    - docker build . -t ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
+    - docker push ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
+    - >
+      echo "Image ID: ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}" 
+      >> ${ARTIFACT_FILENAME}
+    - printf "\n" >> ${ARTIFACT_FILENAME}
+    - "cat ${ARTIFACT_FILENAME}"
+    - gcloud run deploy ${CI_PROJECT_NAME}-${CI_COMMIT_BRANCH} >-
+      --image ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
+      --port ${PORT} --region ${GCP_REGION} --platform managed --allow-unauthenticated --service-account=${CR_SERVICE_ACCOUNT}
+    - >
+      gcloud run services describe ${CI_PROJECT_NAME}-${CI_COMMIT_BRANCH}
+      --region ${GCP_REGION} | head -n 10 >> ${ARTIFACT_FILENAME}
+    - printf "\n" >> ${ARTIFACT_FILENAME}
+    - "cat ${ARTIFACT_FILENAME}"
+
 publish:
   stage: package-release
   tags:
     - runner-two
   only:
     - master
-  environment:
-    name: master
   artifacts:
     when: always
     expire_in: 15 days
@@ -62,28 +81,10 @@ publish:
     - yarn publish:build
     - npx semantic-release
 
-deploy:
+deployment:
   stage: deployment
   extends:
-    - .auth_step
+    - .deploy
   only:
     - staging
-  environment:
-    name: staging
-  script:
-    # - gcloud builds submit --tag $GCP_REGISTRY/$GCP_PROJECT_ID/$GCP_CONTAINER_REG:${CI_PIPELINE_ID}
-    - docker build . -t ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
-    - docker push ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
-    - >
-      echo "Image ID: ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}" 
-      >> ${ARTIFACT_FILENAME}
-    - printf "\n" >> ${ARTIFACT_FILENAME}
-    - "cat ${ARTIFACT_FILENAME}"
-    - gcloud run deploy ${CI_PROJECT_NAME}-${CI_COMMIT_BRANCH} >-
-      --image ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
-      --port ${PORT} --region ${GCP_REGION} --platform managed --allow-unauthenticated --service-account=${CR_SERVICE_ACCOUNT}
-    - >
-      gcloud run services describe ${CI_PROJECT_NAME}-${CI_COMMIT_BRANCH}
-      --region ${GCP_REGION} | head -n 10 >> ${ARTIFACT_FILENAME}
-    - printf "\n" >> ${ARTIFACT_FILENAME}
-    - "cat ${ARTIFACT_FILENAME}"
+    - master
