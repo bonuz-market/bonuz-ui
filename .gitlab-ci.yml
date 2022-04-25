@@ -35,24 +35,16 @@ cache:
     - gcloud config set project ${GCP_PROJECT_ID}
 
 .deploy:
-  tags:
-    - runner-two
-  variables:
-    ARTIFACT_FILENAME: "./artifacts-${CI_PROJECT_NAME}-${CI_PIPELINE_ID}.txt"
-  artifacts:
-    name: "${CI_JOB_ID}-${CI_JOB_NAME}"
-    untracked: false
-    paths:
-      - ${ARTIFACT_FILENAME}
-    exclude:
-      - gcloud-service-key.json
+  extends:
+    - .auth_step
   before_script:
     - echo ${GCP_SERVICE_ACCOUNT} > gcloud-service-key.json
     - gcloud auth activate-service-account --key-file gcloud-service-key.json
     - gcloud auth configure-docker ${GCP_REGISTRY} --quiet
     - gcloud config set project ${GCP_PROJECT_ID}
   script:
-    - gcloud builds submit --tag $GCP_REGISTRY/$GCP_PROJECT_ID/$GCP_CONTAINER_REG:${CI_PIPELINE_ID}
+    - export GOOGLE_APPLICATION_CREDENTIALS="gcloud-service-key.json"
+    - gcloud builds submit --tag $GCP_REGISTRY/$GCP_PROJECT_ID/$GCP_CONTAINER_REG:${CI_PIPELINE_ID} || true
     # - docker build . -t ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
     # - docker push ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
     - >
