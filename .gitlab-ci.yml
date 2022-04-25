@@ -46,11 +46,11 @@ cache:
     - gcloud builds submit --tag ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
     # - docker build . -t ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
     # - docker push ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
-    - >
-      echo "Image ID: ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}" 
-      >> ${ARTIFACT_FILENAME}
-    - printf "\n" >> ${ARTIFACT_FILENAME}
-    - "cat ${ARTIFACT_FILENAME}"
+    # - >
+    #   echo "Image ID: ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}" 
+    #   >> ${ARTIFACT_FILENAME}
+    # - printf "\n" >> ${ARTIFACT_FILENAME}
+    # - "cat ${ARTIFACT_FILENAME}"
     - gcloud run deploy ${CI_PROJECT_NAME}-${CI_COMMIT_BRANCH} >-
       --image ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
       --port ${PORT} --region ${GCP_REGION} --platform managed --allow-unauthenticated --service-account=${CR_SERVICE_ACCOUNT}
