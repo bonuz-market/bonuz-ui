@@ -17,17 +17,17 @@ cache:
   image: google/cloud-sdk:latest
   tags:
     - runner-two
-  variables:
-    ARTIFACT_FILENAME: "./artifacts-${CI_PROJECT_NAME}-${CI_PIPELINE_ID}.txt"
-  artifacts:
-    when: always
-    expire_in: 1 week
-    name: "${CI_JOB_ID}-${CI_JOB_NAME}"
-    untracked: false
-    paths:
-      - ${ARTIFACT_FILENAME}
-    exclude:
-      - gcloud-service-key.json
+  # variables:
+  #   ARTIFACT_FILENAME: "./artifacts-${CI_PROJECT_NAME}-${CI_PIPELINE_ID}.txt"
+  # artifacts:
+  #   when: always
+  #   expire_in: 1 week
+  #   name: "${CI_JOB_ID}-${CI_JOB_NAME}"
+  #   untracked: false
+  #   paths:
+  #     - ${ARTIFACT_FILENAME}
+  #   exclude:
+  #     - gcloud-service-key.json
   before_script:
     - echo ${GCP_SERVICE_ACCOUNT} > gcloud-service-key.json
     - gcloud auth activate-service-account --key-file gcloud-service-key.json
