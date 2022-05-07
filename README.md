@@ -2,6 +2,19 @@
 
 A UI library for [Bonuz](https://bonuz.market).
 
+## Setup
+
+Set URL for your scoped packages.\
+For example package with name `@bonuz/bonuz-ui` will use this URL for download
+```bash
+npm config set @bonuz:registry https://code.bonuz.team/api/v4/packages/npm/
+```
+
+Add the token for the scoped packages URL. This will allow you to download `@bonuz/` packages from private projects.
+```bash
+npm config set -- '//code.bonuz.team/api/v4/packages/npm/:_authToken' "<your_gitlab_access_token>"
+```
+
 ## Tools
 
 - [Stylelint VScode Extenstion](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint).
