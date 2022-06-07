@@ -1401,7 +1401,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.11.0, @babel/preset-env@npm:^7.12.1, @babel/preset-env@npm:^7.12.11, @babel/preset-env@npm:^7.15.6, @babel/preset-env@npm:^7.16.11, @babel/preset-env@npm:^7.16.4":
+"@babel/preset-env@npm:^7.11.0, @babel/preset-env@npm:^7.12.1, @babel/preset-env@npm:^7.12.11, @babel/preset-env@npm:^7.15.6, @babel/preset-env@npm:^7.16.4, @babel/preset-env@npm:^7.18.2":
   version: 7.18.2
   resolution: "@babel/preset-env@npm:7.18.2"
   dependencies:
@@ -1514,7 +1514,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-react@npm:^7.12.10, @babel/preset-react@npm:^7.12.5, @babel/preset-react@npm:^7.14.5, @babel/preset-react@npm:^7.16.0, @babel/preset-react@npm:^7.16.7":
+"@babel/preset-react@npm:^7.12.10, @babel/preset-react@npm:^7.12.5, @babel/preset-react@npm:^7.14.5, @babel/preset-react@npm:^7.16.0, @babel/preset-react@npm:^7.17.12":
   version: 7.17.12
   resolution: "@babel/preset-react@npm:7.17.12"
   dependencies:
@@ -1530,7 +1530,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@npm:^7.12.7, @babel/preset-typescript@npm:^7.16.0, @babel/preset-typescript@npm:^7.16.7":
+"@babel/preset-typescript@npm:^7.12.7, @babel/preset-typescript@npm:^7.16.0, @babel/preset-typescript@npm:^7.17.12":
   version: 7.17.12
   resolution: "@babel/preset-typescript@npm:7.17.12"
   dependencies:
@@ -1635,12 +1635,12 @@ __metadata:
   resolution: "@bonuz/bonuz-ui@workspace:."
   dependencies:
     "@babel/core": ^7.17.9
-    "@babel/preset-env": ^7.16.11
-    "@babel/preset-react": ^7.16.7
-    "@babel/preset-typescript": ^7.16.7
+    "@babel/preset-env": ^7.18.2
+    "@babel/preset-react": ^7.17.12
+    "@babel/preset-typescript": ^7.17.12
     "@rbnlffl/rollup-plugin-eslint": ^3.0.0
-    "@rollup/plugin-commonjs": ^21.1.0
-    "@rollup/plugin-url": ^6.1.0
+    "@rollup/plugin-commonjs": ^22.0.0
+    "@rollup/plugin-url": ^7.0.0
     "@storybook/addon-actions": ^6.5.7
     "@storybook/addon-essentials": ^6.5.7
     "@storybook/addon-links": ^6.5.7
@@ -1650,28 +1650,28 @@ __metadata:
     "@storybook/react": ^6.5.7
     "@svgr/rollup": ^6.2.1
     "@testing-library/jest-dom": ^5.16.4
-    "@testing-library/react": ^12.1.4
-    "@types/node": ^17.0.25
-    "@types/react": ^17.0.42
-    "@types/react-dom": ^17.0.14
-    "@typescript-eslint/eslint-plugin": ^5.20.0
-    "@typescript-eslint/parser": ^5.20.0
-    autoprefixer: ^10.4.4
+    "@testing-library/react": ^13.3.0
+    "@types/node": ^17.0.41
+    "@types/react": ^17.0.45
+    "@types/react-dom": ^17.0.17
+    "@typescript-eslint/eslint-plugin": ^5.27.1
+    "@typescript-eslint/parser": ^5.27.1
+    autoprefixer: ^10.4.7
     babel-loader: ^8.2.5
     classnames: ^2.3.1
     css-loader: ^6.7.1
-    eslint: ^8.13.0
+    eslint: ^8.17.0
     eslint-config-airbnb: 19.0.4
     eslint-config-airbnb-typescript: ^17.0.0
     eslint-config-prettier: ^8.5.0
     eslint-import-resolver-typescript: ^2.7.1
     eslint-plugin-import: ^2.26.0
     eslint-plugin-jsx-a11y: ^6.5.1
-    eslint-plugin-react: ^7.29.4
-    eslint-plugin-react-hooks: ^4.4.0
+    eslint-plugin-react: ^7.30.0
+    eslint-plugin-react-hooks: ^4.5.0
     eslint-plugin-storybook: ^0.5.12
     fs-extra: ^10.1.0
-    postcss: ^8.4.12
+    postcss: ^8.4.14
     postcss-flexbugs-fixes: ^5.0.2
     postcss-sorting: ^7.0.1
     postcss-url: ^10.1.3
@@ -1680,25 +1680,24 @@ __metadata:
     react-dom: ^17.0.2
     react-scripts: ^5.0.1
     rimraf: ^3.0.2
-    rollup: ^2.70.2
+    rollup: ^2.75.6
     rollup-plugin-analyzer: ^4.0.0
     rollup-plugin-cleanup: ^3.2.1
     rollup-plugin-multi-input: ^1.3.1
     rollup-plugin-postcss: ^4.0.2
     rollup-plugin-terser: ^7.0.2
-    rollup-plugin-typescript2: ^0.31.2
+    rollup-plugin-typescript2: ^0.32.1
     sanitize.css: ^13.0.0
-    sass: ^1.50.1
-    sass-loader: ^12.6.0
-    semantic-release: ^19.0.2
+    sass: ^1.52.2
+    sass-loader: ^13.0.0
     storybook-css-modules-preset: ^1.1.1
     style-loader: ^3.3.1
-    stylelint: ^14.7.1
+    stylelint: ^14.8.5
     stylelint-config-prettier: ^9.0.3
-    stylelint-config-standard-scss: ^3.0.0
-    typescript: ^4.6.3
+    stylelint-config-standard-scss: ^4.0.0
+    typescript: ^4.7.3
     web-vitals: ^2.1.4
-    webpack: ^5.72.0
+    webpack: ^5.73.0
   languageName: unknown
   linkType: soft
 
@@ -2760,9 +2759,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-commonjs@npm:^21.1.0":
-  version: 21.1.0
-  resolution: "@rollup/plugin-commonjs@npm:21.1.0"
+"@rollup/plugin-commonjs@npm:^22.0.0":
+  version: 22.0.0
+  resolution: "@rollup/plugin-commonjs@npm:22.0.0"
   dependencies:
     "@rollup/pluginutils": ^3.1.0
     commondir: ^1.0.1
@@ -2772,8 +2771,8 @@ __metadata:
     magic-string: ^0.25.7
     resolve: ^1.17.0
   peerDependencies:
-    rollup: ^2.38.3
-  checksum: e8280f4b6192729f2bdf878c48c451dc441075f2a12f22c688393f48a6b95e8ff83caaacc3df4eb1d81516e08a0e3a669213632879910d85dd630b37bb284df7
+    rollup: ^2.68.0
+  checksum: fdcce2bf58875fde0e06f001544c0d9a0509a12929393862f72dcef8fcbf4d5d0ba0d5db6cf10ba4351335caf67a3dbdb95000678c468585e3972994f92e2ce9
   languageName: node
   linkType: hard
 
@@ -2805,16 +2804,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-url@npm:^6.1.0":
-  version: 6.1.0
-  resolution: "@rollup/plugin-url@npm:6.1.0"
+"@rollup/plugin-url@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "@rollup/plugin-url@npm:7.0.0"
   dependencies:
-    "@rollup/pluginutils": ^3.1.0
+    "@rollup/pluginutils": ^4.2.1
     make-dir: ^3.1.0
     mime: ^2.4.6
   peerDependencies:
     rollup: ^1.20.0||^2.0.0
-  checksum: f40d4ee41c121b0d46d6d0c62bb321031dd189a6e5c5d6256c4d68110ea4d3ecd2657fae32b3888a8118acf3dcc33d13969d8389c72e69a6313462ed019043d4
+  checksum: f85d90dbeb45d2c759d22245df188f663d42e26c7cdd652b1e1c50897a7a221e126550c04005883da7c13a7c97a42f43a9746f762fed9fb8d5c4058907d20f90
   languageName: node
   linkType: hard
 
@@ -2831,7 +2830,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/pluginutils@npm:^4.1.1, @rollup/pluginutils@npm:^4.1.2":
+"@rollup/pluginutils@npm:^4.1.1, @rollup/pluginutils@npm:^4.1.2, @rollup/pluginutils@npm:^4.2.1":
   version: 4.2.1
   resolution: "@rollup/pluginutils@npm:4.2.1"
   dependencies:
@@ -4584,6 +4583,7 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@szmarczak/http-timer@npm:^4.0.5":
   version: 4.0.6
   resolution: "@szmarczak/http-timer@npm:4.0.6"
@@ -4596,6 +4596,9 @@ __metadata:
 "@testing-library/dom@npm:^8.0.0, @testing-library/dom@npm:^8.13.0":
 =======
 "@testing-library/dom@npm:^8.0.0":
+>>>>>>> develop
+=======
+"@testing-library/dom@npm:^8.5.0":
 >>>>>>> develop
   version: 8.13.0
   resolution: "@testing-library/dom@npm:8.13.0"
@@ -4629,17 +4632,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:^12.1.4":
-  version: 12.1.5
-  resolution: "@testing-library/react@npm:12.1.5"
+"@testing-library/react@npm:^13.3.0":
+  version: 13.3.0
+  resolution: "@testing-library/react@npm:13.3.0"
   dependencies:
     "@babel/runtime": ^7.12.5
-    "@testing-library/dom": ^8.0.0
-    "@types/react-dom": <18.0.0
+    "@testing-library/dom": ^8.5.0
+    "@types/react-dom": ^18.0.0
   peerDependencies:
-    react: <18.0.0
-    react-dom: <18.0.0
-  checksum: 4abd0490405e709a7df584a0db604e508a4612398bb1326e8fa32dd9393b15badc826dcf6d2f7525437886d507871f719f127b9860ed69ddd204d1fa834f576a
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  checksum: 98fd8616a7cae0ecfcbe97b5b3c5b91fbafccf449c04875395ccc0e3f0b139e53b3261b9536ec2169a5e2883a1be2098907209064061fe0c2ff21dfbc785dd40
   languageName: node
   linkType: hard
 
@@ -5018,10 +5021,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^17.0.25":
-  version: 17.0.40
-  resolution: "@types/node@npm:17.0.40"
-  checksum: e3b2fe876672fbe4be84ce17773944eb2f5eaba50e2c6c0536bdf6d4972ed6488581580581f154183fdc8f2d56fa42a42e3d6e83b9b71ee25adea16a84765e92
+"@types/node@npm:*, @types/node@npm:^17.0.41":
+  version: 17.0.41
+  resolution: "@types/node@npm:17.0.41"
+  checksum: ddaf9e7decb487850a9bbfeb670b41c9d35c5b1597c4c4f889419b65042d776e9041ed533c7afc1bac30cad1e9dcfd984085b4a35312efe8ea5eaf0bd36a8191
   languageName: node
   linkType: hard
 
@@ -5102,12 +5105,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:<18.0.0, @types/react-dom@npm:^17.0.14":
+"@types/react-dom@npm:^17.0.17":
   version: 17.0.17
   resolution: "@types/react-dom@npm:17.0.17"
   dependencies:
     "@types/react": ^17
   checksum: 23caf98aa03e968811560f92a2c8f451694253ebe16b670929b24eaf0e7fa62ba549abe9db0ac028a9d8a9086acd6ab9c6c773f163fa21224845edbc00ba6232
+  languageName: node
+  linkType: hard
+
+"@types/react-dom@npm:^18.0.0":
+  version: 18.0.5
+  resolution: "@types/react-dom@npm:18.0.5"
+  dependencies:
+    "@types/react": "*"
+  checksum: cd48b81950f499b52a3f0c08261f00046f9b7c96699fa249c9664e257e820daf6ecac815cd1028cebc9d105094adc39d047d1efd79214394b8b2d515574c0787
   languageName: node
   linkType: hard
 
@@ -5131,7 +5143,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^17, @types/react@npm:^17.0.42":
+"@types/react@npm:^17, @types/react@npm:^17.0.45":
   version: 17.0.45
   resolution: "@types/react@npm:17.0.45"
   dependencies:
@@ -5337,7 +5349,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.20.0, @typescript-eslint/eslint-plugin@npm:^5.5.0":
+"@typescript-eslint/eslint-plugin@npm:^5.27.1, @typescript-eslint/eslint-plugin@npm:^5.5.0":
   version: 5.27.1
   resolution: "@typescript-eslint/eslint-plugin@npm:5.27.1"
   dependencies:
@@ -5371,7 +5383,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.20.0, @typescript-eslint/parser@npm:^5.5.0":
+"@typescript-eslint/parser@npm:^5.27.1, @typescript-eslint/parser@npm:^5.5.0":
   version: 5.27.1
   resolution: "@typescript-eslint/parser@npm:5.27.1"
   dependencies:
@@ -5811,6 +5823,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@yarn-tool/resolve-package@npm:^1.0.40":
   version: 1.0.47
   resolution: "@yarn-tool/resolve-package@npm:1.0.47"
@@ -5834,6 +5847,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> develop
 "abab@npm:^2.0.3, abab@npm:^2.0.5":
   version: 2.0.6
   resolution: "abab@npm:2.0.6"
@@ -6557,7 +6572,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.4.4, autoprefixer@npm:^10.4.7":
+"autoprefixer@npm:^10.4.7":
   version: 10.4.7
   resolution: "autoprefixer@npm:10.4.7"
   dependencies:
@@ -10061,7 +10076,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react-hooks@npm:^4.3.0, eslint-plugin-react-hooks@npm:^4.4.0":
+"eslint-plugin-react-hooks@npm:^4.3.0, eslint-plugin-react-hooks@npm:^4.5.0":
   version: 4.5.0
   resolution: "eslint-plugin-react-hooks@npm:4.5.0"
   peerDependencies:
@@ -10070,7 +10085,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:^7.27.1, eslint-plugin-react@npm:^7.29.4":
+"eslint-plugin-react@npm:^7.27.1, eslint-plugin-react@npm:^7.30.0":
   version: 7.30.0
   resolution: "eslint-plugin-react@npm:7.30.0"
   dependencies:
@@ -10189,7 +10204,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.13.0, eslint@npm:^8.2.0, eslint@npm:^8.3.0":
+"eslint@npm:^8.17.0, eslint@npm:^8.2.0, eslint@npm:^8.3.0":
   version: 8.17.0
   resolution: "eslint@npm:8.17.0"
   dependencies:
@@ -16717,15 +16732,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"path-is-network-drive@npm:^1.0.15":
-  version: 1.0.15
-  resolution: "path-is-network-drive@npm:1.0.15"
-  dependencies:
-    tslib: ^2
-  checksum: a2265d7609199e290a39909a5b9607ceab2b2e8de6c294160274beeddc3dd72c368e45aa41926fff72219d0f9310a222e3848b36bd4935c7d6a84bef1553f16a
-  languageName: node
-  linkType: hard
-
 "path-key@npm:^2.0.0, path-key@npm:^2.0.1":
   version: 2.0.1
   resolution: "path-key@npm:2.0.1"
@@ -16744,15 +16750,6 @@ __metadata:
   version: 1.0.7
   resolution: "path-parse@npm:1.0.7"
   checksum: 49abf3d81115642938a8700ec580da6e830dde670be21893c62f4e10bd7dd4c3742ddc603fe24f898cba7eb0c6bc1777f8d9ac14185d34540c6d4d80cd9cae8a
-  languageName: node
-  linkType: hard
-
-"path-strip-sep@npm:^1.0.12":
-  version: 1.0.12
-  resolution: "path-strip-sep@npm:1.0.12"
-  dependencies:
-    tslib: ^2
-  checksum: 4ee1d8e1aa8df185ef85bb5e60b5a91962014ae285db9d9cafec78c45fb60851e3dd01a06c56d4d9f5aafb900b9798f5f99016ebba6ee058c8b3f7b1bf2f2426
   languageName: node
   linkType: hard
 
@@ -16889,6 +16886,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "pkg-conf@npm:^2.1.0":
   version: 2.1.0
   resolution: "pkg-conf@npm:2.1.0"
@@ -16908,6 +16906,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> develop
 "pkg-dir@npm:^3.0.0":
   version: 3.0.0
   resolution: "pkg-dir@npm:3.0.0"
@@ -16923,6 +16923,15 @@ __metadata:
   dependencies:
     find-up: ^4.0.0
   checksum: 9863e3f35132bf99ae1636d31ff1e1e3501251d480336edb1c211133c8d58906bed80f154a1d723652df1fda91e01c7442c2eeaf9dc83157c7ae89087e43c8d6
+  languageName: node
+  linkType: hard
+
+"pkg-dir@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "pkg-dir@npm:5.0.0"
+  dependencies:
+    find-up: ^5.0.0
+  checksum: b167bb8dac7bbf22b1d5e30ec223e6b064b84b63010c9d49384619a36734caf95ed23ad23d4f9bd975e8e8082b60a83395f43a89bb192df53a7c25a38ecb57d9
   languageName: node
   linkType: hard
 
@@ -19405,20 +19414,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-typescript2@npm:^0.31.2":
-  version: 0.31.2
-  resolution: "rollup-plugin-typescript2@npm:0.31.2"
+"rollup-plugin-typescript2@npm:^0.32.1":
+  version: 0.32.1
+  resolution: "rollup-plugin-typescript2@npm:0.32.1"
   dependencies:
     "@rollup/pluginutils": ^4.1.2
-    "@yarn-tool/resolve-package": ^1.0.40
     find-cache-dir: ^3.3.2
     fs-extra: ^10.0.0
     resolve: ^1.20.0
-    tslib: ^2.3.1
+    tslib: ^2.4.0
   peerDependencies:
     rollup: ">=1.26.3"
     typescript: ">=2.4.0"
-  checksum: ceebc686195f8140ee64b89cbd3a284bda50435081bea8f55f404ea293c02ec9787e9147e33f8e078b2c4772d9f198e66f900f54ca77ccda63db9ec2511db665
+  checksum: f41ab63ad1e4d21ec99fbf4a367abdf29ef95c41fd0a5612f2b60a8619f5fe633f75982bfbaf8fe9632bddfb6730ff9cb38be77d82561088168fcaccd2cd1e85
   languageName: node
   linkType: hard
 
@@ -19431,9 +19439,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.43.1, rollup@npm:^2.70.2":
-  version: 2.75.5
-  resolution: "rollup@npm:2.75.5"
+"rollup@npm:^2.43.1, rollup@npm:^2.75.6":
+  version: 2.75.6
+  resolution: "rollup@npm:2.75.6"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -19441,7 +19449,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: fa3e61959efbc88cda75315dc22f035489be9dda3ae7d45a3a474f19efc3661ef6f9849486c7ca51e1a3e2aedef91f4e3223e8123bbeaf155913533d071994d1
+  checksum: df83c6d43a144a296daf82bed7f12f2dfcc6c495a64245e840d15fd21f2ab8b66bb3423e61c974875b33ccf53fb659d2ed099f272937ecf23af48815277c6cd5
   languageName: node
   linkType: hard
 
@@ -19540,7 +19548,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:^12.3.0, sass-loader@npm:^12.6.0":
+"sass-loader@npm:^12.3.0":
   version: 12.6.0
   resolution: "sass-loader@npm:12.6.0"
   dependencies:
@@ -19565,7 +19573,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.50.1":
+"sass-loader@npm:^13.0.0":
+  version: 13.0.0
+  resolution: "sass-loader@npm:13.0.0"
+  dependencies:
+    klona: ^2.0.4
+    neo-async: ^2.6.2
+  peerDependencies:
+    fibers: ">= 3.1.0"
+    node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
+    sass: ^1.3.0
+    sass-embedded: "*"
+    webpack: ^5.0.0
+  peerDependenciesMeta:
+    fibers:
+      optional: true
+    node-sass:
+      optional: true
+    sass:
+      optional: true
+    sass-embedded:
+      optional: true
+  checksum: f7af03813dccf0405eb02917cd10c97571ab81f42e9ea1f3da6d9e96991e076521809a452ad319d57c1a63273ce07c23ddfdbda5cd071a56d261dc28913afdaa
+  languageName: node
+  linkType: hard
+
+"sass@npm:^1.52.2":
   version: 1.52.2
   resolution: "sass@npm:1.52.2"
   dependencies:
@@ -20828,48 +20861,48 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-config-recommended-scss@npm:^5.0.2":
-  version: 5.0.2
-  resolution: "stylelint-config-recommended-scss@npm:5.0.2"
+"stylelint-config-recommended-scss@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "stylelint-config-recommended-scss@npm:6.0.0"
   dependencies:
     postcss-scss: ^4.0.2
-    stylelint-config-recommended: ^6.0.0
+    stylelint-config-recommended: ^7.0.0
     stylelint-scss: ^4.0.0
   peerDependencies:
-    stylelint: ^14.0.0
-  checksum: e882bde8a0846c421e2662f9e7a9c2646120c492528f7ad715d927db6954b8a2499476de0792b15f0044217f72c81edc97afc640c5b4d7618a9f96dc7045e4c1
+    stylelint: ^14.4.0
+  checksum: a7254f4e8fc8c25990ad0fade6c3a7e663e867d4f4f92175919de26315a7283e7dd7dc10ef5f7f3a2f7fb76b3aeb5b428c4f3417b2d526868bb9db40c85270b3
   languageName: node
   linkType: hard
 
-"stylelint-config-recommended@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "stylelint-config-recommended@npm:6.0.0"
+"stylelint-config-recommended@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "stylelint-config-recommended@npm:7.0.0"
   peerDependencies:
-    stylelint: ^14.0.0
-  checksum: 103b3c122253a908f91f5728d39eff6fed3866157e29a6e550da051cfc207b0d159b7434e0806126e3c3939e6528a0a1cd5a1cf00b835dd49b3a18ba4a007fa1
+    stylelint: ^14.4.0
+  checksum: 9a60a59effb7565314d6001779a31228d5713b4d13e05e991e6da5f9d0784aacf55bc0fe217010e257a79136753a22ae61e309fb982367ebd4de3316f37eb821
   languageName: node
   linkType: hard
 
-"stylelint-config-standard-scss@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "stylelint-config-standard-scss@npm:3.0.0"
+"stylelint-config-standard-scss@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "stylelint-config-standard-scss@npm:4.0.0"
   dependencies:
-    stylelint-config-recommended-scss: ^5.0.2
-    stylelint-config-standard: ^24.0.0
+    stylelint-config-recommended-scss: ^6.0.0
+    stylelint-config-standard: ^25.0.0
   peerDependencies:
-    stylelint: ^14.0.0
-  checksum: b9be47e256e28e8f3e31ca51de53fc48d688b264f74d870b97c553cb3f799f3003a458d521644efc4feda0a1345da4e82d0595cfcba540dbb253f12c645234a0
+    stylelint: ^14.4.0
+  checksum: 1f65f8f3c8e5a7706f41d27f5983a88bc4b2cf0d31bd10cc2ef4250eb4a55d46fa4ccac4411c5be57b681a7ddc5c7d0c4c57dfda01769a7b2b41499a16873a12
   languageName: node
   linkType: hard
 
-"stylelint-config-standard@npm:^24.0.0":
-  version: 24.0.0
-  resolution: "stylelint-config-standard@npm:24.0.0"
+"stylelint-config-standard@npm:^25.0.0":
+  version: 25.0.0
+  resolution: "stylelint-config-standard@npm:25.0.0"
   dependencies:
-    stylelint-config-recommended: ^6.0.0
+    stylelint-config-recommended: ^7.0.0
   peerDependencies:
-    stylelint: ^14.0.0
-  checksum: 5993ede913d81410830639db054a7a3f5c87e56254368be45ce876321106fad1c11ee4cb77247049aaf22e283a393dd90d93dec8f796f8f139ed21eb86a9a168
+    stylelint: ^14.4.0
+  checksum: bfd5773f47ea7fcddba972037d6dd32d1fb900c2ca592a313fe1a28df054ef465b11e6e53fe6e87bbf0c356ab33a7a4eecc447cf7a1bd39c9b50c7b4bfb48d81
   languageName: node
   linkType: hard
 
@@ -20888,7 +20921,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^14.7.1":
+"stylelint@npm:^14.8.5":
   version: 14.8.5
   resolution: "stylelint@npm:14.8.5"
   dependencies:
@@ -21580,7 +21613,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2, tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:^2.0.3, tslib@npm:^2.3.1":
+"tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:^2.0.3, tslib@npm:^2.4.0":
   version: 2.4.0
   resolution: "tslib@npm:2.4.0"
   checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
@@ -21705,7 +21738,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.6.3":
+"typescript@npm:^4.7.3":
   version: 4.7.3
   resolution: "typescript@npm:4.7.3"
   bin:
@@ -21715,7 +21748,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.6.3#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.7.3#~builtin<compat/typescript>":
   version: 4.7.3
   resolution: "typescript@patch:typescript@npm%3A4.7.3#~builtin<compat/typescript>::version=4.7.3&hash=bda367"
   bin:
@@ -21974,18 +22007,6 @@ __metadata:
   dependencies:
     os-homedir: ^1.0.0
   checksum: 071b394053fc94747d9df8c7f7ca50af41355c1207c8a0bf9f35f52b0d9ad5142a1920b018bc2b6ff04340a4f9c599ad50c9b8f4ff2c689ae52b1463ebbda94e
-  languageName: node
-  linkType: hard
-
-"upath2@npm:^3.1.13":
-  version: 3.1.13
-  resolution: "upath2@npm:3.1.13"
-  dependencies:
-    "@types/node": "*"
-    path-is-network-drive: ^1.0.15
-    path-strip-sep: ^1.0.12
-    tslib: ^2
-  checksum: 5f204c07da0c59dbe682ce527b0664d98b718daf33948ff953a1f8df966c4a08c8b0cae121911a193e8a616c12592cc0f9951aa1471672ff31f2de5ab3fd8027
   languageName: node
   linkType: hard
 
@@ -22578,7 +22599,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:>=4.43.0 <6.0.0, webpack@npm:^5.64.4, webpack@npm:^5.72.0, webpack@npm:^5.9.0":
+"webpack@npm:>=4.43.0 <6.0.0, webpack@npm:^5.64.4, webpack@npm:^5.73.0, webpack@npm:^5.9.0":
   version: 5.73.0
   resolution: "webpack@npm:5.73.0"
   dependencies:
