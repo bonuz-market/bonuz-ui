@@ -21,7 +21,7 @@ cache:
     ARTIFACT_FILENAME: "./artifacts-${CI_PROJECT_NAME}-${CI_PIPELINE_ID}.txt"
   artifacts:
     when: always
-    expire_in: 15 days
+    expire_in: 1 week
     name: "${CI_JOB_ID}-${CI_JOB_NAME}"
     untracked: false
     paths:
@@ -38,7 +38,6 @@ cache:
   extends:
     - .auth_step
   script:
-    # - gcloud builds submit --tag $GCP_REGISTRY/$GCP_PROJECT_ID/$GCP_CONTAINER_REG:${CI_PIPELINE_ID}
     - docker build . -t ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
     - docker push ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
     - >
@@ -63,7 +62,7 @@ publish:
     - master
   artifacts:
     when: always
-    expire_in: 15 days
+    expire_in: 1 week
   cache:
     policy: pull
     untracked: false
@@ -76,8 +75,8 @@ publish:
   before_script:
     - echo "@${CI_PROJECT_ROOT_NAMESPACE}:registry=${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/npm/" > .npmrc
     - echo "${CI_API_V4_URL#https?}/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=\${CI_JOB_TOKEN}" >> .npmrc
-    - yarn install
   script:
+    - yarn install
     - yarn publish:build
     - npx semantic-release
 
