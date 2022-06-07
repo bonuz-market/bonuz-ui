@@ -1,5 +1,4 @@
 import { ReactNode, FC, PropsWithChildren, ReactElement } from 'react';
-import { SwiperProps } from 'swiper/react';
 
 declare module '@bonuz/bonuz-ui' {
   type ButtonProps = PropsWithChildren<{
@@ -111,31 +110,9 @@ declare module '@bonuz/bonuz-ui' {
     alwaysVisible?: boolean;
     timeout?: number;
   };
-  type AdvantagesListProps = {
-    items: AdvantagesItemProps[];
-    options?: SwiperProps;
-  };
-  type CelebritiesListProps = {
-    items: CelebritiesItemProps[];
-    options?: SwiperProps;
-  };
-  type HowItWorksListProps = {
-    items: HowItWorksItemProps[];
-    options?: SwiperProps;
-  };
   type GalleryProps = {
     items: { image: string; link?: string; alt?: string }[];
     lazy?: boolean;
-  };
-  type RoadMapListProps = {
-    items: RoadMapItemProps[];
-    options?: SwiperProps;
-  };
-  type TeamListProps = {
-    items: TeamCardProps[];
-    rounded?: boolean;
-    centered?: boolean;
-    options?: SwiperProps;
   };
   type TabProps = {
     title: string;
