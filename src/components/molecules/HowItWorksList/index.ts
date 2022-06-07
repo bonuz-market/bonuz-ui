@@ -1,1 +1,0 @@
-export { HowItWorksList } from './HowItWorksList';
