@@ -1,11 +1,6 @@
 export { Header, HeaderSecondary } from './Header';
 export { Footer, FooterSecondary } from './Footer';
-export { CelebritiesList } from './CelebritiesList';
-export { HowItWorksList } from './HowItWorksList';
-export { RoadMapList } from './RoadMapList';
 export { Gallery } from './Gallery';
-export { AdvantagesList } from './AdvantagesList';
-export { TeamList } from './TeamList';
 export { Tabs, TabsSecondary } from './Tabs';
 export { Media } from './Media';
 export { Users } from './Users';
