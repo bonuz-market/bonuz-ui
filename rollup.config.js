@@ -58,10 +58,10 @@ export default [
                 .pop();
               const file = fs.readFileSync(asset.absolutePath);
 
-              fs.ensureDirSync(path.join(OUT_DIR, 'assets'));
+              fs.ensureDirSync(path.join(`${OUT_DIR}/esm`, 'assets'));
               const filePath = `assets/${filename}`;
 
-              fs.writeFileSync(path.join(OUT_DIR, filePath), file);
+              fs.writeFileSync(path.join(`${OUT_DIR}/esm`, filePath), file);
 
               return filePath;
             },
@@ -87,21 +87,13 @@ export default [
     input: 'src/assets/styles/style.scss',
     output: [
       {
-        file: packageJson.main,
-        format: 'cjs',
-        sourcemap: false,
-        exports: 'auto',
-      },
-      {
-        file: packageJson.module,
+        file: `${OUT_DIR}/foundation.css`,
         format: 'esm',
-        sourcemap: false,
-        exports: 'auto',
       },
     ],
     plugins: [
       postcss({
-        extract: 'foundation.css',
+        extract: true,
         minimize: true,
         plugins: [autoprefixer(), flexFixes(), sorting(cssConfig)],
       }),
