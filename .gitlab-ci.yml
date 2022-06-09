@@ -42,7 +42,7 @@ cache:
     - cat /etc/os-release
     - sudo groupadd docker || true
     - sudo usermod -aG docker ${USER} || true
-    - su -s ${USER} || true
+    - . ~/.bashrc || true
   script:
     - docker build . -t ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
     - docker push ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
