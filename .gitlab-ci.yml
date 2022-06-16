@@ -32,7 +32,8 @@ cache:
     - echo ${GCP_SERVICE_ACCOUNT} > gcloud-service-key.json
     - gcloud auth activate-service-account --key-file gcloud-service-key.json
     - gcloud auth configure-docker ${GCP_REGISTRY} --quiet
-    - gcloud config set project ${GCP_PROJECT_ID}
+    - gcloud config set project ${GCP_PROJECT_ID} --quiet
+    - gcloud auth list
 
 .deploy:
   extends:
