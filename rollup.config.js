@@ -43,8 +43,40 @@ export default [
       typescript({ tsconfig: './tsconfig.json' }),
       svgr(),
       url(),
+      postcss({ extract: false }),
+      terser(),
+      eslint({
+        filterExclude: [
+          'node_modules/**',
+          'src/components/**/*.scss',
+          'src/assets/styles/style.scss',
+        ],
+        fix: true,
+      }),
+      cleanup(),
+    ],
+    external: ['react', 'react-dom'],
+  },
+  {
+    input: 'src/index.ts',
+    output: [
+      {
+        file: `${OUT_DIR}/bonuz.css`,
+        format: 'esm',
+        entryFileNames: '[name].scss',
+      },
+    ],
+    plugins: [
+      resolve(),
+      commonjs(),
+      typescript({
+        tsconfig: './tsconfig.json',
+        declaration: false,
+        declarationDir: null,
+      }),
+      svgr(),
       postcss({
-        extract: 'bonuz.css',
+        extract: true,
         minimize: true,
         plugins: [
           autoprefixer(),
@@ -58,10 +90,10 @@ export default [
                 .pop();
               const file = fs.readFileSync(asset.absolutePath);
 
-              fs.ensureDirSync(path.join(`${OUT_DIR}/esm`, 'assets'));
+              fs.ensureDirSync(path.join(`${OUT_DIR}`, 'assets'));
               const filePath = `assets/${filename}`;
 
-              fs.writeFileSync(path.join(`${OUT_DIR}/esm`, filePath), file);
+              fs.writeFileSync(path.join(`${OUT_DIR}`, filePath), file);
 
               return filePath;
             },
@@ -70,18 +102,7 @@ export default [
           sorting(cssConfig),
         ],
       }),
-      terser(),
-      eslint({
-        filterExclude: [
-          'node_modules/**',
-          'src/components/**/*.scss',
-          'src/assets/styles/style.scss',
-        ],
-        fix: true,
-      }),
-      cleanup(),
     ],
-    external: ['react', 'react-dom'],
   },
   {
     input: 'src/assets/styles/style.scss',
