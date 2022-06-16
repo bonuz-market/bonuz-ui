@@ -1,6 +1,7 @@
 import typescript from '@rollup/plugin-typescript';
 import autoprefixer from 'autoprefixer';
 import postcss from 'rollup-plugin-postcss';
+import scss from 'rollup-plugin-scss';
 import svgr from '@svgr/rollup';
 import url from '@rollup/plugin-url';
 import fs from 'fs-extra';
@@ -43,7 +44,9 @@ export default [
       typescript({ tsconfig: './tsconfig.json' }),
       svgr(),
       url(),
-      postcss({ extract: false }),
+      scss({
+        output: false,
+      }),
       terser(),
       eslint({
         filterExclude: [
@@ -55,7 +58,7 @@ export default [
       }),
       cleanup(),
     ],
-    external: ['react', 'react-dom'],
+    external: ['react', 'react-dom', 'src/components/**/*.scss'],
   },
   {
     input: 'src/index.ts',
