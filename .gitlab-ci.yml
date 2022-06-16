@@ -35,28 +35,28 @@ cache:
     - gcloud config set project ${GCP_PROJECT_ID} --quiet
     - gcloud auth list
 
-.deploy:
-  extends:
-    - .auth_step
-  before_script:
-    - sudo groupadd docker || true
-    - sudo usermod -aG docker ${USER} || true
-  script:
-    - docker build . -t ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
-    - docker push ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
-    - >
-      echo "Image ID: ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}" 
-      >> ${ARTIFACT_FILENAME}
-    - printf "\n" >> ${ARTIFACT_FILENAME}
-    - "cat ${ARTIFACT_FILENAME}"
-    - gcloud run deploy ${CI_PROJECT_NAME}-${CI_COMMIT_BRANCH} >-
-      --image ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
-      --port ${PORT} --region ${GCP_REGION} --platform managed --allow-unauthenticated --service-account=${CR_SERVICE_ACCOUNT}
-    - >
-      gcloud run services describe ${CI_PROJECT_NAME}-${CI_COMMIT_BRANCH}
-      --region ${GCP_REGION} | head -n 10 >> ${ARTIFACT_FILENAME}
-    - printf "\n" >> ${ARTIFACT_FILENAME}
-    - "cat ${ARTIFACT_FILENAME}"
+# .deploy:
+#   extends:
+#     - .auth_step
+#   before_script:
+#     - sudo groupadd docker || true
+#     - sudo usermod -aG docker ${USER} || true
+#   script:
+#     - docker build . -t ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
+#     - docker push ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
+#     - >
+#       echo "Image ID: ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}" 
+#       >> ${ARTIFACT_FILENAME}
+#     - printf "\n" >> ${ARTIFACT_FILENAME}
+#     - "cat ${ARTIFACT_FILENAME}"
+#     - gcloud run deploy ${CI_PROJECT_NAME}-${CI_COMMIT_BRANCH} >-
+#       --image ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
+#       --port ${PORT} --region ${GCP_REGION} --platform managed --allow-unauthenticated --service-account=${CR_SERVICE_ACCOUNT}
+#     - >
+#       gcloud run services describe ${CI_PROJECT_NAME}-${CI_COMMIT_BRANCH}
+#       --region ${GCP_REGION} | head -n 10 >> ${ARTIFACT_FILENAME}
+#     - printf "\n" >> ${ARTIFACT_FILENAME}
+#     - "cat ${ARTIFACT_FILENAME}"
 
 publish:
   stage: package-release
@@ -86,8 +86,42 @@ publish:
 
 deployment:
   stage: deployment
-  extends:
-    - .deploy
+  tags:
+    - runner-two
   only:
     - staging
     - master
+  variables:
+    ARTIFACT_FILENAME: "./artifacts-${CI_PROJECT_NAME}-${CI_PIPELINE_ID}.txt"
+  artifacts:
+    when: always
+    name: "${CI_JOB_ID}-${CI_JOB_NAME}"
+    untracked: false
+    paths:
+      - ${ARTIFACT_FILENAME}
+    exclude:
+      - gcloud-service-key.json
+  before_script:
+    - echo ${GCP_SERVICE_ACCOUNT} > gcloud-service-key.json
+    - gcloud auth activate-service-account --key-file gcloud-service-key.json
+    - gcloud auth configure-docker ${GCP_REGISTRY} --quiet
+    - gcloud config set project ${GCP_PROJECT_ID} --quiet
+    - gcloud auth list
+    - sudo groupadd docker || true
+    - sudo usermod -aG docker ${USER} || true
+  script:
+    - docker build . -t ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
+    - docker push ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
+    - >
+      echo "Image ID: ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}" 
+      >> ${ARTIFACT_FILENAME}
+    - printf "\n" >> ${ARTIFACT_FILENAME}
+    - "cat ${ARTIFACT_FILENAME}"
+    - gcloud run deploy ${CI_PROJECT_NAME}-${CI_COMMIT_BRANCH} >-
+      --image ${GCP_REGISTRY}/${GCP_PROJECT_ID}/${CI_PROJECT_NAME}:${CI_PIPELINE_ID}
+      --port ${PORT} --region ${GCP_REGION} --platform managed --allow-unauthenticated --service-account=${CR_SERVICE_ACCOUNT}
+    - >
+      gcloud run services describe ${CI_PROJECT_NAME}-${CI_COMMIT_BRANCH}
+      --region ${GCP_REGION} | head -n 10 >> ${ARTIFACT_FILENAME}
+    - printf "\n" >> ${ARTIFACT_FILENAME}
+    - "cat ${ARTIFACT_FILENAME}"
