@@ -1,1 +1,1 @@
-export { TextBlock } from './TextBlock';
+export * from './TextBlock';

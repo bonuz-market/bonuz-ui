@@ -1,1 +1,1 @@
-export { cutText } from './cut-text';
+export * from './cut-text';

@@ -1,1 +1,1 @@
-export { StatElement } from './StatElement';
+export * from './StatElement';

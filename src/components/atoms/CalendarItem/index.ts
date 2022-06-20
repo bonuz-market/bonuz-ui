@@ -1,1 +1,1 @@
-export { CalendarItem } from './CalendarItem';
+export * from './CalendarItem';

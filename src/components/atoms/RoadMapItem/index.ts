@@ -1,1 +1,1 @@
-export { RoadMapItem } from './RoadMapItem';
+export * from './RoadMapItem';

@@ -1,1 +1,1 @@
-export { FormArrowButton } from './FormArrowButton';
+export * from './FormArrowButton';

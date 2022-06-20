@@ -1,2 +1,2 @@
-export { TabTitle } from './TabTitle';
-export { Tab } from './Tab';
+export * from './TabTitle';
+export * from './Tab';

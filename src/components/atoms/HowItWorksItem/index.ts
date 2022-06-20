@@ -1,1 +1,1 @@
-export { HowItWorksItem } from './HowItWorksItem';
+export * from './HowItWorksItem';
