@@ -53,7 +53,9 @@ const DropdownControlled: FC<
     </div>
   );
 };
-const DropdownUnControlled: FC<React.PropsWithChildren> = ({ children }) => {
+const DropdownUnControlled: FC<React.PropsWithChildren<unknown>> = ({
+  children,
+}) => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [selected, setSelected] = React.useState('');
   const childrenModified = React.Children.map(children, (child, index) => {
