@@ -6,7 +6,7 @@ export type RoadMapItemProps = {
   description: string;
 };
 
-export const RoadMapItem: FC<RoadMapItemProps> = ({ title, description }) => (
+export const RoadMapItem: FC<React.PropsWithChildren<RoadMapItemProps>> = ({ title, description }) => (
   <div className="roadmap__item">
     <h3>{title}</h3>
     <p>{description}</p>

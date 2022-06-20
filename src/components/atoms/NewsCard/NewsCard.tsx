@@ -9,7 +9,7 @@ export type NewsCardProps = {
   link: string;
 };
 
-export const NewsCard: FC<NewsCardProps> = ({
+export const NewsCard: FC<React.PropsWithChildren<NewsCardProps>> = ({
   created,
   img,
   title,

@@ -9,7 +9,7 @@ export type FansListProps = {
   fans: FanItemProps[];
 };
 
-export const FansList: FC<FansListProps> = ({ t, fans }) => (
+export const FansList: FC<React.PropsWithChildren<FansListProps>> = ({ t, fans }) => (
   <div className="media__fans">
     <span className="media__fans__title">
       {t('fans')}

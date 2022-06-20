@@ -11,7 +11,7 @@ export type ActionButtonProps = {
   onClick?: () => void;
 };
 
-export const ActionButton: FC<ActionButtonProps> = ({
+export const ActionButton: FC<React.PropsWithChildren<ActionButtonProps>> = ({
   type,
   className,
   style,

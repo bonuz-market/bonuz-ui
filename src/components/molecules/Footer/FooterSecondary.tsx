@@ -7,7 +7,7 @@ export type FooterSecondaryProps = {
   description?: string;
   socialMediaLinks?: SocialListProps;
 };
-export const FooterSecondary: FC<FooterSecondaryProps> = ({
+export const FooterSecondary: FC<React.PropsWithChildren<FooterSecondaryProps>> = ({
   logo,
   description,
   socialMediaLinks,

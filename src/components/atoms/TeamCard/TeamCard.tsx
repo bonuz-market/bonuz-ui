@@ -17,7 +17,7 @@ export type TeamCardProps = {
   lazySwiper?: boolean;
 };
 
-export const TeamCard: FC<TeamCardProps> = ({
+export const TeamCard: FC<React.PropsWithChildren<TeamCardProps>> = ({
   img,
   name,
   position,

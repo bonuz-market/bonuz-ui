@@ -9,7 +9,7 @@ export type TabTitleProps = PropsWithChildren<{
   onClick: () => void;
 }>;
 
-export const TabTitle: FC<TabTitleProps> = ({
+export const TabTitle: FC<React.PropsWithChildren<TabTitleProps>> = ({
   title,
   type = 'primary',
   isActive,

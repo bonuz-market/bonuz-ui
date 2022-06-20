@@ -32,7 +32,7 @@ type FooterProps = {
   };
   socialMediaLinks: SocialListProps;
 };
-const Footer: FC<FooterProps> = ({
+const Footer: FC<React.PropsWithChildren<FooterProps>> = ({
   logo,
   navigation,
   sideText,

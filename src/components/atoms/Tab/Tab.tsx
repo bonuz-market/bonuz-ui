@@ -1,3 +1,5 @@
 import { FC } from 'react';
 
-export const Tab: FC = ({ children }) => <div>{children}</div>;
+export const Tab: FC<React.PropsWithChildren> = ({ children }) => (
+  <div>{children}</div>
+);
