@@ -1,5 +1,9 @@
 import { FC } from 'react';
 
-export const Tab: FC<React.PropsWithChildren<unknown>> = ({ children }) => (
+interface TabProps {
+  title?: string;
+}
+
+export const Tab: FC<React.PropsWithChildren<TabProps>> = ({ children }) => (
   <div>{children}</div>
 );
