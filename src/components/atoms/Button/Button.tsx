@@ -1,20 +1,18 @@
 /* eslint-disable react/button-has-type */
-import { FC, PropsWithChildren } from 'react';
+import { FC } from 'react';
 import classnames from 'classnames';
 import './Button.scss';
 
-type ButtonProps = {
+interface ButtonProps {
   outline?: boolean;
   disabled?: boolean;
   secondary?: boolean;
   link?: string;
   type?: 'button' | 'submit' | 'reset';
   onClick?: () => void;
-};
-export interface ButtonPropsWithChildren
-  extends PropsWithChildren<ButtonProps> {}
+}
 
-export const Button: FC<React.PropsWithChildren<ButtonPropsWithChildren>> = ({
+export const Button: FC<React.PropsWithChildren<ButtonProps>> = ({
   outline,
   disabled,
   secondary,
