@@ -12,7 +12,7 @@ export type TabsProps = {
   children: ReactElement<TabProps>[] | ReactElement<TabProps>;
 };
 
-export const Tabs: FC<TabsProps> = ({ type, children }) => {
+export const Tabs: FC<React.PropsWithChildren<TabsProps>> = ({ type, children }) => {
   const [activeTab, setActiveTab] = useState<number>(0);
 
   const handleChangeActiveTab = (index: number) => {

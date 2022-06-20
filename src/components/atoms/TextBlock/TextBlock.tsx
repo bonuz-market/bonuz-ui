@@ -11,7 +11,7 @@ type TextBlockProps = {
 export interface TextBlockPropsWithChildren
   extends PropsWithChildren<TextBlockProps> {}
 
-export const TextBlock: FC<TextBlockPropsWithChildren> = ({
+export const TextBlock: FC<React.PropsWithChildren<TextBlockPropsWithChildren>> = ({
   type = 'primary',
   size = 'small',
   title,

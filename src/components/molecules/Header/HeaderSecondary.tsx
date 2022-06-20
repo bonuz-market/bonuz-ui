@@ -7,7 +7,7 @@ export type HeaderSecondaryProps = {
   title: string;
   description?: string;
 };
-export const HeaderSecondary: FC<HeaderSecondaryProps> = ({
+export const HeaderSecondary: FC<React.PropsWithChildren<HeaderSecondaryProps>> = ({
   logo,
   navText,
   title,

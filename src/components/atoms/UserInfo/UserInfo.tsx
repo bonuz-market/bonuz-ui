@@ -14,7 +14,7 @@ export type UserInfoProps = {
   posts: string;
 };
 
-export const UserInfo: FC<UserInfoProps> = ({
+export const UserInfo: FC<React.PropsWithChildren<UserInfoProps>> = ({
   avatar,
   name,
   balance,

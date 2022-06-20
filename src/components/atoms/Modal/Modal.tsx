@@ -7,7 +7,7 @@ export type ModalProps = {
   footer?: { text: string; link?: string };
   video?: boolean;
 };
-export const Modal: FC<ModalProps> = ({
+export const Modal: FC<React.PropsWithChildren<ModalProps>> = ({
   children,
   closeText,
   footer,

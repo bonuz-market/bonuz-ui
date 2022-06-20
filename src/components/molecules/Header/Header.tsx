@@ -15,7 +15,7 @@ type HeaderProps = {
   logoUrl: string;
   logoHoverUrl?: string;
 };
-export const Header: FC<HeaderProps> = ({
+export const Header: FC<React.PropsWithChildren<HeaderProps>> = ({
   LanguageSelector,
   NavigationElements,
   SignInElement,

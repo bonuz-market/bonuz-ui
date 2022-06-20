@@ -20,7 +20,7 @@ const svgWithColor = (color: string) => (
     />
   </svg>
 );
-export const StatElement: FC<StatElementProps> = ({
+export const StatElement: FC<React.PropsWithChildren<StatElementProps>> = ({
   colorHex,
   title,
   description,

@@ -7,7 +7,7 @@ export type HowItWorksItemProps = {
   circleOffset: number;
 };
 
-export const HowItWorksItem: FC<HowItWorksItemProps> = ({
+export const HowItWorksItem: FC<React.PropsWithChildren<HowItWorksItemProps>> = ({
   img,
   title,
   circleOffset,

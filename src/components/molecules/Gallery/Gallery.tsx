@@ -8,7 +8,7 @@ export type GalleryProps = {
   lazy?: boolean;
 };
 
-export const Gallery: FC<GalleryProps> = ({ items, lazy }) => (
+export const Gallery: FC<React.PropsWithChildren<GalleryProps>> = ({ items, lazy }) => (
   <div className="gallery">
     {items.map((item, index) => (
       <div className="item" key={index}>

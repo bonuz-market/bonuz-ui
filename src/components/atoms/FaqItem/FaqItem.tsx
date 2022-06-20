@@ -9,7 +9,7 @@ export type FaqItemProps = {
   description: string;
 };
 
-export const FaqItem: FC<FaqItemProps> = ({ title, description }) => {
+export const FaqItem: FC<React.PropsWithChildren<FaqItemProps>> = ({ title, description }) => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
 
   const handleIsOpened = () => {

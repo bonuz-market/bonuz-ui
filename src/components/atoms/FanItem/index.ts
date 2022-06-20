@@ -1,2 +1,1 @@
-export { FanItem } from './FanItem';
-export type { FanItemProps } from './FanItem';
+export * from './FanItem';

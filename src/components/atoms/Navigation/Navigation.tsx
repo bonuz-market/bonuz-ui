@@ -1,7 +1,9 @@
 import React, { FC } from 'react';
 import './Navigation.scss';
 
-export const Navigation: FC = ({ children }) => {
+export const Navigation: FC<React.PropsWithChildren<unknown>> = ({
+  children,
+}) => {
   const childrenModified = React.Children.map(children, (child) => {
     if (!React.isValidElement(child)) {
       return null;
