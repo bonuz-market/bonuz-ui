@@ -9,7 +9,7 @@ type InfoBlockProps = {
 export interface InfoBlockPropsWithChildren
   extends PropsWithChildren<InfoBlockProps> {}
 
-export const InfoBlock: FC<InfoBlockPropsWithChildren> = ({
+export const InfoBlock: FC<React.PropsWithChildren<InfoBlockPropsWithChildren>> = ({
   size,
   secondColumn,
   children,

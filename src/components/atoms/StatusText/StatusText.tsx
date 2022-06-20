@@ -9,7 +9,7 @@ export type StatusTextProps = {
   alwaysVisible?: boolean;
   timeout?: number;
 };
-export const StatusText: FC<StatusTextProps> = ({
+export const StatusText: FC<React.PropsWithChildren<StatusTextProps>> = ({
   message,
   type,
   alwaysVisible,

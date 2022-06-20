@@ -8,10 +8,9 @@ export type DropdownProps = {
 export type DropdownControlledProps = {
   selected: string;
 };
-const DropdownControlled: FC<DropdownControlledProps> = ({
-  children,
-  selected,
-}) => {
+const DropdownControlled: FC<
+  React.PropsWithChildren<DropdownControlledProps>
+> = ({ children, selected }) => {
   const [isActive, setIsActive] = React.useState<boolean>(false);
   const [selectedOption, setSelectedOption] = React.useState<string>(selected);
 
@@ -54,7 +53,9 @@ const DropdownControlled: FC<DropdownControlledProps> = ({
     </div>
   );
 };
-const DropdownUnControlled: FC = ({ children }) => {
+const DropdownUnControlled: FC<React.PropsWithChildren<unknown>> = ({
+  children,
+}) => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [selected, setSelected] = React.useState('');
   const childrenModified = React.Children.map(children, (child, index) => {
@@ -87,7 +88,10 @@ const DropdownUnControlled: FC = ({ children }) => {
   ) : null;
 };
 
-export const Dropdown: FC<DropdownProps> = ({ children, selected }) =>
+export const Dropdown: FC<React.PropsWithChildren<DropdownProps>> = ({
+  children,
+  selected,
+}) =>
   selected ? (
     <DropdownControlled selected={selected}>{children}</DropdownControlled>
   ) : (

@@ -46,7 +46,7 @@ export type CalendarItemProps = {
   location?: string;
   link?: string;
 };
-export const CalendarItem: FC<CalendarItemProps> = ({
+export const CalendarItem: FC<React.PropsWithChildren<CalendarItemProps>> = ({
   title,
   date,
   location,

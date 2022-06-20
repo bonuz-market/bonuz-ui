@@ -1,5 +1,5 @@
 stages:
-  - package-release
+  - publish
   - deployment
 
 cache:
@@ -21,7 +21,6 @@ cache:
     ARTIFACT_FILENAME: "./artifacts-${CI_PROJECT_NAME}-${CI_PIPELINE_ID}.txt"
   artifacts:
     when: always
-    expire_in: 1 week
     name: "${CI_JOB_ID}-${CI_JOB_NAME}"
     untracked: false
     paths:
@@ -32,12 +31,46 @@ cache:
     - echo ${GCP_SERVICE_ACCOUNT} > gcloud-service-key.json
     - gcloud auth activate-service-account --key-file gcloud-service-key.json
     - gcloud auth configure-docker ${GCP_REGISTRY} --quiet
-    - gcloud config set project ${GCP_PROJECT_ID}
+    - gcloud config set project ${GCP_PROJECT_ID} --quiet
 
-.deploy:
-  extends:
-    - .auth_step
+publish:
+  stage: publish
+  tags:
+    - runner-two
+  only:
+    - master
+  artifacts:
+    when: always
   before_script:
+    - echo "@${CI_PROJECT_ROOT_NAMESPACE}:registry=${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/npm/" > .npmrc
+    - echo "${CI_API_V4_URL#https?}/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=\${CI_JOB_TOKEN}" >> .npmrc
+  script:
+    - yarn install
+    - yarn publish:build
+    - npx semantic-release
+
+deployment:
+  stage: deployment
+  tags:
+    - runner-two
+  only:
+    - staging
+    - master
+  variables:
+    ARTIFACT_FILENAME: "./artifacts-${CI_PROJECT_NAME}-${CI_PIPELINE_ID}.txt"
+  artifacts:
+    when: always
+    name: "${CI_JOB_ID}-${CI_JOB_NAME}"
+    untracked: false
+    paths:
+      - ${ARTIFACT_FILENAME}
+    exclude:
+      - gcloud-service-key.json
+  before_script:
+    - echo ${GCP_SERVICE_ACCOUNT} > gcloud-service-key.json
+    - gcloud auth activate-service-account --key-file gcloud-service-key.json
+    - gcloud auth configure-docker ${GCP_REGISTRY} --quiet
+    - gcloud config set project ${GCP_PROJECT_ID} --quiet
     - sudo groupadd docker || true
     - sudo usermod -aG docker ${USER} || true
   script:
@@ -56,37 +89,3 @@ cache:
       --region ${GCP_REGION} | head -n 10 >> ${ARTIFACT_FILENAME}
     - printf "\n" >> ${ARTIFACT_FILENAME}
     - "cat ${ARTIFACT_FILENAME}"
-
-publish:
-  stage: package-release
-  tags:
-    - runner-two
-  only:
-    - master
-  artifacts:
-    when: always
-    expire_in: 1 week
-  cache:
-    policy: pull
-    untracked: false
-    key: $CI_COMMIT_REF_SLUG
-    key:
-      files:
-        - yarn.lock
-    paths:
-      - node_modules/
-  before_script:
-    - echo "@${CI_PROJECT_ROOT_NAMESPACE}:registry=${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/npm/" > .npmrc
-    - echo "${CI_API_V4_URL#https?}/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=\${CI_JOB_TOKEN}" >> .npmrc
-  script:
-    - yarn install
-    - yarn publish:build
-    - npx semantic-release
-
-deployment:
-  stage: deployment
-  extends:
-    - .deploy
-  only:
-    - staging
-    - master

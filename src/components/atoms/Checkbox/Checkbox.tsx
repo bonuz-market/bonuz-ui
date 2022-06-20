@@ -7,7 +7,7 @@ export type CheckboxProps = {
   onChange?: (checked: boolean) => void;
 };
 
-export const Checkbox: FC<CheckboxProps> = ({ label, checked, onChange }) => {
+export const Checkbox: FC<React.PropsWithChildren<CheckboxProps>> = ({ label, checked, onChange }) => {
   const [defaultChecked, setChecked] = useState(checked || false);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {

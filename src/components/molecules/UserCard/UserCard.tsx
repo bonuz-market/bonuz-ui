@@ -19,7 +19,7 @@ export type UserCardProps = {
   t: (key: string) => string;
 };
 
-export const UserCard: FC<UserCardProps> = ({
+export const UserCard: FC<React.PropsWithChildren<UserCardProps>> = ({
   photo,
   shortLink,
   created,

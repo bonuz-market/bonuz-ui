@@ -1,2 +1,2 @@
-export { Footer } from './Footer';
-export { FooterSecondary } from './FooterSecondary';
+export * from './Footer';
+export * from './FooterSecondary';

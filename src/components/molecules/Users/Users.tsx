@@ -12,7 +12,7 @@ export type UsersProps = {
   }[];
 };
 
-export const Users: FC<UsersProps> = ({ t, users }) => (
+export const Users: FC<React.PropsWithChildren<UsersProps>> = ({ t, users }) => (
   <table className="users">
     <tr>
       <th className="users__cell users__cell--head">
