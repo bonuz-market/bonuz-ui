@@ -18,7 +18,7 @@ export type TableProps = {
   onClick?: (index: number) => void;
 };
 
-export const Table: FC<TableProps> = ({
+export const Table: FC<React.PropsWithChildren<TableProps>> = ({
   columns,
   data,
   selectable,

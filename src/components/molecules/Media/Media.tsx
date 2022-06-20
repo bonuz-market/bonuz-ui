@@ -22,7 +22,7 @@ export type MediaProps = {
   };
 };
 
-export const Media: FC<MediaProps> = ({
+export const Media: FC<React.PropsWithChildren<MediaProps>> = ({
   img,
   title,
   viewers,

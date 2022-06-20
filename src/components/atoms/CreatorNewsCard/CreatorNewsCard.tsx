@@ -14,7 +14,7 @@ export type CreatorNewsCardProps = {
   type?: 'main' | 'default';
 };
 
-export const CreatorNewsCard: FC<CreatorNewsCardProps> = ({
+export const CreatorNewsCard: FC<React.PropsWithChildren<CreatorNewsCardProps>> = ({
   img,
   title,
   description,

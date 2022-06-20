@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { Meta, Story } from '@storybook/react';
 import { Input, InputProps } from './Input';
 import icon from '../../../assets/images/f_i.svg';
@@ -24,7 +23,7 @@ Secondary.args = {
   secondary: true,
 };
 
-const SearchIcon: FC = () => (
+const SearchIcon = () => (
   <svg
     width="24"
     height="24"

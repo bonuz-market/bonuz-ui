@@ -14,7 +14,7 @@ type ButtonProps = {
 export interface ButtonPropsWithChildren
   extends PropsWithChildren<ButtonProps> {}
 
-export const Button: FC<ButtonPropsWithChildren> = ({
+export const Button: FC<React.PropsWithChildren<ButtonPropsWithChildren>> = ({
   outline,
   disabled,
   secondary,

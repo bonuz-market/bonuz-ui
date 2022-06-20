@@ -10,7 +10,7 @@ export type FanItemProps = {
   viewers: number;
 };
 
-export const FanItem: FC<FanItemProps> = ({
+export const FanItem: FC<React.PropsWithChildren<FanItemProps>> = ({
   avatar,
   name,
   description,

@@ -15,7 +15,7 @@ export type SocialListProps = {
   medium?: string;
   telegramMessage?: string;
 };
-export const SocialList: FC<SocialListProps> = ({
+export const SocialList: FC<React.PropsWithChildren<SocialListProps>> = ({
   facebook,
   instagram,
   medium,

@@ -17,7 +17,7 @@ export type InputProps = {
   onChange?: (value: string) => void;
 };
 
-export const Input: FC<InputProps> = ({
+export const Input: FC<React.PropsWithChildren<InputProps>> = ({
   label,
   secondary,
   placeholder,

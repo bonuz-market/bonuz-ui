@@ -7,7 +7,7 @@ export type AdvantagesItemProps = {
   icon: any;
 };
 
-export const AdvantagesItem: FC<AdvantagesItemProps> = ({
+export const AdvantagesItem: FC<React.PropsWithChildren<AdvantagesItemProps>> = ({
   title,
   description,
   icon,

@@ -20,7 +20,7 @@ export type CelebritiesItemProps = {
    */
   lazySwiper?: boolean;
 };
-const Item: FC<CelebritiesItemProps> = ({
+const Item: FC<React.PropsWithChildren<CelebritiesItemProps>> = ({
   img,
   name,
   role,
@@ -60,7 +60,7 @@ const Item: FC<CelebritiesItemProps> = ({
   </>
 );
 
-export const CelebritiesItem: FC<CelebritiesItemProps> = ({
+export const CelebritiesItem: FC<React.PropsWithChildren<CelebritiesItemProps>> = ({
   img,
   name,
   role,
