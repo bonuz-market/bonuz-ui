@@ -54,7 +54,7 @@ export const Header: FC<React.PropsWithChildren<HeaderProps>> = ({
   };
 
   return (
-    <header>
+    <header className="sticky">
       <div
         className={classnames('header-outer', {
           header__fixed: isScrolled,
