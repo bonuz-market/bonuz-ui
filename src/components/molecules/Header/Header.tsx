@@ -52,9 +52,9 @@ export const Header: FC<React.PropsWithChildren<HeaderProps>> = ({
 
     setIsVisible((prevState) => !prevState);
   };
-
+  
   return (
-    <header>
+    <header className="sticky">
       <div
         className={classnames('header-outer', {
           header__fixed: isScrolled,
@@ -95,7 +95,7 @@ export const Header: FC<React.PropsWithChildren<HeaderProps>> = ({
                 active: isVisible,
               })}
             >
-              <Navigation>
+              <Navigation onItemClick={handleChangeIsVisible}>
                 {NavigationElements}
                 {SignInElement}
               </Navigation>
