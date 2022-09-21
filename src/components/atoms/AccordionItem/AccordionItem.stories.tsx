@@ -11,8 +11,8 @@ const Template: Story<AccordionItemProps> = (args) => (
   <AccordionItem {...args} />
 );
 
-export const Left: { args: AccordionItemProps } = Template.bind({});
-Left.args = {
+export const Primary: { args: AccordionItemProps } = Template.bind({});
+Primary.args = {
   title: 'AccordionItem Title',
   children: 'AccordionItem Content',
 };
