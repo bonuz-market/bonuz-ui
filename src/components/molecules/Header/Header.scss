@@ -67,37 +67,16 @@ header {
         }
 
         &:nth-child(2) {
-          margin-left: 60px;
-
-          [dir='rtl'] & {
-            margin-left: 0;
-            margin-right: 60px;
-          }
+          margin-inline-start: 60px;
 
           .menu {
             width: max-content;
 
-            ul {
+            > ul {
               list-style: none;
-              padding-left: 0;
+              padding-inline-start: 0;
               display: flex;
               gap: 20px;
-
-              [dir='rtl'] & {
-                padding-left: unset;
-                padding-right: 0;
-              }
-            }
-
-            li {
-              a {
-                @include u.font(
-                  $weight: var(--font-weight-medium),
-                  $size: var(--font-size-small)
-                );
-
-                text-decoration: none;
-              }
             }
           }
         }
@@ -105,14 +84,8 @@ header {
         &:nth-child(3) {
           display: flex;
           justify-content: space-between;
-          margin-left: auto;
-          margin-right: 30px;
+          margin-inline-start: auto;
           gap: 20px;
-
-          [dir='rtl'] & {
-            margin-left: 30px;
-            margin-right: auto;
-          }
 
           .dropdown {
             &__list > li {
@@ -216,17 +189,11 @@ header {
           }
 
           &:nth-child(2) {
-            margin-left: 0;
-
-            [dir='rtl'] & {
-              margin-left: auto;
-              margin-right: 0;
-            }
+            margin-inline-start: 0;
 
             .menu {
               position: absolute;
-              left: 0;
-              top: 0;
+              inset: 0;
               width: 100%;
               height: 100vh;
               background: $color-background-nav-mobile;
@@ -238,12 +205,7 @@ header {
               transform: translateY(50px);
               overflow: hidden;
 
-              [dir='rtl'] & {
-                left: unset;
-                right: 0;
-              }
-
-              ul {
+              > ul {
                 flex-direction: column;
                 width: max-content;
                 position: absolute;
@@ -252,12 +214,6 @@ header {
                 margin-top: 5rem;
                 z-index: 11;
                 gap: 2rem;
-              }
-
-              li {
-                a {
-                  @include u.font($size: 20px);
-                }
               }
             }
           }

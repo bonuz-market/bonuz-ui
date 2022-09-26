@@ -1,24 +1,40 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import React, { FC } from 'react';
+import classNames from 'classnames';
+import React, { FC, useState } from 'react';
 import './Navigation.scss';
 
 interface NavigationProps {
-  onItemClick: () => void;
+  isSubmenu?: boolean;
+  title?: string;
 }
 export const Navigation: FC<React.PropsWithChildren<NavigationProps>> = ({
   children,
-  onItemClick,
+  isSubmenu,
+  title,
 }) => {
-  const childrenModified = React.Children.map(children, (child) => {
-    if (!React.isValidElement(child)) {
-      return null;
-    }
-    return (
-      <li className="nav-item" onClick={onItemClick}>
-        {child}
-      </li>
-    );
-  });
-  return <ul className="nav">{childrenModified}</ul>;
+  const [isOpen, setIsOpen] = useState(false);
+
+  if (isSubmenu) {
+    if (title)
+      return (
+        <li
+          className="nav-item nav-item--menu"
+          onMouseEnter={() => setIsOpen(true)}
+          onMouseLeave={() => setIsOpen(false)}
+        >
+          {title}
+          {isOpen && (
+            <ul
+              className={classNames('nav-submenu', {
+                'nav-submenu--open': isOpen,
+              })}
+            >
+              {children}
+            </ul>
+          )}
+        </li>
+      );
+  }
+  return <ul className="nav">{children}</ul>;
 };
