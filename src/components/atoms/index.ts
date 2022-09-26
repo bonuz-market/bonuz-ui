@@ -1,5 +1,5 @@
 export { Button } from './Button';
-export { Navigation } from './Navigation';
+export { Navigation, NavigationItem } from './Navigation';
 export { Input } from './Input';
 export { CelebritiesItem, type CelebritiesItemProps } from './CelebritiesItem';
 export { Dropdown } from './Dropdown';

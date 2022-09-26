@@ -4,20 +4,60 @@ $color-font-hover: linear-gradient(270deg, var(--color-1), var(--color-2));
 
 .nav {
   margin: 0;
-  padding: 0;
+  padding: 1rem;
   list-style: none;
+  width: fit-content;
 
   &-item {
-    a {
-      @include u.font($size: var(--font-size-small));
+    padding: 0.5rem;
+    color: var(--base-color);
+    @include u.font($size: var(--font-size-small));
 
+    a {
       position: relative;
-      width: max-content;
 
       &:hover {
         background: $color-font-hover;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &--menu {
+      position: relative;
+
+      .chevron {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &-submenu {
+    position: absolute;
+    inset-block-start: 2rem;
+    width: max-content;
+    padding: 0.5rem !important;
+    list-style: none;
+    background: var(--main-black);
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+
+    .chevron {
+      transform: none;
+    }
+
+    & & {
+      inset-block-start: 0;
+      inset-inline-start: 100%;
+    }
+
+    .nav-item {
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
       }
     }
   }
