@@ -3,8 +3,8 @@ import { Navigation } from './Navigation';
 import { NavigationItem } from './NavigationItem';
 
 export default {
-  title: 'Components/Atoms/Navigation'
-  component: Navigation
+  title: 'Components/Atoms/Navigation',
+  component: Navigation,
 } as Meta;
 
 const Template: Story = (args) => (
@@ -61,7 +61,6 @@ const Template: Story = (args) => (
     <NavigationItem key={5}>
       <a href="#how-it-works">Contact Us</a>
     </NavigationItem>
-    
   </Navigation>
 );
 
