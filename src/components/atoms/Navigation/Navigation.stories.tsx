@@ -1,4 +1,4 @@
-import { Meta Story } from '@storybook/react';
+import { Meta, Story } from '@storybook/react';
 import { Navigation } from './Navigation';
 import { NavigationItem } from './NavigationItem';
 
