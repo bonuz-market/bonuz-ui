@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import classNames from 'classnames';
 import React, { FC, useState } from 'react';
+import { DropdownChevron } from '../Icons';
 import './Navigation.scss';
 
 interface NavigationProps {
@@ -23,7 +24,7 @@ export const Navigation: FC<React.PropsWithChildren<NavigationProps>> = ({
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
         >
-          {title}
+          {title} <DropdownChevron width={16} height={16} className="chevron" />
           {isOpen && (
             <ul
               className={classNames('nav-submenu', {
