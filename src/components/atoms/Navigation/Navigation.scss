@@ -13,6 +13,10 @@ $color-font-hover: linear-gradient(270deg, var(--color-1), var(--color-2));
     color: var(--base-color);
     @include u.font($size: var(--font-size-small));
 
+    &__title {
+      cursor: pointer;
+    }
+
     a {
       position: relative;
 

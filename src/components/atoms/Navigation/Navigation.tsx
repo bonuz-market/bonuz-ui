@@ -39,6 +39,7 @@ export const Navigation: FC<React.PropsWithChildren<NavigationProps>> = ({
           <div
             onClick={() => setIsOpened((prevState) => !prevState)}
             role="button"
+            className="nav-item__title"
           >
             {title}{' '}
             <DropdownChevron width={16} height={16} className="chevron" />
