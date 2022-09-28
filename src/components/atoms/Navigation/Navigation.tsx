@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import classNames from 'classnames';
-import React, { FC, useCallback, useRef, useState } from 'react';
+import React, { CSSProperties, FC, useCallback, useRef, useState } from 'react';
 import { DropdownChevron } from '../Icons';
 import { useOnClickOutside } from './hooks/useOnClickOutside';
 import './Navigation.scss';
@@ -12,6 +12,8 @@ interface NavigationProps {
   isMegaMenu?: boolean;
   isOpen?: boolean;
   title?: string;
+  className?: string;
+  style?: CSSProperties;
 }
 export const Navigation: FC<React.PropsWithChildren<NavigationProps>> = ({
   children,
@@ -19,6 +21,8 @@ export const Navigation: FC<React.PropsWithChildren<NavigationProps>> = ({
   isMegaMenu,
   isOpen,
   title,
+  className,
+  style,
 }) => {
   const [isOpened, setIsOpened] = useState(false);
   const isExpanded = isOpen || isOpened;
@@ -31,10 +35,11 @@ export const Navigation: FC<React.PropsWithChildren<NavigationProps>> = ({
     if (title)
       return (
         <li
-          className={classNames('nav-item', {
+          className={classNames('nav-item', className, {
             'nav-item--menu': isSubmenu,
           })}
           ref={navItemRef}
+          style={style}
         >
           <div
             onClick={() => setIsOpened((prevState) => !prevState)}
@@ -57,5 +62,9 @@ export const Navigation: FC<React.PropsWithChildren<NavigationProps>> = ({
         </li>
       );
   }
-  return <ul className="nav">{children}</ul>;
+  return (
+    <ul className={classNames('nav', className)} style={style}>
+      {children}
+    </ul>
+  );
 };

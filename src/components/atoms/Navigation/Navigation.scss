@@ -44,6 +44,7 @@ $color-font-hover: linear-gradient(270deg, var(--color-1), var(--color-2));
     display: flex;
     z-index: 10;
     box-sizing: border-box;
+    animation: slideDown 0.3s ease-in-out;
 
     @media screen and (max-width: 1050px) {
       & {
@@ -71,6 +72,7 @@ $color-font-hover: linear-gradient(270deg, var(--color-1), var(--color-2));
     & & {
       inset-block-start: 0;
       inset-inline-start: 100%;
+      animation: slideRight 0.3s ease-in-out;
     }
   }
 
@@ -88,8 +90,47 @@ $color-font-hover: linear-gradient(270deg, var(--color-1), var(--color-2));
       margin: initial;
     }
 
+    .nav-item {
+      .chevron {
+        display: none;
+      }
+
+      &__title {
+        cursor: pointer;
+        padding-inline-start: 0.5rem;
+        opacity: 0.3;
+      }
+    }
+
+    .nav-submenu {
+      position: unset;
+      padding: 0;
+    }
+
     .chevron {
       transform: none;
     }
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
