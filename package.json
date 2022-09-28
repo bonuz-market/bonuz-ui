@@ -1,6 +1,6 @@
 {
   "name": "@bonuz/bonuz-ui",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
