@@ -1,4 +1,5 @@
 import { Meta, Story } from '@storybook/react';
+import { Navigation } from '../../atoms';
 import { Footer, FooterProps } from './Footer';
 
 export default {
@@ -17,29 +18,80 @@ Primary.args = {
       alt=""
     />
   ),
-  navigation: {
-    title: 'Navigation',
-    NavigationElements: [
-      <a key={1} href="#how-it-works">
-        How it works
-      </a>,
-      <a key={2} href="#how-it-works">
-        How it works
-      </a>,
-      <a key={3} href="#how-it-works">
-        How it works
-      </a>,
-      <a key={4} href="#how-it-works">
-        How it works
-      </a>,
-      <a key={5} href="#how-it-works">
-        How it works
-      </a>,
-      <a key={6} href="#how-it-works">
-        How it works
-      </a>,
-    ],
-  },
+  navigation: (
+    <div className="navigation">
+      <div>
+        <p>Test</p>
+        <Navigation>
+          <a key={1} href="#how-it-works">
+            How it works
+          </a>
+          <a key={2} href="#how-it-works">
+            How it works
+          </a>
+          <a key={3} href="#how-it-works">
+            How it works
+          </a>
+          <a key={4} href="#how-it-works">
+            How it works
+          </a>
+          <a key={5} href="#how-it-works">
+            How it works
+          </a>
+          <a key={6} href="#how-it-works">
+            How it works
+          </a>
+        </Navigation>
+      </div>
+      <div>
+        <p>Test</p>
+        <Navigation>
+          <a key={1} href="#how-it-works">
+            How it works
+          </a>
+          <a key={2} href="#how-it-works">
+            How it works
+          </a>
+          <a key={3} href="#how-it-works">
+            How it works
+          </a>
+          <a key={4} href="#how-it-works">
+            How it works
+          </a>
+          <a key={5} href="#how-it-works">
+            How it works
+          </a>
+          <a key={6} href="#how-it-works">
+            How it works
+          </a>
+        </Navigation>
+      </div>{' '}
+      <div>
+        <p>Test</p>
+        <Navigation>
+          <a key={1} href="#how-it-works">
+            How it works
+          </a>
+          <a key={2} href="#how-it-works">
+            How it works
+          </a>
+          <a key={3} href="#how-it-works">
+            How it works
+          </a>
+          <a key={4} href="#how-it-works">
+            How it works
+          </a>
+          <a key={5} href="#how-it-works">
+            How it works
+          </a>
+          <a key={6} href="#how-it-works">
+            How it works
+          </a>
+        </Navigation>
+      </div>
+    </div>
+  ),
+
   sideText: 'A space for creators to BONUZ your fans with exclusive content',
   buttons: [{ text: 'Contact us' }, { text: 'Privacy policy', outline: true }],
   privacyPolicy: { text: 'Privacy policy', link: 'https://bonuz.market' },

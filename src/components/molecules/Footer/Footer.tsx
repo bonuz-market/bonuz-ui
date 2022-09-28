@@ -3,7 +3,6 @@ import { FC } from 'react';
 import {
   FormArrowButton,
   Button,
-  Navigation,
   Input,
   SocialList,
   SocialListProps,
@@ -12,13 +11,9 @@ import {
 import { StatusTextProps } from '../../atoms/StatusText/StatusText';
 import './Footer.scss';
 
-type NavigationProps = {
-  title: string;
-  NavigationElements: React.ReactElement[];
-};
 type FooterProps = {
   logo: React.ReactElement;
-  navigation: NavigationProps;
+  navigation: React.ReactElement;
   sideText: string;
   buttons?: { text: string; outline?: boolean; link?: string }[];
   privacyPolicy?: { text: string; link: string };
@@ -64,10 +59,7 @@ const Footer: FC<React.PropsWithChildren<FooterProps>> = ({
                 )}
             </div>
           </div>
-          <div className="col">
-            <p>{navigation.title}</p>
-            <Navigation>{navigation.NavigationElements}</Navigation>
-          </div>
+          <div className="col">{navigation}</div>
           <div className="col">
             <SocialList {...socialMediaLinks} />
             <div className="form">
@@ -104,5 +96,5 @@ const Footer: FC<React.PropsWithChildren<FooterProps>> = ({
 /**
  *      EXPORTS
  */
-export type { NavigationProps, FooterProps };
+export type { FooterProps };
 export { Footer };

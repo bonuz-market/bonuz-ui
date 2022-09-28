@@ -7,6 +7,15 @@ $color-button-stroke: var(--main-black);
 footer {
   background: var(--main-black);
 
+  .navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
   .outer {
     display: flex;
     justify-content: center;
