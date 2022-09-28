@@ -10,14 +10,14 @@ type LanguageSelectorProps = {
 };
 type HeaderProps = {
   LanguageSelector?: ReactElement<LanguageSelectorProps>;
-  NavigationElements: ReactElement[];
+  NavigationItems: ReactElement;
   SignInElement?: ReactElement;
   logoUrl: string;
   logoHoverUrl?: string;
 };
 export const Header: FC<React.PropsWithChildren<HeaderProps>> = ({
   LanguageSelector,
-  NavigationElements,
+  NavigationItems,
   SignInElement,
   logoUrl,
   logoHoverUrl,
@@ -52,7 +52,7 @@ export const Header: FC<React.PropsWithChildren<HeaderProps>> = ({
 
     setIsVisible((prevState) => !prevState);
   };
-  
+
   return (
     <header className="sticky">
       <div
@@ -95,8 +95,8 @@ export const Header: FC<React.PropsWithChildren<HeaderProps>> = ({
                 active: isVisible,
               })}
             >
-              <Navigation onItemClick={handleChangeIsVisible}>
-                {NavigationElements}
+              <Navigation>
+                {NavigationItems}
                 {SignInElement}
               </Navigation>
               <img src={mobileNavigationBackground} className="bg" alt="" />
