@@ -36,17 +36,33 @@ $color-font-hover: linear-gradient(270deg, var(--color-1), var(--color-2));
     }
   }
 
-  &-submenu {
+  %menu {
     position: absolute;
-    inset-block-start: 2rem;
-    width: max-content;
-    padding: 0.5rem !important;
     list-style: none;
     background: var(--main-black);
     border-radius: 0 0 8px 8px;
     display: flex;
-    flex-direction: column;
     z-index: 10;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 1050px) {
+      & {
+        flex-direction: column;
+        position: unset;
+        background: none;
+        padding: 0.5rem;
+        gap: 0;
+      }
+    }
+  }
+
+  &-submenu {
+    @extend %menu;
+
+    inset-block-start: 2rem;
+    width: max-content;
+    padding: 0.5rem;
+    flex-direction: column;
 
     .chevron {
       transform: none;
@@ -59,16 +75,12 @@ $color-font-hover: linear-gradient(270deg, var(--color-1), var(--color-2));
   }
 
   &-megamenu {
-    position: absolute;
+    @extend %menu;
+
     inset-block-start: 100%;
     inset-inline: 0;
     width: 100%;
     padding: 2rem;
-    list-style: none;
-    background: var(--main-black);
-    border-radius: 0 0 8px 8px;
-    z-index: 100;
-    display: flex;
     gap: 2rem;
 
     ul {
