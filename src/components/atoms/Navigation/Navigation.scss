@@ -25,10 +25,10 @@ $color-font-hover: linear-gradient(270deg, var(--color-1), var(--color-2));
 
     &--menu {
       position: relative;
+    }
 
-      .chevron {
-        transform: rotate(90deg);
-      }
+    .chevron {
+      transform: rotate(90deg);
     }
   }
 
@@ -52,13 +52,28 @@ $color-font-hover: linear-gradient(270deg, var(--color-1), var(--color-2));
       inset-block-start: 0;
       inset-inline-start: 100%;
     }
+  }
 
-    .nav-item {
-      a {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
+  &-megamenu {
+    position: absolute;
+    inset-block-start: 100%;
+    inset-inline: 0;
+    width: 100%;
+    padding: 2rem;
+    list-style: none;
+    background: var(--main-black);
+    border-radius: 0 0 8px 8px;
+    z-index: 100;
+    display: flex;
+    gap: 2rem;
+
+    ul {
+      padding: 0.5rem;
+      margin: initial;
+    }
+
+    .chevron {
+      transform: none;
     }
   }
 }

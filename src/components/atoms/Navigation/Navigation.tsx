@@ -1,34 +1,53 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import classNames from 'classnames';
-import React, { FC, useState } from 'react';
+import React, { FC, useCallback, useRef, useState } from 'react';
 import { DropdownChevron } from '../Icons';
+import { useOnClickOutside } from './hooks/useOnClickOutside';
 import './Navigation.scss';
 
 interface NavigationProps {
   isSubmenu?: boolean;
+  isMegaMenu?: boolean;
+  isOpen?: boolean;
   title?: string;
 }
 export const Navigation: FC<React.PropsWithChildren<NavigationProps>> = ({
   children,
   isSubmenu,
+  isMegaMenu,
+  isOpen,
   title,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpened, setIsOpened] = useState(false);
+  const isExpanded = isOpen || isOpened;
+  const navItemRef = useRef<HTMLLIElement>(null);
+  const toggleOpen = useCallback(() => setIsOpened(false), []);
 
-  if (isSubmenu) {
+  useOnClickOutside(navItemRef, toggleOpen);
+
+  if (isSubmenu || isMegaMenu) {
     if (title)
       return (
         <li
-          className="nav-item nav-item--menu"
-          onMouseEnter={() => setIsOpen(true)}
-          onMouseLeave={() => setIsOpen(false)}
+          className={classNames('nav-item', {
+            'nav-item--menu': isSubmenu,
+          })}
+          ref={navItemRef}
         >
-          {title} <DropdownChevron width={16} height={16} className="chevron" />
-          {isOpen && (
+          <div
+            onClick={() => setIsOpened((prevState) => !prevState)}
+            role="button"
+          >
+            {title}{' '}
+            <DropdownChevron width={16} height={16} className="chevron" />
+          </div>
+          {isExpanded && (
             <ul
-              className={classNames('nav-submenu', {
-                'nav-submenu--open': isOpen,
+              className={classNames({
+                'nav-submenu': isSubmenu,
+                'nav-megamenu': isMegaMenu,
               })}
             >
               {children}
