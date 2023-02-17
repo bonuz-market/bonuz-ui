@@ -7,6 +7,7 @@ $color-font-hover: linear-gradient(270deg, var(--color-1), var(--color-2));
   padding: 1rem;
   list-style: none;
   width: fit-content;
+  position: relative;
 
   &-item {
     padding: 0.5rem;
@@ -60,7 +61,7 @@ $color-font-hover: linear-gradient(270deg, var(--color-1), var(--color-2));
   &-submenu {
     @extend %menu;
 
-    inset-block-start: 2rem;
+    inset-block-start: 3rem;
     width: max-content;
     padding: 0.5rem;
     flex-direction: column;
@@ -96,9 +97,12 @@ $color-font-hover: linear-gradient(270deg, var(--color-1), var(--color-2));
       }
 
       &__title {
-        cursor: pointer;
         padding-inline-start: 0.5rem;
-        opacity: 0.3;
+        opacity: 1;
+        font-weight: bold;
+        color: var(--color-2);
+        font-size: calc(var(--font-size-small) * 1.2);
+        cursor: default;
       }
     }
 
