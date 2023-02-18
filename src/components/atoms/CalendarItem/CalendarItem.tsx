@@ -79,7 +79,7 @@ const privateIcon = (
 );
 
 export type Metadata = {
-  speaker: string;
+  speaker?: string;
   verified?: boolean;
   private?: boolean;
 };
