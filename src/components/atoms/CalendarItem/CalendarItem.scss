@@ -22,11 +22,12 @@ $color-link: var(--color-1);
 .calendar-entry > div {
   display: flex;
   column-gap: 5px;
-  align-items: baseline;
+  align-items: center;
 }
 
 .calendar-entry svg {
   height: 16px;
+  width: 16px;
 }
 
 .calendar-entry h2 {
@@ -51,4 +52,21 @@ $color-link: var(--color-1);
 
 .calendar-entry .link a:hover {
   text-decoration: underline;
+}
+
+.calendar-entry .metadata {
+  margin-block-start: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.calendar-entry .metadata .icon-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #040d5b;
+  border-radius: 4px;
+  padding: 7px 10px;
 }

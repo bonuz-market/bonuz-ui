@@ -40,17 +40,62 @@ const linkIcon = (
     />
   </svg>
 );
+
+const speakerIcon = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="#453C8D"
+    viewBox="0 0 16 16"
+  >
+    <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
+    <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z" />
+  </svg>
+);
+
+const verifiedIcon = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="#2A61ED"
+    viewBox="0 0 16 16"
+  >
+    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
+  </svg>
+);
+
+const privateIcon = (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 12 17"
+    fill="#453C8D"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M10.5 6.375H10V4.25C10 1.90613 8.206 0 6 0C3.794 0 2 1.90613 2 4.25V6.375H1.5C0.673333 6.375 0 7.08971 0 7.96875V15.4062C0 16.2853 0.673333 17 1.5 17H10.5C11.3267 17 12 16.2853 12 15.4062V7.96875C12 7.08971 11.3267 6.375 10.5 6.375ZM3.33333 4.25C3.33333 2.68742 4.52933 1.41667 6 1.41667C7.47067 1.41667 8.66667 2.68742 8.66667 4.25V6.375H3.33333V4.25ZM6.66667 11.8447V13.4583C6.66667 13.8493 6.36867 14.1667 6 14.1667C5.63133 14.1667 5.33333 13.8493 5.33333 13.4583V11.8447C4.93667 11.599 4.66667 11.147 4.66667 10.625C4.66667 9.84371 5.26467 9.20833 6 9.20833C6.73533 9.20833 7.33333 9.84371 7.33333 10.625C7.33333 11.147 7.06333 11.599 6.66667 11.8447Z" />
+  </svg>
+);
+
+export type Metadata = {
+  speaker: string;
+  verified?: boolean;
+  private?: boolean;
+};
 export type CalendarItemProps = {
   title: string;
   date?: string;
   location?: string;
   link?: string;
+  metadata?: Metadata;
 };
 export const CalendarItem: FC<React.PropsWithChildren<CalendarItemProps>> = ({
   title,
   date,
   location,
   link,
+  metadata,
 }) => (
   <div className="calendar-entry">
     <h2>{title}</h2>
@@ -68,5 +113,24 @@ export const CalendarItem: FC<React.PropsWithChildren<CalendarItemProps>> = ({
         {link || '-'}
       </a>
     </div>
+    {metadata && (
+      <div className="metadata">
+        {metadata.speaker && (
+          <div className="icon-container">
+            {speakerIcon} <span>{metadata.speaker}</span>
+          </div>
+        )}
+        {metadata.verified && (
+          <div className="icon-container">
+            {verifiedIcon} <span>Verified</span>
+          </div>
+        )}
+        {metadata.private && (
+          <div className="icon-container">
+            {privateIcon} <span>Private</span>
+          </div>
+        )}
+      </div>
+    )}
   </div>
 );
