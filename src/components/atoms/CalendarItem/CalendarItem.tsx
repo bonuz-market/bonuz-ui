@@ -128,9 +128,9 @@ export const CalendarItem: FC<React.PropsWithChildren<CalendarItemProps>> = ({
     </div>
     {metadata && (
       <div className="metadata">
-        {metadata.speaker && (
+        {metadata.caution && (
           <div className="icon-container">
-            {speakerIcon} <span>{metadata.speaker}</span>
+            {cautionIcon} <span>Caution</span>
           </div>
         )}
         {metadata.verified && (
@@ -138,14 +138,14 @@ export const CalendarItem: FC<React.PropsWithChildren<CalendarItemProps>> = ({
             {verifiedIcon} <span>Verified</span>
           </div>
         )}
+        {metadata.speaker && (
+          <div className="icon-container">
+            {speakerIcon} <span>{metadata.speaker}</span>
+          </div>
+        )}
         {metadata.private && (
           <div className="icon-container">
             {privateIcon} <span>Private</span>
-          </div>
-        )}
-        {metadata.caution && (
-          <div className="icon-container">
-            {cautionIcon} <span>Caution</span>
           </div>
         )}
       </div>
