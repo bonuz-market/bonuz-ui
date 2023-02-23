@@ -78,10 +78,23 @@ const privateIcon = (
   </svg>
 );
 
+const cautionIcon = (
+  <svg
+    width={24}
+    height={24}
+    fill="#EDB62A"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 15 15"
+  >
+    <path d="M14.7 10.93L9.445 1.826c-.858-1.504-3.029-1.504-3.884 0L.303 10.929c-.859 1.504.21 3.372 1.942 3.372H12.74c1.732 0 2.819-1.887 1.96-3.372zM7.5 12.28a.843.843 0 01-.837-.836c0-.457.38-.837.837-.837.457 0 .837.38.818.858.022.436-.38.816-.818.816zm.762-5.409c-.037.648-.077 1.294-.114 1.942-.018.21-.018.402-.018.608a.63.63 0 01-.63.609.617.617 0 01-.63-.59c-.056-1.01-.114-2-.17-3.01-.018-.266-.037-.535-.059-.8 0-.439.247-.8.649-.914a.84.84 0 01.972.475.998.998 0 01.078.42c-.019.423-.059.843-.078 1.26z" />
+  </svg>
+);
+
 export type Metadata = {
   speaker?: string;
   verified?: boolean;
   private?: boolean;
+  caution?: boolean;
 };
 export type CalendarItemProps = {
   title: string;
@@ -128,6 +141,11 @@ export const CalendarItem: FC<React.PropsWithChildren<CalendarItemProps>> = ({
         {metadata.private && (
           <div className="icon-container">
             {privateIcon} <span>Private</span>
+          </div>
+        )}
+        {metadata.caution && (
+          <div className="icon-container">
+            {cautionIcon} <span>Caution</span>
           </div>
         )}
       </div>
