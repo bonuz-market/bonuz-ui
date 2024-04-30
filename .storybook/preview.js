@@ -1,7 +1,7 @@
 import '../src/assets/styles/style.scss';
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
+  actions: {},
   controls: {
     matchers: {
       color: /(background|color)$/i,
