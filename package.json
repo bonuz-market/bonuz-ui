@@ -2,8 +2,8 @@
   "name": "@bonuz/bonuz-ui",
   "version": "3.4.1",
   "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "publish:build": "rimraf ./dist && rollup -c",
     "semantic-release": "semantic-release"
   },
@@ -19,6 +19,7 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "@babel/preset-typescript": "^7.17.12",
+    "@chromatic-com/storybook": "^1",
     "@rbnlffl/rollup-plugin-eslint": "^3.0.0",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
@@ -27,13 +28,13 @@
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^8.0.5",
     "@semantic-release/npm": "^9.0.1",
-    "@storybook/addon-actions": "^6.5.9",
-    "@storybook/addon-essentials": "^6.5.9",
-    "@storybook/addon-links": "^6.5.9",
-    "@storybook/builder-webpack5": "^6.5.9",
-    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/addon-actions": "^8.0.9",
+    "@storybook/addon-essentials": "^8.0.9",
+    "@storybook/addon-links": "^8.0.9",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.2",
     "@storybook/preset-scss": "1.0.3",
-    "@storybook/react": "^6.5.9",
+    "@storybook/react": "^8.0.9",
+    "@storybook/react-webpack5": "^8.0.9",
     "@svgr/rollup": "^6.2.1",
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.14",
@@ -52,7 +53,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-storybook": "^0.5.12",
+    "eslint-plugin-storybook": "^0.8.0",
     "fs-extra": "^10.1.0",
     "postcss": "^8.4.14",
     "postcss-flexbugs-fixes": "^5.0.2",
@@ -72,6 +73,7 @@
     "sass": "^1.52.3",
     "sass-loader": "^13.0.0",
     "semantic-release": "^19.0.3",
+    "storybook": "^8.0.9",
     "storybook-css-modules-preset": "^1.1.1",
     "style-loader": "^3.3.1",
     "stylelint": "^14.9.1",
@@ -81,8 +83,11 @@
     "webpack": "^5.73.0"
   },
   "peerDependencies": {
+    "@web3modal/wagmi": "^4.1.11",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "viem": "^2.9.28",
+    "wagmi": "^2.7.0"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -90,7 +95,6 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
-  "packageManager": "yarn@3.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/bonuz-market/bonuz-ui.git"
